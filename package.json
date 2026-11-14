@@ -1,0 +1,11 @@
+{
+  "name": "fairllion",
+  "version": "1.0.0",
+  "description": "Word golf: the rarer your answer, the farther it flies.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "test": "node --test"
+  }
+}
