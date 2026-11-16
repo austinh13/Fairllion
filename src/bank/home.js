@@ -1,0 +1,165 @@
+// Answer cards: the kitchen, the wardrobe, the shed and the harbour.
+
+export default [
+  {
+    id: 'vegetables',
+    q: 'Name a vegetable',
+    tiers: [
+      'Carrot, Potato, Broccoli, Onion, Lettuce, Tomato',
+      'Cucumber, Pea|Peas, Spinach, Cabbage, Corn|Sweetcorn|Maize, Celery, Cauliflower, Pepper|Bell pepper|Capsicum, Mushroom, Garlic, Green bean|Green beans|String bean|French bean, Courgette|Zucchini, Aubergine|Eggplant, Sweet potato, Asparagus, Kale, Pumpkin',
+      'Beetroot|Beet|Beets, Radish, Parsnip, Turnip, Leek, Brussels sprout|Brussels sprouts|Sprout|Sprouts, Artichoke|Globe artichoke, Swede|Rutabaga, Butternut squash|Squash, Okra|Ladies\' fingers|Bhindi, Kohlrabi, Fennel, Shallot, Spring onion|Scallion|Green onion, Chard|Swiss chard, Rocket|Arugula, Watercress, Endive|Chicory, Bok choy|Pak choi|Bok choi, Celeriac, Yam, Cassava|Manioc|Yuca, Taro, Edamame, Chickpea|Garbanzo, Lentil|Lentils, Broad bean|Fava bean, Runner bean, Mangetout|Snow pea, Sugar snap pea|Sugar snap, Bean sprouts|Beansprouts, Jerusalem artichoke|Sunchoke, Radicchio, Romanesco, Daikon|Mooli, Napa cabbage|Chinese cabbage, Red cabbage, Savoy cabbage|Savoy',
+      'Salsify, Samphire, Purslane, Mizuna, Tatsoi, Gai lan|Chinese broccoli|Kai lan, Choy sum, Lotus root, Water chestnut, Bamboo shoot|Bamboo shoots, Bitter melon|Bitter gourd|Karela, Bottle gourd|Calabash|Lauki, Chayote|Choko|Mirliton, Jicama, Tomatillo, Nopales|Nopal, Hearts of palm|Palm heart, Fiddleheads|Fiddlehead, Ramps|Wild leek, Wild garlic|Ramsons, Cardoon, Collard greens|Collards, Mustard greens, Turnip greens, Dandelion greens, Nettles|Nettle, Sea kale, Celtuce, Kalettes, Cavolo nero|Lacinato kale|Tuscan kale, Spaghetti squash, Acorn squash, Kabocha, Delicata, Marrow, Pattypan, Parsley root|Hamburg parsley, Burdock|Gobo',
+      'Scorzonera, Skirret, Oca, Ulluco, Mashua, Yacon, Arrowroot, Konjac, Water spinach|Kangkong, Malabar spinach, Amaranth|Callaloo, Moringa|Drumstick, Tindora|Ivy gourd, Snake gourd, Ridge gourd|Luffa, Winter melon|Ash gourd, Pointed gourd|Parwal, Malanga, Good King Henry, Orache, Sea beet, Alexanders, Crosnes|Chinese artichoke',
+    ],
+  },
+  {
+    id: 'desserts',
+    q: 'Name a dessert',
+    tiers: [
+      'Ice cream, Cake|Chocolate cake, Brownie|Brownies, Cheesecake, Apple pie',
+      'Tiramisu, Crème brûlée|Creme brulee, Pudding, Chocolate mousse|Mousse, Pavlova, Trifle, Sundae, Doughnut|Donut, Pancakes|Pancake, Waffles|Waffle, Crumble|Apple crumble, Cupcake, Banana split, Jelly|Jello|Jell-O, Custard, Sorbet, Panna cotta, Baklava, Churros|Churro, Cookie|Cookies',
+      'Eton mess, Sticky toffee pudding, Bread and butter pudding|Bread pudding, Rice pudding, Bakewell tart, Treacle tart, Spotted dick, Knickerbocker glory, Banoffee pie|Banoffee, Key lime pie, Pecan pie, Pumpkin pie, Lemon meringue pie, Cobbler|Peach cobbler, Black Forest gateau|Black Forest cake, Red velvet cake|Red velvet, Carrot cake, Victoria sponge, Profiteroles, Éclair|Eclair, Macaron|Macarons, Mille-feuille|Napoleon, Crêpes|Crepes|Crêpe, Soufflé|Souffle, Clafoutis, Tarte Tatin, Gelato, Frozen yogurt|Froyo, Cannoli, Affogato, Zabaglione|Sabayon, Semifreddo, Flan|Crème caramel|Creme caramel, Tres leches|Tres leches cake, Mochi, Gulab jamun, Kheer, Halva|Halwa, Fudge, S\'mores|Smores, Strawberry shortcake|Shortcake, Strudel|Apple strudel, Baked Alaska, Bananas Foster, Peach Melba, Angel food cake, Lava cake|Molten chocolate cake, Fruit salad, Christmas pudding|Plum pudding, Mince pie',
+      'Cranachan, Syllabub, Fool|Gooseberry fool, Jam roly-poly|Roly-poly, Summer pudding, Queen of puddings, Manchester tart, Gypsy tart, Paris-Brest, Croquembouche, Opera cake, Religieuse, Madeleine|Madeleines, Canelé|Canele, Far Breton, Kouign-amann, Floating island|Île flottante|Ile flottante, Charlotte|Charlotte russe, Bavarois|Bavarian cream, Sachertorte, Linzer torte, Kaiserschmarrn, Pastel de nata|Pastéis de nata|Portuguese custard tart, Arroz con leche, Crema catalana, Brigadeiro, Alfajores|Alfajor, Cassata, Zuppa inglese, Sfogliatella, Zeppole, Panforte, Kunafa|Knafeh|Kanafeh, Basbousa, Umm Ali, Malabi|Muhallebi, Loukoumades, Galaktoboureko, Kulfi, Jalebi, Ras malai, Mango sticky rice, Halo-halo, Bingsu, Dorayaki, Taiyaki, Daifuku, Dango, Egg tart, Mooncake, Lamington, Beignets|Beignet, Whoopie pie, Blondies|Blondie, Rocky road, Granita, Pots de crème|Pot de creme, Posset|Lemon posset, Blancmange, Junket, Cherries jubilee, Pound cake, Bundt cake',
+      'Kalakand, Mysore pak, Sandesh, Modak, Phirni, Falooda, Laddu|Ladoo, Barfi|Burfi, Cendol, Klepon, Bibingka, Ube halaya, Picarones, Suspiro limeño|Suspiro a la limena, Quindim, Capirotada, Kremówka|Kremowka, Pączki|Paczki, Makowiec, Kürtőskalács|Kurtoskalacs|Chimney cake, Dobos torte, Esterházy torte|Esterhazy torte, Somlói galuska|Somloi galuska, Tulumba, Revani, Sütlaç|Sutlac, Aşure|Ashure, Güllaç|Gullac, Qatayef, Luqaimat, Bougatsa, Ekmek kataifi, Pastiera, Bonet, Torta caprese, Castagnaccio, Bomboloni|Bombolone, Gâteau Basque|Gateau Basque, Sugar pie|Tarte au sucre, Nanaimo bar, Butter tart, Pouding chômeur|Pouding chomeur, Parkin, Eccles cake, Clootie dumpling, Tablet',
+    ],
+  },
+  {
+    id: 'sauces',
+    q: 'Name a sauce, dip or condiment',
+    tiers: [
+      'Ketchup|Tomato sauce|Catsup, Mayonnaise|Mayo, Mustard, Barbecue sauce|BBQ sauce|BBQ, Soy sauce|Soy',
+      'Hot sauce|Tabasco, Salsa, Gravy, Pesto, Ranch|Ranch dressing, Hollandaise, Sriracha, Guacamole, Hummus|Houmous, Mint sauce, Tartar sauce|Tartare sauce, Worcestershire sauce|Worcestershire, Teriyaki, Vinaigrette|French dressing, Marinara, Bolognese|Ragù|Ragu, Alfredo, Relish, Chutney|Mango chutney, Apple sauce|Applesauce, Cranberry sauce, Brown sauce|HP sauce, Sweet chilli sauce|Sweet chili sauce, Thousand Island',
+      'Béchamel|Bechamel|White sauce, Béarnaise|Bearnaise, Aioli, Tzatziki, Tahini, Harissa, Chimichurri, Hoisin, Oyster sauce, Fish sauce|Nam pla|Nuoc mam, Sambal|Sambal oelek, Gochujang, Ponzu, Wasabi, Miso, Pico de gallo, Mole, Buffalo sauce, Blue cheese dressing, Caesar dressing, Honey mustard, Horseradish sauce|Horseradish, Piccalilli, Branston pickle|Branston, Salad cream, Bread sauce, Cheese sauce, Peppercorn sauce, Satay sauce|Peanut sauce, Sweet and sour sauce|Sweet and sour, Black bean sauce, Plum sauce, Duck sauce, XO sauce, Chilli oil|Chili oil|Chili crisp, Raita, Remoulade|Rémoulade, Marie Rose sauce|Marie Rose|Cocktail sauce, Romesco, Salsa verde, Tapenade, Baba ganoush|Baba ghanoush, Arrabbiata, Puttanesca, Carbonara, Taramasalata, Kecap manis|Sweet soy sauce, Peri-peri|Piri piri|Peri peri',
+      'Velouté|Veloute, Espagnole, Demi-glace, Beurre blanc, Mornay, Soubise, Bordelaise, Chasseur, Ravigote, Gribiche, Rouille, Pistou, Sauce vierge, Bagna càuda|Bagna cauda, Gremolata, Muhammara, Toum, Zhug|Schug|Zhoug, Sofrito, Mojo, Huancaína|Huancaina, Agrodolce, Mostarda, Ssamjang, Doenjang, Tonkatsu sauce|Bulldog sauce, Okonomiyaki sauce, Kewpie|Japanese mayonnaise, Yuzu kosho, Tare, Mentsuyu, Nam jim, Nam phrik|Nam prik, Achar|Achaar, Kasundi, Chermoula, Skordalia, Ajvar, Lyutenitsa, Adjika, Tkemali, Satsivi, Amatriciana, Vodka sauce, Hot honey, Comeback sauce, Mumbo sauce',
+      'Shito, Chakalaka, Awaze, Ezme, Mojo picón|Mojo picon, Salsa macha, Salsa roja, Salsa negra, Aji|Ají, Uchucuta, Llajua, Pebre, Hogao, Guasacaca, Sauce Robert, Sauce Choron|Choron, Sauce Albufera|Albufera, Cumberland sauce, Gentleman\'s Relish|Patum Peperium, Colatura|Colatura di alici',
+    ],
+  },
+  {
+    id: 'tea',
+    q: 'Name a kind of tea or herbal tea',
+    strip: ['tea'],
+    tiers: [
+      'Green tea, Black tea, Chamomile|Camomile, Earl Grey, Peppermint|Mint',
+      'English Breakfast|Breakfast, Chai|Masala chai, Oolong, Jasmine, White tea, Matcha, Darjeeling, Rooibos|Redbush, Iced tea, Bubble tea|Boba|Pearl milk tea, Assam, Ginger, Hibiscus, Lemon',
+      'Ceylon, Lapsang souchong|Lapsang|Zhengshan xiaozhong, Pu-erh|Puer|Pu\'er, Sencha, Genmaicha, Hojicha, Gyokuro, Yerba mate|Mate, Lady Grey, Russian Caravan, Builder\'s tea|Builders, Milk tea, Thai tea|Thai iced tea|Cha yen, Sweet tea, Kombucha, Nettle, Echinacea, Lemon balm, Lemon verbena, Honeybush, Barley tea|Mugicha|Boricha, Yellow tea, Keemun, Nilgiri, Kenyan, Irish Breakfast, Scottish Breakfast, Prince of Wales, Gunpowder, Dragon Well|Longjing, Tieguanyin|Iron Goddess|Ti Kuan Yin, Da Hong Pao|Big Red Robe, Silver Needle, White Peony|Bai Mudan, Kukicha|Twig tea, Bancha, Moroccan mint tea|Maghrebi mint tea|Moroccan mint, Teh tarik, Butter tea|Po cha, Kashmiri chai|Noon chai|Pink tea, Sun tea, Arnold Palmer, London Fog, Tulsi|Holy basil, Butterfly pea|Blue tea, Chrysanthemum, Rosehip, Linden|Lime flower|Tilleul, Elderflower, Raspberry leaf, Lavender, Turmeric, Fennel, Ginseng, Osmanthus, Valerian',
+      'Yunnan|Dianhong, Golden Monkey, Jin Jun Mei, Bi Luo Chun|Biluochun, Huangshan Maofeng, Taiping Houkui, Junshan Yinzhen, Anji Bai Cha, Oriental Beauty|Dongfang Meiren, Dong Ding|Tung Ting, Alishan, Jin Xuan|Milk oolong, Dancong|Phoenix Dancong, Shui Xian, Rou Gui, Liu Bao, Fu brick|Fu Zhuan, Kabusecha, Tamaryokucha, Konacha, Shincha, Fukamushi|Fukamushi sencha, Sobacha, Yuja-cha|Yuzu tea|Yuja, Omija-cha|Omija, Daechu-cha|Jujube tea, Oksusu-cha|Corn tea, Kahwa|Kehwa, Sulaimani, Karak chai|Karak, Irani chai, Cutting chai, Doodh pati, Teh halia, Guayusa, Yaupon, Cascara, Labrador tea, Greek mountain tea|Mountain tea|Sideritis',
+      'Lu\'an Melon Seed|Lu An Gua Pian, Bai Ji Guan, Shou Mei, Gong Mei, Mengding Ganlu, Xinyang Maojian, Duyun Maojian, Kuding|Kudingcha, Jiaogulan, Sakurayu|Sakura tea',
+    ],
+  },
+  {
+    id: 'coffee',
+    q: 'Name a coffee drink',
+    strip: ['coffee'],
+    tiers: [
+      'Espresso|Short black, Latte|Caffè latte|Caffe latte, Cappuccino, Americano, Mocha|Caffè mocha|Mochaccino',
+      'Flat white, Macchiato|Caffè macchiato, Iced coffee, Cold brew, Frappuccino, Frappé|Frappe, Irish coffee, Filter coffee|Drip coffee|Drip, Instant coffee, Decaf, Black coffee, Cortado, Latte macchiato',
+      'Affogato, Ristretto, Lungo, Doppio, Red eye, Turkish coffee, Vietnamese coffee|Vietnamese iced coffee|Ca phe sua da, Café au lait|Cafe au lait, Café con leche|Cafe con leche, Cafecito|Cuban coffee|Café Cubano, Nitro cold brew|Nitro, Dalgona|Whipped coffee, Pumpkin spice latte|PSL, Breve|Caffè breve, Piccolo|Piccolo latte, Long black, Gibraltar, Espresso con panna|Con panna, Bulletproof coffee|Bulletproof, Pour-over|Pour over, French press|Cafetière|Cafetiere, Moka pot|Moka|Stovetop, AeroPress|Aeropress, Café de olla|Cafe de olla, Egg coffee|Ca phe trung, Arabic coffee|Qahwa|Gahwa, Espresso martini, Iced latte, Chai latte|Dirty chai, Vanilla latte, Caramel macchiato',
+      'Yuenyeung|Yuanyang, Kopi, Mazagran, Galão|Galao, Freddo espresso, Freddo cappuccino, Espresso tonic, Shakerato|Caffè shakerato, Bicerin, Marocchino, Caffè corretto|Corretto, Carajillo, Café bombón|Cafe bombon, Cortadito, Wiener Melange|Melange, Einspänner|Einspanner, Kleiner Brauner|Brauner, Pharisäer|Pharisaer, Fiaker, Rüdesheimer Kaffee|Rudesheimer, Eiskaffee, Café Touba|Cafe Touba, Buna|Bunna|Jebena buna, Kopi tubruk|Tubruk, Espresso Romano|Romano, Caffè d\'orzo|Orzo, Cascara latte, Flat black',
+      'Kaisermelange, Verlängerter|Verlangerter, Kapuziner, Franziskaner, Maria Theresia, Kaffee verkehrt|Verkehrt, Café liégeois|Cafe liegeois, Kopi joss, Kopi luwak|Civet coffee',
+    ],
+  },
+  {
+    id: 'nuts',
+    q: 'Name a nut or edible seed',
+    strip: ['nut', 'nuts', 'seed', 'seeds'],
+    tiers: [
+      'Peanut|Groundnut|Monkey nut, Almond, Cashew, Walnut, Pistachio',
+      'Hazelnut|Filbert|Cobnut, Pecan, Macadamia|Queensland nut, Brazil nut, Chestnut, Pine nut|Pinon|Pignoli, Coconut, Acorn, Sunflower seed, Pumpkin seed|Pepita|Pepitas, Sesame seed|Sesame',
+      'Flaxseed|Linseed|Flax, Chia seed|Chia, Hemp seed|Hemp, Poppy seed|Poppy, Tiger nut|Chufa, Candlenut|Kukui, Kola nut|Cola nut|Kola, Betel nut|Areca nut|Areca, Hickory nut|Hickory, Butternut|White walnut, Beechnut|Beech nut|Beech mast, Ginkgo nut|Ginkgo, Lotus seed, Watermelon seed, Black walnut, Horse chestnut|Conker, Water chestnut',
+      'Pili nut|Pili, Baru nut|Baru, Sacha inchi, Bunya nut|Bunya, Mongongo, Marula, Shea nut|Shea, Argan, Sapucaia|Paradise nut, Pequi, Ogbono|Dika nut|Bush mango, Egusi, Breadnut|Maya nut|Ramon nut, Gevuina|Chilean hazelnut, Heartnut, Malabar chestnut, Chinquapin, Monkey puzzle nut|Pehuen|Pinon de araucaria, Canarium nut|Canarium|Galip nut, Ngali nut, Tropical almond|Indian almond|Talisay, Okari, Torreya',
+      'Bladdernut, Yellowhorn, Souari nut, Coquito nut, Yeheb nut, Marama bean|Marama',
+    ],
+  },
+  {
+    id: 'colours',
+    q: 'Name a colour',
+    tiers: [
+      'Red, Blue, Green, Yellow, Black, White',
+      'Orange, Purple, Pink, Brown, Grey|Gray, Silver, Gold, Violet, Turquoise, Navy|Navy blue, Beige, Cream, Maroon, Teal, Lime|Lime green, Indigo',
+      'Magenta, Cyan, Crimson, Scarlet, Lavender, Lilac, Mauve, Burgundy, Khaki, Olive|Olive green, Tan, Peach, Coral, Salmon, Aqua, Aquamarine, Ivory, Charcoal, Emerald|Emerald green, Amber, Mustard, Bronze, Copper, Plum, Fuchsia, Hot pink, Sky blue, Royal blue, Baby blue, Cobalt|Cobalt blue, Forest green, Mint|Mint green, Sage|Sage green, Jade, Chartreuse, Ochre|Ocher, Sienna|Burnt sienna, Umber|Burnt umber, Sepia, Taupe, Ecru, Off-white, Cerise, Vermilion|Vermillion, Ultramarine, Periwinkle, Cerulean, Azure, Lemon|Lemon yellow, Mahogany, Chocolate, Rust, Terracotta, Slate|Slate grey, Gunmetal, Platinum, Champagne, Magnolia, Eggshell, Midnight blue, Electric blue, Neon green, Rose',
+      'Blush, Nude, Wine, Oxblood, Brick red, Cherry red|Cherry, Tangerine, Apricot, Caramel, Saffron, Canary yellow|Canary, Sand, Putty, Pewter, Steel blue, Powder blue, Duck egg blue|Duck egg, Petrol blue, Prussian blue, Denim, Cornflower blue|Cornflower, Bottle green, British racing green, Kelly green, Hunter green, Pea green, Avocado, Pistachio, Moss green|Moss, Celadon, Viridian, Lincoln green, Eau de Nil, Puce, Heliotrope, Amethyst, Orchid, Aubergine|Eggplant, Mulberry, Raspberry, Bubblegum pink|Bubblegum, Shocking pink, Carmine, Russet, Auburn, Chestnut, Fawn, Buff, Wheat, Vanilla, Linen, Bone, Alabaster, Jet black|Jet, Ebony, Anthracite, Robin egg blue|Robin\'s egg blue, Seafoam|Seafoam green, Ruby, Sapphire, Mint cream, Honeydew',
+      'Gamboge, Isabelline, Glaucous, Smalt, Zaffre, Celeste, Caput mortuum, Falu red, Coquelicot, Fulvous, Wenge, Feldgrau|Field grey, Drab|Olive drab, Byzantium, Tyrian purple, Alizarin, Madder, Cinnabar, Payne\'s grey|Paynes grey, Davy\'s grey, Jonquil, Vantablack, Xanadu, Fallow, Haint blue',
+    ],
+  },
+  {
+    id: 'hats',
+    q: 'Name a kind of hat',
+    strip: ['hat', 'hats'],
+    tiers: [
+      'Baseball cap|Cap|Ball cap, Cowboy hat, Top hat, Beanie|Tuque|Woolly hat, Sombrero',
+      'Fedora, Beret, Bowler|Derby, Panama, Bucket hat, Trilby, Stetson, Crown, Helmet, Bonnet, Turban, Visor|Sun visor, Snapback, Witch\'s hat|Witch hat, Party hat, Hard hat, Chef\'s hat|Toque|Toque blanche',
+      'Fez|Tarboosh, Deerstalker, Flat cap, Newsboy cap|Newsboy|Baker boy, Boater|Straw boater, Pork pie|Porkpie, Homburg, Trucker hat|Trucker cap, Balaclava, Tam o\' shanter|Tam, Glengarry, Bobble hat|Pom-pom hat, Ushanka, Trapper hat, Kufi, Kippah|Yarmulke, Mitre|Miter, Zucchetto|Skullcap, Tiara, Fascinator, Cloche, Pillbox, Boonie hat|Boonie, Slouch hat, Akubra, Pith helmet|Sun helmet|Topee, Conical hat|Rice hat|Non la, Busby, Bearskin, Tricorn|Tricorne|Cocked hat, Bicorne|Bicorn, Mortarboard|Graduation cap, Dunce cap|Dunce\'s cap, Jester hat|Fool\'s cap|Jester\'s cap, Nightcap, Sou\'wester|Souwester, Kepi, Shako, Garrison cap|Side cap|Forage cap, Sailor hat|Sailor cap, Ten-gallon hat|Ten gallon hat, Coonskin cap|Coonskin, Aviator hat|Flying helmet, Sun hat',
+      'Biretta, Peaked cap, Mob cap, Snood, Papakha, Astrakhan|Karakul, Kalpak, Chullo, Montera, Cordobés|Cordobes, Gat, Jingasa, Kabuto, Eboshi, Taqiyah, Shtreimel, Spodik, Capotain, Hennin, Chaperon, Coif, Phrygian cap|Liberty cap, Petasos, Galero, Camauro, Kamilavka, Klobuk, Saturno|Cappello romano, Cartwheel hat, Picture hat|Gainsborough hat, Juliet cap, Tudor bonnet, Sakkat',
+      'Pileus, Pschent, Nemes, Hedjet, Deshret, Atef, Kausia, Tagelmust',
+    ],
+  },
+  {
+    id: 'shoes',
+    q: 'Name a kind of shoe or boot',
+    strip: ['shoe', 'shoes', 'boot', 'boots'],
+    tiers: [
+      'Sneakers|Trainers|Sneaker|Trainer|Running shoes, Sandals|Sandal, Boots|Boot, High heels|Heels, Flip-flops|Flip flops|Thongs|Jandals, Slippers|Slipper',
+      'Loafers|Loafer|Penny loafers, Stilettos|Stiletto, Wellington boots|Wellies|Wellingtons|Rain boots|Gumboots, Cowboy boots, Ugg boots|Uggs, Crocs, Ballet flats|Flats, Pumps|Court shoes, Brogues|Brogue|Wingtips, Oxfords|Oxford, Moccasins|Moccasin, Clogs|Clog|Sabots, Hiking boots|Walking boots, Doc Martens|Dr Martens|Docs, Espadrilles|Espadrille, Platform shoes|Platforms, Mules|Mule, Wedges|Wedge heels, Football boots|Cleats|Studs',
+      'Chelsea boots, Desert boots, Chukka boots|Chukkas, Derby shoes|Derbies, Monk straps|Monk strap, Boat shoes|Deck shoes, Slip-ons|Slip-on, Plimsolls|Plimsoll, Kitten heels, Peep-toes|Peep toe, Slingbacks|Slingback, Mary Janes|Mary Jane, Gladiator sandals, Huaraches|Huarache, Jelly shoes|Jellies, Galoshes|Overshoes, Waders, Ankle boots|Booties, Knee-high boots, Thigh-high boots|Over-the-knee boots, Combat boots, Riding boots, Work boots|Steel toecap boots|Steel toes, Snow boots, Moon Boots, Ski boots, Climbing shoes, Bowling shoes, Golf shoes, Tap shoes, Pointe shoes, Ballet shoes|Ballet slippers, Spikes|Track spikes, Creepers|Brothel creepers, Winklepickers, Saddle shoes, Driving shoes|Driving moccasins, Block heels, Go-go boots, High-tops|High tops, Skate shoes, Water shoes|Aqua shoes, Trail shoes',
+      'Cuban heels, Geta, Zori|Zōri, Tabi|Jika-tabi, Waraji, Okobo|Pokkuri, Mojari|Jutti|Juttis, Kolhapuri|Kolhapuri chappals, Chappals|Chappal, Paduka, Babouches|Babouche, Opanak|Opanci, Valenki, Mukluks|Mukluk, Kamik, Lotus shoes, Chopines, Pattens, Poulaines|Crakows, Hessian boots|Hessians, Jackboots, Hobnail boots|Hobnails, Engineer boots, Jungle boots, Toe shoes, Barefoot shoes, Basketball shoes, Lapti|Bast shoes',
+      'Caligae, Buskins, Cothurnus|Kothornos, Pampooties|Pampootie, Brogans, Balmorals, Harness boots, Logger boots, Jump boots|Paratrooper boots, Jodhpur boots',
+    ],
+  },
+  {
+    id: 'furniture',
+    q: 'Name a piece of furniture',
+    tiers: [
+      'Chair, Table, Bed, Sofa|Couch|Settee, Desk',
+      'Wardrobe|Armoire, Bookcase|Bookshelf|Shelves, Stool, Armchair, Chest of drawers|Dresser, Bench, Cabinet|Cupboard, Coffee table, Bunk bed|Bunk beds, Recliner, Ottoman|Footstool|Pouffe|Pouf, Bedside table|Nightstand|Night table, Futon, Rocking chair, Cot|Crib, Dining table, Sideboard|Buffet, Hammock, Beanbag|Bean bag',
+      'Chaise longue|Chaise lounge|Chaise, Divan, Chesterfield, Loveseat|Love seat, Sofa bed, Daybed, Four-poster bed|Four-poster, Canopy bed, Murphy bed|Wall bed, Trundle bed, Headboard, Bureau, Writing desk, Secretary|Secretaire, Roll-top desk, Console table, Side table|End table, Dressing table|Vanity, Hutch, Welsh dresser, China cabinet, Display cabinet|Vitrine, Credenza, Blanket chest|Hope chest|Chest, Trunk, Coat stand|Hat stand|Coat rack, Umbrella stand, Shoe rack, TV stand|TV cabinet|Entertainment center, Wingback chair|Wing chair, Club chair, Barcelona chair, Eames chair|Eames lounge chair, Egg chair, Windsor chair, Deckchair|Deck chair, Folding chair, Office chair|Swivel chair, High chair, Bar stool, Throne, Pew, Sectional|Sectional sofa, Nest of tables|Nesting tables, Card table, Lectern, Cradle, Bassinet|Moses basket, Changing table, Toy box, Adirondack chair',
+      'Gateleg table, Drop-leaf table, Trestle table, Escritoire, Davenport, Tallboy|Highboy, Lowboy, Commode, Étagère|Etagere, Whatnot, Canterbury, Fainting couch|Récamier|Recamier, Morris chair, Papasan chair|Papasan, Butterfly chair, Director\'s chair, Bergère|Bergere, Fauteuil, Settle, Banquette, Ladderback chair, Glider, Porch swing, Plant stand, Magazine rack, Wine rack, Hall tree, Curio cabinet, Pier table',
+      'Klismos, Savonarola chair, Tansu, Kotatsu, Chabudai, Zaisu, Charpai|Charpoy, Takht, Kas, Tête-à-tête|Tete-a-tete, Torchère|Torchere, Psyche mirror|Cheval mirror, Lazy Susan, Prie-dieu, Misericord',
+    ],
+  },
+  {
+    id: 'tools',
+    q: 'Name a tool',
+    tiers: [
+      'Hammer, Screwdriver, Saw, Wrench|Spanner, Drill, Pliers',
+      'Tape measure|Measuring tape, Spirit level|Level, Chisel, Axe|Ax, Shovel|Spade, Rake, Crowbar|Pry bar, Mallet, File, Sandpaper, Utility knife|Stanley knife|Box cutter, Clamp|C-clamp, Hacksaw, Sledgehammer, Allen key|Hex key|Allen wrench, Socket wrench|Ratchet, Vice|Vise, Pickaxe|Pick, Hoe, Trowel, Wheelbarrow, Ladder',
+      'Jigsaw, Circular saw, Chainsaw, Mitre saw|Miter saw|Chop saw, Table saw, Band saw|Bandsaw, Angle grinder|Grinder, Sander|Orbital sander, Router, Plane|Hand plane|Planer, Lathe, Nail gun, Staple gun, Glue gun|Hot glue gun, Soldering iron, Heat gun, Blowtorch, Multimeter, Stud finder, Wire strippers|Wire stripper, Bolt cutters, Tin snips|Snips, Needle-nose pliers, Pipe wrench|Stillson, Adjustable wrench|Adjustable spanner|Crescent wrench, Torque wrench, Impact driver, Rasp, Awl|Bradawl, Hole saw, Caulking gun, Putty knife, Scraper|Paint scraper, Paintbrush, Paint roller|Roller, Try square, Speed square, Chalk line, Plumb bob|Plumb line, Handsaw|Hand saw, Coping saw, Fretsaw, Tenon saw|Backsaw, Bow saw, Secateurs|Pruners|Pruning shears, Loppers, Shears|Hedge shears|Garden shears, Hedge trimmer, Lawn mower|Lawnmower|Mower, Strimmer|String trimmer|Weed eater|Weed whacker, Leaf blower, Pitchfork|Garden fork, Scythe, Sickle, Machete, Hatchet, Multi-tool|Multitool|Leatherman, Jack|Car jack, Plunger',
+      'Billhook, Mattock, Adze|Adz, Splitting maul|Maul, Wedge, Froe, Drawknife|Draw knife, Spokeshave, Gouge, Dovetail saw, Marking gauge, Sliding bevel|Bevel, Calipers|Callipers|Vernier calipers, Micrometer, Feeler gauge, Laser level, Scriber|Scribe, Whetstone|Sharpening stone|Oilstone, Grindstone, Anvil, Tongs, Bellows, Rivet gun|Riveter, Grease gun, Oil can, Lug wrench|Wheel brace|Tire iron, Tyre lever|Tire lever, Breaker bar, Pipe cutter, Pipe bender, Drain snake|Plumber\'s snake|Auger, Basin wrench, Crimper|Crimping tool, Oscillating tool, Rotary tool|Dremel, Biscuit joiner, Dowel jig, Mortiser, Jointer, Thicknesser|Thickness planer, Scroll saw, Drill press|Pillar drill, Bench grinder, Belt sander, Centre punch|Center punch, Countersink, Tap and die, Monkey wrench',
+      'Swage, Fuller, Hardy, Card scraper, Burnisher, Spud wrench, Flaring tool, Punch down tool, Spindle moulder|Shaper, Trammel, Inshave, Twibil, Reamer, Broach, Mandrel, Hoof pick, Dibber|Dibble, Edger|Half-moon edger, Bulb planter',
+    ],
+  },
+  {
+    id: 'knots',
+    q: 'Name a knot',
+    strip: ['knot', 'knots'],
+    tiers: [
+      'Reef knot|Square knot, Bowline, Slip knot|Slipknot, Granny knot, Clove hitch',
+      'Figure-eight|Figure of eight|Figure 8, Sheet bend, Half hitch, Overhand knot|Overhand, Noose, Hangman\'s knot|Hangman\'s noose, Windsor|Full Windsor, Half Windsor, Four-in-hand, Bow|Shoelace knot, Sheepshank, Timber hitch, Trucker\'s hitch',
+      'Round turn and two half hitches, Rolling hitch, Taut-line hitch, Cow hitch|Lark\'s head|Girth hitch, Prusik, Monkey\'s fist, Fisherman\'s knot, Double fisherman\'s|Grapevine, Improved clinch, Palomar, Blood knot|Barrel knot, Surgeon\'s knot, Water knot|Tape knot, Alpine butterfly|Butterfly loop, Bowline on a bight, Running bowline, Cat\'s paw, Carrick bend, Highwayman\'s hitch, Constrictor, Buntline hitch, Anchor bend|Fisherman\'s bend, Cleat hitch, Turk\'s head, Gordian knot, Double overhand, Stopper knot, Pratt|Shelby, Eldredge, Trinity, Bow tie, Eye splice, Square lashing, Munter hitch|Italian hitch, Celtic knot',
+      'Diamond knot, Stevedore knot, Heaving line knot, Bimini twist, Albright, Uni knot, Arbor knot, Trilene knot, Snell, Dropper loop, Perfection loop, Zeppelin bend|Zeppelin, Ashley stopper knot, Klemheist, Garda hitch, Bachmann hitch, Icicle hitch, Pile hitch, Midshipman\'s hitch, Marlinespike hitch, Siberian hitch, Diagonal lashing, Tripod lashing, Shear lashing, Back splice, Short splice, Long splice, Whipping, Thief knot, Hunter\'s bend|Rigger\'s bend, Flemish bend, Matthew Walker, Wall knot, Crown knot, Kelvin, Chinese button knot|Button knot, Josephine knot',
+      'Manrope knot, Sailmaker\'s whipping, Ashley bend, Mooring hitch, Halyard hitch, Magnus hitch, Blake\'s hitch, Distel hitch, Valdotain tresse, Balthus, Onassis, Merovingian',
+    ],
+  },
+  {
+    id: 'boats',
+    q: 'Name a type of boat or ship',
+    strip: ['boat', 'ship'],
+    tiers: [
+      'Canoe, Kayak, Yacht, Sailboat|Sailing boat, Rowing boat|Rowboat, Submarine',
+      'Ferry, Cruise ship|Cruise liner, Speedboat|Speed boat, Motorboat|Motor boat, Raft, Gondola, Catamaran, Tugboat|Tug, Pirate ship, Aircraft carrier, Battleship, Dinghy, Barge, Lifeboat, Pedalo|Paddle boat|Pedal boat, Jet ski|Personal watercraft, Fishing boat, Cargo ship|Freighter, Tanker|Oil tanker, Houseboat, Narrowboat|Narrow boat, Dugout canoe|Dugout, Noah\'s Ark|Ark, Steamboat|Steamer',
+      'Trawler, Schooner, Galleon, Clipper, Frigate, Destroyer, Cruiser, Corvette, Dreadnought, Junk, Sampan, Dhow, Felucca, Longship|Viking longship|Drakkar, Trireme, Galley, Caravel, Carrack, Brig, Brigantine, Sloop, Ketch, Yawl, Cutter, Punt, Coracle, Outrigger|Outrigger canoe, Hovercraft, Hydrofoil, Icebreaker, Container ship, Tall ship, Man-of-war|Man o\' war, Ironclad, U-boat, Torpedo boat, PT boat, Gunboat, Minesweeper, Landing craft, Hospital ship, Lightship, Trimaran, Rowing shell|Scull|Racing shell, Paddle steamer, Riverboat, Showboat, Ocean liner|Liner, Superyacht|Megayacht, Skiff, Dory, Vaporetto, Water taxi, Inflatable|RIB|Rigid inflatable, Airboat, Pontoon boat|Pontoon, Cabin cruiser, Longboat, Barque|Bark',
+      'Catboat, Wherry, Coble, Lugger, Smack, Thames barge|Sailing barge, Jet boat, Bass boat, Runabout, Seiner|Purse seiner, Longliner, Whaler|Whaleboat, Pinnace, Jolly boat, Gig, Launch, Tender, Barquentine, Full-rigged ship, Fluyt, Xebec, Cog, Hulk, Knarr, Umiak, Baidarka|Bidarka, Pirogue, Bangka|Banca, Proa, Waka, Jangada, Caique, Gulet, Dhoni, Shikara, Reed boat, Quffa|Guffa, Flatboat, Keelboat, Scow, Skipjack, Sharpie, Bateau, York boat',
+      'Hoy, Tartane, Polacca, Balangay, Vinta, Lakatoi, Kettuvallam, Bajra, Wupeng, Trabaccolo, Bragozzo, Sandolo, Gundalow, Bugeye, Log canoe, Pungy, Mackinaw boat, Durham boat, Butty',
+    ],
+  },
+  {
+    id: 'units',
+    q: 'Name a unit of measurement',
+    tiers: [
+      'Metre|Meter, Inch, Foot|Feet, Kilogram|Kilo|kg, Mile, Litre|Liter',
+      'Centimetre|Centimeter|cm, Millimetre|Millimeter|mm, Kilometre|Kilometer|km, Gram|Gramme, Pound|lb, Ounce|oz, Gallon, Pint, Yard, Second, Minute, Hour, Degree, Celsius|Degree Celsius, Fahrenheit, Tonne|Ton|Metric ton, Acre, Hectare, Watt, Volt, Calorie, Byte',
+      'Joule, Newton, Ampere|Amp, Ohm, Kelvin, Hertz, Pascal, Mole, Candela, Lumen, Lux, Decibel, Coulomb, Farad, Henry, Tesla, Weber, Siemens, Becquerel, Gray, Sievert, Kilowatt-hour|kWh, Horsepower, Knot, Nautical mile, Fathom, Furlong, League, Light-year|Lightyear, Parsec, Astronomical unit|AU, Stone, Hundredweight, Quart, Cup, Tablespoon, Teaspoon, Fluid ounce, Bushel, Peck, Barrel, Carat|Karat, Grain, Dram, Gill, Chain, Rod|Pole|Perch, Hand, Cubit, Micrometre|Micrometer|Micron, Nanometre|Nanometer, Ångström|Angstrom, Bar, Atmosphere, Psi, Torr, Bit, Kilobyte, Megabyte, Gigabyte, Terabyte, Pixel, Mach, Radian, Kilocalorie, BTU|British thermal unit',
+      'Steradian, Are, Therm, Erg, Dyne, Electronvolt, Gauss, Maxwell, Poise, Stokes, Rem, Rad, Roentgen|Röntgen, Curie, Dalton, Barn, Jansky, Debye, Oersted, Smoot, Jiffy, Shake, Barleycorn, Ell, Span, Link, Rood, Hide, Oxgang|Bovate, Virgate, Firkin, Kilderkin, Hogshead, Tun, Puncheon, Pottle, Noggin, Minim, Scruple, Pennyweight, Troy ounce, Slug, Poundal, Kip, Tog, Sone, Phon, Dioptre|Diopter, Katal, Footcandle, Mil|Thou, Cord, Board foot, Petabyte, Exabyte',
+      'Morgen, Arpent, Verst, Li, Ri, Shaku, Tsubo, Tael, Catty|Jin, Picul, Tola, Seer, Maund, Bigha, Dunam|Dunum, Feddan, Pood, Arshin, Sazhen, Vershok, Mutchkin, Lambert, Nit, Stilb, Phot',
+    ],
+  },
+];

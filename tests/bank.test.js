@@ -89,9 +89,13 @@ test('closed sets are complete', () => {
   assert.equal(count('si-prefixes'), 24);
   assert.equal(count('constellations'), 88);
   assert.equal(count('presidents'), 40);
+  assert.equal(count('asian-capitals'), 50);
+  assert.equal(count('nfl-teams'), 32);
+  assert.equal(count('nba-teams'), 30);
+  assert.equal(count('tarot'), 78);
 });
 
 test('the bank reports its size', () => {
   const answers = PROMPTS.reduce((n, p) => n + cardFor(p.id).answers.length, 0);
-  assert.ok(answers > 3000, `${answers} answers`);
+  assert.ok(answers > 14000, `${answers} answers`);
 });

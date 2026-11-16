@@ -75,6 +75,7 @@ Each tier needs at least three answers. Optional fields: `strip` (filler words t
 - A course's name gives its country: a "Links" or "Dunes" is a links, a "Heath" or "Moor" is heathland, "Hills" and "Pines" are mountain courses, a "Mesa" is desert, a "Bay" or "Cove" is a tropical coast, a "Garden" is in blossom, a "Fell" is under snow, and the rest are parkland.
 - One hole on every course (sometimes two) is modelled on a famous real hole, such as the island green at TPC Sawgrass or the Road Hole at St Andrews. The hole card says which. Hazards sit where the originals' do, but yardages are scaled to fit the game's clubs. The list is `CLASSICS` in `src/course.js`.
 
+- The bank holds 121 categories and about 15,000 answers, spread over eight files in `src/bank/`. A round draws 42 of them. Adding or removing a category changes which categories a seed deals, so a future daily or an old unlimited code gets a new set of categories (its holes stay the same). A round already in progress keeps the categories it was dealt.
 - The rarity tiers are editorial: each card was sorted by hand. They are not measured from player data.
 - There is no multiplayer and no account system. Comparing scores works by sharing the copied scorecard or an unlimited round's code.
 - Daily No. 1 is 13 November 2026 (`EPOCH` in `src/daily.js`).
