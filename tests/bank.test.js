@@ -48,7 +48,7 @@ test('no spelling is blank, and none carries stray characters', () => {
   for (const p of PROMPTS) {
     for (const s of spellings(p)) {
       assert.ok(s.name.length > 0, `${p.id}: blank spelling near "${s.primary}"`);
-      assert.ok(!/[\n\t;]/.test(s.name), `${p.id}: stray character in "${s.name}"`);
+      assert.ok(!/[\n\t;?"()]/.test(s.name), `${p.id}: stray character in "${s.name}"`);
     }
   }
 });

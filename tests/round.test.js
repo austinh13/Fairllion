@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
-import { PARS, centerX, describeHazards, generateCourse } from '../src/course.js';
+import { CLASSICS, PARS, centerX, describeHazards, generateCourse } from '../src/course.js';
+import { SETTINGS } from '../src/setting.js';
 import { EPOCH, cleanCode, dailyNumber, dailySeed, dateKey, daysBetween, msToMidnight, randomCode, shiftKey } from '../src/daily.js';
 import { PROMPTS, cardFor } from '../src/prompts.js';
 import { makeRng } from '../src/rng.js';
@@ -43,6 +44,25 @@ test('every generated hole is playable', () => {
       assert.equal(describeHazards(h).length, h.hazards.length + 1);
     });
   }
+});
+
+test('every course has a hole modelled on a real one, and says so', () => {
+  const seen = new Set();
+  for (let i = 0; i < 300; i++) {
+    const course = generateCourse(`classic-${i}`);
+    const classics = course.holes.filter((h) => h.after);
+    assert.ok(classics.length >= 1 && classics.length <= 2);
+    for (const h of classics) {
+      const model = CLASSICS.find((c) => c.name === h.name);
+      assert.ok(model, h.name);
+      assert.equal(h.after, model.after);
+      assert.equal(h.par, model.par);
+      assert.equal(h.length, model.length);
+      seen.add(h.name);
+    }
+    for (const h of course.holes) assert.ok(SETTINGS[h.setting], h.setting);
+  }
+  assert.equal(seen.size, CLASSICS.length, 'every classic turns up');
 });
 
 test('prompts are dealt per hole and never repeat in a round', () => {

@@ -1,0 +1,141 @@
+// Answer cards: animals, plants, weather, rocks and the body.
+
+export default [
+  {
+    id: 'birds',
+    q: 'Name a bird',
+    tiers: [
+      'Eagle, Owl, Robin, Penguin, Parrot, Pigeon',
+      'Duck, Swan, Seagull|Gull, Crow, Chicken|Hen|Rooster|Cockerel, Flamingo, Hawk, Sparrow, Hummingbird, Peacock|Peafowl|Peahen, Ostrich, Falcon, Turkey, Goose|Geese, Woodpecker, Toucan, Pelican, Vulture, Dove',
+      'Blue jay|Bluejay, Cardinal, Magpie, Blackbird, Starling, Kingfisher, Heron, Stork, Crane, Emu, Kiwi, Raven, Wren, Finch, Canary, Budgie|Budgerigar|Parakeet, Cockatoo, Macaw, Albatross, Puffin, Pheasant, Quail, Kookaburra, Condor, Kestrel, Osprey, Buzzard, Swallow, Swift, Lark|Skylark, Nightingale, Thrush, Mockingbird, Cuckoo, Dodo, Loon|Great northern diver, Partridge, Grouse, Tit|Blue tit|Great tit, Cormorant, Ibis, Egret, Sandpiper, Lovebird, Cockatiel, Jay, Mallard, Roadrunner',
+      'Chickadee, Goldfinch, Bullfinch, Chaffinch, Greenfinch, Nuthatch, Treecreeper, Wagtail, Warbler, Oriole, Tanager, Grackle, Meadowlark, Whip-poor-will|Whippoorwill, Nightjar, Plover, Lapwing|Peewit, Curlew, Snipe, Woodcock, Avocet, Oystercatcher, Tern, Gannet, Booby|Blue-footed booby, Frigatebird, Petrel, Shearwater, Guillemot|Murre, Razorbill, Auk, Merganser, Teal, Wigeon|Widgeon, Eider, Grebe, Coot, Moorhen, Bittern, Spoonbill, Hornbill, Lyrebird, Bird of paradise, Cassowary, Rhea, Lorikeet, Rosella, Galah, Kea, Kakapo, Shrike, Kite, Harrier, Goshawk, Sparrowhawk, Merlin, Peregrine|Peregrine falcon, Secretary bird, Hoopoe, Bee-eater, Myna|Mynah, Dipper, Waxwing, Jackdaw, Rook, Mourning dove, Flycatcher, Weaver|Weaverbird, Bald eagle, Golden eagle, Snowy owl, Barn owl, Kittiwake, Fulmar, Ptarmigan, Capercaillie',
+      'Hoatzin, Shoebill, Potoo, Frogmouth, Oilbird, Takahe, Weka, Huia, Tui, Pukeko, Kokako, Quetzal|Resplendent quetzal, Trogon, Motmot, Jacamar, Puffbird, Barbet, Tinamou, Seriema, Sunbittern, Kagu, Mesite, Turaco, Mousebird, Hamerkop|Hammerkop, Jabiru, Marabou|Marabou stork, Limpkin, Trumpeter, Screamer, Jacana, Pratincole, Courser, Sheathbill, Skua|Jaeger, Phalarope, Turnstone, Dunlin, Godwit, Whimbrel, Stilt, Dotterel, Bustard, Sandgrouse, Malleefowl|Megapode, Wryneck, Firecrest, Goldcrest, Chiffchaff, Linnet, Twite, Siskin, Redpoll, Crossbill, Brambling, Yellowhammer, Bunting, Dunnock|Hedge sparrow, Fieldfare, Redwing, Stonechat, Whinchat, Wheatear, Redstart, Pipit, Accentor, Babbler, Bowerbird, Fairywren|Fairy wren, Pardalote, Honeyeater, Sunbird, White-eye, Tailorbird, Pitta, Broadbill, Manakin, Cotinga, Bellbird, Antbird, Ovenbird, Woodcreeper, Bulbul, Go-away-bird, Drongo, Oxpecker, Hornero, Roller',
+    ],
+  },
+  {
+    id: 'fish',
+    q: 'Name a fish',
+    tiers: [
+      'Salmon, Tuna, Goldfish, Shark, Cod',
+      'Trout, Clownfish, Catfish, Swordfish, Bass, Sardine, Carp, Mackerel, Piranha, Eel, Pufferfish|Puffer fish|Puffer|Blowfish|Fugu, Haddock, Anchovy, Herring, Seahorse|Sea horse, Stingray',
+      'Pike, Barracuda, Marlin, Halibut, Plaice, Sole|Dover sole, Flounder, Snapper|Red snapper, Grouper, Perch, Tilapia, Koi, Guppy, Angelfish, Betta|Siamese fighting fish|Fighting fish, Manta ray|Manta, Hammerhead|Hammerhead shark, Great white|Great white shark, Whale shark, Sturgeon, Minnow, Sunfish|Ocean sunfish|Mola, Lionfish, Pollock|Pollack|Alaska pollock, Monkfish|Anglerfish, Mahi-mahi|Dolphinfish|Dorado, Bream|Sea bream, Mullet|Red mullet, Turbot, Skate, Neon tetra|Tetra, Barramundi, Walleye, Goby, Wrasse, Parrotfish, Flying fish, Electric eel, Sea bass, Tiger shark, Bull shark',
+      'Coelacanth, Lamprey, Hagfish, Arapaima|Pirarucu, Gar|Longnose gar, Bowfin, Paddlefish, Lungfish, Mudskipper, Archerfish, Blobfish, Oarfish, Viperfish, Remora|Suckerfish, Pilot fish, Triggerfish, Boxfish|Cowfish, Porcupinefish, Butterflyfish, Surgeonfish|Tang|Blue tang, Damselfish, Moray|Moray eel, Conger|Conger eel, Wolffish|Wolf eel, Stonefish, Scorpionfish, Frogfish, Sea dragon|Leafy sea dragon|Weedy sea dragon, Pipefish, Tarpon, Bonefish, Sailfish, Amberjack, Yellowtail, Kingfish, Bluefish, Pompano, Trevally|Jack, Hake, Ling, Whiting, Coley|Saithe, John Dory|Dory, Gurnard, Rockfish, Char|Arctic char, Grayling, Whitefish, Smelt, Capelin, Sprat, Pilchard, Shad, Roach, Tench, Chub, Zander, Muskellunge|Musky|Muskie, Crappie, Bluegill, Loach, Zebrafish|Danio, Gourami, Discus, Oscar, Cichlid, Arowana, Pleco|Plecostomus, Molly, Platy, Swordtail, Snakehead, Sawfish, Mako|Mako shark, Basking shark',
+      'Bleak, Ide|Orfe, Gudgeon, Ruffe, Burbot, Sterlet, Beluga sturgeon|Beluga, Huchen, Taimen, Wels catfish|Wels, Candiru, Tigerfish|Goliath tigerfish, Payara|Vampire fish, Pacu, Tambaqui, Peacock bass, Stargazer, Weever, Dragonet, Blenny, Clingfish, Lumpsucker|Lumpfish, Toadfish, Midshipman, Batfish, Handfish, Sargassum fish, Opah|Moonfish, Snipe eel, Barreleye, Fangtooth, Bristlemouth, Loosejaw|Stoplight loosejaw, Tripod fish, Goblin shark, Frilled shark, Megamouth|Megamouth shark, Wobbegong, Guitarfish, Chimaera|Ratfish, Bichir, Gulper eel|Pelican eel, Hatchetfish, Lanternfish, Grenadier|Rattail, Filefish, Cardinalfish, Squirrelfish, Snook, Cobia, Tilefish, Sablefish|Black cod, Lingcod, Pumpkinseed, Sculpin, Rasbora, Killifish, Corydoras, Rudd, Dace, Barbel, Greenland shark, Cookiecutter shark, Dogfish, Ocean pout, Icefish, Toothfish|Patagonian toothfish, Orange roughy, Hoki, Tautog, Scup',
+    ],
+  },
+  {
+    id: 'insects',
+    q: 'Name an insect',
+    tiers: [
+      'Ant, Bee|Honeybee|Honey bee, Butterfly, Fly|Housefly|House fly, Mosquito',
+      'Beetle, Ladybird|Ladybug|Lady beetle, Wasp, Grasshopper, Cockroach|Roach, Dragonfly, Moth, Cricket, Caterpillar, Bumblebee|Bumble bee, Flea, Termite, Firefly|Lightning bug, Praying mantis|Mantis, Hornet, Locust, Louse|Lice, Gnat',
+      'Stick insect|Walking stick|Stick bug, Earwig, Aphid|Greenfly, Weevil, Cicada, Midge, Silverfish, Damselfly, Horsefly, Fruit fly|Drosophila, Monarch|Monarch butterfly, Stag beetle, Dung beetle|Scarab, Mayfly, Leaf insect, Bedbug|Bed bug, Tsetse fly|Tsetse, Lacewing, Hoverfly, Crane fly|Daddy longlegs, Katydid|Bush cricket, Mealworm, Water boatman, Pond skater|Water strider, Bluebottle|Blowfly, Cabbage white, Swallowtail, Red admiral, Painted lady, Hercules beetle, Goliath beetle, Rhinoceros beetle, Atlas moth, Luna moth, Silkworm|Silk moth, Botfly, Stink bug|Shield bug, Yellowjacket|Yellow jacket, Fire ant, Glow-worm|Glowworm, June bug|June beetle',
+      'Leafhopper, Treehopper, Froghopper|Spittlebug, Planthopper, Scale insect, Mealybug, Whitefly, Caddisfly, Stonefly, Dobsonfly, Alderfly, Antlion, Assassin bug, Sawfly, Thrips, Rove beetle, Click beetle, Tiger beetle, Ground beetle, Longhorn beetle, Jewel beetle, Bombardier beetle, Blister beetle, Darkling beetle, Whirligig beetle, Diving beetle, Burying beetle|Carrion beetle, Cockchafer|Maybug, Japanese beetle, Colorado beetle|Colorado potato beetle, Boll weevil, Deathwatch beetle, Woodworm|Furniture beetle, Hawk moth|Sphinx moth, Tiger moth, Emperor moth, Clothes moth, Gypsy moth|Spongy moth, Peppered moth, Morpho|Blue morpho, Birdwing, Fritillary, Skipper, Brimstone, Orange tip, Ichneumon|Ichneumon wasp, Tarantula hawk, Paper wasp, Mud dauber, Gall wasp, Carpenter bee, Leafcutter bee, Mason bee, Army ant, Leafcutter ant, Bullet ant, Carpenter ant, Mole cricket, Weta, Robber fly, Sandfly|Sand fly, Blackfly|Black fly, Velvet ant',
+      'Snakefly, Owlfly, Scorpionfly, Bristletail, Firebrat, Booklouse|Barklouse, Webspinner, Psyllid, Codling moth, Hummingbird hawk-moth, Hairstreak, Comma, Peacock butterfly, Grayling butterfly, Ringlet, Gatekeeper, Meadow brown, Speckled wood, Purple emperor, Camberwell beauty|Mourning cloak, Cuckoo wasp, Fig wasp, Sweat bee, Stingless bee, Weaver ant, Honeypot ant, Cave cricket|Camel cricket, Jerusalem cricket, Bee fly, Deer fly, Warble fly, Scuttle fly, Stalk-eyed fly, Cluster fly, Lantern bug|Lanternfly, Spotted lanternfly, Wheel bug, Water scorpion, Backswimmer, Giant water bug|Toe-biter, Thornbug, Cochineal, Lac insect, Rhinoceros cockroach, Hissing cockroach|Madagascar hissing cockroach, Orchid mantis, Ghost mantis, Devil\'s flower mantis, Titan beetle, Violin beetle, Giraffe weevil, Tortoise beetle, Soldier beetle, Sexton beetle, Oil beetle, Cardinal beetle, Bloody-nosed beetle, Hornet moth, Lobster moth, Puss moth, Burnet moth, Bogong moth',
+    ],
+  },
+  {
+    id: 'reptiles',
+    q: 'Name a reptile or amphibian',
+    tiers: [
+      'Snake, Frog, Turtle, Crocodile, Lizard',
+      'Alligator, Tortoise, Toad, Chameleon, Iguana, Gecko, Python, Cobra, Rattlesnake, Komodo dragon, Salamander, Newt, Boa|Boa constrictor, Anaconda, Viper',
+      'Axolotl, Gila monster, Monitor lizard|Monitor, Bearded dragon, Black mamba|Mamba, Adder, Garter snake, King cobra, Corn snake, Sea turtle, Leatherback, Loggerhead, Snapping turtle, Terrapin, Gharial|Gavial, Caiman|Cayman, Skink, Tree frog, Poison dart frog|Poison frog|Dart frog, Bullfrog, Cane toad, Horned lizard|Horned toad, Copperhead, Cottonmouth|Water moccasin, Coral snake, Asp, Boomslang, Taipan, Sidewinder, Tuatara, Frilled lizard|Frill-necked lizard, Giant tortoise|Galápagos tortoise, Thorny devil, Basilisk|Jesus lizard, Mudpuppy, Hellbender, Olm, Caecilian, Slow worm|Slowworm',
+      'Anole, Agama, Uromastyx, Tegu, Chuckwalla, Flying dragon|Draco, Leopard gecko, Tokay|Tokay gecko, Crested gecko, Day gecko, Blue-tongued skink|Bluetongue, Shingleback, Glass lizard, Worm lizard|Amphisbaenian, Marine iguana, Gopher tortoise, Box turtle, Mud turtle, Musk turtle, Softshell turtle, Mata mata|Matamata, Alligator snapping turtle, Painted turtle, Red-eared slider|Slider, Hawksbill, Green turtle|Green sea turtle, Ridley|Olive ridley|Kemp\'s ridley, Saltwater crocodile|Saltie, Nile crocodile, Kingsnake|King snake, Milk snake, Rat snake, Hognose|Hognose snake, Bushmaster, Fer-de-lance, Gaboon viper, Puff adder, Krait, Saw-scaled viper, Death adder, Tiger snake, Brown snake|Eastern brown snake, Sea snake, Vine snake, Reticulated python, Ball python|Royal python, Burmese python, Green tree python, Grass snake, Smooth snake, Wood frog, Leopard frog, Goliath frog, Fire salamander, Tiger salamander, Natterjack, Glass frog, Horned frog|Pacman frog, Great crested newt',
+      'Pig-nosed turtle|Fly River turtle, Mary River turtle, Bog turtle, Flatback, Arrau, Mugger|Mugger crocodile, False gharial|Tomistoma, Dwarf crocodile, Mangrove snake, Twig snake, Flying snake|Paradise tree snake, Wolf snake, Kukri snake, Sunbeam snake, Pipe snake, Shieldtail, File snake|Wart snake, Thread snake, Blind snake, Rubber boa, Rosy boa, Sand boa, Emerald tree boa, Night lizard, Alligator lizard, Whiptail, Fence lizard, Collared lizard, Leopard lizard, Girdled lizard|Armadillo lizard|Zonure, Plated lizard, Wall lizard, Sand lizard, Crocodile lizard, Knob-tailed gecko, Leaf-tailed gecko, Flying gecko, Gargoyle gecko, Mossy frog, Hairy frog, Purple frog, Darwin\'s frog, Gastric-brooding frog, Coqui, Reed frog, Rain frog, Tomato frog, Spadefoot|Spadefoot toad, Midwife toad, Surinam toad|Pipa, Clawed frog|Xenopus, Fire-bellied toad, Siren, Amphiuma, Ensatina, Giant salamander|Chinese giant salamander|Japanese giant salamander, Smooth newt, Palmate newt, Eft, Waterdog',
+    ],
+  },
+  {
+    id: 'horse-breeds',
+    q: 'Name a breed of horse or pony',
+    strip: ['horse', 'pony'],
+    tiers: [
+      'Arabian|Arab, Thoroughbred, Shetland, Clydesdale, Mustang',
+      'Quarter horse|American Quarter Horse, Appaloosa, Shire, Paint|American Paint Horse, Palomino, Friesian, Lipizzaner|Lipizzan, Morgan, Andalusian, Percheron, Welsh pony|Welsh, Belgian|Belgian draft|Brabant, Pinto',
+      'Tennessee Walking Horse|Tennessee Walker|Walking horse, Standardbred, Connemara, Exmoor, Dartmoor, New Forest, Highland, Icelandic, Haflinger, Hanoverian, Trakehner, Akhal-Teke, Lusitano, Paso Fino, Falabella, Miniature horse|Miniature, Gypsy Vanner|Gypsy cob|Irish cob|Vanner|Tinker, Suffolk Punch|Suffolk, Cleveland Bay, Hackney, Welsh cob, Fjord|Norwegian Fjord, Przewalski\'s horse|Przewalski|Takhi, Brumby, Camargue, Dutch Warmblood|KWPN, Holsteiner, Oldenburg, Saddlebred|American Saddlebred, Irish Draught|Irish Draft, Missouri Fox Trotter|Fox Trotter, Chincoteague|Assateague',
+      'Fell, Dales, Eriskay, Kerry Bog, Rocky Mountain Horse, Criollo, Mangalarga Marchador, Marwari, Kathiawari, Barb|Barbary, Kladruber, Knabstrupper, Noriker, Shagya, Ardennes|Ardennais, Boulonnais, Breton, Comtois, Poitevin|Mulassier, Selle Français, Peruvian Paso|Peruvian horse, Mongolian horse|Mongolian, Orlov Trotter|Orlov, Don, Budyonny|Budenny, Kabardin, Karabakh, Yakut, Bashkir Curly|Curly|American Bashkir Curly, Caspian, Turkoman, Hucul, Konik, Sorraia, Kiger|Kiger mustang, Nokota, Florida Cracker, Marsh Tacky, Sable Island, Banker horse|Banker',
+      'Garrano, Pottok, Asturcón, Losino, Skyros, Pindos, Bosnian mountain horse|Bosnian, Galiceño, Gotland|Gotland pony, Nordland|Lyngshest, Døle|Dole, Faroese, Yonaguni, Misaki, Kiso, Hokkaido|Dosanko, Jeju, Batak, Sumba, Sandalwood, Timor, Basotho|Basuto, Boer, Nooitgedacht, Dongola, Karabair, Lokai, Tersk, Vyatka, Mezen, Pechora, Altai, Bhutia, Spiti, Zanskari, Manipuri, Datong, Guoxia, Hequ, Lijiang, Tibetan, Riwoche, Murgese, Maremmano, Salernitano, Bardigiano, Esperia, Giara, Ventasso, Tolfetano, Pentro',
+    ],
+  },
+  {
+    id: 'cat-breeds',
+    q: 'Name a breed of cat',
+    strip: ['cat'],
+    tiers: [
+      'Siamese, Persian, Maine Coon, Sphynx|Sphinx, Bengal',
+      'Ragdoll, British Shorthair, Scottish Fold, Russian Blue, Abyssinian, Burmese, Himalayan, Siberian, Norwegian Forest|Wegie, Birman, Manx, American Shorthair, Exotic Shorthair|Exotic',
+      'Devon Rex, Cornish Rex, Selkirk Rex, Savannah, Oriental|Oriental Shorthair, Tonkinese, Turkish Angora|Angora, Turkish Van, Egyptian Mau, Bombay, Balinese, Somali, Ocicat, Chartreux, Havana Brown|Havana, Korat, Japanese Bobtail, American Bobtail, Munchkin, Ragamuffin, Singapura, Snowshoe, Toyger, LaPerm, American Curl',
+      'Burmilla, Pixie-bob, Nebelung, Peterbald, Donskoy|Don Sphynx, Khao Manee, Lykoi, Chausie, Cymric, Javanese, Colorpoint Shorthair, Highlander, Kurilian Bobtail, Sokoke, Australian Mist, Minuet|Napoleon, Bambino, Serengeti, Ojos Azules, Mekong Bobtail, Thai, Chantilly-Tiffany|Chantilly|Tiffany, European Shorthair|Celtic Shorthair, German Rex, Ukrainian Levkoy|Levkoy, Neva Masquerade',
+      'Arabian Mau, Aegean, Cyprus, Brazilian Shorthair, Ural Rex, Tennessee Rex, Skookum, Lambkin, Dwelf, Elf, York Chocolate, Raas, Sam Sawet, Suphalak, Kanaani, Foldex, Toybob, Dragon Li|Li Hua, Tiffanie|Asian Semi-longhair, Bohemian Rex, Oriental Longhair, Mandalay, Karelian Bobtail, Kinkalow, Genetta, Cheetoh',
+    ],
+  },
+  {
+    id: 'mushrooms',
+    q: 'Name a mushroom or other fungus',
+    strip: ['mushroom', 'mushrooms', 'fungus'],
+    tiers: [
+      'Button|White button, Portobello|Portabella|Portabello, Shiitake, Truffle',
+      'Chanterelle|Girolle, Oyster, Porcini|Cep|Penny bun|King bolete, Morel, Enoki|Enokitake, Chestnut|Cremini|Crimini|Baby bella, Toadstool, Fly agaric|Amanita muscaria, Yeast, Mould|Mold, Puffball, Death cap',
+      'Maitake|Hen of the woods, Lion\'s mane|Lions mane, Chicken of the woods|Sulphur shelf, Reishi|Lingzhi, Chaga, Cordyceps, Black truffle|Périgord truffle, White truffle|Alba truffle, Destroying angel, Shaggy ink cap|Shaggy mane|Lawyer\'s wig, Ink cap|Inky cap, Honey fungus|Honey mushroom, Bracket fungus|Shelf fungus|Bracket, Wood ear|Jelly ear|Cloud ear, Turkey tail, Fairy ring champignon|Fairy ring, Field mushroom|Meadow mushroom, Horse mushroom, Parasol, Blewit|Wood blewit, Magic mushroom|Psilocybe|Liberty cap, Stinkhorn, Earthstar, Bolete, Slippery jack, Matsutake, Nameko, Shimeji|Beech mushroom, King oyster|King trumpet|Eryngii, Black trumpet|Horn of plenty|Trumpet of death, Hedgehog|Pied de mouton, Lobster, Penicillium, Mildew|Powdery mildew, Rust, Smut, Ergot, Corn smut|Huitlacoche, Aspergillus, Koji',
+      'Beefsteak fungus|Ox tongue, Dryad\'s saddle|Pheasant back, Witches\' butter|Witch\'s butter, Scarlet elf cup|Elf cup, Orange peel fungus|Orange peel, Bird\'s nest fungus|Bird\'s nest, Dead man\'s fingers, King Alfred\'s cakes|Cramp balls, Candlesnuff, Coral fungus, Cauliflower fungus, Earthball, Earth tongue|Earthtongue, Amethyst deceiver, Deceiver, Panther cap, Blusher, False morel, Deadly webcap|Webcap, Funeral bell, Sickener, Russula|Brittlegill, Milkcap|Lactarius, Saffron milkcap, Charcoal burner, Porcelain fungus, Velvet shank, Jack-o\'-lantern|Jack o lantern, Sulphur tuft, Caesar\'s mushroom|Amanita caesarea, St George\'s mushroom, Tinder fungus|Hoof fungus|Amadou, Birch polypore|Razor strop, Artist\'s conk|Artist\'s bracket, Zombie fungus|Ophiocordyceps, Summer truffle|Burgundy truffle, Snow fungus|Tremella|Silver ear, Veiled lady|Bamboo fungus',
+      'Agarikon, Chytrid, Pig\'s ear, Bleeding tooth, Indigo milk cap, Ghost fungus, Devil\'s fingers|Octopus stinkhorn, Latticed stinkhorn|Basket stinkhorn, Barometer earthstar, Weeping widow, Verdigris agaric, Scarlet waxcap|Waxcap, Parrot waxcap, Shaggy parasol, Fairy inkcap, Glistening inkcap, Magpie inkcap, Collared earthstar, Jelly tooth, Yellow brain, Black bulgar, Hairy curtain crust, Lumpy bracket, Blushing bracket, Dyer\'s mazegill, Oak mazegill, Giant polypore, Cinnabar polypore, Coral tooth, Candy cap, Desert truffle, Pecan truffle, Oregon truffle, Bianchetto truffle|Bianchetto, Mycena|Bonnet, Hare\'s ear, Lemon disco, Green elf cup, Earpick fungus',
+    ],
+  },
+  {
+    id: 'clouds',
+    q: 'Name a type of cloud',
+    strip: ['cloud', 'clouds'],
+    tiers: [
+      'Cumulus, Cirrus, Stratus, Nimbus',
+      'Cumulonimbus|Thundercloud|Thunderhead, Nimbostratus|Rain cloud, Altostratus, Altocumulus, Stratocumulus, Cirrostratus, Cirrocumulus, Fog, Contrail|Vapour trail|Vapor trail',
+      'Mammatus|Mamma, Lenticular|Lenticularis|UFO cloud, Noctilucent, Shelf cloud|Arcus, Wall cloud|Murus, Roll cloud|Volutus, Funnel, Anvil|Incus, Mackerel sky, Pileus|Scarf cloud, Nacreous|Mother-of-pearl|Polar stratospheric, Pyrocumulus|Fire cloud, Kelvin-Helmholtz|Fluctus|Billow cloud, Asperitas|Asperatus|Undulatus asperatus, Virga, Fallstreak hole|Hole punch cloud|Cavum, Morning Glory, Banner cloud, Mushroom cloud, Mist',
+      'Cap cloud, Orographic, Castellanus|Castellatus, Floccus, Fractus|Scud, Undulatus, Radiatus, Velum, Pannus, Tuba, Congestus|Towering cumulus, Humilis|Fair-weather cumulus, Mediocris, Fibratus, Uncinus|Mares\' tails|Mare\'s tails, Spissatus, Cauda|Tail cloud, Pyrocumulonimbus|Flammagenitus, Sea fog|Haar|Sea fret, Radiation fog|Valley fog, Advection fog, Steam fog|Sea smoke, Ice fog|Freezing fog, Glory, Iridescent cloud',
+      'Calvus, Capillatus, Nebulosus, Opacus, Translucidus, Perlucidus, Duplicatus, Intortus, Vertebratus, Lacunosus, Praecipitatio, Homogenitus, Silvagenitus, Cataractagenitus, Cumulogenitus, Mutatus, Pogonip, Upslope fog',
+    ],
+  },
+  {
+    id: 'rocks',
+    q: 'Name a rock or mineral',
+    tiers: [
+      'Granite, Marble, Quartz, Limestone, Diamond',
+      'Sandstone, Slate, Basalt, Obsidian, Chalk, Coal, Salt|Halite|Rock salt, Pumice, Clay, Flint, Talc, Mica, Shale, Graphite, Gypsum, Jade, Amethyst',
+      'Feldspar, Gneiss, Schist, Quartzite, Conglomerate, Breccia, Mudstone, Siltstone, Dolomite, Travertine, Tuff, Andesite, Rhyolite, Gabbro, Diorite, Pyrite|Fool\'s gold|Iron pyrite, Calcite, Fluorite|Fluorspar, Magnetite|Lodestone, Hematite|Haematite, Malachite, Azurite, Turquoise, Lapis lazuli|Lapis, Agate, Jasper, Onyx, Garnet, Olivine|Peridot, Topaz, Corundum, Asbestos, Borax, Serpentine, Soapstone|Steatite, Alabaster, Galena, Bauxite, Cinnabar, Kaolinite|Kaolin|China clay, Chert, Anthracite, Lignite, Scoria, Tourmaline, Beryl, Zircon, Opal, Moonstone, Hornblende',
+      'Augite, Pyroxene, Amphibole, Biotite, Muscovite, Orthoclase, Plagioclase, Labradorite, Albite, Microcline, Nepheline, Kyanite, Sillimanite, Andalusite, Staurolite, Chlorite, Epidote, Actinolite, Tremolite, Wollastonite, Rhodochrosite, Rhodonite, Sphalerite|Zincblende, Chalcopyrite, Bornite, Cuprite, Arsenopyrite, Stibnite, Molybdenite, Cassiterite, Wolframite, Scheelite, Chromite, Ilmenite, Rutile, Goethite, Limonite, Siderite, Magnesite, Aragonite, Barite|Baryte, Celestine|Celestite, Anhydrite, Apatite, Uraninite|Pitchblende, Spodumene, Lepidolite, Zeolite, Vermiculite, Bentonite|Montmorillonite, Greywacke|Graywacke, Arkose, Marl, Hornfels, Phyllite, Eclogite, Peridotite, Kimberlite, Pegmatite, Syenite, Granodiorite, Dacite, Trachyte, Dolerite|Diabase, Ignimbrite, Perlite, Oolite, Ironstone',
+      'Coquina, Tillite, Granulite, Amphibolite, Migmatite, Mylonite, Skarn, Greenschist, Blueschist, Dunite, Komatiite, Lamproite, Aplite, Monzonite, Tonalite, Phonolite, Tachylite, Pitchstone, Evaporite, Banded iron formation, Novaculite, Larvikite, Charnockite, Anorthosite, Carbonatite, Leucite, Petalite, Monazite, Carnotite, Sylvite, Cryolite, Illite, Glauconite, Anatase, Chalcocite, Covellite, Realgar, Orpiment, Vanadinite, Wulfenite, Crocoite, Dioptase, Chrysocolla, Smithsonite, Hemimorphite, Cerussite, Anglesite, Pyromorphite, Autunite, Torbernite, Benitoite, Painite, Taaffeite, Grandidierite, Jeremejevite, Musgravite, Poudretteite, Bixbite|Red beryl, Tektite|Moldavite, Fulgurite',
+    ],
+  },
+  {
+    id: 'winds',
+    q: 'Name a wind that has its own name',
+    strip: ['wind', 'winds'],
+    tiers: [
+      'Monsoon, Trade winds|Trades, Mistral, Sirocco|Scirocco, Chinook',
+      'Föhn|Foehn, Santa Ana|Santa Anas, Jet stream, Harmattan, Bora|Bura, Westerlies|Prevailing westerlies, Roaring Forties, Haboob, Zephyr|Zephyrus, Nor\'easter|Northeaster',
+      'Simoom|Simoon|Samiel, Khamsin|Khamaseen|Hamsin, Levanter|Levante, Tramontane|Tramontana, Meltemi|Etesians|Etesian, Libeccio, Ostro, Gregale|Grecale|Euroclydon, Furious Fifties, Screaming Sixties, Polar easterlies|Easterlies, Diablo, Sundowner, Squamish, Williwaw, Pampero, Zonda, Southerly buster, Brickfielder, Fremantle Doctor, Cape Doctor, Shamal, Bise, Ghibli|Gibli, Kona, Norther|Blue norther|Texas norther, Alberta clipper|Clipper, Loo, Buran, Jugo',
+      'Berg, Halny, Košava|Kosava, Vardarac|Vardar, Karaburan|Black buran, Purga, Sarma, Helm, Marin, Autan, Leveche|Lebeche, Solano, Cierzo, Poniente, Tehuantepecer|Tehuano, Papagayo, Norte, Elephanta, Habagat, Amihan, Nor\'wester, Calima, Sukhovey, Afghanets|Afganets, Joran, Vendaval, Wreckhouse, Suête|Suêtes|Les Suêtes, Bohorok, Sharav, Barber',
+      'Arifi|Irifi, Chili, Leste, Pontias, Breva, Tivano, Ora, Embat, Garbino|Garbí, Gharbi, Nashi, Sharqi|Shargi|Sharki, Datoo, Brisote, Coromuel, Chubasco, Collada, Bayamo, Virazón, Puelche, Surazo, Friagem, Gending, Kumbang|Koembang, Knik, Taku, Mono, Washoe zephyr, Wasatch, Austru, Crivăț|Crivetz, Karif, Belat',
+    ],
+  },
+  {
+    id: 'organs',
+    q: 'Name an organ or gland of the human body',
+    tiers: [
+      'Heart, Brain, Lungs|Lung, Liver, Kidney|Kidneys, Skin',
+      'Stomach, Intestine|Intestines|Bowel|Gut, Pancreas, Spleen, Bladder|Urinary bladder, Eye|Eyes, Gallbladder|Gall bladder, Small intestine, Large intestine|Colon, Appendix, Tongue, Thyroid|Thyroid gland, Ear|Ears',
+      'Oesophagus|Esophagus|Gullet|Food pipe, Larynx|Voice box, Trachea|Windpipe, Uterus|Womb, Ovary|Ovaries, Testis|Testicle|Testicles|Testes, Prostate|Prostate gland, Adrenal gland|Adrenal glands|Adrenals, Pituitary|Pituitary gland|Hypophysis, Thymus, Tonsils|Tonsil, Spinal cord, Rectum, Duodenum, Nose, Placenta, Pharynx|Throat, Diaphragm, Hypothalamus, Pineal gland|Pineal, Lymph node|Lymph nodes|Lymph gland, Bone marrow|Marrow, Cerebellum, Penis, Vagina, Cervix, Breast|Mammary gland, Salivary gland|Salivary glands, Parathyroid|Parathyroid glands, Ureter, Urethra',
+      'Jejunum, Ileum, Caecum|Cecum, Sigmoid colon, Medulla oblongata|Medulla, Pons, Hippocampus, Amygdala, Thalamus, Cerebrum, Cerebral cortex|Cortex, Corpus callosum, Brainstem|Brain stem, Retina, Cornea, Iris, Lens, Cochlea, Eardrum|Tympanic membrane, Epiglottis, Fallopian tube|Fallopian tubes|Oviduct, Epididymis, Vas deferens, Seminal vesicle, Clitoris, Scrotum, Mesentery, Peritoneum, Pleura, Pericardium, Omentum, Bile duct, Islets of Langerhans, Interstitium, Sinus|Sinuses, Adenoids|Adenoid, Uvula, Gums|Gum',
+      'Sublingual gland, Parotid gland|Parotid, Submandibular gland, Bulbourethral gland|Cowper\'s gland, Bartholin\'s gland, Skene\'s gland, Lacrimal gland|Tear gland, Meibomian gland, Vomeronasal organ|Jacobson\'s organ, Organ of Corti, Semicircular canals|Semicircular canal, Ampulla of Vater, Sphincter of Oddi, Pylorus, Choroid plexus, Area postrema, Juxtaglomerular apparatus, Nephron, Glomerulus, Loop of Henle, Carotid body, Aortic body, Organ of Zuckerkandl, Peyer\'s patches, Claustrum, Substantia nigra, Basal ganglia, Fornix, Mammillary bodies|Mammillary body, Locus coeruleus, Insula, Cingulate cortex|Cingulate gyrus, Hymen, Prepuce|Foreskin, Thyroid isthmus, Sweat gland|Sweat glands, Sebaceous gland|Sebaceous glands',
+    ],
+  },
+  {
+    id: 'phobias',
+    q: 'Name a phobia',
+    tiers: [
+      'Arachnophobia|Fear of spiders, Claustrophobia, Acrophobia|Fear of heights, Agoraphobia',
+      'Xenophobia, Hydrophobia|Aquaphobia, Trypophobia, Nyctophobia|Fear of the dark, Coulrophobia|Fear of clowns, Ophidiophobia|Fear of snakes, Aerophobia|Aviophobia|Fear of flying, Glossophobia|Fear of public speaking, Hemophobia|Haemophobia|Fear of blood, Thanatophobia|Fear of death, Technophobia, Triskaidekaphobia, Hippopotomonstrosesquippedaliophobia, Trypanophobia|Fear of needles, Emetophobia, Cynophobia|Fear of dogs, Germophobia|Germaphobia|Mysophobia, Social phobia',
+      'Ailurophobia|Felinophobia|Fear of cats, Entomophobia|Insectophobia, Apiphobia|Melissophobia, Astraphobia|Brontophobia|Fear of thunder, Atychophobia|Fear of failure, Autophobia|Monophobia, Chronophobia, Dentophobia|Odontophobia, Gephyrophobia, Herpetophobia, Iatrophobia, Nomophobia, Pyrophobia, Thalassophobia, Ergophobia, Philophobia, Gamophobia, Gerascophobia, Ornithophobia, Musophobia|Murophobia, Selachophobia|Galeophobia, Arithmophobia|Numerophobia, Chromophobia, Hylophobia, Pogonophobia, Phasmophobia, Somniphobia|Hypnophobia, Tokophobia, Xanthophobia, Anthophobia, Cibophobia|Sitophobia, Ablutophobia, Necrophobia, Ombrophobia, Achluophobia, Lygophobia',
+      'Arachibutyrophobia, Hexakosioihexekontahexaphobia, Paraskevidekatriaphobia|Friggatriskaidekaphobia, Omphalophobia, Pentheraphobia, Phobophobia, Bibliophobia, Catoptrophobia|Eisoptrophobia, Cyberphobia, Decidophobia, Didaskaleinophobia, Ecclesiophobia, Eleutherophobia, Euphobia, Genuphobia, Globophobia, Hedonophobia, Heliophobia, Ichthyophobia, Koumpounophobia, Lachanophobia, Linonophobia, Metrophobia, Mageirocophobia, Nephophobia, Neophobia, Nosocomephobia, Pediophobia, Philemaphobia, Plutophobia, Sesquipedalophobia, Taphophobia, Tetraphobia, Turophobia, Verbophobia, Xylophobia, Zoophobia, Spectrophobia, Papyrophobia',
+      'Alektorophobia, Bufonophobia, Equinophobia|Hippophobia, Ranidaphobia, Lepidopterophobia, Myrmecophobia, Spheksophobia, Helminthophobia, Batrachophobia, Dendrophobia, Botanophobia, Cymophobia, Chionophobia, Anemophobia, Lilapsophobia, Cometophobia, Selenophobia, Siderophobia, Ouranophobia, Kenophobia, Apeirophobia, Allodoxaphobia, Chaetophobia, Epistemophobia, Kakorrhaphiophobia, Optophobia, Geliophobia, Ergasiophobia, Agyrophobia, Amaxophobia, Hodophobia, Siderodromophobia, Thalassomegaphobia, Megalophobia, Pupaphobia, Automatonophobia, Anuptaphobia, Caligynephobia|Venustraphobia, Chorophobia',
+    ],
+  },
+];

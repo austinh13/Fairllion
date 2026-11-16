@@ -2,9 +2,12 @@
 
 import { generateCourse } from '../course.js';
 import { cleanCode, dailyNumber, dailySeed, dateKey, longDate } from '../daily.js';
+import { moodFor } from '../mood.js';
 import { createRenderer } from '../render.js';
-import { CLUBS, SHOT_CLOCK, describeRel } from '../rules.js';
-import { computeStats } from '../stats.js';
+import { CLUBS, SHOT_CLOCK, describeRel, formatRel } from '../rules.js';
+import { restore } from '../round.js';
+import { PROMPTS } from '../prompts.js';
+import { computeStats, computeUnlimitedStats } from '../stats.js';
 import { store } from '../store.js';
 import { $, clubTable, esc, scoreMark } from './dom.js';
 
@@ -26,16 +29,34 @@ export function renderHome(root) {
       <p class="marks">${result.scores.map((s, i) => scoreMark(s, result.pars[i])).join('')}</p>
       <div class="actions">
         <a class="btn" href="#/daily">See the scorecard</a>
-        <a class="btn btn-ghost" href="#/practice">Play a practice round</a>
       </div>`;
   } else {
     today = `
       <p class="muted">${started ? `You are on hole ${saved.hole + 1}. Pick up where you left off.` : 'Everyone gets the same six holes and the same categories today.'}</p>
       <div class="actions">
         <a class="btn" href="#/daily">${started ? 'Carry on with today’s round' : 'Play today’s round'}</a>
-        <a class="btn btn-ghost" href="#/practice">Practice round</a>
       </div>`;
   }
+
+  // Unlimited: a round in play, if any, and the record so far.
+  const live = restore(store.getUnlimited(), PROMPTS);
+  const going = live && !live.done && (live.hole > 0 || live.shot > 0) ? live : null;
+  const u = computeUnlimitedStats(store.unlimitedResults());
+  const unlimited = `
+      <p class="muted">${
+        going
+          ? `You are on hole ${going.hole + 1} of ${esc(going.course.name)}.`
+          : 'A fresh course every round, as many rounds as you like. The shot clock can be switched off.'
+      }</p>
+      ${u.played ? `<p class="fine">${u.played} ${u.played === 1 ? 'round' : 'rounds'} played · best ${esc(formatRel(u.best))}</p>` : ''}
+      <div class="actions">
+        ${
+          going
+            ? `<a class="btn" href="#/unlimited">Carry on</a>
+               <a class="btn btn-ghost" href="#/unlimited/new">New round</a>`
+            : `<a class="btn" href="#/unlimited/new">Play unlimited</a>`
+        }
+      </div>`;
 
   root.innerHTML = `
   <section class="home page">
@@ -47,14 +68,21 @@ export function renderHome(root) {
 
     <figure class="plate">
       <canvas class="map" aria-hidden="true"></canvas>
-      <figcaption>${esc(course.name)} · No. 1, ${esc(first.name)} · Par ${first.par}, ${first.length} yards</figcaption>
+      <figcaption>${esc(course.name)} · ${esc(moodFor(dailySeed(key)).name)} · No. 1, ${esc(first.name)}, par ${first.par}</figcaption>
     </figure>
 
-    <div class="card today">
-      <p class="eyebrow">Daily No. ${dailyNumber(key)} · ${esc(longDate(key))}</p>
-      <h2>${esc(course.name)} <span class="muted">Par ${course.par}</span></h2>
-      ${today}
-      ${streak > 1 ? `<p class="fine">You are on a ${streak}-day streak.</p>` : ''}
+    <div class="modes">
+      <div class="card today mode">
+        <p class="eyebrow">Daily No. ${dailyNumber(key)} · ${esc(longDate(key))}</p>
+        <h2>Daily <span class="muted">${esc(course.name)}, par ${course.par}</span></h2>
+        ${today}
+        ${streak > 1 ? `<p class="fine">You are on a ${streak}-day streak.</p>` : ''}
+      </div>
+      <div class="card today mode">
+        <p class="eyebrow">Play on</p>
+        <h2>Unlimited</h2>
+        ${unlimited}
+      </div>
     </div>
 
     <div class="steps">
@@ -81,7 +109,7 @@ export function renderHome(root) {
 
     <div class="card code">
       <h2>Play a friend's round</h2>
-      <p class="muted">Practice rounds have a code. The same code deals the same holes and categories, so you can compare cards.</p>
+      <p class="muted">Every unlimited round has a code. The same code deals the same holes and categories, so you can compare cards.</p>
       <form class="answer" id="h-code" novalidate>
         <label class="sr-only" for="h-code-input">Round code</label>
         <input id="h-code-input" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="12" placeholder="Round code">
@@ -91,7 +119,7 @@ export function renderHome(root) {
     </div>
   </section>`;
 
-  const renderer = createRenderer($('.map', root));
+  const renderer = createRenderer($('.map', root), { markers: false });
   renderer.setHole(first);
 
   $('#h-code', root).addEventListener('submit', (event) => {
@@ -101,7 +129,7 @@ export function renderHome(root) {
       $('#h-code-note', root).textContent = 'A round code is three to twelve letters and digits.';
       return;
     }
-    location.hash = `#/practice/${code}`;
+    location.hash = `#/unlimited/${code}`;
   });
 
   return () => renderer.destroy();

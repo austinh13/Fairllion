@@ -89,6 +89,25 @@ test('typos get one suggestion, and only when it is unambiguous', () => {
   assert.equal(suggest(card, 'Menet'), null, 'two answers are equally close');
 });
 
+test('suggestions are forgiving: a few slips or an unfinished word still count', () => {
+  const elements = cardFor('elements');
+  assert.equal(suggest(elements, 'hidrogin').name, 'Hydrogen', 'two slips in eight letters');
+  assert.equal(suggest(elements, 'potasium').name, 'Potassium');
+  assert.equal(suggest(elements, 'magnesum').name, 'Magnesium');
+
+  const composers = cardFor('composers');
+  assert.equal(suggest(composers, 'betoven').name, 'Beethoven');
+  assert.equal(suggest(composers, 'beetho').name, 'Beethoven', 'an unfinished word');
+  assert.equal(suggest(composers, 'Ludwig van Betoven').name, 'Beethoven', 'a full name with a typo');
+
+  assert.equal(suggest(cardFor('painters'), 'Claud Monett').name, 'Monet');
+
+  const card = buildCard({ id: 't', tiers: ['Paris', 'Berlin', 'Madrid', 'Rome', 'Vienna'] });
+  assert.equal(suggest(card, 'Barlin').name, 'Berlin', 'same first letter breaks a tie');
+  assert.equal(suggest(card, 'Lisbon'), null, 'not close to anything');
+  assert.equal(suggest(card, 'Tokyo'), null);
+});
+
 test('an exact spelling always beats a plural-insensitive one', () => {
   const card = buildCard({ id: 't', tiers: ['Mars', 'Mar', 'Alpha', 'Beta', 'Gamma'] });
   assert.equal(findAnswer(card, 'Mar').name, 'Mar');

@@ -30,7 +30,9 @@ export function shiftKey(key, days) {
 }
 
 export const dailySeed = (key) => `daily|${key}`;
-export const practiceSeed = (code) => `practice|${code}`;
+// Unlimited rounds were called practice rounds at first. The seed keeps the
+// old prefix so codes shared back then still deal the same holes.
+export const unlimitedSeed = (code) => `practice|${code}`;
 
 /** "Friday 13 November 2026" */
 export function longDate(key) {
@@ -46,7 +48,7 @@ export function msToMidnight(now = new Date()) {
 
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
-/** A five-character code that names a practice round. */
+/** A five-character code that names an unlimited round. */
 export function randomCode(random = Math.random) {
   let code = '';
   for (let i = 0; i < 5; i++) code += CODE_ALPHABET[Math.floor(random() * CODE_ALPHABET.length)];

@@ -2,11 +2,14 @@
 
 import arts from './bank/arts.js';
 import life from './bank/life.js';
+import nature from './bank/nature.js';
+import world from './bank/world.js';
+import culture from './bank/culture.js';
 import places from './bank/places.js';
 import science from './bank/science.js';
 import { buildCard } from './match.js';
 
-export const PROMPTS = [...places, ...science, ...arts, ...life];
+export const PROMPTS = [...places, ...science, ...arts, ...life, ...nature, ...world, ...culture];
 
 const byId = new Map(PROMPTS.map((p) => [p.id, p]));
 const cards = new Map();

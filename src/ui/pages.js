@@ -4,7 +4,7 @@ import { PARS } from '../course.js';
 import { dateKey, dailyNumber } from '../daily.js';
 import { PROMPTS, cardFor } from '../prompts.js';
 import { BEYOND, GREEN_RADIUS, HOLE_OUT, MAX_OVER_PAR, PUTT_RUN, SHOT_CLOCK, formatRel } from '../rules.js';
-import { computeStats } from '../stats.js';
+import { computeStats, computeUnlimitedStats } from '../stats.js';
 import { store } from '../store.js';
 import { clubTable, esc, scoreMark, tierChip } from './dom.js';
 
@@ -60,36 +60,36 @@ export function renderHow(root) {
     <p>On the scorecard a circle is a birdie, a double circle is an eagle or better, a square is a bogey and a filled square is worse.</p>
     <p class="marks">${scoreMark(1, 3)} ${scoreMark(2, 4)} ${scoreMark(3, 4)} ${scoreMark(4, 4)} ${scoreMark(5, 4)} ${scoreMark(7, 4)}</p>
 
-    <h2>Daily and practice rounds</h2>
-    <p><b>The daily</b> is one round a day, new at midnight where you are. Everyone gets the same six holes and the same category on the same shot, so scores compare fairly. Your round is saved in this browser as you go.</p>
-    <p><b>Practice rounds</b> are unlimited and do not touch your daily record. Each has a short code; anyone who plays the same code gets the same round, so you can send one to a friend. In practice you can also switch the shot clock off.</p>
+    <h2>Two ways to play</h2>
+    <p><b>Daily</b> is one round a day, new at midnight where you are. Everyone gets the same six holes and the same category on the same shot, so scores compare fairly, and playing on consecutive days builds a streak.</p>
+    <p><b>Unlimited</b> deals a fresh course every round, as many rounds as you like, and keeps its own record apart from the daily. Each round has a short code; anyone who plays the same code gets the same round, so you can send one to a friend. In unlimited you can also switch the shot clock off.</p>
+    <p>Both modes save your round in this browser as you go, so you can close the tab and carry on later.</p>
 
     <h2>Where the rarities come from</h2>
     <p>The bank holds ${PROMPTS.length} categories and ${answers.toLocaleString('en-GB')} answers. Every card was sorted into its five tiers by hand, as an editorial judgement of how readily each answer comes to mind. It is not measured from what players type, and nothing you type leaves your browser.</p>
 
     <div class="actions">
       <a class="btn" href="#/daily">Play today's round</a>
-      <a class="btn btn-ghost" href="#/practice">Practice round</a>
+      <a class="btn btn-ghost" href="#/unlimited/new">Play unlimited</a>
     </div>
   </article>`;
   return () => {};
 }
 
-export function renderStats(root) {
-  const today = dateKey();
-  const s = computeStats(store.results(), today);
-  const tile = (label, value) => `<div class="card tile"><p class="tile-value">${value}</p><p class="tile-label">${label}</p></div>`;
+const tile = (label, value) => `<div class="card tile"><p class="tile-value">${value}</p><p class="tile-label">${label}</p></div>`;
+const avg = (n) => formatRel(Math.round(n * 10) / 10);
 
+function holeBars(holes) {
   const kinds = [
-    ['Holes in one', s.holes.ace],
-    ['Eagles or better', s.holes.eagle],
-    ['Birdies', s.holes.birdie],
-    ['Pars', s.holes.par],
-    ['Bogeys', s.holes.bogey],
-    ['Doubles or worse', s.holes.worse],
+    ['Holes in one', holes.ace],
+    ['Eagles or better', holes.eagle],
+    ['Birdies', holes.birdie],
+    ['Pars', holes.par],
+    ['Bogeys', holes.bogey],
+    ['Doubles or worse', holes.worse],
   ];
   const most = Math.max(1, ...kinds.map(([, n]) => n));
-  const bars = kinds
+  return `<ul class="bars">${kinds
     .map(
       ([label, n]) => `<li>
         <span class="bar-label">${label}</span>
@@ -97,8 +97,15 @@ export function renderStats(root) {
         <span class="bar-count">${n}</span>
       </li>`,
     )
-    .join('');
+    .join('')}</ul>`;
+}
 
+function dailySection() {
+  const s = computeStats(store.results(), dateKey());
+  if (!s.played) {
+    return `<p class="lede">No daily rounds finished yet. Play today's and it will show up here.</p>
+      <div class="actions"><a class="btn" href="#/daily">Play today's round</a></div>`;
+  }
   const recent = s.recent
     .map(
       (r) => `<tr>
@@ -110,31 +117,63 @@ export function renderStats(root) {
       </tr>`,
     )
     .join('');
+  return `<div class="tiles">
+      ${tile('Rounds played', s.played)}
+      ${tile('Current streak', s.streak)}
+      ${tile('Longest streak', s.bestStreak)}
+      ${tile('Best round', formatRel(s.best))}
+      ${tile('Average round', avg(s.average))}
+    </div>
+    <h3>Hole by hole</h3>
+    ${holeBars(s.holes)}
+    <h3>Recent rounds</h3>
+    <div class="table-wrap"><table class="scorecard">
+      <thead><tr><th class="num">Daily</th><th>Date</th><th>Holes</th><th class="num">Strokes</th><th class="num">To par</th></tr></thead>
+      <tbody>${recent}</tbody>
+    </table></div>`;
+}
 
+function unlimitedSection() {
+  const s = computeUnlimitedStats(store.unlimitedResults());
+  if (!s.played) {
+    return `<p class="lede">No unlimited rounds finished yet.</p>
+      <div class="actions"><a class="btn" href="#/unlimited/new">Play unlimited</a></div>`;
+  }
+  const recent = s.recent
+    .map(
+      (r) => `<tr>
+        <td><a href="#/unlimited/${esc(r.code)}">${esc(r.code)}</a></td>
+        <td>${esc(r.course || '')}</td>
+        <td class="marks">${r.scores.map((sc, i) => scoreMark(sc, r.pars[i])).join('')}</td>
+        <td class="num"><b>${r.strokes}</b></td>
+        <td class="num">${formatRel(r.diff)}</td>
+      </tr>`,
+    )
+    .join('');
+  return `<div class="tiles">
+      ${tile('Rounds played', s.played)}
+      ${tile('Best round', formatRel(s.best))}
+      ${tile('Average round', avg(s.average))}
+    </div>
+    <h3>Hole by hole</h3>
+    ${holeBars(s.holes)}
+    <h3>Recent rounds</h3>
+    <div class="table-wrap"><table class="scorecard">
+      <thead><tr><th>Code</th><th>Course</th><th>Holes</th><th class="num">Strokes</th><th class="num">To par</th></tr></thead>
+      <tbody>${recent}</tbody>
+    </table></div>`;
+}
+
+export function renderStats(root) {
   root.innerHTML = `
   <section class="page">
     <p class="eyebrow">Your record</p>
     <h1>Stats</h1>
-    ${
-      s.played
-        ? `<div class="tiles">
-            ${tile('Daily rounds played', s.played)}
-            ${tile('Current streak', s.streak)}
-            ${tile('Longest streak', s.bestStreak)}
-            ${tile('Best round', formatRel(s.best))}
-            ${tile('Average round', formatRel(Math.round(s.average * 10) / 10))}
-          </div>
-          <h2>Hole by hole</h2>
-          <ul class="bars">${bars}</ul>
-          <h2>Recent rounds</h2>
-          <div class="table-wrap"><table class="scorecard">
-            <thead><tr><th class="num">Daily</th><th>Date</th><th>Holes</th><th class="num">Strokes</th><th class="num">To par</th></tr></thead>
-            <tbody>${recent}</tbody>
-          </table></div>`
-        : `<p class="lede">No daily rounds finished yet. Play today's and it will show up here.</p>
-           <div class="actions"><a class="btn" href="#/daily">Play today's round</a></div>`
-    }
-    <p class="fine">Only daily rounds count. Everything here is kept in this browser and nowhere else; clearing your browser data clears it.</p>
+    <h2>Daily</h2>
+    ${dailySection()}
+    <h2>Unlimited</h2>
+    ${unlimitedSection()}
+    <p class="fine">Daily and unlimited rounds are counted apart, and only the daily keeps a streak. Everything here is kept in this browser and nowhere else; clearing your browser data clears it.</p>
   </section>`;
   return () => {};
 }

@@ -2,6 +2,8 @@
 // If storage is unavailable the game still runs; it just forgets on reload.
 
 const KEY = 'fairllion.v1';
+/** How many finished unlimited rounds to remember. */
+const UNLIMITED_KEEP = 200;
 let cache = null;
 
 const isObject = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
@@ -15,9 +17,10 @@ function load() {
     data = null;
   }
   cache = isObject(data) ? data : {};
-  for (const part of ['settings', 'daily', 'results']) {
+  for (const part of ['settings', 'daily', 'results', 'unlimited']) {
     if (!isObject(cache[part])) cache[part] = {};
   }
+  if (!Array.isArray(cache.unlimited.rounds)) cache.unlimited.rounds = [];
   return cache;
 }
 
@@ -67,5 +70,26 @@ export const store = {
       if (r && /^\d{4}-\d{2}-\d{2}$/.test(key)) out[key] = r;
     }
     return out;
+  },
+
+  /** The unlimited round in play (one at a time), or null. */
+  getUnlimited() {
+    return load().unlimited.current ?? null;
+  },
+  setUnlimited(snap) {
+    load().unlimited.current = snap;
+    save();
+  },
+
+  /** Finished unlimited rounds, oldest first: { code, scores, pars, course, date }. */
+  unlimitedResults() {
+    return load().unlimited.rounds.filter(
+      (r) => r && typeof r.code === 'string' && Array.isArray(r.scores) && Array.isArray(r.pars) && r.scores.length === r.pars.length,
+    );
+  },
+  addUnlimitedResult(result) {
+    const data = load();
+    data.unlimited.rounds = [...data.unlimited.rounds, result].slice(-UNLIMITED_KEEP);
+    save();
   },
 };

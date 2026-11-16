@@ -5,7 +5,7 @@ import { cardFor, promptById } from '../prompts.js';
 import { totals } from '../round.js';
 import { CLUBS, describeRel, formatRel, scoreName } from '../rules.js';
 import { shareText } from '../share.js';
-import { computeStats } from '../stats.js';
+import { computeStats, computeUnlimitedStats } from '../stats.js';
 import { store } from '../store.js';
 import { $, copyText, esc, scoreMark, tierChip } from './dom.js';
 
@@ -44,6 +44,13 @@ function wholeCard(promptId, given) {
   }).join('');
 }
 
+/** "Unlimited rounds played: 12. Best: 4 under par." */
+function unlimitedLine() {
+  const s = computeUnlimitedStats(store.unlimitedResults());
+  if (!s.played) return '';
+  return `Unlimited rounds played: <b>${s.played}</b>. Best: ${esc(describeRel(s.best))}. Average: ${esc(formatRel(Math.round(s.average * 10) / 10))}.`;
+}
+
 function fmtCountdown(ms) {
   const total = Math.max(0, Math.floor(ms / 1000));
   const two = (n) => String(n).padStart(2, '0');
@@ -51,7 +58,7 @@ function fmtCountdown(ms) {
 }
 
 /**
- * @param options { round, mode: 'daily' | 'practice', dateKey, code }
+ * @param options { round, mode: 'daily' | 'unlimited', dateKey, code }
  * @returns cleanup function
  */
 export function renderSummary(root, { round, mode, dateKey, code }) {
@@ -59,9 +66,9 @@ export function renderSummary(root, { round, mode, dateKey, code }) {
   const t = totals(round);
   const pars = holes.map((h) => h.par);
   const scores = round.cards.map((c) => c.score);
-  const title = mode === 'daily' ? `Daily No. ${dailyNumber(dateKey)}` : `Practice round ${code}`;
+  const title = mode === 'daily' ? `Daily No. ${dailyNumber(dateKey)}` : `Unlimited round ${code}`;
   const base = location.href.split('#')[0];
-  const link = mode === 'daily' ? base : `${base}#/practice/${code}`;
+  const link = mode === 'daily' ? base : `${base}#/unlimited/${code}`;
 
   const rows = holes
     .map(
@@ -105,11 +112,17 @@ export function renderSummary(root, { round, mode, dateKey, code }) {
     <h1>${t.strokes} strokes, ${describeRel(t.diff)}</h1>
     <p class="lede">${verdict(t.diff)}</p>
     <div class="actions">
-      <button class="btn" type="button" id="s-share">Copy scorecard</button>
-      ${mode === 'practice' ? '<button class="btn btn-ghost" type="button" id="s-link">Copy a link to this round</button>' : ''}
-      <a class="btn btn-ghost" href="#/practice">${mode === 'practice' ? 'Play another' : 'Play a practice round'}</a>
+      ${
+        mode === 'daily'
+          ? `<button class="btn" type="button" id="s-share">Copy scorecard</button>
+             <a class="btn btn-ghost" href="#/unlimited">Play unlimited</a>`
+          : `<a class="btn" href="#/unlimited/new" id="s-next">Next round</a>
+             <button class="btn btn-ghost" type="button" id="s-share">Copy scorecard</button>
+             <button class="btn btn-ghost" type="button" id="s-link">Copy a link to this round</button>`
+      }
       <a class="btn btn-ghost" href="#/">Home</a>
     </div>
+    ${mode === 'unlimited' ? `<p class="fine">${unlimitedLine()}</p>` : ''}
     <p class="fine" id="s-note" role="status" aria-live="polite">${mode === 'daily' ? 'The next daily round starts in <b id="s-count"></b>.' : 'Send the link to a friend: the same code deals the same six holes and categories.'}</p>
     <textarea class="manual" id="s-manual" rows="5" readonly hidden aria-label="Text to copy"></textarea>
 
@@ -159,7 +172,7 @@ export function renderSummary(root, { round, mode, dateKey, code }) {
     }
     extra.push(link);
     const text = shareText({
-      title: mode === 'daily' ? `Fairllion Daily No. ${dailyNumber(dateKey)}` : `Fairllion practice round ${code}`,
+      title: mode === 'daily' ? `Fairllion Daily No. ${dailyNumber(dateKey)}` : `Fairllion unlimited round ${code}`,
       pars,
       scores,
       extra,

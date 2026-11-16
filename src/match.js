@@ -104,30 +104,66 @@ export function findAnswer(card, input) {
 }
 
 /**
- * A single close match for a probable typo, or null when nothing is close
- * or when two different answers are equally close.
+ * How many typos a word of this length may carry and still get a suggestion.
+ * Tuned to be forgiving ("kinda close" counts): about one slip per three letters.
+ */
+export function typoBudget(length) {
+  if (length < 4) return 0;
+  if (length <= 5) return 1;
+  if (length <= 8) return 2;
+  if (length <= 12) return 3;
+  return 4;
+}
+
+/** Shortest unfinished start of an answer that may be suggested ("tchaik"). */
+const MIN_PREFIX = 4;
+
+/**
+ * A single close match for a probable typo or an unfinished answer, or null
+ * when nothing is close or when two different answers are equally close.
  */
 export function suggest(card, input) {
-  const key = contentWords(input, card).join('');
+  const list = contentWords(input, card);
+  const key = list.join('');
   if (key.length < 4) return null;
-  const max = key.length >= 7 ? 2 : 1;
-  let best = null;
-  let bestDist = max + 1;
-  let tie = false;
+
+  // What the player might have meant to type: the whole thing, without a
+  // plural, and on people cards just the surname ("Claud Monett" -> "monett").
+  const tries = new Set([key, loose(key)]);
+  if (card.people && list.length > 1) {
+    tries.add(list.slice(-1).join(''));
+    if (list.length > 2) tries.add(list.slice(-2).join(''));
+  }
+
+  // Score every answer by its closest spelling; lower is better.
+  const scored = [];
   for (const answer of card.answers) {
-    for (const k of answer.keys) {
-      if (Math.abs(k.length - key.length) > max) continue;
-      const d = editDistance(key, k);
-      if (d < bestDist) {
-        best = answer;
-        bestDist = d;
-        tie = false;
-      } else if (d === bestDist && answer !== best) {
-        tie = true;
+    let best = Infinity;
+    for (const t of tries) {
+      if (t.length < 4) continue;
+      for (const k of answer.keys) {
+        // Typos rarely hit the first letter, so a wrong start costs a slip.
+        const budget = typoBudget(Math.min(t.length, k.length)) - (t[0] === k[0] ? 0 : 1);
+        if (Math.abs(k.length - t.length) <= budget) {
+          const d = editDistance(t, k);
+          if (d <= budget) best = Math.min(best, d);
+        }
+        // An unfinished answer: "beetho" -> "beethoven". Ranked after typos.
+        if (t.length >= MIN_PREFIX && k.length > t.length && t[0] === k[0]) {
+          const d = editDistance(t, k.slice(0, t.length));
+          if (d <= Math.max(0, budget - 1)) best = Math.min(best, 0.5 + d);
+        }
       }
     }
+    if (best < Infinity) scored.push({ answer, d: best, first: answer.keys.some((k) => k[0] === key[0]) });
   }
-  return best && !tie ? best : null;
+  if (!scored.length) return null;
+
+  // Closest first; on a tie, an answer starting with the same letter wins.
+  scored.sort((a, b) => a.d - b.d || Number(b.first) - Number(a.first));
+  const [top, next] = scored;
+  if (next && next.d === top.d && next.first === top.first) return null;
+  return top.answer;
 }
 
 /** Edit distance where swapping two neighbouring letters counts as one. */

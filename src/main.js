@@ -1,4 +1,4 @@
-// Entry point: a small hash router over the five screens.
+// Entry point: a small hash router over the screens.
 
 import { cleanCode, dailySeed, dateKey, randomCode } from './daily.js';
 import { PROMPTS } from './prompts.js';
@@ -25,8 +25,9 @@ function show(title, mount) {
   // A screen may hand over to another while it mounts; keep the newer one's cleanup.
   if (mine === shown) cleanup = undo;
   else undo?.();
+  const here = (location.hash || '#/').split('/').slice(0, 2).join('/');
   for (const a of document.querySelectorAll('.masthead nav a')) {
-    a.toggleAttribute('aria-current', a.getAttribute('href') === (location.hash || '#/'));
+    a.toggleAttribute('aria-current', a.getAttribute('href') === here);
   }
 }
 
@@ -46,17 +47,29 @@ function showDaily() {
   );
 }
 
-function showPractice(arg) {
-  const code = cleanCode(arg);
-  if (!code) {
-    location.replace(`#/practice/${randomCode()}`);
+/**
+ * Unlimited rounds, one after another.
+ *   #/unlimited       carry on with the round in play, or start a new one
+ *   #/unlimited/new   start a new one
+ *   #/unlimited/CODE  play the round with that code (a friend's, say)
+ */
+function showUnlimited(arg) {
+  if (arg === 'new') {
+    location.replace(`#/unlimited/${randomCode()}`);
     return;
   }
-  show('Practice round', (root) =>
+  const code = cleanCode(arg);
+  if (!code) {
+    const saved = restore(store.getUnlimited(), PROMPTS);
+    const going = saved && !saved.done ? cleanCode(saved.seed.split('|')[1]) : null;
+    location.replace(`#/unlimited/${going || randomCode()}`);
+    return;
+  }
+  show('Unlimited', (root) =>
     mountGame(root, {
-      mode: 'practice',
+      mode: 'unlimited',
       code,
-      onFinish: (round) => show('Scorecard', (r) => renderSummary(r, { round, mode: 'practice', code })),
+      onFinish: (round) => show('Scorecard', (r) => renderSummary(r, { round, mode: 'unlimited', code })),
     }),
   );
 }
@@ -66,8 +79,11 @@ function route() {
   switch (head) {
     case 'daily':
       return showDaily();
+    case 'unlimited':
+      return showUnlimited(arg);
     case 'practice':
-      return showPractice(arg);
+      // Unlimited rounds used to be practice rounds; keep old links working.
+      return location.replace(arg ? `#/unlimited/${arg}` : '#/unlimited');
     case 'how':
       return show('How to play', renderHow);
     case 'stats':

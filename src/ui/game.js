@@ -1,10 +1,12 @@
 // The round in play: map, prompt, shot clock and club guide.
 
 import { describeHazards } from '../course.js';
-import { dailyNumber, dailySeed, practiceSeed } from '../daily.js';
+import { dailyNumber, dailySeed, dateKey as todayKey, unlimitedSeed } from '../daily.js';
 import { findAnswer, suggest } from '../match.js';
+import { moodFor } from '../mood.js';
 import { PROMPTS, cardFor, promptById } from '../prompts.js';
 import { createRenderer } from '../render.js';
+import { settingOf } from '../setting.js';
 import { createRound, currentHole, currentPromptId, nextHole, restore, snapshot, swing, totals, whiff } from '../round.js';
 import { BEYOND, CLUBS, GREEN_RADIUS, SHOT_CLOCK, formatRel, outlook, remaining, scoreName, zonesFor } from '../rules.js';
 import { sfx } from '../sfx.js';
@@ -76,66 +78,97 @@ function bagText(o, hole, pos) {
   return o.club.carryLo - (hole.length - pos) > BEYOND ? 'Over the back: penalty' : 'Long of the green';
 }
 
+/** The same, in a word, for the compact bag on small screens. */
+function bagWord(o, hole, pos) {
+  if (o.status === 'drops') return '✓ Drops';
+  if (o.status === 'past') return 'Rolls past';
+  if (o.status === 'reach') return '✓ Green';
+  if (o.status === 'short') return 'Short';
+  if (pos > hole.length) return 'Back';
+  return o.club.carryLo - (hole.length - pos) > BEYOND ? 'Penalty' : 'Long';
+}
+
+const article = (word) => (/^(?!one)[aeiou]/i.test(word) ? 'an' : 'a');
+const capital = (text) => text.replace(/^./, (m) => m.toUpperCase());
+
+/** The one line under the prompt: what reaches the green from here. */
+function advice(hole, pos, lie) {
+  const r = remaining(hole, pos);
+  if (r <= GREEN_RADIUS) return { lead: `${r} yds, on the green.`, rest: `Only a ${CLUBS[0].rarity} answer drops the putt.` };
+  const all = CLUBS.map((c) => ({ c, o: outlook(hole, pos, lie, c.tier) }));
+  const good = all.filter((x) => x.o.status === 'reach');
+  const name = ({ c, o }) => `${article(c.rarity)} <b>${esc(c.rarity)}</b> answer (${esc(o.club.club)} ${o.club.lo}–${o.club.hi}y)`;
+  if (good.length) {
+    const list = good.length === 1 ? name(good[0]) : `${good.slice(0, -1).map(name).join(', ')} or ${name(good.at(-1))}`;
+    return { lead: `${r} to the pin.`, rest: `${capital(list)} reaches the green.` };
+  }
+  const best = all.filter((x) => x.o.status === 'short').at(-1);
+  return { lead: `${r} to the pin.`, rest: best ? `Nothing reaches. ${capital(name(best))} gets closest.` : 'Every club runs long from here.' };
+}
+
 /**
  * @param root      element to render into
- * @param options   { mode: 'daily' | 'practice', dateKey, code, onFinish(round) }
+ * @param options   { mode: 'daily' | 'unlimited', dateKey, code, onFinish(round) }
  * @returns cleanup function
  */
 export function mountGame(root, { mode, dateKey, code, onFinish }) {
-  const seed = mode === 'daily' ? dailySeed(dateKey) : practiceSeed(code);
-  let round = mode === 'daily' ? restore(store.getDaily(dateKey), PROMPTS) : null;
+  const seed = mode === 'daily' ? dailySeed(dateKey) : unlimitedSeed(code);
+  let round = restore(mode === 'daily' ? store.getDaily(dateKey) : store.getUnlimited(), PROMPTS);
   if (!round || round.seed !== seed) round = createRound(seed, PROMPTS);
   if (round.done) {
     onFinish(round);
     return () => {};
   }
 
-  let relaxed = mode === 'practice' && store.getSetting('relaxed', false) === true;
+  let relaxed = mode === 'unlimited' && store.getSetting('relaxed', false) === true;
   let phase = 'intro';
   let pending = null; // a typo suggestion waiting for a second Enter
   let dead = false;
 
+  const mood = moodFor(seed);
+
   root.innerHTML = `
-  <section class="game">
-    <header class="game-head">
-      <div>
-        <p class="eyebrow">${mode === 'daily' ? `Daily No. ${dailyNumber(dateKey)}` : `Practice round ${esc(code)}`}</p>
-        <h1 class="game-title">${esc(round.course.name)}</h1>
-      </div>
-      <div class="game-tools">
-        ${mode === 'practice' ? '<button class="btn btn-ghost btn-small" id="g-relax" type="button"></button>' : ''}
-        <button class="btn btn-ghost btn-small" id="g-rules" type="button">Rules</button>
-      </div>
-    </header>
-    <div class="game-grid">
-      <div class="stage">
-        <canvas class="map" aria-hidden="true"></canvas>
-        <div class="stage-bar">
-          <span class="tag" id="g-hole"></span>
-          <span class="tag tag-strong" id="g-dist"></span>
+  <section class="game" data-mood="${mood.key}">
+    <div class="stage">
+      <canvas class="map" aria-hidden="true"></canvas>
+    </div>
+    <div class="hud">
+      <header class="hud-top">
+        <h1 class="hud-where">
+          <span>${mode === 'daily' ? `Daily No. ${dailyNumber(dateKey)}` : `Unlimited ${esc(code)}`}</span>
+          <span class="hud-course">${esc(round.course.name)}</span>
+          <span id="g-hole"></span>
+        </h1>
+        <div class="hud-right">
+          <ol class="holes" id="g-holes" aria-label="Scorecard so far"></ol>
+          ${mode === 'unlimited' ? '<button class="hud-btn" id="g-relax" type="button"></button>' : ''}
+          <button class="hud-btn" id="g-rules" type="button">Rules</button>
         </div>
-        <div class="overlay" id="g-overlay" hidden></div>
-      </div>
-      <div class="panel">
-        <ol class="holes" id="g-holes" aria-label="Scorecard so far"></ol>
-        <div class="card play">
-          <div class="clock" id="g-clock" aria-hidden="true"><span class="clock-fill" id="g-clock-fill"></span></div>
-          <div class="play-top">
-            <p class="eyebrow" id="g-status"></p>
-            <p class="clock-num" id="g-secs" role="timer" aria-label="Seconds left on the shot clock"></p>
+      </header>
+      <div class="ask" id="g-ask">
+        <p class="ask-eyebrow" id="g-status"></p>
+        <h2 class="prompt" id="g-prompt"></h2>
+        <details class="ask-more" id="g-more">
+          <summary id="g-advice"></summary>
+          <div class="ask-drop">
+            <ul class="bag" id="g-bag" aria-label="What each kind of answer will do from here"></ul>
+            <ol class="log" id="g-log" aria-label="Shots on this hole"></ol>
           </div>
-          <h2 class="prompt" id="g-prompt"></h2>
-          <form class="answer" id="g-form" autocomplete="off" novalidate>
-            <label class="sr-only" for="g-input">Your answer</label>
-            <input id="g-input" name="answer" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="60" placeholder="Type an answer">
-            <button class="btn" id="g-swing" type="submit">Swing</button>
-          </form>
-          <p class="feedback" id="g-feedback" role="status" aria-live="polite"></p>
-        </div>
-        <ul class="bag" id="g-bag" aria-label="What each kind of answer will do from here"></ul>
-        <ol class="log" id="g-log" aria-label="Shots on this hole"></ol>
+        </details>
+      </div>
+      <div class="shot" id="g-play">
+        <p class="toast" id="g-feedback" role="status" aria-live="polite"></p>
+        <form class="answer" id="g-form" autocomplete="off" novalidate>
+          <div class="clock" id="g-clock">
+            <span class="clock-num" id="g-secs" role="timer" aria-label="Seconds left on the shot clock"></span>
+          </div>
+          <label class="sr-only" for="g-input">Your answer</label>
+          <input id="g-input" name="answer" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="60" placeholder="type one answer…">
+          <button class="btn btn-swing" id="g-swing" type="submit">Swing</button>
+        </form>
       </div>
     </div>
+    <div class="overlay" id="g-overlay" hidden></div>
     <dialog class="dialog" id="g-dialog" aria-labelledby="g-dialog-title">
       <h2 id="g-dialog-title">The rules in brief</h2>
       <p>Each shot gives you a category. Type one thing that belongs in it. The rarer your answer, the bigger the club.</p>
@@ -154,12 +187,12 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
 
   const el = {
     hole: $('#g-hole', root),
-    dist: $('#g-dist', root),
     overlay: $('#g-overlay', root),
     holes: $('#g-holes', root),
     clock: $('#g-clock', root),
-    fill: $('#g-clock-fill', root),
     secs: $('#g-secs', root),
+    advice: $('#g-advice', root),
+    more: $('#g-more', root),
     status: $('#g-status', root),
     prompt: $('#g-prompt', root),
     form: $('#g-form', root),
@@ -170,8 +203,40 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     log: $('#g-log', root),
     dialog: $('#g-dialog', root),
     relax: $('#g-relax', root),
+    game: $('.game', root),
+    stage: $('.stage', root),
+    top: $('.hud-top', root),
+    ask: $('#g-ask', root),
+    play: $('#g-play', root),
   };
   const renderer = createRenderer($('.map', root));
+  document.body.classList.add('is-playing');
+
+  // The course fills the screen; tell the camera which parts the interface covers.
+  // (The open club list drops over the course and does not count.)
+  function measure() {
+    if (dead) return;
+    const s = el.stage.getBoundingClientRect();
+    const top = el.ask.getBoundingClientRect();
+    const form = el.form.getBoundingClientRect();
+    renderer.setInsets?.({
+      top: Math.max(0, top.bottom - s.top),
+      bottom: Math.max(0, s.bottom - form.top),
+    });
+  }
+  const watcher = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
+  for (const node of [el.stage, el.top, el.ask, el.form]) watcher?.observe(node);
+
+  // Keep the round above an on-screen keyboard.
+  const vv = window.visualViewport;
+  function fitViewport() {
+    if (!vv) return;
+    el.game.style.height = `${Math.round(vv.height)}px`;
+    el.game.style.transform = vv.offsetTop ? `translateY(${Math.round(vv.offsetTop)}px)` : '';
+  }
+  vv?.addEventListener('resize', fitViewport);
+  vv?.addEventListener('scroll', fitViewport);
+  fitViewport();
 
   // ---- shot clock ---------------------------------------------------------
 
@@ -179,14 +244,12 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
 
   function paintClock() {
     el.clock.hidden = relaxed;
-    el.secs.hidden = relaxed;
+    // The ring empties in chunky steps, like everything else here.
     const ratio = Math.max(0, clock.left / clock.total);
-    el.fill.style.transform = `scaleX(${ratio})`;
+    el.clock.style.setProperty('--left', String(Math.ceil(ratio * 30) / 30));
     const secs = Math.max(0, Math.ceil(clock.left / 1000));
     if (el.secs.textContent !== String(secs)) el.secs.textContent = String(secs);
-    const low = clock.running && secs <= 7;
-    el.clock.classList.toggle('is-low', low);
-    el.secs.classList.toggle('is-low', low);
+    el.clock.classList.toggle('is-low', clock.running && secs <= 7);
   }
 
   function startClock() {
@@ -217,10 +280,11 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
 
   function persist() {
     if (mode === 'daily') store.setDaily(dateKey, snapshot(round));
+    else store.setUnlimited(snapshot(round));
   }
 
   function setFeedback(html, tone = '') {
-    el.feedback.className = `feedback ${tone ? `is-${tone}` : ''}`;
+    el.feedback.className = `toast ${tone ? `is-${tone}` : ''}`;
     el.feedback.innerHTML = html;
   }
 
@@ -244,10 +308,10 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
 
   function paintHud() {
     const hole = currentHole(round);
-    const r = remaining(hole, round.pos);
-    el.hole.textContent = `No. ${hole.number} · Par ${hole.par} · ${hole.length} yds`;
-    el.dist.textContent = r <= GREEN_RADIUS ? `${r} yds · on the green` : `${r} yds to the pin`;
-    el.status.textContent = `Stroke ${round.strokes + 1} · ${lieLabel(round)}`;
+    el.hole.textContent = `Hole ${hole.number} of ${round.course.holes.length}`;
+    el.status.textContent = `Hole ${hole.number} · Par ${hole.par} · Shot ${round.strokes + 1} · ${lieLabel(round)}`;
+    const a = advice(hole, round.pos, round.lie);
+    el.advice.innerHTML = `<b>${esc(a.lead)}</b> ${a.rest}`;
   }
 
   function paintBag() {
@@ -259,6 +323,8 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
       return `<li class="${good ? 'is-good' : ''}" data-tier="${c.tier}">
         <span class="swatch"></span>
         <span class="bag-rarity">${esc(c.rarity)}</span>
+        <span class="bag-short" aria-hidden="true">${esc(c.short)}</span>
+        <span class="bag-word" aria-hidden="true">${esc(bagWord(o, hole, round.pos))}</span>
         <span class="bag-club">${esc(club)}</span>
         <span class="bag-status">${esc(bagText(o, hole, round.pos))}</span>
       </li>`;
@@ -269,17 +335,19 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     const shots = round.cards[round.hole].shots;
     el.log.hidden = shots.length === 0;
     el.log.innerHTML = shots
-      .map((s) => `<li>${s.answer ? `<b>${esc(s.answer)}</b> ${tierChip(s.tier)}` : '<b>No answer</b>'} <span class="muted">${esc(brief(s))}</span></li>`)
+      .map((s) => `<li>${s.answer ? `<b>${esc(s.answer)}</b> ${tierChip(s.tier)}` : '<b>No answer</b>'} <span>${esc(brief(s))}</span></li>`)
       .join('');
   }
 
   function showOverlay(html, buttonId, onClick) {
     el.overlay.innerHTML = `<div class="overlay-card card">${html}</div>`;
     el.overlay.hidden = false;
+    el.game.classList.add('has-card');
     const button = $(`#${buttonId}`, el.overlay);
     button.addEventListener('click', () => {
       el.overlay.hidden = true;
       el.overlay.innerHTML = '';
+      el.game.classList.remove('has-card');
       onClick();
     });
     button.focus({ preventScroll: true });
@@ -304,8 +372,9 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     el.prompt.textContent = 'Ready when you are.';
     const notes = describeHazards(hole).map((l) => `<li>${esc(l)}</li>`).join('');
     showOverlay(
-      `<p class="eyebrow">Hole ${hole.number} of ${round.course.holes.length} · Par ${hole.par}</p>
+      `<p class="eyebrow">Hole ${hole.number} of ${round.course.holes.length} · Par ${hole.par} · ${esc(settingOf(hole).name)}</p>
        <h2>${esc(hole.name)}</h2>
+       ${hole.after ? `<p class="after">Modelled on ${esc(hole.after)}</p>` : ''}
        <p class="yards">${hole.length}<span> yards</span></p>
        <ul class="notes">${notes}</ul>
        <button class="btn" type="button" id="g-go">Tee off</button>
@@ -336,6 +405,7 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     phase = 'busy';
     stopClock();
     lock(true);
+    el.more.open = false;
     const hole = currentHole(round);
     const fromSand = round.lie === 'sand' && remaining(hole, round.pos) > GREEN_RADIUS;
     const out = swing(round, answer);
@@ -409,13 +479,13 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
         nextHole(round);
         persist();
         if (!round.done) return showIntro();
-        if (mode === 'daily') {
-          store.setResult(dateKey, {
-            scores: round.cards.map((c) => c.score),
-            pars: round.course.holes.map((h) => h.par),
-            course: round.course.name,
-          });
-        }
+        const result = {
+          scores: round.cards.map((c) => c.score),
+          pars: round.course.holes.map((h) => h.par),
+          course: round.course.name,
+        };
+        if (mode === 'daily') store.setResult(dateKey, result);
+        else store.addUnlimitedResult({ ...result, code, date: todayKey() });
         onFinish(round);
       },
     );
@@ -485,7 +555,7 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     showIntro();
   } else {
     renderer.setHole(currentHole(round));
-    setFeedback('Welcome back. The clock has restarted for this shot.', 'hint');
+    setFeedback('Welcome back. The clock has started again.', 'hint');
     beginShot();
   }
 
@@ -494,5 +564,9 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     clearInterval(ticker);
     renderer.destroy();
     if (el.dialog.open) el.dialog.close();
+    watcher?.disconnect();
+    vv?.removeEventListener('resize', fitViewport);
+    vv?.removeEventListener('scroll', fitViewport);
+    document.body.classList.remove('is-playing');
   };
 }

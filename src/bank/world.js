@@ -1,0 +1,121 @@
+// Answer cards: more of the map, from peaks and lakes to cities and teams.
+
+export default [
+  {
+    id: 'mountains',
+    q: 'Name a mountain',
+    strip: ['mount', 'mt', 'mountain', 'peak'],
+    tiers: [
+      'Everest|Chomolungma|Sagarmatha, Kilimanjaro, Fuji|Fujiyama|Fuji-san, K2|Godwin-Austen, Mont Blanc|Monte Bianco',
+      'Matterhorn|Cervino, Denali|McKinley, Ben Nevis, Olympus, Rushmore, Snowdon|Yr Wyddfa, Aconcagua, Elbrus, Kosciuszko|Kosciusko, Rainier|Tahoma, Sinai, Kangchenjunga|Kanchenjunga, Annapurna, Table Mountain, Eiger, Vesuvius, Etna',
+      'Lhotse, Makalu, Cho Oyu, Dhaulagiri, Manaslu, Nanga Parbat, Shishapangma|Xixabangma, Gasherbrum, Broad Peak, Vinson|Vinson Massif, Aoraki|Mount Cook, Puncak Jaya|Carstensz Pyramid|Carstensz, Whitney, Shasta, Hood, Logan, Mount Kenya, Ararat, Kailash, Toubkal, Zugspitze, Jungfrau, Monte Rosa, Grossglockner|Großglockner, Triglav, Teide, Fitz Roy|Fitzroy|Chaltén, Chimborazo, Cotopaxi, Huascarán|Huascaran, Mauna Kea, Pikes Peak, Half Dome, El Capitan, Scafell Pike|Scafell, Helvellyn, Kinabalu, Pico de Orizaba|Orizaba|Citlaltépetl, Popocatépetl|Popocatepetl, Washington, Mitchell, Sugarloaf|Pão de Açúcar, Athos, Parnassus, St Helens|Saint Helens',
+      'Nuptse, Ama Dablam, Pumori, Machapuchare|Machhapuchchhre, Kamet, Nanda Devi, Trisul, Shivling, Changabang, Gangkhar Puensum, Namcha Barwa, Minya Konka|Gongga, Muztagh Ata, Ismoil Somoni|Communism Peak, Lenin Peak, Khan Tengri, Jengish Chokusu|Pobeda|Victory Peak, Damavand|Demavend, Kazbek, Shkhara, Ushba, Mulhacén|Mulhacen, Aneto, Monte Perdido, Gran Paradiso, Marmolada, Ortler, Piz Bernina|Bernina, Weisshorn, Dent Blanche, Finsteraarhorn, Mönch|Monch, Barre des Écrins|Écrins, La Meije|Meije, Margherita Peak|Mount Stanley, Meru, Ras Dashen|Ras Dejen, Mount Cameroon, Elgon, Ruapehu, Taranaki|Egmont, Ben Macdui, Slieve Donard, Carrauntoohil, Robson, Assiniboine, Saint Elias|St Elias, Elbert, Ojos del Salado',
+      'Pissis, Llullaillaco, Mercedario, Tupungato, Illimani, Sajama, Alpamayo, Yerupajá|Yerupaja, Salcantay|Salkantay, Ausangate, El Misti|Misti, Cerro Torre, Pico Bolívar|Bolívar, Roraima, Pico da Neblina|Neblina, Pico Duarte|Duarte, Tajumulco, Chirripó|Chirripo, Foraker, Hunter, Sanford, Kebnekaise, Galdhøpiggen|Galdhopiggen, Glittertind, Hvannadalshnúkur, Snaefell, Gerlach|Gerlachovský štít, Rysy, Moldoveanu, Musala, Olympus Mons, Aspiring, Tasman, Ossa, Wilhelm, Giluwe, Apo, Pulag, Kerinci, Semeru, Fansipan, Hkakabo Razi, Yushan|Jade Mountain, Hallasan|Halla, Paektu|Baekdu|Changbai, Tai Shan|Tai, Emei|Emeishan, Huangshan|Yellow Mountain, Hua Shan|Huashan, Doi Inthanon, Hermon, Thabana Ntlenyana, Mafadi, Emi Koussi, Tahat, Karisimbi, Alam Kuh, Jebel Shams',
+    ],
+  },
+  {
+    id: 'islands',
+    q: 'Name an island',
+    strip: ['island', 'isle', 'of'],
+    tiers: [
+      'Hawaii, Greenland, Ireland, Great Britain|Britain, Iceland, Madagascar',
+      'Cuba, Jamaica, Bali, Sicily, Crete, Tasmania, Sri Lanka|Ceylon, Maui, Manhattan, Long Island, Puerto Rico, Corsica, Sardinia, Malta, Cyprus, Borneo, Java, Sumatra, Tahiti, Easter Island|Rapa Nui, Alcatraz, Ellis Island, Isle of Man, Isle of Skye|Skye, Isle of Wight, Santorini|Thera, Mykonos, Capri, Ibiza, Majorca|Mallorca, Barbados, Singapore, Newfoundland, Vancouver Island',
+      'Oahu, Kauai, Molokai, Lanai, Honshu, Hokkaido, Kyushu, Shikoku, Okinawa, Taiwan|Formosa, Hainan, Luzon, Mindanao, Sulawesi|Celebes, New Guinea, Lombok, Phuket, Ko Samui|Koh Samui|Samui, Langkawi, Penang, Zanzibar|Unguja, Mauritius, Réunion|Reunion, Mahé|Mahe, Tenerife, Gran Canaria, Lanzarote, Fuerteventura, Madeira, Menorca|Minorca, Elba, Ischia, Rhodes, Corfu, Kos, Lesbos|Lesvos, Zakynthos|Zante, Kefalonia|Cephalonia, Naxos, Delos, Ithaca, Gotland, Anglesey|Ynys Môn, Lewis and Harris|Lewis|Harris, Arran, Mull, Iona, Islay, Jersey, Guernsey, Sark, Lindisfarne|Holy Island, Martha\'s Vineyard, Nantucket, Staten Island, Key West, Baffin Island, Prince Edward Island, Cape Breton, Trinidad, Tobago, Antigua, Saint Lucia|St Lucia, Grenada, Martinique, Guadeloupe, Aruba, Curaçao|Curacao, Bermuda, Hispaniola, Grand Cayman, Bora Bora, Guam, Sakhalin, South Island, North Island',
+      'Ellesmere Island, Victoria Island, Banks Island, Mackinac, Anticosti, Bonaire, New Providence, Moorea, Saipan, Spitsbergen, Wrangel Island, Socotra, Pemba, Lamu, Bioko|Fernando Pó, São Tomé|Sao Tome, Saint Helena|St Helena, Ascension, Tristan da Cunha, South Georgia, Tierra del Fuego|Isla Grande de Tierra del Fuego, Chiloé|Chiloe, Robinson Crusoe Island, Pitcairn, Norfolk Island, Lord Howe Island, K\'gari|Fraser Island, Kangaroo Island, Rottnest, Phillip Island, Stewart Island|Rakiura, Christmas Island, Nauru, Lampedusa, Gozo, Pantelleria, Stromboli, Lipari, Djerba, Heligoland|Helgoland, Rügen|Rugen, Sylt, Texel, Saaremaa, Bornholm, Öland|Oland, Krk, Hvar, Brač|Brac, Korčula|Korcula, Chios, Samos, Lemnos, Euboea|Evia, Aegina, Hydra, Paros, Milos, Patmos, Lundy, Alderney, Orkney Mainland, Shetland Mainland, Achill Island, Aran Islands|Inis Mór|Inishmore',
+      'Hiiumaa, Muhu, Usedom, Ameland, Terschelling, Föhr|Fohr, Vis, Mljet, Spetses, Skiathos, Skopelos, Karpathos, Kythira, Salamis, Kerkennah, Favignana, Procida, Giglio, Montecristo, Asinara, Ustica, Comino, Cabrera, Formentera, La Gomera|Gomera, El Hierro|Hierro, La Palma, Porto Santo, Corvo, São Miguel|Sao Miguel, Pico Island|Pico, Faial, Terceira, Fogo, Santo Antão|Santo Antao, Sal, Mafia, Nosy Be, Rodrigues, Agaléga|Agalega, Diego Garcia, Kerguelen|Grande Terre, Heard Island, Macquarie Island, Campbell Island, Bouvet Island|Bouvet, Peter I Island, Jan Mayen, Bear Island|Bjørnøya, Kolguyev, Vaygach, Severny Island, Bolshevik Island, Kotelny, Iturup, Kunashir, Shikotan, Sado, Awaji, Tsushima, Yakushima, Ishigaki, Iriomote, Jeju, Ulleungdo, Ganghwa, Palawan, Cebu, Bohol, Samar, Leyte, Negros, Panay, Mindoro, Siargao, Boracay, Flores, Sumba, Sumbawa, Timor, Halmahera, Seram, Buru, Biak, Komodo, Siberut, Nias, Bangka, Belitung, Batam, Bintan, Tioman, Redang, Perhentian, Koh Phi Phi|Phi Phi, Koh Tao, Koh Lanta, Koh Chang, Phu Quoc, Con Dao, Andaman, Car Nicobar, Rameswaram, Majuli',
+    ],
+  },
+  {
+    id: 'lakes',
+    q: 'Name a lake',
+    strip: ['lake', 'loch', 'lough', 'lac', 'lago', 'llyn'],
+    tiers: [
+      'Superior, Michigan, Loch Ness, Victoria, Tahoe',
+      'Erie, Huron, Ontario, Titicaca, Baikal, Caspian Sea|Caspian, Dead Sea, Great Salt Lake, Geneva|Léman, Como, Garda, Windermere, Champlain, Placid, Loch Lomond, Sea of Galilee|Galilee|Tiberias|Kinneret',
+      'Tanganyika, Malawi|Nyasa, Chad, Aral Sea|Aral, Ladoga, Onega, Great Bear, Great Slave, Winnipeg, Athabasca, Okeechobee, Mead, Powell, Crater Lake, Louise, Lucerne|Vierwaldstättersee, Constance|Bodensee, Maggiore, Lugano, Balaton, Bled, Ohrid, Annecy, Zurich, Hallstatt, Königssee|Konigssee, Lough Neagh, Coniston|Coniston Water, Ullswater, Derwentwater|Derwent Water, Issyk-Kul|Issyk Kul, Balkhash, Biwa, Inle, Tonlé Sap|Tonle Sap, Toba, Taal, Dal, Pangong|Pangong Tso, Van, Urmia, Sevan, Nasser, Volta, Kariba, Turkana|Rudolf, Taupō|Taupo, Wakatipu, Tekapo, Eyre|Kati Thanda, Nicaragua|Cocibolca, Atitlán|Atitlan, Maracaibo, Salton Sea|Salton, Lake of the Woods, Mono, George, Pontchartrain',
+      'Prespa, Neuchâtel|Neuchatel, Bourget, Chiemsee, Starnberg, Vänern|Vanern, Vättern|Vattern, Mälaren|Malaren, Saimaa, Peipus, Inari, Lough Erne, Bassenthwaite, Loch Awe, Loch Morar, Llyn Tegid|Bala, Khövsgöl|Hovsgol, Qinghai|Koko Nor, West Lake|Xi Hu, Poyang, Dongting, Tai|Taihu, Albert, Edward, Kivu, Tana, Nakuru, Naivasha, Natron, Retba|Lac Rose, Rotorua, Te Anau, Burley Griffin, Poopó|Poopo, General Carrera|Buenos Aires, Llanquihue, Nahuel Huapi, Nipigon, Reindeer, Manitoba, Cayuga, Seneca, Winnipesaukee, Pyramid, Flathead, Yellowstone, Coeur d\'Alene, Lanier, Havasu, Travis, Loch Tay, Loch Katrine',
+      'Vostok, Hillier, Spotted Lake, Boiling Lake, Nyos, Karachay, Peigneur, Pitch Lake, Bosumtwi, Assal, Abaya, Mweru, Bangweulu, Tota, Sarez, Karakul, Kussharo, Mashu, Tazawa, Towada, Chūzenji|Chuzenji, Kawaguchi, Yamanaka, Ashi, Tōya|Toya, Shikotsu, Nam Co|Namtso, Yamdrok|Yamdrok Tso, Manasarovar, Rara, Phewa, Tilicho, Gosainkunda, Loktak, Wular, Sambhar, Tuz, Eğirdir|Egirdir, Beyşehir|Beysehir, İznik|Iznik, Bafa, Qaraoun, Habbaniyah, Tharthar, Maharlu, Zaysan, Alakol, Uvs, Hulun, Bosten, Ebinur, Mývatn|Myvatn, Þingvallavatn|Thingvallavatn, Mjøsa|Mjosa, Hornindalsvatnet, Siljan, Päijänne|Paijanne',
+    ],
+  },
+  {
+    id: 'volcanoes',
+    q: 'Name a volcano',
+    strip: ['mount', 'mt', 'volcano', 'volcan'],
+    tiers: [
+      'Vesuvius, Etna, Mount St Helens|St Helens|Saint Helens, Krakatoa|Krakatau, Fuji|Fujiyama|Fuji-san',
+      'Kilauea|Kīlauea, Mauna Loa, Mauna Kea, Pinatubo, Eyjafjallajökull|Eyjafjallajokull, Stromboli, Popocatépetl|Popocatepetl|Popo, Tambora, Yellowstone|Yellowstone Caldera|Yellowstone supervolcano, Kilimanjaro, Pelée|Mont Pelée|Pelee, Hekla, Rainier',
+      'Cotopaxi, Chimborazo, Merapi, Mayon, Taal, Sakurajima, Unzen, Ruapehu, Taranaki|Egmont, Tongariro, Ngauruhoe, Whakaari|White Island, Erebus, Hunga Tonga|Hunga Tonga-Hunga Ha\'apai, Nyiragongo, Ol Doinyo Lengai, Erta Ale, Mount Cameroon, Teide, Santorini|Thera, Vulcano, Campi Flegrei|Phlegraean Fields, Katla, Laki, Grímsvötn|Grimsvotn, Surtsey, Fagradalsfjall, Hood, Shasta, Baker, Lassen|Lassen Peak, Mazama|Crater Lake, Katmai, Novarupta, Paricutín|Paricutin, Colima, Fuego|Volcán de Fuego, Arenal, Nevado del Ruiz|Ruiz, Soufrière Hills|Soufriere Hills, Ararat, Damavand, Elbrus, Haleakalā|Haleakala, Diamond Head, Toba, Taupō|Taupo, Agung, Bromo, Rinjani, Piton de la Fournaise, Aso',
+      'Bárðarbunga|Bardarbunga, Askja, Krafla, Redoubt, Augustine, Pavlof, Shishaldin, Spurr, Iliamna, Adams, Glacier Peak, Newberry, Three Sisters, Jefferson, Garibaldi, Pacaya, Irazú|Irazu, Poás|Poas, Masaya, Ojos del Salado, Villarrica, Osorno, Calbuco, Chaitén|Chaiten, Puyehue, Llaima, Láscar|Lascar, Sabancaya, El Misti|Misti, Ubinas, Tungurahua, Sangay, Galeras, La Soufrière|La Soufriere, Kick \'em Jenny, Klyuchevskaya Sopka|Klyuchevskoy, Bezymianny, Shiveluch, Avachinsky, Tolbachik, Karymsky, Bandai, Asama, Ontake|Ontakesan, Kirishima, Batur, Kelud|Kelut, Semeru, Sinabung, Galunggung, Kanlaon, Bulusan, Kerinci, Erciyes, Nemrut, Hualālai|Hualalai, Lōʻihi|Loihi|Kamaʻehuakanaloa, Long Valley Caldera|Long Valley, Valles Caldera, Rabaul, Manam, Lamington, Ulawun, Yasur, Ambrym, Nyamuragira|Nyamulagira, Karthala, Fogo, Pico, Beerenberg, Big Ben',
+      'Olympus Mons, Tamu Massif, Axial Seamount, Kolumbo, Marsili, Ferdinandea, Nisyros, Methana, Monte Nuovo, Roccamonfina, Colli Albani|Alban Hills, Puy de Dôme|Puy de Dome, Laacher See, Öræfajökull|Oraefajokull, Herðubreið|Herdubreid, Hverfjall, Eldfell, Snæfellsjökull|Snaefellsjokull, Tseax, Edziza, Meager, Deception Island, Melbourne, Sidley, Takahe, Cerro Azul, Wolf, Sierra Negra, Fernandina, Hudson|Cerro Hudson, Quizapu, Cerro Negro, Momotombo, San Cristóbal, Santa Ana|Ilamatepec, Izalco, Santa María|Santiaguito, Tacaná|Tacana, El Chichón|Chichonal, Nevado de Toluca|Xinantécatl, Iztaccíhuatl|Iztaccihuatl, Pico de Orizaba|Citlaltépetl|Orizaba, Sunset Crater, Capulin, Paektu|Baekdu|Changbai, Hallasan|Halla, Kikai, Usu, Tarumae, Tokachi, Miyakejima, Nishinoshima, Lewotobi, Ruang, Lokon, Soputan, Ibu, Dukono, Gamalama, Hibok-Hibok, Kasatochi, Bogoslof, Okmok',
+    ],
+  },
+  {
+    id: 'waterfalls',
+    q: 'Name a waterfall',
+    strip: ['falls', 'fall', 'waterfall', 'force'],
+    tiers: [
+      'Niagara, Victoria|Mosi-oa-Tunya, Angel|Salto Ángel|Kerepakupai Merú',
+      'Iguazu|Iguaçu|Iguassu|Iguazú, Yosemite, Multnomah, Bridalveil|Bridal Veil, Horseshoe, Gullfoss, Skógafoss|Skogafoss, Seljalandsfoss, Kaieteur, Rhine Falls|Rheinfall, Reichenbach, Havasu',
+      'Dettifoss, Goðafoss|Godafoss, Sutherland, Tugela, Jog, Dudhsagar, Huangguoshu, Ban Gioc|Detian|Ban Gioc-Detian, Kegon, Nachi, Lower Yellowstone|Lower Falls, Shoshone, Snoqualmie, Burney, Vernal, Nevada, Mardalsfossen, Vøringsfossen|Voringsfossen, Seven Sisters, Krimml, Staubbach, Trümmelbach|Trummelbach, Gavarnie, Marmore|Cascata delle Marmore, Murchison|Kabalega, Blue Nile|Tis Issat, Ouzoud, Kalambo, Augrabies, Wallaman, Jim Jim, Wentworth, Huka, Takakkaw, Montmorency, Gocta',
+      'Ribbon, Helmcken, Basaseachic, Agua Azul, Hierve el Agua, Kuang Si, Erawan, Tumpak Sewu, Pagsanjan, Athirappilly, Nohkalikai, Baatara Gorge|Baatara, Hukou, Shiraito, Fukuroda, Pongour, Kawasan, Kravica, Skradinski Buk|Krka, Howick, Twin Falls, Shannon, Virginia, Della, Brandywine, Kakabeka, Tahquamenon, Bash Bish, Kaaterskill, Ruby, Amicalola, Cumberland, Toccoa, Akaka, Wailua, Rainbow, Dunn\'s River|Dunns River, YS, Salto del Laja|Laja, Petrohué|Petrohue, Saltos del Monday|Monday, Moconá|Mocona|Yucumã, Caracol, Itiquira',
+      'Aber, Swallow, Henrhyd, Pistyll Rhaeadr, High Force, Aysgarth, Hardraw Force, Steall, Eas a\' Chual Aluinn, Powerscourt, Torc, Wollomombi, Ellenborough, Mutarazi, Kalandula, Boyoma|Stanley Falls, Inga, Lofoi, Wli, Mac Mac, Sekumpul, Gitgit, Madakaripura, Tinago, Maria Cristina, Kunchikal, Barehipani, Yumbilla, Ramnefjellsfossen, Vinnufossen, Langfoss, Kjosfossen, Tegenungan, Thi Lo Su, Pisew, Whitewater, Linville, Hanakapiai, Waimoku, Hiilawe, Sipi, Karuma, Chamarel, Orinduik, Véu de Noiva|Veu de Noiva, Fumaça|Fumaca, Cola de Caballo',
+    ],
+  },
+  {
+    id: 'us-cities',
+    q: 'Name a city in the United States',
+    tiers: [
+      'New York|New York City|NYC, Los Angeles|LA, Chicago, Miami, Las Vegas|Vegas, San Francisco|SF',
+      'Boston, Seattle, Houston, Dallas, Atlanta, Washington|Washington DC|DC, Philadelphia|Philly, Orlando, Denver, Detroit, New Orleans|NOLA, Phoenix, San Diego, Nashville, Austin, Honolulu, Portland, Baltimore',
+      'San Antonio, Minneapolis, St Louis|Saint Louis, Kansas City, Pittsburgh, Cleveland, Cincinnati, Salt Lake City, Sacramento, San Jose, Charlotte, Indianapolis, Columbus, Milwaukee, Memphis, Tampa, Jacksonville, Albuquerque, Tucson, Oklahoma City, Anchorage, Buffalo, Raleigh, Richmond, Louisville, Omaha, Fort Worth, El Paso, Oakland, Long Beach, Santa Fe, Savannah, Charleston, Boise, Reno, Palm Springs, Key West, Atlantic City, Malibu, Beverly Hills, Santa Monica, Berkeley, Princeton, Cambridge, Newark, Providence, Hartford, Madison, Des Moines, Little Rock, Birmingham, Baton Rouge, Tallahassee, Fort Lauderdale, St Petersburg|Saint Petersburg, Pasadena, Anaheim, Scottsdale, Colorado Springs, Boulder, Aspen, Tulsa, Galveston, Knoxville, Asheville, Virginia Beach, Annapolis, Rochester, Albany, Ann Arbor, Green Bay, St Paul|Saint Paul, Springfield, Juneau, Hoboken, New Haven',
+      'Jackson, Mobile, Montgomery, Shreveport, Sarasota, Naples, Spokane, Tacoma, Eugene, Salem, Fresno, Bakersfield, Irvine, Tempe, Mesa, Flagstaff, Cheyenne, Billings, Fargo, Sioux Falls, Lincoln, Wichita, Lubbock, Amarillo, Corpus Christi, Laredo, Plano, Arlington, Lexington, Chattanooga, Durham, Greensboro, Norfolk, Wilmington, Syracuse, Ithaca, Scranton, Erie, Allentown, Harrisburg, Akron, Toledo, Dayton, Grand Rapids, Flint, Lansing, Duluth, Peoria, Gary, South Bend, Fort Wayne, Evansville, Fairbanks, Hilo, Augusta, Bangor, Manchester, Concord, Montpelier, Burlington, Worcester, Stamford, Paterson, Trenton, Camden, Dover, Yonkers, Santa Barbara, Monterey, Sedona, Santa Cruz, Stockton, Modesto, Riverside, San Bernardino, Chula Vista, Henderson, Aurora, Lakeland, Gainesville, Pensacola, Daytona Beach, Boca Raton, Myrtle Beach, Greenville, Columbia, Macon, Athens, Huntsville, Tuscaloosa, Biloxi, Lafayette, Waco, Abilene, Odessa, Midland, Brownsville, McAllen, Beaumont, Topeka, Dubuque, Cedar Rapids, Davenport, Iowa City, Rapid City, Bismarck, Missoula, Bozeman, Provo, Ogden, Moab, Roswell, Taos, Las Cruces, Yuma, Prescott, Durango, Pueblo, Laramie, Casper, Deadwood',
+      'Truth or Consequences, Walla Walla, Kalamazoo, Ypsilanti, Schenectady, Poughkeepsie, Kokomo, Muncie, Pocatello, Twin Falls, Coeur d\'Alene, Yakima, Bellingham, Medford, Bend, Eureka, Redding, Chico, Visalia, Oxnard, Ventura, San Luis Obispo, Carmel|Carmel-by-the-Sea, St George|Saint George, Grand Junction, Minot, Grand Forks, Ames, Lawrence, Joplin, Branson, Hot Springs, Texarkana, Lake Charles, Gulfport, Hattiesburg, Tupelo, Dothan, Valdosta, Ocala, Spartanburg, Roanoke, Charlottesville, Lynchburg, Morgantown, Wheeling, Altoona, Lancaster, Gettysburg, Hershey, Bethlehem, Binghamton, Utica, Saratoga Springs, Plattsburgh, Portsmouth, Nashua, Lowell, Provincetown, Hyannis, New Bedford, Fall River, Newport, Mystic, Bar Harbor, Kennebunkport, Ketchikan, Sitka, Nome, Barrow|Utqiagvik, Kailua, Lahaina, Kapaa, Tombstone, Bisbee, Jerome, Marfa, Terlingua, Luckenbach, Fredericksburg, Natchez, Vicksburg, Oxford, Clarksdale, Paducah, Bowling Green',
+    ],
+  },
+  {
+    // One city for each country on the 'asia' card: the seat of government.
+    id: 'asian-capitals',
+    q: 'Name the capital city of a country in Asia',
+    tiers: [
+      'Tokyo, Beijing|Peking, Bangkok, Seoul, New Delhi|Delhi',
+      'Singapore, Manila, Jakarta|Nusantara, Kuala Lumpur|KL|Putrajaya, Hanoi, Moscow, Tehran|Teheran, Baghdad, Kabul, Islamabad, Jerusalem, Riyadh, Ankara, Taipei, Kathmandu, Damascus, Beirut, Doha, Abu Dhabi',
+      'Dhaka|Dacca, Sri Jayawardenepura Kotte|Kotte|Colombo, Phnom Penh, Pyongyang, Kuwait City|Kuwait, Muscat, Amman, Manama, Ulaanbaatar|Ulan Bator, Vientiane, Tbilisi, Yerevan, Baku, Nicosia, Malé|Male, Tashkent, Astana|Nur-Sultan',
+      'Sanaa|Sana\'a, Naypyidaw|Nay Pyi Taw|Naypyitaw, Thimphu, Bishkek, Dushanbe, Ramallah',
+      'Bandar Seri Begawan, Ashgabat|Ashkhabad|Asgabat, Dili',
+    ],
+  },
+  {
+    id: 'nfl-teams',
+    q: 'Name an NFL team',
+    tiers: [
+      'Dallas Cowboys|Cowboys, New England Patriots|Patriots|Pats, Green Bay Packers|Packers, Kansas City Chiefs|Chiefs, Pittsburgh Steelers|Steelers, San Francisco 49ers|49ers|Niners|Forty-Niners',
+      'New York Giants|Giants, Chicago Bears|Bears, Philadelphia Eagles|Eagles, Miami Dolphins|Dolphins, Denver Broncos|Broncos, Las Vegas Raiders|Raiders|Oakland Raiders, Seattle Seahawks|Seahawks, Buffalo Bills|Bills, Baltimore Ravens|Ravens',
+      'New York Jets|Jets, Los Angeles Rams|Rams|St Louis Rams, Minnesota Vikings|Vikings, Detroit Lions|Lions, New Orleans Saints|Saints, Tampa Bay Buccaneers|Buccaneers|Bucs, Cleveland Browns|Browns, Indianapolis Colts|Colts|Baltimore Colts, Washington Commanders|Commanders|Washington Football Team',
+      'Atlanta Falcons|Falcons, Cincinnati Bengals|Bengals, Los Angeles Chargers|Chargers|San Diego Chargers, Arizona Cardinals|Cardinals, Carolina Panthers|Panthers',
+      'Tennessee Titans|Titans|Houston Oilers, Houston Texans|Texans, Jacksonville Jaguars|Jaguars|Jags',
+    ],
+  },
+  {
+    id: 'nba-teams',
+    q: 'Name an NBA team',
+    tiers: [
+      'Los Angeles Lakers|LA Lakers|Lakers, Chicago Bulls|Bulls, Boston Celtics|Celtics, Golden State Warriors|Warriors, Miami Heat|Heat',
+      'New York Knicks|Knicks|Knickerbockers, San Antonio Spurs|Spurs, Brooklyn Nets|Nets|New Jersey Nets, Philadelphia 76ers|76ers|Sixers, Dallas Mavericks|Mavericks|Mavs, Cleveland Cavaliers|Cavaliers|Cavs, Houston Rockets|Rockets, Detroit Pistons|Pistons, Phoenix Suns|Suns',
+      'Toronto Raptors|Raptors, Milwaukee Bucks|Bucks, Denver Nuggets|Nuggets, Oklahoma City Thunder|Thunder|OKC|Seattle SuperSonics|SuperSonics|Sonics, Utah Jazz|Jazz, Orlando Magic|Magic, LA Clippers|Los Angeles Clippers|Clippers, Portland Trail Blazers|Trail Blazers|Blazers|Trailblazers, Atlanta Hawks|Hawks, Sacramento Kings|Kings',
+      'Indiana Pacers|Pacers, Minnesota Timberwolves|Timberwolves|Wolves, Memphis Grizzlies|Grizzlies|Vancouver Grizzlies',
+      'Washington Wizards|Wizards|Washington Bullets, Charlotte Hornets|Hornets|Charlotte Bobcats, New Orleans Pelicans|Pelicans',
+    ],
+  },
+  {
+    id: 'bridges',
+    q: 'Name a famous bridge',
+    strip: ['bridge', 'bridges'],
+    tiers: [
+      'Golden Gate, Brooklyn, Tower Bridge, London Bridge, Sydney Harbour|Sydney Harbor|Harbour',
+      'Rialto|Ponte di Rialto, Ponte Vecchio, Bridge of Sighs|Ponte dei Sospiri, Charles|Karlův most|Karluv most, Forth|Forth Rail, Millau Viaduct|Millau, Øresund|Oresund|Öresund, Akashi Kaikyō|Akashi Kaikyo|Akashi, George Washington, Manhattan, Williamsburg, Queensboro|59th Street, Bay Bridge|San Francisco-Oakland Bay, Pont Neuf, Verrazzano-Narrows|Verrazzano|Verrazano, Chesapeake Bay, Mackinac',
+      'Pont Alexandre III|Alexandre III, Pont des Arts, Ponte Sant\'Angelo|Sant\'Angelo, Stari Most|Mostar, Széchenyi Chain|Chain|Széchenyi, Clifton Suspension|Clifton, Humber, Severn, Iron Bridge|Ironbridge, Millennium, Westminster, Waterloo, Blackfriars, Albert, Hammersmith, Tyne, Gateshead Millennium, Ha\'penny|Halfpenny, Kintai, Khaju, Si-o-se-pol, Tsing Ma, Hong Kong-Zhuhai-Macau|HZMB, Rainbow, Great Belt|Storebælt, Vasco da Gama, 25 de Abril|25th of April, Bosphorus|Bosporus|15 July Martyrs, Galata, Confederation, Jacques Cartier, Lions Gate, Capilano Suspension|Capilano, Royal Gorge, Seven Mile, Sunshine Skyway, Edmund Pettus, Tacoma Narrows|Galloping Gertie, Coronado, Howrah|Rabindra Setu, Erasmus|Erasmusbrug, Pont du Gard, Pont d\'Avignon|Saint-Bénézet, Glenfinnan Viaduct|Glenfinnan, Chapel Bridge|Kapellbrücke, Glienicke|Bridge of Spies',
+      'Hangzhou Bay, Danyang-Kunshan Grand|Danyang-Kunshan, Dom Luís I|Luís I, Bandra-Worli Sea Link|Bandra-Worli, Helix, Rio-Niterói|Rio-Niteroi, Puente de la Mujer, Magere Brug|Skinny Bridge, Pont de Normandie, Puente Nuevo, Golden Bridge|Cầu Vàng, Seto Ōhashi|Seto Ohashi, Landwasser Viaduct|Landwasser, Ribblehead Viaduct|Ribblehead, Garabit Viaduct|Garabit, Alcántara|Alcantara, Steinerne Brücke, Krämerbrücke|Kramerbrucke, Hohenzollern, Ponte Pietra, Ponte Scaligero|Castelvecchio, Devil\'s Bridge, Vizcaya|Puente de Vizcaya, Marco Polo|Lugou, Anji|Zhaozhou, Story, Anzac, Auckland Harbour, Eads, Roebling, Hell Gate, Bayonne, Goethals, Mario Cuomo|Tappan Zee, Benjamin Franklin|Ben Franklin, Ambassador, Peace, Bixby Creek|Bixby, Hoover Dam Bypass|Mike O\'Callaghan-Pat Tillman, Arthur Ravenel Jr|Ravenel, Zakim|Leonard P Zakim Bunker Hill, New River Gorge, Lake Pontchartrain Causeway|Pontchartrain Causeway, Deception Pass',
+      'Chaotianmen, Lupu, Sutong, Jiaozhou Bay, Baluarte, Russky, Octávio Frias de Oliveira|Octavio Frias de Oliveira, King Fahd Causeway, Pamban, Chenab, Shinkyō|Shinkyo, Most SNP|UFO, Jade Belt, Kurilpa, Te Rewa Rewa, Smithfield Street, Roberto Clemente, Navajo, Natchez Trace Parkway, Sundial, Gateway, Kurushima Kaikyō|Kurushima, Tatara, Ponte della Maddalena, Pont Valentré|Valentre, Pont Saint-Martin, Puente Romano, Most Slobode, Kingsway, Ada, Branko, Gazela, Charles de Gaulle, Pont de Bir-Hakeim|Bir-Hakeim, Pont Mirabeau|Mirabeau, Pont de l\'Alma|Alma, Passerelle Simone-de-Beauvoir, Ponte della Costituzione|Calatrava, Ponte degli Alpini|Bassano, Zubizuri, Alamillo, Bac de Roda',
+    ],
+  },
+];
