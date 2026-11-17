@@ -982,7 +982,7 @@ function makeSky(mood) {
 export function createRenderer(canvas, { markers = true } = {}) {
   let gl;
   try {
-    gl = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'default' });
+    gl = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' });
   } catch {
     return createFlatRenderer(canvas);
   }
@@ -1221,6 +1221,10 @@ export function createRenderer(canvas, { markers = true } = {}) {
     scene.add(sky);
     const horizon = new THREE.Color(mood.sky[2]);
     scene.fog = new THREE.Fog(horizon, mood.fog[0], mood.fog[1]);
+    // Nothing shows through the haze, so nothing beyond it is drawn.
+    camera.far = Math.max(950, mood.fog[1] * 1.05);
+    camera.updateProjectionMatrix();
+    sky.scale.setScalar((camera.far * 0.9) / 1400);
     gl.setClearColor(horizon);
     hemi.color.set(mood.fill.sky);
     hemi.groundColor.set(mood.fill.ground);
@@ -1489,7 +1493,8 @@ export function createRenderer(canvas, { markers = true } = {}) {
     if (dead) return;
     raf = requestAnimationFrame(frameStep);
     // While nothing moves but the flag, about 30 frames a second is plenty.
-    const still = (mode === 'aim' || mode === 'overview') && !tweens.length && !bits.length && !trail.length && cam.pos.distanceToSquared(goal.pos) < 0.09;
+    // (Only once the camera has fully stopped: dropping frames mid-move shows as judder.)
+    const still = mode === 'aim' && !tweens.length && !bits.length && !trail.length && cam.pos.distanceToSquared(goal.pos) < 1e-4 && cam.look.distanceToSquared(goal.look) < 1e-4;
     if (still && now - last < 30) return;
     const dt = clamp(now - last, 0, 64);
     last = now;
