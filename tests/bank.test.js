@@ -95,7 +95,25 @@ test('closed sets are complete', () => {
   assert.equal(count('tarot'), 78);
 });
 
+// Lists with a fixed, real-world size; every other card holds at least 60 answers.
+const CLOSED = new Set([
+  'us-states', 'us-capitals', 'africa', 'europe', 'asia', 'americas', 'euro-capitals', 'asian-capitals',
+  'greek-letters', 'nato-alphabet', 'si-prefixes', 'nfl-teams', 'nba-teams', 'presidents',
+]);
+
+test('the bank holds 300 categories', () => {
+  assert.equal(PROMPTS.length, 300);
+});
+
+test('every open category has at least 60 answers', () => {
+  for (const p of PROMPTS) {
+    if (CLOSED.has(p.id)) continue;
+    const n = cardFor(p.id).answers.length;
+    assert.ok(n >= 60, `${p.id} has ${n} answers`);
+  }
+});
+
 test('the bank reports its size', () => {
   const answers = PROMPTS.reduce((n, p) => n + cardFor(p.id).answers.length, 0);
-  assert.ok(answers > 14000, `${answers} answers`);
+  assert.ok(answers > 40000, `${answers} answers`);
 });

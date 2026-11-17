@@ -232,13 +232,13 @@ export default [
   },
   {
     id: 'dickens',
-    q: 'Name a book by Charles Dickens',
+    q: 'Name a book by Charles Dickens, or a character from one',
     tiers: [
-      'A Christmas Carol|Christmas Carol, Oliver Twist|Oliver, Great Expectations',
-      'David Copperfield, A Tale of Two Cities|Tale of Two Cities, Bleak House, Hard Times',
-      'Nicholas Nickleby, Little Dorrit, The Pickwick Papers|Pickwick Papers|Pickwick, Our Mutual Friend, The Old Curiosity Shop|Old Curiosity Shop',
-      'Dombey and Son, Martin Chuzzlewit, The Mystery of Edwin Drood|Edwin Drood, Barnaby Rudge',
-      'The Chimes|Chimes, The Cricket on the Hearth|Cricket on the Hearth, The Battle of Life|Battle of Life, The Haunted Man|Haunted Man, Sketches by Boz, Pictures from Italy, American Notes, A Child\'s History of England, The Uncommercial Traveller, The Signal-Man|The Signalman, Mugby Junction, The Life of Our Lord, Master Humphrey\'s Clock, The Mudfog Papers, No Thoroughfare, Hunted Down, George Silverman\'s Explanation, Holiday Romance, The Frozen Deep',
+      "A Christmas Carol|Christmas Carol, Oliver Twist|Oliver, Great Expectations, Scrooge|Ebenezer Scrooge",
+      "David Copperfield, A Tale of Two Cities|Tale of Two Cities, Bleak House, Hard Times, Tiny Tim, Fagin, The Artful Dodger|Artful Dodger|Jack Dawkins, Miss Havisham, Pip, Bob Cratchit, Jacob Marley|Marley",
+      "Nicholas Nickleby, Little Dorrit, The Pickwick Papers|Pickwick Papers|Pickwick, Our Mutual Friend, The Old Curiosity Shop|Old Curiosity Shop, Bill Sikes, Nancy, Mr Bumble|Bumble, Estella, Magwitch|Abel Magwitch, Uriah Heep, Mr Micawber|Wilkins Micawber|Micawber, Sydney Carton, Madame Defarge, Mr Pickwick|Samuel Pickwick, Little Nell, Betsey Trotwood, Ghost of Christmas Past, Ghost of Christmas Present, Ghost of Christmas Yet to Come, Fezziwig, Mr Brownlow, Joe Gargery, Charles Darnay, Sam Weller, Wackford Squeers|Squeers, Smike, Mr Gradgrind|Thomas Gradgrind|Gradgrind, Peggotty",
+      "Dombey and Son, Martin Chuzzlewit, The Mystery of Edwin Drood|Edwin Drood, Barnaby Rudge, Lucie Manette, Doctor Manette|Dr Manette, Steerforth, Mr Murdstone, Quilp|Daniel Quilp, Josiah Bounderby, Esther Summerson, Lady Dedlock, Mr Jarndyce|John Jarndyce, Inspector Bucket, Mrs Jellyby, Harold Skimpole, Mr Tulkinghorn, Amy Dorrit, Pecksniff|Seth Pecksniff, Mrs Gamp|Sairey Gamp, John Jasper, Herbert Pocket, Wemmick, Jaggers, Pumblechook, Mrs Joe, Biddy, Mr Dick, Agnes Wickfield, Dora Spenlow, Noah Claypole, Monks, Charley Bates, Jerry Cruncher, Miss Pross, Captain Cuttle, Mr Toots, Paul Dombey, Florence Dombey, Ralph Nickleby, Newman Noggs",
+      "The Chimes|Chimes, The Cricket on the Hearth|Cricket on the Hearth, The Battle of Life|Battle of Life, The Haunted Man|Haunted Man, Sketches by Boz, Pictures from Italy, American Notes, A Child's History of England, The Uncommercial Traveller, The Signal-Man|The Signalman, Mugby Junction, The Life of Our Lord, Master Humphrey's Clock, The Mudfog Papers, No Thoroughfare, Hunted Down, George Silverman's Explanation, Holiday Romance, The Frozen Deep, Bentley Drummle, Little Em'ly, Ham Peggotty, Krook, Mr Guppy, Mrs Pardiggle, Mr Turveydrop, Mr Vholes, Mrs Sparsit, Sissy Jupe, Stephen Blackpool, Bella Wilfer, Noddy Boffin, Silas Wegg, Gaffer Hexam, Lizzie Hexam, Bradley Headstone, Mr Podsnap, Jenny Wren, Dick Swiveller, Sampson Brass, Sally Brass, Kit Nubbles, The Marchioness, Mr Wardle, Mr Winkle, Mr Snodgrass, Mr Tupman, Mr Jingle|Alfred Jingle, Mrs Bardell, Vincent Crummles, Kate Nickleby, Cheeryble brothers|Cheerybles, Mr Mantalini, Simon Tappertit, Dolly Varden, Gabriel Varden, Grip, Tom Pinch, Mark Tapley, Jonas Chuzzlewit, Montague Tigg, Edith Granger, Carker, Arthur Clennam, Mr Merdle, Flora Finching, Rigaud, Stryver",
     ],
   },
   {

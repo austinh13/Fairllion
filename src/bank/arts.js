@@ -4,13 +4,13 @@
 export default [
   {
     id: 'shakespeare',
-    q: 'Name a play by Shakespeare',
+    q: 'Name a play by Shakespeare, or a character in one',
     tiers: [
-      'Hamlet, Macbeth, Romeo and Juliet, Othello',
-      "King Lear, A Midsummer Night's Dream, The Tempest, Julius Caesar, Much Ado About Nothing, Twelfth Night, The Merchant of Venice",
-      "As You Like It, The Taming of the Shrew, Richard III|Richard 3|Richard the Third, Henry V|Henry 5|Henry the Fifth, Antony and Cleopatra, The Winter's Tale, The Comedy of Errors",
-      "Measure for Measure, Love's Labour's Lost|Loves Labors Lost, The Merry Wives of Windsor, All's Well That Ends Well, Henry IV|Henry 4|Henry IV Part 1|Henry IV Part 2|Henry the Fourth, Richard II|Richard 2|Richard the Second, Coriolanus, Titus Andronicus, The Two Gentlemen of Verona|Two Gentlemen of Verona",
-      'Cymbeline, Pericles|Pericles Prince of Tyre, Troilus and Cressida, Timon of Athens, King John, Henry VI|Henry 6|Henry the Sixth, Henry VIII|Henry 8|Henry the Eighth, The Two Noble Kinsmen|Two Noble Kinsmen',
+      "Hamlet, Macbeth, Romeo and Juliet, Othello",
+      "King Lear, A Midsummer Night's Dream, The Tempest, Julius Caesar, Much Ado About Nothing, Twelfth Night, The Merchant of Venice, Romeo, Juliet, Lady Macbeth, Iago, Ophelia, Puck, Shylock, Prospero, Falstaff|Sir John Falstaff, Brutus",
+      "As You Like It, The Taming of the Shrew, Richard III|Richard 3|Richard the Third, Henry V|Henry 5|Henry the Fifth, Antony and Cleopatra, The Winter's Tale, The Comedy of Errors, Desdemona, Portia, Mark Antony, Cleopatra, Cordelia, Mercutio, Tybalt, Polonius, Horatio, Laertes, Gertrude, Claudius, Yorick, Banquo, Macduff, Oberon, Titania, Bottom|Nick Bottom, Caliban, Ariel, Miranda, Beatrice, Benedick, Viola, Malvolio, Rosencrantz, Guildenstern, The Three Witches|Three Witches|Weird Sisters",
+      "Measure for Measure, Love's Labour's Lost|Loves Labors Lost, The Merry Wives of Windsor, All's Well That Ends Well, Henry IV|Henry 4|Henry IV Part 1|Henry IV Part 2|Henry the Fourth, Richard II|Richard 2|Richard the Second, Coriolanus, Titus Andronicus, The Two Gentlemen of Verona|Two Gentlemen of Verona, Goneril, Regan, Edmund, Edgar, Benvolio, Friar Laurence, Duncan, Malcolm, Lysander, Demetrius, Hermia, Helena, Orsino, Olivia, Sir Toby Belch, Feste, Rosalind, Orlando, Jaques, Touchstone, Katherina|Kate, Petruchio, Bianca, Cassio, Emilia, Prince Hal|Hal, Hotspur, Mistress Quickly, Dogberry, Antonio, Bassanio, Jessica, Cassius, Calpurnia, Fortinbras, Hecate, Lady Anne, John of Gaunt",
+      "Cymbeline, Pericles|Pericles Prince of Tyre, Troilus and Cressida, Timon of Athens, King John, Henry VI|Henry 6|Henry the Sixth, Henry VIII|Henry 8|Henry the Eighth, The Two Noble Kinsmen|Two Noble Kinsmen, Bardolph, Pistol, Nym, Poins, Doll Tearsheet, Justice Shallow|Shallow, Nerissa, Isabella, Angelo, Imogen|Innogen, Perdita, Leontes, Hermione, Autolycus, Paulina, Aaron, Lavinia, Tamora, Octavius, Enobarbus, Volumnia, Proteus, Valentine, Launce, Parolles, Thersites, Osric, Bolingbroke, Glendower|Owen Glendower, Fluellen, Peter Quince|Quince, Snout, Flute, Starveling, Snug, Egeus, Theseus, Hippolyta, Trinculo, Stephano, Gonzalo, Ferdinand, Sycorax, Iachimo, Posthumus",
     ],
   },
   {
@@ -222,13 +222,13 @@ export default [
   },
   {
     id: 'olympic-sports',
-    q: 'Name a sport that has been contested at the Summer Olympics',
+    q: 'Name a sport that has been contested at the Summer or Winter Olympics',
     tiers: [
-      'Swimming, Athletics|Track and field|Track, Gymnastics|Artistic gymnastics, Football|Soccer, Basketball',
-      'Tennis, Boxing, Cycling|Road cycling|Track cycling, Diving, Volleyball, Rowing, Golf, Wrestling',
-      'Judo, Fencing, Archery, Table tennis|Ping pong, Badminton, Weightlifting, Sailing, Hockey|Field hockey, Rugby|Rugby sevens|Rugby union, Equestrian|Horse riding|Dressage|Show jumping|Eventing, Shooting, Taekwondo',
-      'Triathlon, Water polo, Handball, Beach volleyball, Skateboarding, Surfing, Canoeing|Canoe|Kayaking|Kayak|Canoe sprint, Artistic swimming|Synchronized swimming|Synchronised swimming, BMX|BMX racing|BMX freestyle, Sport climbing|Climbing, Trampoline|Trampolining, Rhythmic gymnastics, Baseball, Softball',
-      'Modern pentathlon|Pentathlon, Breaking|Breakdancing, Marathon swimming|Open water swimming, Mountain biking|Mountain bike, Canoe slalom, Karate, Cricket, Lacrosse, Polo, Tug of war, Croquet',
+      "Swimming, Athletics|Track and field|Track, Gymnastics|Artistic gymnastics, Football|Soccer, Basketball, Ice hockey, Figure skating|Ice skating, Alpine skiing|Skiing|Downhill skiing",
+      "Tennis, Boxing, Cycling|Road cycling|Track cycling, Diving, Volleyball, Rowing, Golf, Wrestling, Ski jumping, Snowboarding|Snowboard, Bobsleigh|Bobsled, Speed skating, Curling",
+      "Judo, Fencing, Archery, Table tennis|Ping pong, Badminton, Weightlifting, Sailing, Hockey|Field hockey, Rugby|Rugby sevens|Rugby union, Equestrian|Horse riding|Dressage|Show jumping|Eventing, Shooting, Taekwondo, Luge, Biathlon, Cross-country skiing, Skeleton, Short track speed skating|Short track, Freestyle skiing|Moguls|Aerials",
+      "Triathlon, Water polo, Handball, Beach volleyball, Skateboarding, Surfing, Canoeing|Canoe|Kayaking|Kayak|Canoe sprint, Artistic swimming|Synchronized swimming|Synchronised swimming, BMX|BMX racing|BMX freestyle, Sport climbing|Climbing, Trampoline|Trampolining, Rhythmic gymnastics, Baseball, Softball, Nordic combined, Ski mountaineering|Skimo, Squash, Flag football",
+      "Modern pentathlon|Pentathlon, Breaking|Breakdancing, Marathon swimming|Open water swimming, Mountain biking|Mountain bike, Canoe slalom, Karate, Cricket, Lacrosse, Polo, Tug of war, Croquet, Military patrol, Skijoring, Jeu de paume|Real tennis, Rackets, Basque pelota|Pelota, Motorboating|Powerboating, Roque",
     ],
   },
 ];

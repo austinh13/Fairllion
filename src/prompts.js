@@ -8,9 +8,23 @@ import culture from './bank/culture.js';
 import home from './bank/home.js';
 import places from './bank/places.js';
 import science from './bank/science.js';
+import sport from './bank/sport.js';
+import screen from './bank/screen.js';
+import music from './bank/music.js';
+import books from './bank/books.js';
+import history from './bank/history.js';
+import kitchen from './bank/kitchen.js';
+import cities from './bank/cities.js';
+import words from './bank/words.js';
+import tech from './bank/tech.js';
+import wild from './bank/wild.js';
+import society from './bank/society.js';
 import { buildCard } from './match.js';
 
-export const PROMPTS = [...places, ...science, ...arts, ...life, ...nature, ...world, ...culture, ...home];
+export const PROMPTS = [
+  ...places, ...science, ...arts, ...life, ...nature, ...world, ...culture, ...home,
+  ...sport, ...screen, ...music, ...books, ...history, ...kitchen, ...cities, ...words, ...tech, ...wild, ...society,
+];
 
 const byId = new Map(PROMPTS.map((p) => [p.id, p]));
 const cards = new Map();

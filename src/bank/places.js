@@ -82,13 +82,13 @@ export default [
   },
   {
     id: 'olympic-cities',
-    q: 'Name a city that has hosted the Olympic Games, summer or winter',
+    q: 'Name a place that has hosted, or will host, the Olympic, Paralympic or Youth Olympic Games',
     tiers: [
-      'London, Paris, Tokyo, Los Angeles|LA, Beijing, Rio de Janeiro|Rio',
-      'Sydney, Athens, Barcelona, Atlanta, Rome, Berlin, Moscow, Seoul',
-      'Munich, Montreal, Mexico City, Vancouver, Sochi, Salt Lake City, Melbourne, Calgary, Amsterdam, Stockholm, Helsinki',
-      'Turin|Torino, Nagano, Lillehammer, Sarajevo, Innsbruck, Lake Placid, Pyeongchang, Oslo, Milan|Milano, Antwerp, St. Louis|Saint Louis',
-      "Sapporo, Grenoble, Albertville, Chamonix, St. Moritz|Saint Moritz|Sankt Moritz, Cortina d'Ampezzo|Cortina, Garmisch-Partenkirchen|Garmisch, Squaw Valley|Palisades Tahoe",
+      "London, Paris, Tokyo, Los Angeles|LA, Beijing, Rio de Janeiro|Rio",
+      "Sydney, Athens, Barcelona, Atlanta, Rome, Berlin, Moscow, Seoul, Brisbane",
+      "Munich, Montreal, Mexico City, Vancouver, Sochi, Salt Lake City, Melbourne, Calgary, Amsterdam, Stockholm, Helsinki, Stoke Mandeville, Toronto, New York, Whistler, Marseille, Singapore",
+      "Turin|Torino, Nagano, Lillehammer, Sarajevo, Innsbruck, Lake Placid, Pyeongchang, Oslo, Milan|Milano, Antwerp, St. Louis|Saint Louis, Tel Aviv, Heidelberg, Arnhem, Nanjing, Buenos Aires, Lausanne, Gangneung, Zhangjiakou, Qingdao, Hong Kong, Weymouth, Nice, Dakar",
+      "Sapporo, Grenoble, Albertville, Chamonix, St. Moritz|Saint Moritz|Sankt Moritz, Cortina d'Ampezzo|Cortina, Garmisch-Partenkirchen|Garmisch, Squaw Valley|Palisades Tahoe, Örnsköldsvik|Ornskoldsvik, Geilo, Tignes, Gangwon, Tallinn, Teahupo'o|Tahiti",
     ],
   },
   {
