@@ -22,10 +22,10 @@ test('a seed always builds the same course, and different seeds differ', () => {
 test('every generated hole is playable', () => {
   for (let i = 0; i < 400; i++) {
     const course = generateCourse(`seed-${i}`);
-    assert.equal(course.par, 24);
-    assert.equal(course.holes.length, 6);
+    assert.equal(course.par, 12);
+    assert.equal(course.holes.length, 3);
     assert.ok(course.name.length > 4);
-    assert.equal(new Set(course.holes.flatMap((h) => h.name.split(' '))).size, 12, 'no word repeats in the hole names');
+    assert.equal(new Set(course.holes.flatMap((h) => h.name.split(' '))).size, 6, 'no word repeats in the hole names');
     course.holes.forEach((h, n) => {
       assert.equal(h.par, PARS[n]);
       assert.equal(h.number, n + 1);
@@ -111,8 +111,8 @@ test('any round can be played to the end with sane scores', () => {
       if (card.pickedUp) assert.equal(card.score, par + MAX_OVER_PAR);
     });
     const t = totals(round);
-    assert.equal(t.holes, 6);
-    assert.equal(t.par, 24);
+    assert.equal(t.holes, 3);
+    assert.equal(t.par, 12);
     assert.equal(t.strokes, round.cards.reduce((a, c) => a + c.score, 0));
   }
 });
@@ -157,10 +157,10 @@ test('a round survives being saved and restored mid-hole', () => {
   // A saved round keeps the course it was played on, whatever the generator does now.
   const kept = JSON.parse(JSON.stringify(snapshot(round)));
   kept.course.name = 'Saved Links';
-  kept.course.holes[5].length += 7;
+  kept.course.holes[2].length += 7;
   const again = restore(kept, PROMPTS);
   assert.equal(again.course.name, 'Saved Links');
-  assert.equal(again.course.holes[5].length, round.course.holes[5].length + 7);
+  assert.equal(again.course.holes[2].length, round.course.holes[2].length + 7);
 
   // A damaged course or an unknown prompt falls back to a freshly generated one.
   const broken = JSON.parse(JSON.stringify(snapshot(round)));
@@ -194,17 +194,17 @@ test('the shared scorecard uses circles under par and squares over', () => {
   assert.equal(holeMark(4, 4), '•');
   assert.equal(holeMark(5, 4), '□');
   assert.equal(holeMark(7, 4), '▣');
-  const text = shareText({ title: 'Fairllion Daily No. 1', pars: PARS, scores: [3, 2, 5, 3, 5, 4], extra: ['example.test'] });
-  assert.equal(text, 'Fairllion Daily No. 1\n22 strokes (−2)\n○ ○ • • □ ○\nexample.test');
+  const text = shareText({ title: 'Fairllion Daily No. 1', pars: PARS, scores: [2, 4, 6], extra: ['example.test'] });
+  assert.equal(text, 'Fairllion Daily No. 1\n12 strokes (E)\n○ • □\nexample.test');
 });
 
 test('stats count streaks across month ends', () => {
   const day = (scores) => ({ scores, pars: PARS });
   const results = {
-    '2026-11-28': day([4, 3, 5, 3, 4, 5]),
-    '2026-11-30': day([3, 2, 4, 3, 4, 5]),
-    '2026-12-01': day([4, 1, 5, 3, 6, 5]),
-    '2026-12-02': day([4, 3, 5, 3, 4, 8]),
+    '2026-11-28': day([3, 4, 5]),
+    '2026-11-30': day([2, 3, 4]),
+    '2026-12-01': day([1, 6, 5]),
+    '2026-12-02': day([3, 4, 8]),
   };
   const s = computeStats(results, '2026-12-02');
   assert.equal(s.played, 4);

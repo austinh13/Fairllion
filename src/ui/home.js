@@ -32,7 +32,7 @@ export function renderHome(root) {
       </div>`;
   } else {
     today = `
-      <p class="muted">${started ? `You are on hole ${saved.hole + 1}. Pick up where you left off.` : 'Everyone gets the same six holes and the same categories today.'}</p>
+      <p class="muted">${started ? `You are on hole ${saved.hole + 1}. Pick up where you left off.` : 'Everyone gets the same three holes and the same categories today.'}</p>
       <div class="actions">
         <a class="btn" href="#/daily">${started ? 'Carry on with today’s round' : 'Play today’s round'}</a>
       </div>`;
@@ -63,7 +63,7 @@ export function renderHome(root) {
     <div class="hero">
       <p class="eyebrow">Word golf</p>
       <h1 class="wordmark">Fairllion</h1>
-      <p class="lede">Six holes. One category per shot. The rarer your answer, the farther the ball flies.</p>
+      <p class="lede">Three holes. One category per shot. The rarer your answer, the farther the ball flies.</p>
     </div>
 
     <figure class="plate">

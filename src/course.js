@@ -1,10 +1,10 @@
-// Course generation. A seed always produces the same six holes.
+// Course generation. A seed always produces the same three holes.
 
 import { makeRng } from './rng.js';
 import { settingKeyFor } from './setting.js';
 
-/** The loop: two par 3s, two par 4s, two par 5s. Par 24. */
-export const PARS = [4, 3, 5, 3, 4, 5];
+/** The loop: a par 3, a par 4 and a par 5. Par 12. */
+export const PARS = [3, 4, 5];
 
 const LENGTHS = { 3: [105, 170], 4: [240, 330], 5: [410, 520] };
 
