@@ -505,8 +505,11 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
     void el.form.offsetWidth; // restart the animation
     el.form.classList.add('shake');
     if (guess) {
-      pending = { raw, answer: guess };
-      setFeedback(`Did you mean <b>${esc(guess.name)}</b>? Press Enter again to play it.`, 'hint');
+      // Put the answer in the box, so Enter plays exactly what is shown and
+      // a near miss can be edited from the right spelling.
+      el.input.value = guess.name;
+      pending = { raw: guess.name, answer: guess };
+      setFeedback(`${esc(raw)} → <b>${esc(guess.name)}</b>. Press Enter to play it, or edit.`, 'hint');
     } else {
       pending = null;
       sfx.bad();
