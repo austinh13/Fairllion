@@ -101,8 +101,8 @@ const CLOSED = new Set([
   'greek-letters', 'nato-alphabet', 'si-prefixes', 'nfl-teams', 'nba-teams', 'presidents',
 ]);
 
-test('the bank holds 300 categories', () => {
-  assert.equal(PROMPTS.length, 300);
+test('the bank holds 309 categories', () => {
+  assert.equal(PROMPTS.length, 309);
 });
 
 test('every open category has at least 60 answers', () => {

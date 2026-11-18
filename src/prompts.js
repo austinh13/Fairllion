@@ -1,6 +1,7 @@
 // The prompt bank: every category a shot can ask for.
 
 import arts from './bank/arts.js';
+import everyday from './bank/everyday.js';
 import life from './bank/life.js';
 import nature from './bank/nature.js';
 import world from './bank/world.js';
@@ -23,7 +24,7 @@ import { buildCard } from './match.js';
 
 export const PROMPTS = [
   ...places, ...science, ...arts, ...life, ...nature, ...world, ...culture, ...home,
-  ...sport, ...screen, ...music, ...books, ...history, ...kitchen, ...cities, ...words, ...tech, ...wild, ...society,
+  ...sport, ...screen, ...music, ...books, ...history, ...kitchen, ...cities, ...words, ...tech, ...wild, ...society, ...everyday,
 ];
 
 const byId = new Map(PROMPTS.map((p) => [p.id, p]));
