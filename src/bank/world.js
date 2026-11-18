@@ -1,4 +1,4 @@
-// Answer cards: more of the map, from peaks and lakes to cities and teams.
+// Answer cards: more of the map, from peaks and lakes to islands, waterfalls and bridges.
 
 export default [
   {
@@ -59,51 +59,6 @@ export default [
       'Dettifoss, Goðafoss|Godafoss, Sutherland, Tugela, Jog, Dudhsagar, Huangguoshu, Ban Gioc|Detian|Ban Gioc-Detian, Kegon, Nachi, Lower Yellowstone|Lower Falls, Shoshone, Snoqualmie, Burney, Vernal, Nevada, Mardalsfossen, Vøringsfossen|Voringsfossen, Seven Sisters, Krimml, Staubbach, Trümmelbach|Trummelbach, Gavarnie, Marmore|Cascata delle Marmore, Murchison|Kabalega, Blue Nile|Tis Issat, Ouzoud, Kalambo, Augrabies, Wallaman, Jim Jim, Wentworth, Huka, Takakkaw, Montmorency, Gocta',
       'Ribbon, Helmcken, Basaseachic, Agua Azul, Hierve el Agua, Kuang Si, Erawan, Tumpak Sewu, Pagsanjan, Athirappilly, Nohkalikai, Baatara Gorge|Baatara, Hukou, Shiraito, Fukuroda, Pongour, Kawasan, Kravica, Skradinski Buk|Krka, Howick, Twin Falls, Shannon, Virginia, Della, Brandywine, Kakabeka, Tahquamenon, Bash Bish, Kaaterskill, Ruby, Amicalola, Cumberland, Toccoa, Akaka, Wailua, Rainbow, Dunn\'s River|Dunns River, YS, Salto del Laja|Laja, Petrohué|Petrohue, Saltos del Monday|Monday, Moconá|Mocona|Yucumã, Caracol, Itiquira',
       'Aber, Swallow, Henrhyd, Pistyll Rhaeadr, High Force, Aysgarth, Hardraw Force, Steall, Eas a\' Chual Aluinn, Powerscourt, Torc, Wollomombi, Ellenborough, Mutarazi, Kalandula, Boyoma|Stanley Falls, Inga, Lofoi, Wli, Mac Mac, Sekumpul, Gitgit, Madakaripura, Tinago, Maria Cristina, Kunchikal, Barehipani, Yumbilla, Ramnefjellsfossen, Vinnufossen, Langfoss, Kjosfossen, Tegenungan, Thi Lo Su, Pisew, Whitewater, Linville, Hanakapiai, Waimoku, Hiilawe, Sipi, Karuma, Chamarel, Orinduik, Véu de Noiva|Veu de Noiva, Fumaça|Fumaca, Cola de Caballo',
-    ],
-  },
-  {
-    id: 'us-cities',
-    q: 'Name a city in the United States',
-    tiers: [
-      'New York|New York City|NYC, Los Angeles|LA, Chicago, Miami, Las Vegas|Vegas, San Francisco|SF',
-      'Boston, Seattle, Houston, Dallas, Atlanta, Washington|Washington DC|DC, Philadelphia|Philly, Orlando, Denver, Detroit, New Orleans|NOLA, Phoenix, San Diego, Nashville, Austin, Honolulu, Portland, Baltimore',
-      'San Antonio, Minneapolis, St Louis|Saint Louis, Kansas City, Pittsburgh, Cleveland, Cincinnati, Salt Lake City, Sacramento, San Jose, Charlotte, Indianapolis, Columbus, Milwaukee, Memphis, Tampa, Jacksonville, Albuquerque, Tucson, Oklahoma City, Anchorage, Buffalo, Raleigh, Richmond, Louisville, Omaha, Fort Worth, El Paso, Oakland, Long Beach, Santa Fe, Savannah, Charleston, Boise, Reno, Palm Springs, Key West, Atlantic City, Malibu, Beverly Hills, Santa Monica, Berkeley, Princeton, Cambridge, Newark, Providence, Hartford, Madison, Des Moines, Little Rock, Birmingham, Baton Rouge, Tallahassee, Fort Lauderdale, St Petersburg|Saint Petersburg, Pasadena, Anaheim, Scottsdale, Colorado Springs, Boulder, Aspen, Tulsa, Galveston, Knoxville, Asheville, Virginia Beach, Annapolis, Rochester, Albany, Ann Arbor, Green Bay, St Paul|Saint Paul, Springfield, Juneau, Hoboken, New Haven',
-      'Jackson, Mobile, Montgomery, Shreveport, Sarasota, Naples, Spokane, Tacoma, Eugene, Salem, Fresno, Bakersfield, Irvine, Tempe, Mesa, Flagstaff, Cheyenne, Billings, Fargo, Sioux Falls, Lincoln, Wichita, Lubbock, Amarillo, Corpus Christi, Laredo, Plano, Arlington, Lexington, Chattanooga, Durham, Greensboro, Norfolk, Wilmington, Syracuse, Ithaca, Scranton, Erie, Allentown, Harrisburg, Akron, Toledo, Dayton, Grand Rapids, Flint, Lansing, Duluth, Peoria, Gary, South Bend, Fort Wayne, Evansville, Fairbanks, Hilo, Augusta, Bangor, Manchester, Concord, Montpelier, Burlington, Worcester, Stamford, Paterson, Trenton, Camden, Dover, Yonkers, Santa Barbara, Monterey, Sedona, Santa Cruz, Stockton, Modesto, Riverside, San Bernardino, Chula Vista, Henderson, Aurora, Lakeland, Gainesville, Pensacola, Daytona Beach, Boca Raton, Myrtle Beach, Greenville, Columbia, Macon, Athens, Huntsville, Tuscaloosa, Biloxi, Lafayette, Waco, Abilene, Odessa, Midland, Brownsville, McAllen, Beaumont, Topeka, Dubuque, Cedar Rapids, Davenport, Iowa City, Rapid City, Bismarck, Missoula, Bozeman, Provo, Ogden, Moab, Roswell, Taos, Las Cruces, Yuma, Prescott, Durango, Pueblo, Laramie, Casper, Deadwood',
-      'Truth or Consequences, Walla Walla, Kalamazoo, Ypsilanti, Schenectady, Poughkeepsie, Kokomo, Muncie, Pocatello, Twin Falls, Coeur d\'Alene, Yakima, Bellingham, Medford, Bend, Eureka, Redding, Chico, Visalia, Oxnard, Ventura, San Luis Obispo, Carmel|Carmel-by-the-Sea, St George|Saint George, Grand Junction, Minot, Grand Forks, Ames, Lawrence, Joplin, Branson, Hot Springs, Texarkana, Lake Charles, Gulfport, Hattiesburg, Tupelo, Dothan, Valdosta, Ocala, Spartanburg, Roanoke, Charlottesville, Lynchburg, Morgantown, Wheeling, Altoona, Lancaster, Gettysburg, Hershey, Bethlehem, Binghamton, Utica, Saratoga Springs, Plattsburgh, Portsmouth, Nashua, Lowell, Provincetown, Hyannis, New Bedford, Fall River, Newport, Mystic, Bar Harbor, Kennebunkport, Ketchikan, Sitka, Nome, Barrow|Utqiagvik, Kailua, Lahaina, Kapaa, Tombstone, Bisbee, Jerome, Marfa, Terlingua, Luckenbach, Fredericksburg, Natchez, Vicksburg, Oxford, Clarksdale, Paducah, Bowling Green',
-    ],
-  },
-  {
-    // One city for each country on the 'asia' card: the seat of government.
-    id: 'asian-capitals',
-    q: 'Name the capital city of a country in Asia',
-    tiers: [
-      'Tokyo, Beijing|Peking, Bangkok, Seoul, New Delhi|Delhi',
-      'Singapore, Manila, Jakarta|Nusantara, Kuala Lumpur|KL|Putrajaya, Hanoi, Moscow, Tehran|Teheran, Baghdad, Kabul, Islamabad, Jerusalem, Riyadh, Ankara, Taipei, Kathmandu, Damascus, Beirut, Doha, Abu Dhabi',
-      'Dhaka|Dacca, Sri Jayawardenepura Kotte|Kotte|Colombo, Phnom Penh, Pyongyang, Kuwait City|Kuwait, Muscat, Amman, Manama, Ulaanbaatar|Ulan Bator, Vientiane, Tbilisi, Yerevan, Baku, Nicosia, Malé|Male, Tashkent, Astana|Nur-Sultan',
-      'Sanaa|Sana\'a, Naypyidaw|Nay Pyi Taw|Naypyitaw, Thimphu, Bishkek, Dushanbe, Ramallah',
-      'Bandar Seri Begawan, Ashgabat|Ashkhabad|Asgabat, Dili',
-    ],
-  },
-  {
-    id: 'nfl-teams',
-    q: 'Name an NFL team',
-    tiers: [
-      'Dallas Cowboys|Cowboys, New England Patriots|Patriots|Pats, Green Bay Packers|Packers, Kansas City Chiefs|Chiefs, Pittsburgh Steelers|Steelers, San Francisco 49ers|49ers|Niners|Forty-Niners',
-      'New York Giants|Giants, Chicago Bears|Bears, Philadelphia Eagles|Eagles, Miami Dolphins|Dolphins, Denver Broncos|Broncos, Las Vegas Raiders|Raiders|Oakland Raiders, Seattle Seahawks|Seahawks, Buffalo Bills|Bills, Baltimore Ravens|Ravens',
-      'New York Jets|Jets, Los Angeles Rams|Rams|St Louis Rams, Minnesota Vikings|Vikings, Detroit Lions|Lions, New Orleans Saints|Saints, Tampa Bay Buccaneers|Buccaneers|Bucs, Cleveland Browns|Browns, Indianapolis Colts|Colts|Baltimore Colts, Washington Commanders|Commanders|Washington Football Team',
-      'Atlanta Falcons|Falcons, Cincinnati Bengals|Bengals, Los Angeles Chargers|Chargers|San Diego Chargers, Arizona Cardinals|Cardinals, Carolina Panthers|Panthers',
-      'Tennessee Titans|Titans|Houston Oilers, Houston Texans|Texans, Jacksonville Jaguars|Jaguars|Jags',
-    ],
-  },
-  {
-    id: 'nba-teams',
-    q: 'Name an NBA team',
-    tiers: [
-      'Los Angeles Lakers|LA Lakers|Lakers, Chicago Bulls|Bulls, Boston Celtics|Celtics, Golden State Warriors|Warriors, Miami Heat|Heat',
-      'New York Knicks|Knicks|Knickerbockers, San Antonio Spurs|Spurs, Brooklyn Nets|Nets|New Jersey Nets, Philadelphia 76ers|76ers|Sixers, Dallas Mavericks|Mavericks|Mavs, Cleveland Cavaliers|Cavaliers|Cavs, Houston Rockets|Rockets, Detroit Pistons|Pistons, Phoenix Suns|Suns',
-      'Toronto Raptors|Raptors, Milwaukee Bucks|Bucks, Denver Nuggets|Nuggets, Oklahoma City Thunder|Thunder|OKC|Seattle SuperSonics|SuperSonics|Sonics, Utah Jazz|Jazz, Orlando Magic|Magic, LA Clippers|Los Angeles Clippers|Clippers, Portland Trail Blazers|Trail Blazers|Blazers|Trailblazers, Atlanta Hawks|Hawks, Sacramento Kings|Kings',
-      'Indiana Pacers|Pacers, Minnesota Timberwolves|Timberwolves|Wolves, Memphis Grizzlies|Grizzlies|Vancouver Grizzlies',
-      'Washington Wizards|Wizards|Washington Bullets, Charlotte Hornets|Hornets|Charlotte Bobcats, New Orleans Pelicans|Pelicans',
     ],
   },
   {

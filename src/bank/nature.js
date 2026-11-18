@@ -105,18 +105,6 @@ export default [
     ],
   },
   {
-    id: 'winds',
-    q: 'Name a wind that has its own name',
-    strip: ['wind', 'winds'],
-    tiers: [
-      'Monsoon, Trade winds|Trades, Mistral, Sirocco|Scirocco, Chinook',
-      'Föhn|Foehn, Santa Ana|Santa Anas, Jet stream, Harmattan, Bora|Bura, Westerlies|Prevailing westerlies, Roaring Forties, Haboob, Zephyr|Zephyrus, Nor\'easter|Northeaster',
-      'Simoom|Simoon|Samiel, Khamsin|Khamaseen|Hamsin, Levanter|Levante, Tramontane|Tramontana, Meltemi|Etesians|Etesian, Libeccio, Ostro, Gregale|Grecale|Euroclydon, Furious Fifties, Screaming Sixties, Polar easterlies|Easterlies, Diablo, Sundowner, Squamish, Williwaw, Pampero, Zonda, Southerly buster, Brickfielder, Fremantle Doctor, Cape Doctor, Shamal, Bise, Ghibli|Gibli, Kona, Norther|Blue norther|Texas norther, Alberta clipper|Clipper, Loo, Buran, Jugo',
-      'Berg, Halny, Košava|Kosava, Vardarac|Vardar, Karaburan|Black buran, Purga, Sarma, Helm, Marin, Autan, Leveche|Lebeche, Solano, Cierzo, Poniente, Tehuantepecer|Tehuano, Papagayo, Norte, Elephanta, Habagat, Amihan, Nor\'wester, Calima, Sukhovey, Afghanets|Afganets, Joran, Vendaval, Wreckhouse, Suête|Suêtes|Les Suêtes, Bohorok, Sharav, Barber',
-      'Arifi|Irifi, Chili, Leste, Pontias, Breva, Tivano, Ora, Embat, Garbino|Garbí, Gharbi, Nashi, Sharqi|Shargi|Sharki, Datoo, Brisote, Coromuel, Chubasco, Collada, Bayamo, Virazón, Puelche, Surazo, Friagem, Gending, Kumbang|Koembang, Knik, Taku, Mono, Washoe zephyr, Wasatch, Austru, Crivăț|Crivetz, Karif, Belat',
-    ],
-  },
-  {
     id: 'organs',
     q: 'Name an organ or gland of the human body',
     tiers: [

@@ -1,0 +1,70 @@
+// Answer cards: snacks, treats and takeaways.
+
+export default [
+  {
+    id: 'pizza-toppings',
+    q: 'Name a pizza topping',
+    tiers: [
+      'Pepperoni, Cheese|Mozzarella, Mushrooms|Mushroom, Ham, Pineapple, Tomato|Tomato sauce',
+      'Onions|Onion, Peppers|Pepper|Green peppers|Bell peppers, Olives|Black olives|Olive, Sausage, Bacon, Chicken, Jalapeños|Jalapenos|Jalapeño, Spinach, Sweetcorn|Corn, Beef|Ground beef|Mince, Anchovies|Anchovy, Basil',
+      'Salami, Chorizo, Spicy beef, Meatballs, Barbecue sauce|BBQ sauce, Garlic, Red onion, Rocket|Arugula, Cherry tomatoes, Sun-dried tomatoes, Artichoke|Artichokes|Artichoke hearts, Prosciutto|Parma ham, Feta, Goat\'s cheese|Goat cheese, Parmesan, Cheddar, Pesto, Chilli flakes|Chili flakes|Red pepper flakes, Oregano, Tuna, Prawns|Shrimp, Egg, Ricotta, Gorgonzola, Buffalo chicken, Pulled pork, Hot honey|Honey',
+      'Capers, Nduja, Pancetta, Speck, Capicola|Coppa, Soppressata, Italian sausage, Fennel sausage, Kebab meat|Doner, Tandoori chicken, Paneer, Peri-peri chicken|Piri piri chicken, Smoked salmon, Clams, Squid|Calamari, Mussels, Aubergine|Eggplant, Courgette|Zucchini, Roasted peppers, Caramelised onions|Caramelized onions, Butternut squash, Sweet potato, Broccoli, Kale, Truffle|Truffle oil, Burrata, Taleggio, Fontina, Provolone, Brie, Stilton|Blue cheese, Halloumi, Vegan cheese, Ranch|Ranch dressing, Garlic butter, Balsamic glaze|Balsamic, Pine nuts, Figs',
+      'Bresaola, Guanciale, Lardo, Mortadella, Pistachio|Pistachios, Stracciatella, Scamorza|Smoked scamorza, Pecorino, Asiago, Robiola, Friarielli|Broccoli rabe|Rapini, Radicchio, Fennel, Leeks, Potato|Potatoes, Rosemary, Thyme, Fried egg, Quail eggs, Bottarga, Sardines, Octopus, Crab, Lobster, Duck, Lamb, Haggis, Black pudding, Kimchi, Bulgogi, Teriyaki chicken, Banana, Chocolate|Nutella, Marshmallows, Pear, Apple, Sweet chilli sauce, Sriracha, Hot sauce|Tabasco, Mango chutney, Za\'atar, Dukkah, Cauliflower, Edamame',
+    ],
+  },
+  {
+    id: 'ice-cream-flavours',
+    q: 'Name an ice cream flavour',
+    tiers: [
+      'Vanilla, Chocolate, Strawberry, Mint choc chip|Mint chocolate chip|Mint chip, Cookies and cream|Cookies \'n\' cream',
+      'Rum and raisin, Pistachio, Neapolitan, Raspberry ripple, Butterscotch, Salted caramel|Caramel, Coffee, Cookie dough, Rocky road, Banana, Mango, Lemon, Coconut, Toffee|Toffee fudge, Hazelnut, Peanut butter, Bubblegum|Bubble gum',
+      'Butter pecan, Tutti frutti, Chocolate chip, Double chocolate, Dark chocolate, White chocolate, Black cherry|Cherry, Blueberry, Raspberry, Peach, Orange, Lime, Passion fruit, Cherry Garcia, Phish Food, Chunky Monkey, Birthday cake, Cheesecake, Chocolate brownie|Brownie, Honeycomb, Stracciatella, Tiramisu, Matcha|Green tea, Cinnamon, Gingerbread, Pumpkin, Maple walnut',
+      'Rose, Lavender, Honey, Earl Grey, Chai, Ginger, Black sesame, Red bean, Taro, Ube, Lychee, Durian, Mango lassi, Kulfi, Saffron, Cardamom, Malt|Malted milk, Rhubarb and custard, Bakewell tart, Eton mess, Lemon meringue, Key lime pie, Apple pie, Pecan pie, Blackcurrant, Gooseberry, Elderflower, Fig, Guava, Pineapple, Watermelon, Kiwi, Melon|Cantaloupe, Avocado, Almond, Walnut, Chestnut, Marzipan, Nutella, Ferrero Rocher, Oreo, Snickers, Twix, Marshmallow, S\'mores|Smores, Moose tracks, Superman, Blue moon, Spumoni, Dulce de leche, Horchata, Churro, Liquorice|Licorice, Peppermint, Candy cane',
+      'Olive oil, Basil, Goat\'s cheese, Cheddar, Blue cheese, Bacon, Garlic, Black pepper, Chilli|Chili, Wasabi, Miso, Soy sauce, Sweetcorn|Corn, Beetroot, Carrot cake, Jalapeño|Jalapeno, Tomato, Brown bread, Christmas pudding, Mince pie, Mulled wine, Guinness, Whisky|Whiskey, Bourbon, Rum, Gin and tonic, Prosecco, Champagne, Baileys, Kahlúa|Kahlua, Amaretto, Limoncello, Gianduja, Zabaglione, Bacio, Fior di latte, Cassata, Mascarpone, Ricotta, Halva, Turkish delight, Baklava, Mastic, Pandan, Hojicha, Yuzu, Sakura|Cherry blossom, Sweet potato',
+    ],
+  },
+  {
+    id: 'snacks',
+    q: 'Name a snack',
+    tiers: [
+      'Crisps|Chips|Potato chips, Popcorn, Chocolate, Biscuits|Cookies, Fruit, Nuts',
+      'Pretzels|Pretzel, Crackers, Cheese, Yoghurt|Yogurt, Apple, Banana, Granola bar|Cereal bar, Peanuts, Nachos|Tortilla chips, Toast, Sandwich, Carrot sticks|Carrots, Hummus|Dip, Grapes, Raisins, Sweets|Candy',
+      'Cheese and crackers, Rice cakes, Trail mix, Doritos, Pringles, Cheetos|Wotsits, Twiglets, Sausage roll|Mini sausage rolls, Pork pie, Scotch egg, Jerky|Beef jerky|Biltong, Olives, Celery sticks|Celery, Breadsticks|Grissini, Oatcakes, Flapjack, Muffin, Cupcake, Brownie, Dried fruit|Dried apricots, Almonds, Cashews, Pistachios, Edamame, Pickles, Salsa|Chips and salsa, Guacamole, String cheese|Cheese strings, Boiled egg|Hard-boiled egg, Peanut butter, Protein bar, Smoothie, Ice lolly|Popsicle, Crumpet, Bagel',
+      'Pork scratchings|Pork rinds|Chicharrones, Prawn crackers, Bombay mix|Chevda, Wasabi peas, Seaweed snacks|Nori, Kale chips, Veggie straws, Cheese puffs, Corn nuts, Sunflower seeds, Pumpkin seeds|Pepitas, Roasted chickpeas, Dates, Figs, Fruit leather|Fruit roll-up, Energy balls|Bliss balls, Overnight oats, Cottage cheese, Babybel, Pizza bagel|Mini pizza, Quesadilla, Spring rolls, Samosa|Samosas, Onion bhaji|Bhajis, Pakora, Dim sum, Gyoza, Mozzarella sticks, Chicken nuggets, Potato wedges, Onion rings, Garlic bread, Cheese on toast, Beans on toast, Teacake, Scone, Malt loaf, Banana bread',
+      'Arancini, Croquettes|Croquetas, Empanada|Empanadas, Tostones, Plantain chips, Cassava chips, Murukku, Chakli, Mathri, Namak para, Khakhra, Bhel puri, Pani puri|Golgappa, Vada pav, Dhokla, Senbei|Rice crackers, Onigiri, Takoyaki, Taiyaki, Tteokbokki, Hotteok, Kimbap|Gimbap, Pocky, Twinkies, Funyuns, Takis, Bugles, Goldfish|Goldfish crackers, Ritz, Triscuits, Wheat Thins, Cheez-It|Cheez-Its, Ants on a log, Devilled eggs|Deviled eggs, Pigs in blankets, Cocktail sausages, Vol-au-vents, Cheese straws, Pinwheels, Crudités|Crudites, Tapenade, Baba ganoush, Tzatziki, Pita chips, Dried mango, Freeze-dried fruit, Puffed rice, Granola',
+    ],
+  },
+  {
+    id: 'cakes',
+    q: 'Name a type of cake',
+    tiers: [
+      'Chocolate cake, Carrot cake, Cheesecake, Sponge cake|Sponge|Victoria sponge|Victoria sandwich, Birthday cake, Cupcake|Cupcakes',
+      'Red velvet|Red velvet cake, Black Forest gateau|Black Forest cake, Lemon drizzle|Lemon drizzle cake, Fruit cake|Fruitcake, Coffee and walnut|Coffee cake, Banana bread|Banana cake, Angel food cake|Angel cake, Swiss roll, Pound cake|Madeira cake, Wedding cake, Christmas cake, Brownie|Brownies, Muffin|Muffins, Doughnut|Donut, Battenberg, Marble cake, Upside-down cake|Pineapple upside-down cake',
+      'Tiramisu, Gingerbread|Ginger cake, Lamington|Lamingtons, Fairy cake|Fairy cakes, Rock cake|Rock cakes, Eccles cake, Bakewell tart, Jaffa cakes, Chocolate fudge cake|Fudge cake, Devil\'s food cake, Funfetti|Confetti cake, Ice cream cake, Mud cake, Tres leches|Tres leches cake, Bundt cake|Bundt, Chiffon cake, Genoise|Génoise, Opera cake, Sachertorte|Sacher torte, Simnel cake, Dundee cake, Parkin, Lardy cake, Welsh cakes, Teacake|Teacakes, Madeleine|Madeleines, Financier, Panettone, Stollen, Yule log|Bûche de Noël, Cinnamon roll, Babka, Rum baba|Baba au rhum, Croquembouche, Mille-feuille',
+      'Hummingbird cake, Italian cream cake, German chocolate cake, Boston cream pie, Coconut cake, Polenta cake|Orange polenta cake, Olive oil cake, Almond cake, Tarta de Santiago, Basque cheesecake|Burnt Basque cheesecake, Japanese cheesecake|Cotton cheesecake, Castella, Pandan cake, Mooncake, Pineapple cake, Black bun, Banbury cake, Chelsea bun, Bath bun, Sally Lunn, Bara brith, Barmbrack, Seed cake|Caraway seed cake, Tottenham cake, Pavlova, Baked Alaska, Dobos torte, Esterházy torte|Esterhazy torte, Linzer torte, Princess cake|Prinsesstårta, Kladdkaka, Bee sting cake|Bienenstich, Frankfurter Kranz, Crumb cake|Streuselkuchen, Gugelhupf|Kugelhopf, Pastiera, Torta caprese, Panforte, Kouign-amann, Gâteau Basque|Gateau Basque, Fraisier, Charlotte|Charlotte russe, Dacquoise, Paris-Brest, Honey cake|Medovik, Napoleon cake, Bird\'s milk cake|Ptichye moloko',
+      'Baumkuchen, Lapis legit|Spekkoek, Bolu kukus, Kue putu, Bibingka, Sans rival, Ube cake, Mamón, Basbousa, Revani, Sfouf, Bolo rei, Bolo de rolo, Bolo de fubá, Pão de ló, Queijada, Malva pudding, Koeksister, Vínarterta, Kransekake, Kvæfjordkake|World\'s best cake, Sylvia cake|Silvia cake, Szarlotka, Sernik, Makowiec, Kremówka|Kremowka, Rigó Jancsi, Punschkrapfen, Ontbijtkoek, Boterkoek|Butter cake, Gâteau nantais, Far breton, Clafoutis, Saint-Honoré|Gâteau Saint-Honoré, Torta della nonna, Zuccotto, Cassata, Pandoro, Colomba|Colomba pasquale, Ciambellone',
+    ],
+  },
+  {
+    id: 'biscuits',
+    q: 'Name a biscuit or cookie',
+    tiers: [
+      'Chocolate chip cookie|Chocolate chip|Chocolate chip cookies, Oreo|Oreos, Digestive|Digestives, Shortbread, Custard cream|Custard creams, Ginger nut|Ginger nuts|Gingersnap|Ginger snap|Ginger biscuit',
+      'Jammie Dodger|Jammie Dodgers, Bourbon|Bourbon biscuit, Rich Tea, Hobnob|Hobnobs, Chocolate digestive|Chocolate digestives, Jaffa Cakes|Jaffa cake, Gingerbread man|Gingerbread, Oatmeal raisin|Oatmeal cookie, Peanut butter cookie, Snickerdoodle, Macaron|Macarons, Wafer|Wafers, Fig roll|Fig Newton, Pink wafer, Party rings|Party ring, Malted milk, Shortcake, Biscotti, Fortune cookie|Fortune cookies, Animal crackers',
+      'Garibaldi, Nice|Nice biscuit, Viennese whirl|Viennese whirls, Millionaire\'s shortbread, Florentine|Florentines, Amaretti, Macaroon|Coconut macaroon, Melting moments, Anzac biscuit|Anzac biscuits, Tim Tam|Tim Tams, Penguin, Club, Biscoff|Lotus Biscoff|Speculoos|Speculaas|Spekulatius, Stroopwafel|Stroopwafels, Thumbprint cookie|Thumbprint cookies, Sugar cookie|Sugar cookies, Black and white cookie, Chocolate chunk, White chocolate macadamia, Double chocolate cookie, Whoopie pie, Ladyfinger|Ladyfingers|Savoiardi, Langue de chat, Tuile, Brandy snap|Brandy snaps, Lebkuchen, Pfeffernüsse|Pfeffernusse, Linzer cookie, Spritz cookie|Spritz, Rugelach, Hamantaschen, Kourabiedes, Alfajor|Alfajores, Polvorones, Snowball cookies|Russian tea cakes|Mexican wedding cookies, Graham cracker|Graham crackers, Thin Mints, Nutter Butter, Chips Ahoy, Milano, Pecan sandies',
+      'Abernethy, Bath Oliver, Cornish fairing, Shrewsbury biscuit, Empire biscuit, Lincoln, Arrowroot, Morning coffee, Ginger crunch, Wagon Wheel, Mint Viscount, Breakaway, Blue Riband, Iced gem|Iced gems, Kingston, Gypsy cream, Teddy Grahams, Pizzelle, Cantucci, Baci di dama, Brutti ma buoni, Ricciarelli, Krumkake, Pepparkakor, Springerle, Vanillekipferl, Zimtsterne, Bethmännchen, Kaasstengels, Nankhatai, Bizcochitos, Ma\'amoul, Ghraybeh, Ka\'ak, Koulourakia, Melomakarona, Paximadia, Kurabiye, Kleicha, Nan-e berenji, Crinkle cookies|Chocolate crinkle, Monster cookie, Cowboy cookie, Ranger cookie, Hermit cookie|Hermits, Molasses cookie',
+      'Mandelbrot|Mandel bread, Kichel, Taralli, Ossi dei morti, Cuccidati, Reginelle, Canestrelli, Marie biscuit|Marie|Galletas María, Rosquillas, Mantecados, Pastissets, Tahini cookies, Barazek, Nan-e nokhodchi, Krakelingen, Jodenkoeken, Kletskoppen, Kruidnoten, Pepernoten, Gevulde koeken, Vaniljekranse, Finnish sticks|Finska pinnar, Drömmar, Havreflarn, Syltkakor, Kolaczki, Pierniczki, Jeera biscuits, Osmania biscuits, Parle-G, Khari, Karachi biscuits, Monte Carlo, Yo-yos, Afghan biscuits|Afghans, Belgian biscuit, Hokey pokey biscuits',
+    ],
+  },
+  {
+    id: 'fast-food',
+    q: 'Name a fast food item',
+    tiers: [
+      'Burger|Hamburger, Fries|Chips|French fries, Pizza, Hot dog, Chicken nuggets|Nuggets, Fried chicken',
+      'Cheeseburger, Milkshake|Shake, Onion rings, Kebab|Doner kebab, Fish and chips, Taco|Tacos, Burrito, Wrap, Chicken wings|Wings, Big Mac, Whopper, Hash brown|Hash browns, Sundae, Apple pie, Nachos, Sandwich|Sub|Submarine sandwich, Fried rice',
+      'McFlurry, Happy Meal, Quarter Pounder, Filet-O-Fish|Filet o fish, Zinger burger|Zinger, Popcorn chicken, Chicken burger|Chicken sandwich, Veggie burger, Quesadilla, Chalupa, Crunchwrap, Corn dog, Chilli dog|Chili dog, Curly fries, Cheese fries|Cheesy fries, Loaded fries, Poutine, Mozzarella sticks, Garlic bread, Chicken tenders|Chicken strips|Tenders|Chicken fingers, Egg McMuffin|McMuffin|Breakfast muffin, Pancakes|Hotcakes, Coleslaw, Corn on the cob, Mashed potato|Mash, Gravy, Spring rolls, Sweet and sour chicken, Chow mein, Noodles, Gyro|Gyros, Falafel, Shawarma, Samosa, Calzone, Doughnut|Donut, Cookie, Soft serve|Ice cream cone|Cone, Slushie|Slush, Cola|Coke|Soda|Fizzy drink',
+      'Sloppy joe, Philly cheesesteak|Cheesesteak, Meatball sub, Reuben, Pulled pork sandwich, Po\' boy|Po boy, Frito pie, Fish taco, Taquitos, Tamales, Elote, Churros, Funnel cake, Soft pretzel|Pretzel, Blooming onion|Bloomin\' onion, Jalapeño poppers|Jalapeno poppers, Tater tots|Tots, Waffle fries, Sweet potato fries, Potato wedges|Wedges, Fish finger sandwich, Battered sausage, Saveloy, Chip butty, Cornish pasty|Pasty, Sausage roll, Steak bake, Meat pie|Pie, Scotch pie, Shish kebab|Chicken shish, Lahmacun, Pide, Bao|Bao bun, Dumplings, Banh mi, Ramen, Yakisoba, Katsu curry, Teriyaki chicken, Onigiri, Bento, Pad thai, Satay, Nasi goreng',
+      'Currywurst, Bratwurst, Frikandel, Kroket, Patatje oorlog|Patat, Bitterballen, Danish hot dog|Pølse, Lángos, Ćevapi|Cevapi, Burek, Pljeskavica, Kumpir, Simit, Börek, Arepa, Pupusa, Salchipapas, Choripán, Completo, Coxinha, Pão de queijo, Bunny chow, Gatsby, Bake and shark, Doubles, Jamaican patty|Beef patty, Vada pav, Pav bhaji, Kati roll|Kathi roll, Frankie, Chole bhature, Dosa, Pani puri, Takoyaki, Okonomiyaki, Karaage, Jianbing|Jian bing, Roujiamo, Tteokbokki, Hotteok, Kimbap, Martabak|Murtabak, Pastizzi, Arancini, Panzerotti, Supplì, Piadina, Trapizzino, Pan bagnat, Croque monsieur, Jambon-beurre, Kapsalon, Halal snack pack|HSP, Chiko roll, Dim sim, Munchy box, Chips and cheese',
+    ],
+  },
+];

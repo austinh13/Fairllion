@@ -13,50 +13,6 @@ export default [
     ],
   },
   {
-    id: 'solar-system',
-    q: 'Name a planet, dwarf planet or moon in our solar system',
-    tiers: [
-      "Earth, Mars, Jupiter, Saturn, Venus, Moon|Luna",
-      "Mercury, Neptune, Uranus, Pluto",
-      "Europa, Titan, Io, Ganymede, Ceres, Phobos, Callisto",
-      "Deimos, Triton, Enceladus, Charon, Eris, Titania, Oberon, Miranda, Haumea, Makemake, Sedna, Quaoar, Orcus, Gonggong",
-      "Mimas, Rhea, Iapetus, Dione, Tethys, Hyperion, Phoebe, Ariel, Umbriel, Nereid, Proteus, Amalthea, Himalia, Nix, Hydra, Styx, Kerberos, Dysnomia, Larissa, Puck, Pandora, Prometheus, Janus, Epimetheus, Thebe, Metis, Despina, Galatea, Thalassa, Naiad, Hi'iaka, Namaka, Weywot, Vanth, Xiangliu, Sycorax, Caliban, Prospero, Setebos, Cordelia, Ophelia, Bianca, Cressida, Desdemona, Juliet, Portia, Rosalind, Belinda, Perdita, Cupid, Mab, Pan, Daphnis, Atlas, Calypso, Telesto, Helene, Polydeuces, Methone, Pallene, Anthe, Paaliaq, Ymir, Kiviuq, Ijiraq, Siarnaq, Tarvos, Elara, Pasiphae, Sinope, Carme, Ananke, Lysithea, Leda, Callirrhoe, Themisto, Halimede, Sao, Laomedeia, Psamathe, Neso, Hippocamp",
-    ],
-  },
-  {
-    id: 'constellations',
-    q: 'Name a constellation',
-    tiers: [
-      'Orion, Ursa Major|Great Bear, Leo, Scorpius|Scorpio, Gemini, Taurus',
-      'Ursa Minor|Little Bear, Cassiopeia, Aries, Pisces, Virgo, Libra, Cancer, Sagittarius, Aquarius, Capricornus|Capricorn, Pegasus, Andromeda',
-      'Canis Major, Hercules, Draco, Cygnus, Perseus, Crux|Southern Cross, Centaurus, Lyra, Hydra, Phoenix, Ophiuchus',
-      'Canis Minor, Aquila, Boötes, Cepheus, Corona Borealis, Auriga, Cetus, Delphinus, Eridanus, Lynx, Carina, Monoceros, Lupus, Corvus, Lepus, Leo Minor, Serpens',
-      'Antlia, Apus, Ara, Caelum, Camelopardalis, Canes Venatici, Chamaeleon, Circinus, Columba, Coma Berenices, Corona Australis, Crater, Dorado, Equuleus, Fornax, Grus, Horologium, Hydrus, Indus, Lacerta, Mensa, Microscopium, Musca, Norma, Octans, Pavo, Pictor, Piscis Austrinus, Puppis, Pyxis, Reticulum, Sagitta, Scutum, Sculptor, Sextans, Telescopium, Triangulum, Triangulum Australe, Tucana, Vela, Volans, Vulpecula',
-    ],
-  },
-  {
-    id: 'stars',
-    q: 'Name a star',
-    tiers: [
-      'Sun|Sol, Polaris|North Star|Pole Star, Sirius|Dog Star',
-      'Betelgeuse, Alpha Centauri|Rigil Kentaurus, Vega, Proxima Centauri|Proxima',
-      'Rigel, Antares, Aldebaran, Arcturus, Altair, Deneb, Canopus, Castor, Pollux',
-      "Capella, Spica, Procyon, Regulus, Bellatrix, Fomalhaut, Algol, Barnard's Star|Barnard, Mizar, Alcor, Achernar",
-      'Alnitak, Alnilam, Mintaka, Saiph, Dubhe, Merak, Alkaid, Alioth, Phecda, Megrez, Thuban, Kochab, Rasalhague, Sadr, Albireo, Denebola, Algieba, Mira, Alphard, Hadar, Mimosa, Acrux, Gacrux, Shaula, Elnath, Alhena, Mirfak, Almach, Mirach, Alpheratz, Schedar, Caph, Enif, Markab, Scheat, Hamal, Diphda, Menkar, Nunki, Zubenelgenubi, Zubeneschamali, Alphecca, Vindemiatrix, Porrima, Wezen, Adhara, Mirzam, Avior, Miaplacidus, Atria, Alnair, Ankaa, Tarazed, Eltanin, Rastaban, Alderamin, Tau Ceti, Epsilon Eridani, Wolf 359, Eta Carinae, UY Scuti, VY Canis Majoris',
-    ],
-  },
-  {
-    id: 'geologic-time',
-    q: 'Name an eon, era, period, epoch or age of geological time',
-    tiers: [
-      "Jurassic, Cretaceous, Triassic",
-      "Cambrian, Pleistocene, Holocene, Precambrian, Mesozoic",
-      "Permian, Devonian, Carboniferous, Paleozoic|Palaeozoic, Cenozoic|Cainozoic, Quaternary, Anthropocene",
-      "Silurian, Ordovician, Eocene, Miocene, Pliocene, Tertiary, Paleocene|Palaeocene, Oligocene, Maastrichtian, Campanian, Tithonian, Kimmeridgian, Oxfordian, Messinian, Calabrian, Meghalayan",
-      "Paleogene|Palaeogene, Neogene, Hadean, Archean|Archaean, Proterozoic, Phanerozoic, Ediacaran, Cryogenian, Tonian, Mississippian, Pennsylvanian, Eoarchean, Paleoarchean, Mesoarchean, Neoarchean, Paleoproterozoic, Mesoproterozoic, Neoproterozoic, Siderian, Rhyacian, Orosirian, Statherian, Calymmian, Ectasian, Stenian, Santonian, Coniacian, Turonian, Cenomanian, Albian, Aptian, Barremian, Hauterivian, Valanginian, Berriasian, Callovian, Bathonian, Bajocian, Aalenian, Toarcian, Pliensbachian, Sinemurian, Hettangian, Rhaetian, Norian, Carnian, Ladinian, Anisian, Olenekian, Induan, Changhsingian, Wuchiapingian, Capitanian, Wordian, Roadian, Kungurian, Artinskian, Sakmarian, Asselian, Gzhelian, Kasimovian, Moscovian, Bashkirian, Serpukhovian, Visean, Tournaisian, Famennian, Frasnian, Givetian, Eifelian, Emsian, Pragian, Lochkovian, Pridoli, Ludlow, Wenlock, Llandovery, Gelasian, Zanclean, Tortonian, Serravallian, Langhian, Burdigalian, Aquitanian, Chattian, Rupelian, Priabonian, Bartonian, Lutetian, Ypresian, Thanetian, Selandian, Danian, Greenlandian, Northgrippian",
-    ],
-  },
-  {
     id: 'bones',
     q: 'Name a bone in the human body',
     strip: ['bone', 'bones'],
@@ -66,39 +22,6 @@ export default [
       "Sternum|Breastbone|Breast bone, Scapula|Shoulder blade, Tailbone|Tail bone|Coccyx, Sacrum, Phalanges|Phalanx|Finger bones, Carpals|Carpal, Tarsals|Tarsal, Metacarpals|Metacarpal, Metatarsals|Metatarsal, Stapes|Stirrup, Floating rib|Floating ribs, Cervical vertebra|Cervical vertebrae|Neck bone",
       "Maxilla, Calcaneus|Heel bone, Talus|Ankle bone, Hyoid, Incus|Anvil, Malleus|Hammer, Scaphoid, Atlas, Axis, Ilium, Ischium, Pubis, Thoracic vertebra|Thoracic vertebrae, Lumbar vertebra|Lumbar vertebrae, True rib|True ribs, False rib|False ribs, Sesamoid",
       "Sphenoid, Ethmoid, Vomer, Zygomatic|Cheekbone|Cheek bone|Zygoma, Temporal, Parietal, Occipital, Frontal, Lacrimal, Nasal, Palatine, Lunate, Triquetrum|Triquetral, Pisiform, Trapezium, Trapezoid, Capitate, Hamate, Cuboid, Navicular, Cuneiform, Xiphoid|Xiphoid process, Manubrium, Fabella, Sutural bone|Wormian bone, Inferior nasal concha|Turbinate",
-    ],
-  },
-  {
-    id: 'si-prefixes',
-    q: 'Name a metric (SI) prefix',
-    tiers: [
-      'Kilo, Mega, Giga, Milli, Centi',
-      'Micro, Nano, Tera, Deci',
-      'Pico, Hecto, Deca|Deka, Peta',
-      'Femto, Exa, Atto, Zetta, Yotta',
-      'Zepto, Yocto, Ronna, Quetta, Ronto, Quecto',
-    ],
-  },
-  {
-    id: 'greek-letters',
-    q: 'Name a letter of the Greek alphabet',
-    tiers: [
-      'Alpha, Beta, Omega, Delta, Pi',
-      'Gamma, Sigma, Theta, Lambda, Epsilon',
-      'Phi, Psi, Kappa, Omicron, Zeta, Mu',
-      'Rho, Tau, Eta, Chi, Iota',
-      'Nu, Xi, Upsilon',
-    ],
-  },
-  {
-    id: 'nato-alphabet',
-    q: 'Name a code word from the NATO phonetic alphabet',
-    tiers: [
-      'Alfa|Alpha, Bravo, Charlie, Delta, Foxtrot, Tango',
-      'Echo, Whiskey|Whisky, Zulu, Romeo, Oscar, Victor',
-      'Kilo, Sierra, Golf, Hotel, Yankee, X-ray',
-      'Mike, Papa, India, Juliett|Juliet, November',
-      'Lima, Quebec, Uniform',
     ],
   },
   {
@@ -143,17 +66,6 @@ export default [
       "Howler monkey|Howler, Tamarin|Golden lion tamarin, Proboscis monkey, Squirrel monkey, Tarsier, Aye-aye, Bushbaby|Bush baby|Galago, Loris|Slow loris|Slender loris, Colobus|Colobus monkey, Vervet|Vervet monkey, Western lowland gorilla|Western gorilla, Eastern lowland gorilla|Grauer's gorilla, Bornean orangutan, Sumatran orangutan, Hamadryas baboon, Olive baboon, Chacma baboon, Emperor tamarin, Cotton-top tamarin",
       "Siamang, Gelada, Langur, Sifaka, Indri, Uakari, Saki|Saki monkey, Titi|Titi monkey, Drill, Mangabey, Guenon, Patas monkey, Woolly monkey, Night monkey|Owl monkey|Douroucouli, Tapanuli orangutan, Guinea baboon, Yellow baboon, Hoolock gibbon, Lar gibbon|White-handed gibbon, Crab-eating macaque|Long-tailed macaque, Lion-tailed macaque, Bonnet macaque, Pig-tailed macaque, De Brazza's monkey, Diana monkey, Hanuman langur|Gray langur|Grey langur, Golden langur",
       "Potto, Muriqui|Woolly spider monkey, Talapoin, Douc|Douc langur, Snub-nosed monkey|Golden snub-nosed monkey, Mouse lemur, Angwantibo, Kipunji, Lutung, Surili, Grivet, Barbary macaque|Barbary ape, Pygmy marmoset, Ruffed lemur, Dwarf lemur, Sportive lemur, Goeldi's monkey|Callimico, Bearded saki",
-    ],
-  },
-  {
-    id: 'marsupials',
-    q: 'Name a marsupial, living or extinct',
-    tiers: [
-      "Kangaroo, Koala, Wombat",
-      "Wallaby, Possum|Opossum|Brushtail possum|Ringtail possum, Tasmanian devil, Sugar glider, Red kangaroo, Virginia opossum",
-      "Quokka, Bandicoot, Wallaroo, Tasmanian tiger|Thylacine, Numbat, Quoll, Bilby, Eastern grey kangaroo|Eastern gray kangaroo, Western grey kangaroo|Western gray kangaroo, Common wombat, Hairy-nosed wombat|Northern hairy-nosed wombat, Diprotodon, Marsupial lion|Thylacoleo",
-      "Tree kangaroo, Pademelon, Potoroo, Bettong, Dunnart, Cuscus, Antechinus, Rock wallaby, Marsupial mole, Antilopine kangaroo, Southern hairy-nosed wombat, Spotted-tailed quoll|Tiger quoll, Eastern quoll, Northern quoll, Western quoll|Chuditch, Swamp wallaby, Red-necked wallaby, Tammar wallaby, Agile wallaby, Woylie, Boodie|Burrowing bettong, Long-nosed potoroo, Squirrel glider, Yellow-bellied glider, Procoptodon, Thylacosmilus",
-      "Monito del monte, Yapok|Water opossum, Phascogale, Kowari, Planigale, Dibbler, Mulgara, Kultarr, Ningaui, Honey possum, Greater glider, Feathertail glider, Striped possum, Shrew opossum, Musky rat-kangaroo, Hare-wallaby, Nabarlek, Leadbeater's possum, Pygmy possum|Mountain pygmy possum, Mahogany glider, Lemuroid ringtail possum, Scaly-tailed possum, Fat-tailed dunnart, Southern brown bandicoot, Eastern barred bandicoot, Lesser bilby, Pig-footed bandicoot, Bridled nail-tail wallaby|Nailtail wallaby, Lumholtz's tree-kangaroo, Goodfellow's tree-kangaroo, Short-tailed opossum|Gray short-tailed opossum, Woolly opossum, Mouse opossum, Four-eyed opossum, Palorchestes",
     ],
   },
   {

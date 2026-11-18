@@ -25,30 +25,6 @@ export default [
     ],
   },
   {
-    id: 'football-clubs',
-    q: 'Name a European football club',
-    strip: ['fc', 'cf', 'afc', 'club', 'football'],
-    tiers: [
-      'Manchester United|Man United|Man Utd, Real Madrid, Barcelona|Barca, Liverpool, Bayern Munich|Bayern|Bayern Munchen, Chelsea, Arsenal, Juventus|Juve, Manchester City|Man City',
-      'AC Milan|Milan, Inter Milan|Inter|Internazionale, Paris Saint-Germain|PSG|Paris St Germain, Tottenham Hotspur|Tottenham|Spurs, Ajax, Borussia Dortmund|Dortmund, Atlético Madrid|Atletico Madrid|Atletico, Celtic, Rangers, Benfica, Porto, Napoli, Roma|AS Roma',
-      'Everton, Newcastle United|Newcastle, Aston Villa, West Ham United|West Ham, Lazio, Fiorentina, Sevilla, Valencia, PSV Eindhoven|PSV, Feyenoord, Marseille|Olympique de Marseille, Lyon|Olympique Lyonnais, Monaco|AS Monaco, Sporting Lisbon|Sporting CP|Sporting, Galatasaray, Fenerbahçe|Fenerbahce, Besiktas|Beşiktaş, Bayer Leverkusen|Leverkusen, RB Leipzig|Leipzig, Schalke 04|Schalke, Leeds United|Leeds, Nottingham Forest|Forest, Athletic Bilbao|Athletic Club',
-      'Olympiacos, Panathinaikos, Club Brugge|Brugge, Anderlecht, Red Star Belgrade|Crvena Zvezda, Dinamo Zagreb, Dynamo Kyiv|Dynamo Kiev, Shakhtar Donetsk|Shakhtar, Zenit Saint Petersburg|Zenit, Spartak Moscow, CSKA Moscow, Basel, Young Boys, Salzburg|Red Bull Salzburg, Rapid Vienna, Copenhagen|FC Copenhagen, Rosenborg, Malmö|Malmo, Real Sociedad, Real Betis|Betis, Villarreal, Atalanta, Hamburg|Hamburger SV, Werder Bremen, Borussia Mönchengladbach|Monchengladbach|Gladbach, Eintracht Frankfurt, Bordeaux, Saint-Étienne|Saint-Etienne|St Etienne, Lille',
-      'Steaua Bucharest|FCSB|Steaua, Ferencváros|Ferencvaros, Legia Warsaw, Sparta Prague, Slavia Prague, Partizan Belgrade|Partizan, Hajduk Split, Ludogorets, BATE Borisov, Sheriff Tiraspol, AZ Alkmaar|AZ, Twente, Standard Liège|Standard Liege, Genk, Gent, Braga, Vitória Guimarães|Vitoria Guimaraes, Deportivo La Coruña|Deportivo La Coruna|Deportivo, Sampdoria, Torino, Genoa, Udinese, Parma, Bologna, Nantes, Lens, Rennes, Kaiserslautern, Nürnberg|Nurnberg, Stuttgart|VfB Stuttgart, Freiburg, Union Berlin, Molde, Bodø/Glimt|Bodo Glimt|Bodo/Glimt, Aberdeen, Hearts|Heart of Midlothian, Hibernian|Hibs',
-    ],
-  },
-  {
-    id: 'english-clubs',
-    q: 'Name an English football club in the Premier League or Football League',
-    strip: ['fc', 'afc', 'football', 'club'],
-    tiers: [
-      'Manchester United|Man United|Man Utd, Liverpool, Arsenal, Chelsea, Manchester City|Man City, Tottenham Hotspur|Tottenham|Spurs',
-      'Everton, Newcastle United|Newcastle, Aston Villa, West Ham United|West Ham, Leeds United|Leeds, Leicester City|Leicester, Southampton, Nottingham Forest|Forest',
-      'Wolverhampton Wanderers|Wolves|Wolverhampton, Brighton and Hove Albion|Brighton, Crystal Palace, Fulham, Brentford, Bournemouth|AFC Bournemouth, Sunderland, Middlesbrough|Boro, Blackburn Rovers|Blackburn, Burnley, Sheffield United, Sheffield Wednesday, Ipswich Town|Ipswich, Norwich City|Norwich, West Bromwich Albion|West Brom, Derby County|Derby, Stoke City|Stoke',
-      'Portsmouth, Watford, Queens Park Rangers|QPR, Coventry City|Coventry, Bristol City, Millwall, Luton Town|Luton, Swansea City|Swansea, Cardiff City|Cardiff, Hull City|Hull, Preston North End|Preston, Bolton Wanderers|Bolton, Birmingham City|Birmingham, Charlton Athletic|Charlton, Wigan Athletic|Wigan, Reading, Plymouth Argyle|Plymouth, Huddersfield Town|Huddersfield, Blackpool, Barnsley, Oxford United, Wrexham',
-      'Accrington Stanley|Accrington, Tranmere Rovers|Tranmere, Crewe Alexandra|Crewe, Port Vale, Stockport County|Stockport, Rotherham United|Rotherham, Doncaster Rovers|Doncaster, Lincoln City|Lincoln, Grimsby Town|Grimsby, Mansfield Town|Mansfield, Notts County, Exeter City|Exeter, Cheltenham Town|Cheltenham, Gillingham, Leyton Orient|Orient, Wycombe Wanderers|Wycombe, Peterborough United|Peterborough|Posh, Shrewsbury Town|Shrewsbury, Walsall, Bradford City|Bradford, Carlisle United|Carlisle, Morecambe, Fleetwood Town|Fleetwood, Salford City|Salford, Harrogate Town|Harrogate, Barrow, Bromley, Crawley Town|Crawley, AFC Wimbledon|Wimbledon, MK Dons|Milton Keynes Dons, Newport County|Newport, Colchester United|Colchester, Swindon Town|Swindon, Northampton Town|Northampton, Bristol Rovers, Burton Albion|Burton, Stevenage, Chesterfield, Cambridge United',
-    ],
-  },
-  {
     id: 'f1-drivers',
     q: 'Name a Formula One driver, past or present',
     people: true,
@@ -97,51 +73,6 @@ export default [
     ],
   },
   {
-    id: 'cricket-terms',
-    q: 'Name a cricket term, from fielding positions to shots',
-    tiers: [
-      'Wicket, Over, Run, Bowler, Batsman|Batter, Six, Four|Boundary, Innings, Century|Hundred, Duck',
-      'Stumps, Bails, Crease, Wicketkeeper|Keeper, LBW|Leg before wicket, Caught, Bowled, Run out, Stumped, Hat-trick, Maiden|Maiden over, No-ball|No ball, Wide, Spin|Spinner, Pitch, Test match|Test, Slip|Slips',
-      'Googly, Yorker, Bouncer, Leg spin|Leg break, Off spin|Off break, Gully, Cover|Covers|Cover point, Mid-on, Mid-off, Square leg, Fine leg, Third man, Point, Silly point, Cover drive, Pull shot|Pull, Hook shot|Hook, Sweep|Sweep shot, Follow-on|Follow on, Declaration|Declare, Bye, Leg bye, Nightwatchman, Tail|Tail-ender|Tailender, Opener|Opening batsman, All-rounder|Allrounder, Golden duck',
-      'Doosra, Chinaman, Flipper, Off-cutter|Leg-cutter|Cutter, Inswinger|Outswinger|Swing, Reverse swing, Seam|Seamer, Popping crease, Return crease, Bowling crease, Long on, Long off, Deep midwicket|Midwicket, Short leg, Silly mid-off|Silly mid-on, Leg slip, Long stop, Square cut|Cut shot, Late cut, Glance|Leg glance, Reverse sweep, Switch hit, Scoop|Ramp|Dilscoop, Helicopter shot, Nelson, Pair, King pair, Dead ball, Free hit, Powerplay, Super over, Duckworth-Lewis|DLS|Duckworth-Lewis-Stern',
-      'Mankad, Beamer, Grubber|Daisy cutter, Jaffa, Leg trap, Cow corner, Fly slip, Deep backward point, Deep fine leg, Short third man, Sightscreen, Heavy roller, Light roller, Tea interval|Tea, Drinks break, Retired hurt, Timed out, Handled the ball, Obstructing the field, Hit wicket, Hit the ball twice, Carrying the bat, Chin music, Corridor of uncertainty, Rabbit, Walk|Walking, Bunsen|Bunsen burner, Five-for|Fifer|Five-wicket haul, Ton|Tonne, Nurdle',
-    ],
-  },
-  {
-    id: 'baseball-terms',
-    q: 'Name a baseball term',
-    tiers: [
-      'Home run|Homer|Dinger, Strike, Ball, Pitcher, Catcher, Inning, Base, Out, Bat, Glove|Mitt',
-      'Strikeout|Strike out|K, Walk|Base on balls, Single, Double, Triple, Grand slam, Bunt, Shortstop, First base|First baseman, Second base|Second baseman, Third base|Third baseman, Outfield|Outfielder, Infield|Infielder, Dugout, Bullpen, Mound|Pitcher’s mound|Pitchers mound, Home plate|Plate, Umpire|Ump, World Series',
-      'Fastball, Curveball|Curve, Slider, Changeup|Change-up, Knuckleball|Knuckler, Sinker, Splitter|Split-finger fastball, Cutter|Cut fastball, Stolen base|Steal, Double play, Triple play, Foul ball|Foul, Fly ball|Pop fly|Pop-up, Ground ball|Grounder, Line drive|Liner, Sacrifice fly|Sac fly, Designated hitter|DH, Pinch hitter, Relief pitcher|Reliever, Closer, Starter|Starting pitcher, RBI|Run batted in, ERA|Earned run average, Batting average, No-hitter, Perfect game, Seventh-inning stretch',
-      'Balk, Infield fly rule, Hit by pitch|HBP, Wild pitch, Passed ball, Error, Fielder’s choice|Fielders choice, Squeeze play|Suicide squeeze, Hit and run, Pickoff, Rundown|Pickle, Can of corn, Texas leaguer, Bloop, Bleeder, Chopper, Moonshot, Walk-off|Walk-off home run, Cycle|Hitting for the cycle, Save, Hold, Shutout, Complete game, Bases loaded|Bases juiced, Full count, On deck|On-deck circle, Batter’s box|Batters box, Foul pole, Warning track, Green Monster, Bleachers',
-      'Eephus, Screwball, Forkball, Spitball|Spitter, Palmball, Gyroball, Sidearm, Submarine, Southpaw, Rosin bag, Uncle Charlie, Golden sombrero, Mendoza line, Ducks on the pond, Chin music, Painting the corners, Frozen rope, Worm burner, Tater, Rhubarb, Battery, Twin killing, Defensive indifference, Ground-rule double, Sabermetrics, WAR|Wins above replacement, OPS|On-base plus slugging, WHIP, Slash line, Utility player, Five-tool player, Bullpen catcher, Lineup card, Magic number',
-    ],
-  },
-  {
-    id: 'gridiron-terms',
-    q: 'Name an American football term',
-    tiers: [
-      'Touchdown, Quarterback|QB, Field goal, Super Bowl, End zone, Kickoff, Punt, Tackle',
-      'Interception|Pick, Fumble, Sack, Safety, First down, Down, Huddle, Snap, Wide receiver|Receiver|WR, Running back|RB, Linebacker, Cornerback, Center|Centre, Tight end, Kicker, Punter, Offense|Offence, Defense|Defence',
-      'Extra point|PAT|Point after, Two-point conversion, Hail Mary, Blitz, Audible, Shotgun, Play action|Play-action, Screen pass|Screen, Onside kick, Touchback, Fair catch, Line of scrimmage|Scrimmage, Offensive line|O-line, Defensive line|D-line, Guard, Nose tackle, Defensive end, Free safety, Strong safety, Holding, Pass interference, Offside|Offsides, False start, Red zone, Two-minute warning, Pick six, Gridiron',
-      'Draw play|Draw, Sweep, Option|Read option, Bootleg, Spike, Kneel|Victory formation, Nickel|Nickel back, Dime|Dime back, Zone defense|Zone, Man coverage|Man-to-man, Cover 2|Cover two, Pocket, Scramble, Encroachment, Neutral zone infraction, Roughing the passer, Facemask, Clipping, Chop block, Intentional grounding, Delay of game, Illegal formation, Muffed punt|Muff, Coffin corner, Hash marks, Goal line stand, Tight end screen, Slot receiver|Slot, Fullback, Halfback, Long snapper, Special teams, Wildcat',
-      'Flea flicker, Statue of Liberty, Fumblerooski, Hook and ladder|Hook-and-lateral, Wishbone, Wing T, Pistol formation|Pistol, Run and shoot, Spread offense|Spread, West Coast offense, Nickel package, Prevent defense, Tampa 2, Zone blitz, Jet sweep, End around, Reverse, Squib kick, Pooch punt, Rouge, Pylon, Chain gang|Chains, Sticks, Tuck rule, Dead ball, Horse-collar tackle|Horse collar, Spearing, Taunting, Hurdling, Fourth and long, Bubble screen, RPO|Run-pass option, Mike linebacker|Mike, Sam linebacker|Sam, Will linebacker|Will',
-    ],
-  },
-  {
-    id: 'yoga-poses',
-    q: 'Name a yoga pose',
-    strip: ['pose', 'asana'],
-    tiers: [
-      "Downward dog|Downward-facing dog|Adho mukha svanasana, Child's pose|Childs pose|Balasana, Lotus|Padmasana, Tree|Vrksasana, Warrior|Warrior one|Warrior I|Virabhadrasana, Mountain|Tadasana, Cobra|Bhujangasana, Corpse|Savasana|Shavasana",
-      "Upward dog|Upward-facing dog|Urdhva mukha svanasana, Warrior two|Warrior II, Warrior three|Warrior III, Plank, Bridge|Setu bandhasana, Cat|Marjaryasana, Cow|Bitilasana, Cat-cow, Triangle|Trikonasana, Chair|Utkatasana, Boat|Navasana, Pigeon|Kapotasana|Eka pada rajakapotasana, Crow|Bakasana, Headstand|Sirsasana, Shoulder stand|Shoulderstand|Sarvangasana, Sun salutation|Surya namaskar",
-      'Plough|Plow|Halasana, Fish|Matsyasana, Camel|Ustrasana, Bow|Dhanurasana, Wheel|Urdhva dhanurasana, Locust|Salabhasana, Eagle|Garudasana, Dancer|Natarajasana, Half moon|Ardha chandrasana, Cobbler|Bound angle|Baddha konasana|Butterfly, Easy pose|Sukhasana, Hero|Virasana, Forward fold|Standing forward bend|Uttanasana, Seated forward bend|Paschimottanasana, Happy baby|Ananda balasana, Garland|Malasana|Squat, Four-limbed staff|Chaturanga|Chaturanga dandasana, Staff|Dandasana, Lizard|Utthan pristhasana',
-      'Extended side angle|Utthita parsvakonasana, Reverse warrior|Viparita virabhadrasana, Revolved triangle|Parivrtta trikonasana, Pyramid|Parsvottanasana, Wide-legged forward bend|Prasarita padottanasana, Side plank|Vasisthasana, Firefly|Tittibhasana, Side crow|Parsva bakasana, Peacock|Mayurasana, Scorpion|Vrschikasana, Handstand|Adho mukha vrksasana, Forearm stand|Pincha mayurasana, Lord of the fishes|Half lord of the fishes|Ardha matsyendrasana, Cow face|Gomukhasana, Head-to-knee|Janu sirsasana, Reclining bound angle|Supta baddha konasana, Legs up the wall|Viparita karani, Puppy|Uttana shishosana|Extended puppy, Frog|Mandukasana, Gate|Parighasana, Sphinx|Salamba bhujangasana, Thread the needle, Low lunge|Anjaneyasana|Crescent lunge',
-      'Eight-angle|Astavakrasana, Flying pigeon|Eka pada galavasana, King pigeon|Raja kapotasana, Compass|Parivrtta surya yantrasana, Bird of paradise|Svarga dvijasana, Heron|Krounchasana, Monkey|Splits|Hanumanasana, Lion|Simhasana, Tortoise|Kurmasana, Embryo|Garbha pindasana, Rooster|Kukkutasana, Noose|Pasasana, Sage Marichi|Marichyasana, Wild thing|Camatkarasana, Visvamitrasana|Visvamitra, Shoulder-pressing|Bhujapidasana, Ear pressure|Karnapidasana, Upward plank|Purvottanasana, Reclining hero|Supta virasana',
-    ],
-  },
-  {
     id: 'basketball-players',
     q: 'Name a basketball player, past or present',
     people: true,
@@ -154,18 +85,6 @@ export default [
     ],
   },
   {
-    id: 'cricketers',
-    q: 'Name a cricketer, past or present',
-    people: true,
-    tiers: [
-      'Bradman|Don Bradman, Tendulkar|Sachin Tendulkar|Sachin, Kohli|Virat Kohli, Flintoff|Andrew Flintoff|Freddie Flintoff, Botham|Ian Botham, Warne|Shane Warne',
-      'Lara|Brian Lara, Dhoni|MS Dhoni, Ponting|Ricky Ponting, Anderson|James Anderson|Jimmy Anderson, Broad|Stuart Broad, Stokes|Ben Stokes, Root|Joe Root, Cook|Alastair Cook, Imran Khan, Muralitharan|Muttiah Muralitharan|Murali, Richards|Viv Richards',
-      'Sobers|Garfield Sobers|Gary Sobers, Grace|WG Grace, Gavaskar|Sunil Gavaskar, Kapil Dev|Kapil, McGrath|Glenn McGrath, Gilchrist|Adam Gilchrist, Kallis|Jacques Kallis, Akram|Wasim Akram, Waqar Younis|Waqar, Ambrose|Curtly Ambrose, Walsh|Courtney Walsh, Hadlee|Richard Hadlee, Boycott|Geoffrey Boycott, Gower|David Gower, Gooch|Graham Gooch, Pietersen|Kevin Pietersen|KP, Smith|Steve Smith, Warner|David Warner, Cummins|Pat Cummins, Williamson|Kane Williamson, Babar Azam|Babar, Bumrah|Jasprit Bumrah, Sharma|Rohit Sharma, Gayle|Chris Gayle, Lillee|Dennis Lillee',
-      "Holding|Michael Holding, Marshall|Malcolm Marshall, Greenidge, Haynes, Lloyd|Clive Lloyd, Border|Allan Border, Steve Waugh|Waugh, Mark Waugh, Thomson|Jeff Thomson, Greg Chappell|Chappell, Ian Chappell, Hayden, Langer, Lee|Brett Lee, Dravid|Rahul Dravid, Ganguly|Sourav Ganguly, Laxman|VVS Laxman, Sehwag, Kumble|Anil Kumble, Harbhajan, Ashwin, Jadeja, Jayasuriya, Sangakkara, Jayawardene, De Villiers|AB de Villiers, Steyn|Dale Steyn, Shaun Pollock|Pollock, Graeme Pollock, Donald|Allan Donald, Shoaib Akhtar|Akhtar, Inzamam, Miandad|Javed Miandad, Afridi|Shahid Afridi, Swann|Graeme Swann, Vaughan|Michael Vaughan, Strauss, Trescothick, Bairstow, Buttler|Jos Buttler, Archer|Jofra Archer, Brook|Harry Brook, Starc|Mitchell Starc, Lyon|Nathan Lyon, Head|Travis Head",
-      "Hobbs|Jack Hobbs, Hammond|Wally Hammond, Hutton|Len Hutton, Compton|Denis Compton, Trueman|Fred Trueman, Laker|Jim Laker, Barnes|Sydney Barnes, Larwood|Harold Larwood, Trumper|Victor Trumper, Worrell|Frank Worrell, Weekes|Everton Weekes, Walcott|Clyde Walcott, Headley|George Headley, Constantine|Learie Constantine, Ranjitsinhji|Ranji, Benaud|Richie Benaud, Lindwall|Ray Lindwall, Miller|Keith Miller, Underwood|Derek Underwood, Knott|Alan Knott, Willis|Bob Willis, Hick|Graeme Hick, Atherton|Michael Atherton, Stewart|Alec Stewart, Crowe|Martin Crowe, McCullum|Brendon McCullum, Vettori, Zaheer Abbas, Hanif Mohammad, Saqlain|Saqlain Mushtaq, Vaas|Chaminda Vaas, Malinga|Lasith Malinga, Shakib|Shakib Al Hasan, Rashid Khan, Ellyse Perry|Perry, Charlotte Edwards",
-    ],
-  },
-  {
     id: 'stadiums',
     q: 'Name a sports stadium, arena or ground',
     strip: ['stadium', 'arena'],
@@ -175,30 +94,6 @@ export default [
       "Stamford Bridge, Etihad Stadium, Tottenham Hotspur Stadium, Goodison Park, Villa Park, St James' Park|St James Park, Hampden Park|Hampden, Celtic Park|Parkhead, Ibrox, Signal Iduna Park|Westfalenstadion, Olympiastadion, Johan Cruyff Arena|Amsterdam Arena, Estadio Azteca|Azteca, La Bombonera|Bombonera, Estadio Monumental|Monumental, Eden Gardens, Sydney Cricket Ground|SCG, The Oval|Kia Oval, Headingley, Edgbaston, SoFi Stadium, AT&T Stadium|Cowboys Stadium, Arrowhead Stadium, Soldier Field, MetLife Stadium, Superdome|Caesars Superdome, Crypto.com Arena|Staples Center, TD Garden|Boston Garden, United Center, Roland Garros|Stade Roland Garros, Arthur Ashe Stadium, Rod Laver Arena",
       "Hillsborough, Elland Road, Highbury, White Hart Lane, Maine Road, Molineux, Stade Vélodrome|Velodrome, Parc des Princes, Mestalla, Metropolitano|Wanda Metropolitano, Estádio da Luz|Estadio da Luz|Da Luz, Estádio do Dragão|Estadio do Dragao|Dragao, Philips Stadion, De Kuip, Stadio Olimpico, Aviva Stadium|Lansdowne Road, Ellis Park, Eden Park, Newlands, Camden Yards|Oriole Park, Busch Stadium, Candlestick Park, Shea Stadium, Ebbets Field, Polo Grounds, Astrodome, Michigan Stadium|Big House, Cameron Indoor Stadium, Rucker Park, Bird's Nest|Birds Nest|Beijing National Stadium, Luzhniki, Narendra Modi Stadium|Motera, Wankhede, The Gabba|Gabba, Adelaide Oval, WACA, Trent Bridge",
       "Bramall Lane, Deepdale, Turf Moor, Ewood Park, Portman Road, Fratton Park, The Den, Craven Cottage, Loftus Road, Selhurst Park, Vicarage Road, Carrow Road, The Hawthorns, Estadio Centenario|Centenario, Mineirão|Mineirao, Morumbi, Pacaembu, San Mamés|San Mames, Anoeta, Riazor, Sánchez Pizjuán|Sanchez Pizjuan, La Rosaleda, Geoffroy-Guichard, Stade Louis II|Louis II, Stadio Diego Armando Maradona|San Paolo, Marassi|Luigi Ferraris, Artemio Franchi, Ernst Happel|Prater, Parken, Ullevaal, Şükrü Saracoğlu|Sukru Saracoglu, Poljud, Puskás Aréna|Puskas Arena|Nepstadion, Rungrado|May Day Stadium, Azadi Stadium",
-    ],
-  },
-  {
-    id: 'golf-courses',
-    q: 'Name a famous golf course',
-    strip: ['golf', 'club', 'links', 'course'],
-    tiers: [
-      'Augusta National|Augusta, St Andrews|Old Course|St Andrews Old Course, Pebble Beach, Carnoustie, Royal Birkdale|Birkdale, TPC Sawgrass|Sawgrass',
-      "Muirfield, Royal Troon|Troon, Turnberry|Trump Turnberry, Royal St George's|Royal St Georges|Sandwich, Royal Lytham|Royal Lytham and St Annes|Lytham, Royal Liverpool|Hoylake, Pinehurst|Pinehurst No 2, Oakmont, Shinnecock Hills|Shinnecock, Winged Foot, Bethpage Black|Bethpage, Valderrama, Wentworth, The Belfry|Belfry, Gleneagles, Celtic Manor",
-      'Royal Portrush|Portrush, Royal County Down|County Down, Merion, Baltusrol, Oakland Hills, Olympic Club|Olympic, Medinah, Whistling Straits, Kiawah Island|Kiawah, Torrey Pines, Riviera, Bay Hill, Harbour Town, Muirfield Village, Cypress Point, Pine Valley, Royal Melbourne, Kingston Heath, Le Golf National|Golf National, Marco Simone, Hazeltine, Southern Hills, Quail Hollow, East Lake, Doral|Blue Monster',
-      'Sunningdale, Woodhall Spa, Walton Heath, Ballybunion, Lahinch, Portmarnock, The K Club|K Club, Royal Dornoch|Dornoch, Kingsbarns, Castle Stuart, Prestwick, Musselburgh, Royal Aberdeen, Cruden Bay, Machrihanish, North Berwick, Royal Porthcawl|Porthcawl, Saunton, Ganton, The Country Club|Brookline, Bandon Dunes|Bandon, Sand Hills, Chambers Bay, Erin Hills, Valhalla, Firestone, Colonial, Oak Hill, Congressional, Cape Kidnappers, Kauri Cliffs, Leopard Creek',
-      "Tara Iti, Barnbougle Dunes|Barnbougle, New South Wales Golf Club, Hirono, Kasumigaseki, Mission Hills, Yas Links, Morfontaine, Les Bordes, Royal Zoute, Falsterbo, Fishers Island, Friar's Head|Friars Head, Crystal Downs, Prairie Dunes, Seminole, Garden City, Somerset Hills, Los Angeles Country Club, Shoreacres, Yeamans Hall, Ballyneal",
-    ],
-  },
-  {
-    id: 'nfl-players',
-    q: 'Name an NFL player, past or present',
-    people: true,
-    tiers: [
-      'Tom Brady|Brady, Patrick Mahomes|Mahomes, Peyton Manning|Manning, Jerry Rice|Rice, Joe Montana|Montana, Travis Kelce|Kelce',
-      'Aaron Rodgers|Rodgers, Brett Favre|Favre, Dan Marino|Marino, John Elway|Elway, Walter Payton|Payton, Emmitt Smith, Barry Sanders, Jim Brown, Lawrence Taylor, Joe Namath|Namath, Eli Manning, Drew Brees|Brees, Rob Gronkowski|Gronkowski|Gronk, Randy Moss|Moss',
-      "Deion Sanders|Prime Time, Troy Aikman|Aikman, Terry Bradshaw|Bradshaw, Johnny Unitas|Unitas, Dick Butkus|Butkus, Reggie White, Ray Lewis, OJ Simpson|O.J. Simpson, Joe Burrow|Burrow, Josh Allen, Lamar Jackson, Jalen Hurts|Hurts, Saquon Barkley|Barkley, Derrick Henry, Adrian Peterson, LaDainian Tomlinson|Tomlinson, Marshawn Lynch|Beast Mode, Calvin Johnson|Megatron, Terrell Owens, Larry Fitzgerald, Tony Gonzalez, JJ Watt|J.J. Watt, Aaron Donald, Russell Wilson, Ben Roethlisberger|Roethlisberger|Big Ben, Cam Newton, Michael Vick|Vick, Odell Beckham Jr|Odell Beckham, Justin Jefferson, Tyreek Hill, Christian McCaffrey|McCaffrey, Michael Strahan|Strahan",
-      "Jerome Bettis|Bettis, Franco Harris, Eric Dickerson|Dickerson, Marcus Allen, Tony Dorsett|Dorsett, Earl Campbell, Gale Sayers|Sayers, Steve Young, Warren Moon, Jim Kelly, Kurt Warner, Philip Rivers, Matthew Stafford|Stafford, Troy Polamalu|Polamalu, Ed Reed, Brian Urlacher|Urlacher, Junior Seau|Seau, Joe Greene|Mean Joe Greene, Bruce Smith, Deacon Jones, Charles Woodson, Darrelle Revis|Revis, Champ Bailey, Ronnie Lott, Rod Woodson, Shannon Sharpe, Michael Irvin, Cris Carter, Marvin Harrison, Steve Largent, Anthony Muñoz|Anthony Munoz, Adam Vinatieri|Vinatieri, Justin Tucker, Von Miller, TJ Watt|T.J. Watt, Micah Parsons, Davante Adams, Ja'Marr Chase, CeeDee Lamb",
-      'Sammy Baugh, Bronko Nagurski|Nagurski, Red Grange, Jim Thorpe, Don Hutson, Otto Graham, Bart Starr, YA Tittle|Y.A. Tittle, Fran Tarkenton|Tarkenton, Roger Staubach|Staubach, Ken Stabler|Stabler, Dan Fouts, Lance Alworth, Raymond Berry, Paul Hornung, Bob Hayes, Larry Csonka|Csonka, Mike Ditka|Ditka, Ray Nitschke, Jack Lambert, Jack Ham, Mel Blount, Dick Lane|Night Train Lane, Lynn Swann, John Riggins, Art Monk, Bo Jackson, Doug Flutie|Flutie, William Perry|Refrigerator Perry|The Refrigerator',
     ],
   },
 ];

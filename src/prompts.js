@@ -20,11 +20,20 @@ import words from './bank/words.js';
 import tech from './bank/tech.js';
 import wild from './bank/wild.js';
 import society from './bank/society.js';
+import merged from './bank/merged.js';
+import around from './bank/around.js';
+import occasions from './bank/occasions.js';
+import pastimes from './bank/pastimes.js';
+import treats from './bank/treats.js';
+import creatures from './bank/creatures.js';
+import stuff from './bank/stuff.js';
+import ideas from './bank/ideas.js';
 import { buildCard } from './match.js';
 
 export const PROMPTS = [
   ...places, ...science, ...arts, ...life, ...nature, ...world, ...culture, ...home,
   ...sport, ...screen, ...music, ...books, ...history, ...kitchen, ...cities, ...words, ...tech, ...wild, ...society, ...everyday,
+  ...merged, ...around, ...occasions, ...pastimes, ...treats, ...creatures, ...stuff, ...ideas,
 ];
 
 const byId = new Map(PROMPTS.map((p) => [p.id, p]));

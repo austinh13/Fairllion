@@ -81,28 +81,17 @@ test('closed sets are complete', () => {
   const count = (id) => cardFor(id).answers.length;
   assert.equal(count('elements'), 118);
   assert.equal(count('us-states'), 50);
-  assert.equal(count('us-capitals'), 50);
   assert.equal(count('africa'), 54);
   assert.equal(count('americas'), 35);
-  assert.equal(count('greek-letters'), 24);
-  assert.equal(count('nato-alphabet'), 26);
-  assert.equal(count('si-prefixes'), 24);
-  assert.equal(count('constellations'), 88);
-  assert.equal(count('presidents'), 40);
-  assert.equal(count('asian-capitals'), 50);
-  assert.equal(count('nfl-teams'), 32);
-  assert.equal(count('nba-teams'), 30);
-  assert.equal(count('tarot'), 78);
 });
 
 // Lists with a fixed, real-world size; every other card holds at least 60 answers.
 const CLOSED = new Set([
-  'us-states', 'us-capitals', 'africa', 'europe', 'asia', 'americas', 'euro-capitals', 'asian-capitals',
-  'greek-letters', 'nato-alphabet', 'si-prefixes', 'nfl-teams', 'nba-teams', 'presidents',
+  'us-states', 'africa', 'europe', 'asia', 'americas',
 ]);
 
-test('the bank holds 309 categories', () => {
-  assert.equal(PROMPTS.length, 309);
+test('the bank holds 288 categories', () => {
+  assert.equal(PROMPTS.length, 288);
 });
 
 test('every open category has at least 60 answers', () => {

@@ -1,15 +1,6 @@
 // Answer cards: writers, thinkers, explorers, gods, stage and screen, games.
 // Cards marked `people` accept a full name for a surname.
 
-/** Tarot pips: "Two of Cups|2 of Cups" and so on, with the suits' other names. */
-const SUITS = [['Cups'], ['Swords'], ['Wands', 'Rods', 'Staves'], ['Pentacles', 'Coins', 'Disks']];
-const RANKS = [['Two', '2'], ['Three', '3'], ['Four', '4'], ['Five', '5'], ['Six', '6'], ['Seven', '7'], ['Eight', '8'], ['Nine', '9'], ['Ten', '10']];
-const card = (rank, suit) => rank.flatMap((r) => suit.map((s) => `${r} of ${s}`)).join('|');
-const pips = (skip) =>
-  SUITS.flatMap((suit) => RANKS.filter((rank) => !skip.includes(`${rank[0]} of ${suit[0]}`)).map((rank) => card(rank, suit))).join(', ');
-const court = SUITS.flatMap((suit) => ['Page', 'Knight', 'Queen', 'King'].map((r) => card([r], suit))).join(', ');
-const PIPS_IN_TIER_3 = ['Three of Swords', 'Ten of Swords'];
-
 export default [
   {
     id: 'novelists',
@@ -116,22 +107,6 @@ export default [
     ],
   },
   {
-    id: 'tarot',
-    q: 'Name a tarot card',
-    tiers: [
-      'Death, The Fool, The Lovers, The Tower',
-      'The Devil, The Magician, The Hanged Man, The Moon, The Sun, The Star, Wheel of Fortune, The World, The Empress, The Emperor, Judgement|Judgment',
-      [
-        'The High Priestess|The Papess, The Hierophant|The Pope, The Chariot, Strength, The Hermit, Justice, Temperance',
-        ...SUITS.map((suit) => card(['Ace'], suit)),
-        card(['Three', '3'], SUITS[1]),
-        card(['Ten', '10'], SUITS[1]),
-      ].join(', '),
-      court,
-      pips(PIPS_IN_TIER_3),
-    ],
-  },
-  {
     id: 'operas',
     q: 'Name an opera or operetta',
     tiers: [
@@ -151,17 +126,6 @@ export default [
       'Joseph and the Amazing Technicolor Dreamcoat|Joseph, Miss Saigon, Into the Woods, Sweeney Todd, Guys and Dolls, Oklahoma!|Oklahoma, The King and I|King and I, South Pacific, Carousel, The Wizard of Oz|Wizard of Oz, Little Shop of Horrors, The Rocky Horror Show|Rocky Horror Show|Rocky Horror, Starlight Express, Blood Brothers, Billy Elliot, Kinky Boots, Aladdin, Beauty and the Beast, Legally Blonde, Mean Girls, Waitress, Come From Away, In the Heights, Avenue Q, Spamalot, The Producers, A Chorus Line|Chorus Line, Anything Goes, Kiss Me Kate, Hello Dolly!|Hello Dolly, Show Boat, Annie Get Your Gun, Singin\' in the Rain|Singing in the Rain, 42nd Street, Funny Girl, Gypsy, Company, Follies, Pippin, Godspell, Hair, Jersey Boys, Dreamgirls, The Color Purple|Color Purple, Spring Awakening, Next to Normal, Heathers, Beetlejuice, Shrek the Musical|Shrek, Charlie and the Chocolate Factory, Chitty Chitty Bang Bang, The Wiz|Wiz, Sunset Boulevard, We Will Rock You, Tina|Tina the Musical, Back to the Future, Frozen, Everybody\'s Talking About Jamie|Jamie, Mrs Doubtfire, MJ|MJ the Musical, Jagged Little Pill',
       'Brigadoon, Camelot, Kismet, The Music Man|Music Man, Bye Bye Birdie, Man of La Mancha, Mame, Sweet Charity, 1776, A Little Night Music, Sunday in the Park with George, Assassins, Merrily We Roll Along, Pacific Overtures, A Funny Thing Happened on the Way to the Forum|Forum, The Fantasticks|Fantasticks, Damn Yankees, The Pajama Game|Pajama Game, How to Succeed in Business Without Really Trying|How to Succeed, On the Town, Wonderful Town, Bells Are Ringing, Pal Joey, Kiss of the Spider Woman, Ragtime, Parade, The Light in the Piazza, Grey Gardens, Titanic, Seussical, Urinetown, Thoroughly Modern Millie, The Drowsy Chaperone, Once on This Island, Falsettos, The Secret Garden, Big River, City of Angels, Grand Hotel, Nine, La Cage aux Folles, Barnum, Chess, Me and My Girl, Half a Sixpence, Aspects of Love, Whistle Down the Wind, Love Never Dies, The Woman in White, Bat Out of Hell, Fun Home, Once, Be More Chill, Elf, Hedwig and the Angry Inch|Hedwig, Natasha Pierre and the Great Comet of 1812|The Great Comet, The Band\'s Visit, Kimberly Akimbo, Suffs, Shucked, A Strange Loop, Tick Tick Boom, Bright Star, Made in Dagenham',
       'Paint Your Wagon, Promises Promises, Passion, Anyone Can Whistle, Fiorello!|Fiorello, Li\'l Abner, Lady in the Dark, Babes in Arms, Of Thee I Sing, Caroline or Change, Salad Days, The Boy Friend, Oh What a Lovely War|Oh What a Lovely War!, Tell Me on a Sunday, Cinderella, State Fair, Allegro, Flower Drum Song, Pipe Dream, No Strings, Shuffle Along, Girl Crazy, Strike Up the Band, Lady Be Good, No No Nanette, Floyd Collins, Dogfight, The Will Rogers Follies, Lionel Bart\'s Blitz|Blitz!, Stop the World I Want to Get Off, Zorba',
-    ],
-  },
-  {
-    id: 'disney-films',
-    q: 'Name a Disney or Pixar animated film',
-    tiers: [
-      'The Lion King|Lion King, Frozen, Toy Story, Aladdin, The Little Mermaid|Little Mermaid, Beauty and the Beast',
-      'Snow White and the Seven Dwarfs|Snow White, Cinderella, Finding Nemo, Moana, Encanto, Tangled, Mulan, Pinocchio, Bambi, Dumbo, Peter Pan, Sleeping Beauty, The Jungle Book|Jungle Book, Monsters Inc|Monsters Incorporated, Up, Coco, Cars, The Incredibles|Incredibles, Inside Out, Zootopia|Zootropolis, Pocahontas, 101 Dalmatians|One Hundred and One Dalmatians, Lady and the Tramp, WALL-E|Wall E, Ratatouille',
-      'Hercules, Tarzan, The Hunchback of Notre Dame|Hunchback of Notre Dame, Lilo & Stitch|Lilo and Stitch, The Princess and the Frog|Princess and the Frog, Wreck-It Ralph, Big Hero 6, Frozen II|Frozen 2, Fantasia, Alice in Wonderland, The Aristocats|Aristocats, Robin Hood, The Fox and the Hound|Fox and the Hound, Brave, A Bug\'s Life|Bugs Life, Toy Story 2, Toy Story 3, Toy Story 4, Finding Dory, Monsters University, Cars 2, Cars 3, Incredibles 2, Soul, Luca, Turning Red, Elemental, Raya and the Last Dragon|Raya, Wish, Bolt, The Emperor\'s New Groove|Emperor\'s New Groove, Inside Out 2, Moana 2, Onward, Lightyear, The Good Dinosaur|Good Dinosaur, Ralph Breaks the Internet, Zootopia 2, Elio',
-      'Meet the Robinsons, Chicken Little, Atlantis|Atlantis The Lost Empire, Treasure Planet, Brother Bear, Home on the Range, The Rescuers|Rescuers, The Rescuers Down Under|Rescuers Down Under, The Great Mouse Detective|Great Mouse Detective, Oliver & Company|Oliver and Company, The Black Cauldron|Black Cauldron, The Sword in the Stone|Sword in the Stone, The Many Adventures of Winnie the Pooh|Winnie the Pooh, Fantasia 2000, Dinosaur, Strange World',
-      'Saludos Amigos, The Three Caballeros|Three Caballeros, Make Mine Music, Fun and Fancy Free, Melody Time, The Adventures of Ichabod and Mr Toad|Ichabod and Mr Toad, The Reluctant Dragon, Victory Through Air Power',
     ],
   },
   {
@@ -191,10 +155,10 @@ export default [
     q: 'Name a board game',
     tiers: [
       'Chess, Monopoly, Scrabble, Checkers|Draughts, Cluedo|Clue, Snakes and Ladders|Chutes and Ladders',
-      'Risk, Backgammon, Trivial Pursuit, Battleship|Battleships, Connect Four|Connect 4, Operation, Guess Who, Pictionary, Mouse Trap|Mousetrap, The Game of Life|Game of Life|Life, Catan|Settlers of Catan, Ludo|Parcheesi|Pachisi, Sorry!|Sorry, Go|Weiqi|Baduk, Candy Land|Candyland, Stratego, Othello|Reversi, Hungry Hungry Hippos|Hungry Hippos, Mahjong|Mah-jong|Mahjongg',
-      'Ticket to Ride, Carcassonne, Pandemic, Mastermind, Chinese Checkers|Chinese chequers|Sternhalma, Mancala, Diplomacy, Axis & Allies|Axis and Allies, Cranium, Balderdash, Rummikub, Upwords, Azul, Splendor, Agricola, Puerto Rico, Power Grid, Terraforming Mars, Wingspan, Gloomhaven, Twilight Imperium, Arkham Horror, Betrayal at House on the Hill, Small World, King of Tokyo, Dixit, Mysterium, Scotland Yard, HeroQuest|Hero Quest, Shogi, Xiangqi|Chinese chess, Nine Men\'s Morris|Mill|Merels, Blokus, Labyrinth, Carrom, Trouble|Frustration, Kerplunk|KerPlunk, Payday, Codenames, Cascadia, Everdell, Root, Scythe, Brass',
-      'Hex, Janggi, Makruk, Fox and Geese, Hnefatafl|Tafl, Senet, Royal Game of Ur|Game of Ur, Mehen, Patolli, Alquerque, Fanorona, Halma, Pente, Gomoku, Abalone, Quoridor, Qwirkle, Crokinole, Spirit Island, Twilight Struggle, El Grande, Tigris and Euphrates|Tigris & Euphrates, Acquire, Escape from Colditz, Kingdomino, Patchwork, Mall Madness, Careers, Masterpiece, Dream Phone, Stock Ticker, Hotel|Hotel Tycoon, Downfall, Formula D, Heroscape, Talisman, Dungeon!|Dungeon, Space Hulk, Blood Bowl, Warhammer, Hive',
-      'Oware|Ayo, Bao, Kalah, Surakarta, Konane, Tablut, Lasca, Kingmaker, Hare and Tortoise, Cosmic Encounter, Civilization, Railway Rivals, Sagrada, Tzolkin|Tzolk\'in, Through the Ages, Le Havre, Concordia, Tikal',
+      'Risk, Backgammon, Trivial Pursuit, Battleship|Battleships, Connect Four|Connect 4, Operation, Guess Who, Pictionary, Mouse Trap|Mousetrap, The Game of Life|Game of Life|Life, Catan|Settlers of Catan, Ludo|Parcheesi|Pachisi, Sorry!|Sorry, Go|Weiqi|Baduk, Candy Land|Candyland, Stratego, Othello|Reversi',
+      'Hungry Hungry Hippos|Hungry Hippos, Mahjong|Mah-jong|Mahjongg, Ticket to Ride, Carcassonne, Pandemic, Mastermind, Chinese Checkers|Chinese chequers|Sternhalma, Mancala, Diplomacy, Axis & Allies|Axis and Allies, Cranium, Balderdash, Rummikub, Upwords, Azul, Splendor, Agricola, Puerto Rico, Power Grid, Terraforming Mars, Wingspan, Gloomhaven, Twilight Imperium, Arkham Horror, Betrayal at House on the Hill, Small World, King of Tokyo',
+      "Dixit, Mysterium, Scotland Yard, HeroQuest|Hero Quest, Shogi, Xiangqi|Chinese chess, Nine Men's Morris|Mill|Merels, Blokus, Labyrinth, Carrom, Trouble|Frustration, Kerplunk|KerPlunk, Payday, Codenames, Cascadia, Everdell, Root, Scythe, Brass, Hex, Janggi, Makruk, Fox and Geese, Hnefatafl|Tafl, Senet, Royal Game of Ur|Game of Ur, Mehen, Patolli, Alquerque, Fanorona, Halma, Pente, Gomoku, Abalone, Quoridor",
+      "Qwirkle, Crokinole, Spirit Island, Twilight Struggle, El Grande, Tigris and Euphrates|Tigris & Euphrates, Acquire, Escape from Colditz, Kingdomino, Patchwork, Mall Madness, Careers, Masterpiece, Dream Phone, Stock Ticker, Hotel|Hotel Tycoon, Downfall, Formula D, Heroscape, Talisman, Dungeon!|Dungeon, Space Hulk, Blood Bowl, Warhammer, Hive, Oware|Ayo, Bao, Kalah, Surakarta, Konane, Tablut, Lasca, Kingmaker, Hare and Tortoise, Cosmic Encounter, Civilization, Railway Rivals, Sagrada, Tzolkin|Tzolk'in, Through the Ages, Le Havre, Concordia, Tikal",
     ],
   },
   {
@@ -213,10 +177,10 @@ export default [
     q: 'Name a literary device or figure of speech',
     tiers: [
       'Metaphor, Simile, Alliteration, Rhyme, Irony',
-      'Personification|Prosopopoeia, Onomatopoeia, Hyperbole, Foreshadowing, Oxymoron, Imagery, Symbolism, Flashback|Analepsis, Satire, Allusion, Assonance, Pun|Paronomasia, Rhetorical question, Repetition, Cliffhanger, Sarcasm',
-      'Anaphora, Euphemism, Juxtaposition, Paradox, Analogy, Allegory, Understatement, Litotes, Metonymy, Synecdoche, Apostrophe, Consonance, Enjambment, Caesura, Chiasmus, Antithesis, Anticlimax|Bathos, Pathos, Motif, Dramatic irony, Red herring, Deus ex machina, Chekhov\'s gun, In medias res, Unreliable narrator, Stream of consciousness, Frame story|Frame narrative, Epiphany, Catharsis, Hubris, Hamartia|Tragic flaw, Malapropism, Spoonerism, Parody, Pastiche, Anachronism, Archetype, Epithet, Foil, Soliloquy, Monologue, Aside, Pathetic fallacy, Anthropomorphism, Tautology, Plot twist|Twist, MacGuffin, Breaking the fourth wall|Fourth wall, Exposition, Denouement|Dénouement, Sibilance, Refrain, Internal rhyme, Slant rhyme|Half rhyme|Near rhyme, Flash-forward|Prolepsis',
-      'Zeugma, Polysyndeton, Asyndeton, Epistrophe|Epiphora, Anadiplosis, Pleonasm, Circumlocution|Periphrasis, Aposiopesis, Hendiadys, Transferred epithet|Hypallage, Antanaclasis, Syllepsis, Anastrophe, Hyperbaton, Antimetabole, Epizeuxis, Isocolon, Tricolon|Rule of three, Meiosis, Ekphrasis, Mise en abyme, Kenning, Objective correlative, Verisimilitude, Metafiction, Free indirect discourse|Free indirect speech, Interior monologue, Synaesthesia|Synesthesia, Cacophony, Euphony, Eye rhyme, Volta, Apophasis|Paralipsis, Hypophora, Ethos, Logos, Climax, Situational irony, Verbal irony, Rising action, Falling action',
-      'Anthimeria, Catachresis, Merism, Antonomasia, Metalepsis, Tmesis, Polyptoton, Diacope, Symploce, Epanalepsis, Anacoluthon, Bdelygmia, Procatalepsis, Paraprosdokian, Adynaton, Auxesis',
+      'Personification|Prosopopoeia, Onomatopoeia, Hyperbole, Foreshadowing, Oxymoron, Imagery, Symbolism, Flashback|Analepsis, Satire, Allusion, Assonance, Pun|Paronomasia, Rhetorical question, Repetition, Cliffhanger, Sarcasm, Anaphora, Euphemism',
+      "Juxtaposition, Paradox, Analogy, Allegory, Understatement, Litotes, Metonymy, Synecdoche, Apostrophe, Consonance, Enjambment, Caesura, Chiasmus, Antithesis, Anticlimax|Bathos, Pathos, Motif, Dramatic irony, Red herring, Deus ex machina, Chekhov's gun, In medias res, Unreliable narrator, Stream of consciousness, Frame story|Frame narrative, Epiphany, Catharsis, Hubris",
+      'Hamartia|Tragic flaw, Malapropism, Spoonerism, Parody, Pastiche, Anachronism, Archetype, Epithet, Foil, Soliloquy, Monologue, Aside, Pathetic fallacy, Anthropomorphism, Tautology, Plot twist|Twist, MacGuffin, Breaking the fourth wall|Fourth wall, Exposition, Denouement|Dénouement, Sibilance, Refrain, Internal rhyme, Slant rhyme|Half rhyme|Near rhyme, Flash-forward|Prolepsis, Zeugma, Polysyndeton, Asyndeton, Epistrophe|Epiphora, Anadiplosis, Pleonasm, Circumlocution|Periphrasis, Aposiopesis, Hendiadys, Transferred epithet|Hypallage, Antanaclasis, Syllepsis',
+      'Anastrophe, Hyperbaton, Antimetabole, Epizeuxis, Isocolon, Tricolon|Rule of three, Meiosis, Ekphrasis, Mise en abyme, Kenning, Objective correlative, Verisimilitude, Metafiction, Free indirect discourse|Free indirect speech, Interior monologue, Synaesthesia|Synesthesia, Cacophony, Euphony, Eye rhyme, Volta, Apophasis|Paralipsis, Hypophora, Ethos, Logos, Climax, Situational irony, Verbal irony, Rising action, Falling action, Anthimeria, Catachresis, Merism, Antonomasia, Metalepsis, Tmesis, Polyptoton, Diacope, Symploce, Epanalepsis, Anacoluthon, Bdelygmia, Procatalepsis, Paraprosdokian, Adynaton, Auxesis',
     ],
   },
   {
@@ -228,28 +192,6 @@ export default [
       'Xbox Series X|Series X|Xbox Series S|Series S, Wii U, Nintendo 3DS|3DS, Game Boy Advance|GBA, Game Boy Color|GBC, PSP|PlayStation Portable, PS Vita|PlayStation Vita|Vita, Sega Saturn|Saturn, Dreamcast|Sega Dreamcast, Master System|Sega Master System, Game Gear|Sega Game Gear, Steam Deck, Virtual Boy, Atari Jaguar|Jaguar, Atari Lynx|Lynx, Neo Geo, TurboGrafx-16|TurboGrafx|PC Engine, Intellivision, ColecoVision, Magnavox Odyssey|Odyssey, 3DO, Game & Watch|Game and Watch, Ouya, Sega CD|Mega-CD, Sega 32X|32X, Meta Quest|Oculus Quest, Atari 7800, Atari 5200, Vectrex, Nintendo 2DS|2DS',
       'CD-i|Philips CD-i, Amiga CD32|CD32, Neo Geo Pocket, WonderSwan, N-Gage|Nokia N-Gage, Gizmondo, Game.com|Tiger Game.com, Pippin|Apple Pippin, Sega Nomad|Nomad, Channel F|Fairchild Channel F, Astrocade|Bally Astrocade, Odyssey 2|Videopac, Atari XEGS|XEGS, PC-FX, Pokémon Mini|Pokemon Mini, Game Boy Micro, Nintendo DSi|DSi, New Nintendo 3DS, Evercade, Analogue Pocket, Playdate, Stadia|Google Stadia, ROG Ally|Asus ROG Ally, Legion Go|Lenovo Legion Go, PlayStation Portal, Famicom Disk System, 64DD|Nintendo 64DD',
       'FM Towns Marty, Sega Pico|Pico, Arcadia 2001|Emerson Arcadia, GX4000|Amstrad GX4000, C64GS|Commodore 64 Games System, Playdia, Casio Loopy|Loopy, Super Cassette Vision, Cassette Vision, Game Boy Light, PocketStation, Satellaview, Zeebo, HyperScan, GP32, GP2X, SG-1000, Sega Mark III|Mark III, Telstar|Coleco Telstar, Studio II|RCA Studio II, Adventure Vision, Microvision',
-    ],
-  },
-  {
-    id: 'dickens',
-    q: 'Name a book by Charles Dickens, or a character from one',
-    tiers: [
-      "A Christmas Carol|Christmas Carol, Oliver Twist|Oliver, Great Expectations, Scrooge|Ebenezer Scrooge",
-      "David Copperfield, A Tale of Two Cities|Tale of Two Cities, Bleak House, Hard Times, Tiny Tim, Fagin, The Artful Dodger|Artful Dodger|Jack Dawkins, Miss Havisham, Pip, Bob Cratchit, Jacob Marley|Marley",
-      "Nicholas Nickleby, Little Dorrit, The Pickwick Papers|Pickwick Papers|Pickwick, Our Mutual Friend, The Old Curiosity Shop|Old Curiosity Shop, Bill Sikes, Nancy, Mr Bumble|Bumble, Estella, Magwitch|Abel Magwitch, Uriah Heep, Mr Micawber|Wilkins Micawber|Micawber, Sydney Carton, Madame Defarge, Mr Pickwick|Samuel Pickwick, Little Nell, Betsey Trotwood, Ghost of Christmas Past, Ghost of Christmas Present, Ghost of Christmas Yet to Come, Fezziwig, Mr Brownlow, Joe Gargery, Charles Darnay, Sam Weller, Wackford Squeers|Squeers, Smike, Mr Gradgrind|Thomas Gradgrind|Gradgrind, Peggotty",
-      "Dombey and Son, Martin Chuzzlewit, The Mystery of Edwin Drood|Edwin Drood, Barnaby Rudge, Lucie Manette, Doctor Manette|Dr Manette, Steerforth, Mr Murdstone, Quilp|Daniel Quilp, Josiah Bounderby, Esther Summerson, Lady Dedlock, Mr Jarndyce|John Jarndyce, Inspector Bucket, Mrs Jellyby, Harold Skimpole, Mr Tulkinghorn, Amy Dorrit, Pecksniff|Seth Pecksniff, Mrs Gamp|Sairey Gamp, John Jasper, Herbert Pocket, Wemmick, Jaggers, Pumblechook, Mrs Joe, Biddy, Mr Dick, Agnes Wickfield, Dora Spenlow, Noah Claypole, Monks, Charley Bates, Jerry Cruncher, Miss Pross, Captain Cuttle, Mr Toots, Paul Dombey, Florence Dombey, Ralph Nickleby, Newman Noggs",
-      "The Chimes|Chimes, The Cricket on the Hearth|Cricket on the Hearth, The Battle of Life|Battle of Life, The Haunted Man|Haunted Man, Sketches by Boz, Pictures from Italy, American Notes, A Child's History of England, The Uncommercial Traveller, The Signal-Man|The Signalman, Mugby Junction, The Life of Our Lord, Master Humphrey's Clock, The Mudfog Papers, No Thoroughfare, Hunted Down, George Silverman's Explanation, Holiday Romance, The Frozen Deep, Bentley Drummle, Little Em'ly, Ham Peggotty, Krook, Mr Guppy, Mrs Pardiggle, Mr Turveydrop, Mr Vholes, Mrs Sparsit, Sissy Jupe, Stephen Blackpool, Bella Wilfer, Noddy Boffin, Silas Wegg, Gaffer Hexam, Lizzie Hexam, Bradley Headstone, Mr Podsnap, Jenny Wren, Dick Swiveller, Sampson Brass, Sally Brass, Kit Nubbles, The Marchioness, Mr Wardle, Mr Winkle, Mr Snodgrass, Mr Tupman, Mr Jingle|Alfred Jingle, Mrs Bardell, Vincent Crummles, Kate Nickleby, Cheeryble brothers|Cheerybles, Mr Mantalini, Simon Tappertit, Dolly Varden, Gabriel Varden, Grip, Tom Pinch, Mark Tapley, Jonas Chuzzlewit, Montague Tigg, Edith Granger, Carker, Arthur Clennam, Mr Merdle, Flora Finching, Rigaud, Stryver",
-    ],
-  },
-  {
-    id: 'harry-potter',
-    q: 'Name a character from the Harry Potter books',
-    tiers: [
-      'Harry Potter|Harry, Hermione Granger|Hermione, Ron Weasley|Ron|Ronald Weasley, Dumbledore|Albus Dumbledore, Voldemort|Lord Voldemort|Tom Riddle|You-Know-Who, Hagrid|Rubeus Hagrid',
-      'Snape|Severus Snape, Draco Malfoy|Draco, Sirius Black|Sirius, Ginny Weasley|Ginny, Neville Longbottom|Neville, Luna Lovegood|Luna, McGonagall|Minerva McGonagall, Dobby, Hedwig, Bellatrix Lestrange|Bellatrix, Fred Weasley|Fred, George Weasley|George, Lupin|Remus Lupin, Cedric Diggory|Cedric, Dudley Dursley|Dudley, Umbridge|Dolores Umbridge',
-      'Lucius Malfoy|Lucius, Narcissa Malfoy|Narcissa, Peter Pettigrew|Wormtail|Scabbers, Mad-Eye Moody|Alastor Moody|Moody, Tonks|Nymphadora Tonks, Cho Chang|Cho, Kreacher, Fawkes, Crookshanks, Buckbeak|Witherwings, Nagini, Aragog, Fluffy, Norbert|Norberta, Percy Weasley|Percy, Bill Weasley|Bill, Charlie Weasley|Charlie, Molly Weasley|Mrs Weasley, Arthur Weasley|Mr Weasley, Vernon Dursley|Uncle Vernon, Petunia Dursley|Aunt Petunia, Lily Potter|Lily, James Potter, Gilderoy Lockhart|Lockhart, Quirrell|Professor Quirrell, Slughorn|Horace Slughorn, Trelawney|Sybill Trelawney, Filch|Argus Filch, Mrs Norris, Madam Pomfrey|Pomfrey, Professor Sprout|Sprout, Flitwick|Professor Flitwick, Madam Hooch|Hooch, Moaning Myrtle|Myrtle, Nearly Headless Nick, Peeves, Fleur Delacour|Fleur, Viktor Krum|Krum, Cornelius Fudge|Fudge, Kingsley Shacklebolt|Kingsley, Dean Thomas, Seamus Finnigan|Seamus, Lavender Brown|Lavender, Parvati Patil|Parvati, Padma Patil|Padma, Oliver Wood, Crabbe|Vincent Crabbe, Goyle|Gregory Goyle, Grindelwald|Gellert Grindelwald, Winky, Griphook, Ollivander|Mr Ollivander, Barty Crouch|Barty Crouch Jr|Barty Crouch Sr, Fenrir Greyback|Greyback',
-      'Aberforth Dumbledore|Aberforth, Ariana Dumbledore|Ariana, Regulus Black|Regulus, Andromeda Tonks|Andromeda, Teddy Lupin|Teddy, Scorpius Malfoy|Scorpius, Albus Severus Potter|Albus Potter, Colin Creevey|Colin, Dennis Creevey, Ernie Macmillan|Ernie, Justin Finch-Fletchley, Hannah Abbott, Susan Bones, Zacharias Smith, Terry Boot, Michael Corner, Marietta Edgecombe, Romilda Vane, Cormac McLaggen|McLaggen, Katie Bell, Angelina Johnson|Angelina, Alicia Spinnet, Lee Jordan, Pansy Parkinson|Pansy, Blaise Zabini|Blaise, Marcus Flint, Theodore Nott, Millicent Bulstrode, Rita Skeeter|Skeeter, Xenophilius Lovegood|Xenophilius, Mundungus Fletcher|Mundungus, Arabella Figg|Mrs Figg, Amos Diggory, Ludo Bagman|Bagman, Rufus Scrimgeour|Scrimgeour, Antonin Dolohov|Dolohov, Walden Macnair|Macnair, Firenze, Grawp, Igor Karkaroff|Karkaroff, Madame Maxime|Olympe Maxime, Gabrielle Delacour|Gabrielle, Madam Rosmerta|Rosmerta, Stan Shunpike, The Fat Lady|Fat Lady, Sir Cadogan, The Bloody Baron|Bloody Baron, The Grey Lady|Helena Ravenclaw, The Fat Friar|Fat Friar, Professor Binns|Binns, Nicolas Flamel|Flamel, Godric Gryffindor, Salazar Slytherin, Rowena Ravenclaw, Helga Hufflepuff, Errol, Pigwidgeon, Trevor',
-      'Kendra Dumbledore, Rose Weasley, Hugo Weasley, Lily Luna Potter, Victoire Weasley, Ted Tonks, Elphias Doge, Dedalus Diggle, Hestia Jones, Emmeline Vance, Sturgis Podmore, Pius Thicknesse, Yaxley, Augustus Rookwood|Rookwood, Mulciber, Rabastan Lestrange, Rodolphus Lestrange, Alecto Carrow, Amycus Carrow, Thorfinn Rowle, Scabior, Bane, Ronan, Magorian, Madam Malkin, Mr Borgin|Borgin, Ernie Prang, Wilhelmina Grubbly-Plank|Grubbly-Plank, Aurora Sinistra|Sinistra, Septima Vector, Charity Burbage, Bathilda Bagshot, Gregorovitch, Hokey, Hermes, Arnold, Fang, Mafalda Hopkirk, Bertha Jorkins, Frank Bryce, Mrs Cole, Merope Gaunt, Marvolo Gaunt, Morfin Gaunt, Hepzibah Smith, Gornuk',
     ],
   },
 ];

@@ -3,29 +3,6 @@
 
 export default [
   {
-    id: 'shakespeare',
-    q: 'Name a play by Shakespeare, or a character in one',
-    tiers: [
-      "Hamlet, Macbeth, Romeo and Juliet, Othello",
-      "King Lear, A Midsummer Night's Dream, The Tempest, Julius Caesar, Much Ado About Nothing, Twelfth Night, The Merchant of Venice, Romeo, Juliet, Lady Macbeth, Iago, Ophelia, Puck, Shylock, Prospero, Falstaff|Sir John Falstaff, Brutus",
-      "As You Like It, The Taming of the Shrew, Richard III|Richard 3|Richard the Third, Henry V|Henry 5|Henry the Fifth, Antony and Cleopatra, The Winter's Tale, The Comedy of Errors, Desdemona, Portia, Mark Antony, Cleopatra, Cordelia, Mercutio, Tybalt, Polonius, Horatio, Laertes, Gertrude, Claudius, Yorick, Banquo, Macduff, Oberon, Titania, Bottom|Nick Bottom, Caliban, Ariel, Miranda, Beatrice, Benedick, Viola, Malvolio, Rosencrantz, Guildenstern, The Three Witches|Three Witches|Weird Sisters",
-      "Measure for Measure, Love's Labour's Lost|Loves Labors Lost, The Merry Wives of Windsor, All's Well That Ends Well, Henry IV|Henry 4|Henry IV Part 1|Henry IV Part 2|Henry the Fourth, Richard II|Richard 2|Richard the Second, Coriolanus, Titus Andronicus, The Two Gentlemen of Verona|Two Gentlemen of Verona, Goneril, Regan, Edmund, Edgar, Benvolio, Friar Laurence, Duncan, Malcolm, Lysander, Demetrius, Hermia, Helena, Orsino, Olivia, Sir Toby Belch, Feste, Rosalind, Orlando, Jaques, Touchstone, Katherina|Kate, Petruchio, Bianca, Cassio, Emilia, Prince Hal|Hal, Hotspur, Mistress Quickly, Dogberry, Antonio, Bassanio, Jessica, Cassius, Calpurnia, Fortinbras, Hecate, Lady Anne, John of Gaunt",
-      "Cymbeline, Pericles|Pericles Prince of Tyre, Troilus and Cressida, Timon of Athens, King John, Henry VI|Henry 6|Henry the Sixth, Henry VIII|Henry 8|Henry the Eighth, The Two Noble Kinsmen|Two Noble Kinsmen, Bardolph, Pistol, Nym, Poins, Doll Tearsheet, Justice Shallow|Shallow, Nerissa, Isabella, Angelo, Imogen|Innogen, Perdita, Leontes, Hermione, Autolycus, Paulina, Aaron, Lavinia, Tamora, Octavius, Enobarbus, Volumnia, Proteus, Valentine, Launce, Parolles, Thersites, Osric, Bolingbroke, Glendower|Owen Glendower, Fluellen, Peter Quince|Quince, Snout, Flute, Starveling, Snug, Egeus, Theseus, Hippolyta, Trinculo, Stephano, Gonzalo, Ferdinand, Sycorax, Iachimo, Posthumus",
-    ],
-  },
-  {
-    id: 'presidents',
-    q: 'Name a president of the United States',
-    people: true,
-    tiers: [
-      'Washington, Lincoln|Abe Lincoln, Obama, Trump, Kennedy|JFK, Biden',
-      'Roosevelt|FDR|Teddy Roosevelt, Jefferson, Bush, Clinton, Reagan, Nixon',
-      'Adams, Carter, Eisenhower|Ike, Truman, Jackson, Johnson|LBJ, Grant, Wilson, Ford, Madison',
-      'Monroe, Hoover, Taft, Coolidge, McKinley, Cleveland, Garfield, Harding, Polk, Taylor',
-      'Van Buren, Harrison, Tyler, Fillmore, Pierce, Buchanan, Hayes, Arthur',
-    ],
-  },
-  {
     id: 'composers',
     q: 'Name a classical composer',
     people: true,
@@ -62,28 +39,6 @@ export default [
     ],
   },
   {
-    id: 'greek-myth',
-    q: 'Name a god, hero or monster from Greek mythology',
-    tiers: [
-      'Zeus, Poseidon, Hades, Athena, Hercules|Heracles, Apollo, Aphrodite',
-      'Ares, Hermes, Hera, Artemis, Medusa, Achilles, Dionysus, Odysseus|Ulysses, Hephaestus, Demeter, Persephone, Perseus, Minotaur, Cerberus, Pegasus',
-      'Prometheus, Atlas, Cronus|Kronos|Cronos, Eros, Pandora, Icarus, Theseus, Jason, Helen|Helen of Troy, Hector, Paris, Agamemnon, Orpheus, Cyclops|Polyphemus, Hydra, Hestia, Pan, Gaia|Gaea, Nike, Narcissus, Oedipus, Ajax, Uranus|Ouranos, Rhea, Sisyphus, Midas, Chimera|Chimaera, Sphinx, Siren, Centaur, Daedalus, Ariadne, Calypso, Circe, Penelope, Hecate, Nemesis, Morpheus, Charon, Adonis, Andromeda, Cassandra, Medea',
-      'Chiron, Bellerophon, Atalanta, Antigone, Electra, Clytemnestra, Menelaus, Patroclus, Priam, Aeneas, Telemachus, Castor, Pollux|Polydeuces, Leda, Europa, Io, Ganymede, Callisto, Tiresias, Arachne, Pygmalion, Galatea, Psyche, Eurydice, Asclepius, Hebe, Eris, Tyche, Themis, Mnemosyne, Hyperion, Oceanus, Leto, Thetis, Proteus, Aeolus, Nyx, Hypnos, Thanatos, Helios, Selene, Eos, Iris, Triton, Typhon, Scylla, Charybdis, Tantalus, Echo, Minos, Phaedra, Hippolyta, Orion, Actaeon, Niobe, Talos, Argus|Argos, Harpy|Harpies, Gorgon, Satyr, Nymph, Muse, Fates|Moirai, Furies|Erinyes, Daphne, Orestes, Iphigenia, Nestor, Diomedes',
-      'Semele, Danaë, Phaethon|Phaeton, Tethys, Iapetus, Epimetheus, Maia, Metis, Nereus, Boreas, Zephyrus|Zephyr, Erebus, Tartarus, Chaos, Phobos, Deimos, Harmonia, Cadmus, Pasiphaë, Hippolytus, Penthesilea, Philoctetes, Laocoön, Geryon, Ladon, Echidna, Procrustes, Lycaon, Endymion, Hyacinthus|Hyacinth, Syrinx, Alcestis, Admetus, Meleager, Peleus, Neoptolemus|Pyrrhus, Pylades, Creon, Jocasta, Laius, Eteocles, Polynices, Ismene, Hecuba, Andromache, Astyanax, Briseis, Sarpedon, Memnon, Nausicaa, Laertes, Aegeus, Pirithous, Deucalion, Pyrrha, Atreus, Thyestes, Pelops, Alcmene, Amphitryon, Eurystheus, Iolaus, Deianira, Nessus, Omphale, Hylas, Antaeus, Tithonus, Anchises, Clio, Calliope, Erato, Euterpe, Melpomene, Polyhymnia, Terpsichore, Thalia, Urania, Clotho, Lachesis, Atropos, Alecto, Megaera, Tisiphone, Stheno, Euryale, Hygieia, Panacea, Bia, Kratos, Eileithyia, Enyo, Momus',
-    ],
-  },
-  {
-    id: 'norse-myth',
-    q: 'Name a figure from Norse mythology',
-    tiers: [
-      'Thor, Odin, Loki',
-      'Freya|Freyja, Valkyrie|Valkyries, Frigg|Frigga, Baldur|Balder|Baldr, Heimdall|Heimdallr, Fenrir|Fenris',
-      'Tyr, Freyr|Frey, Hel|Hela, Jörmungandr|Midgard Serpent|World Serpent, Sif, Sleipnir, Ymir, Njord|Njörðr, Idun|Idunn|Iðunn, Bragi, Mimir',
-      'Skadi|Skaði, Surtr|Surt, Vidar|Víðarr, Vali, Hodr|Höðr|Hod|Hoder, Forseti, Ullr|Ull, Sigurd|Siegfried, Brynhildr|Brunhild|Brynhild|Brunhilde, Fafnir, Nidhogg|Níðhöggr, Ratatoskr|Ratatosk, Huginn|Hugin, Muninn|Munin, Norns|Norn, Angrboda|Angrboða, Sigyn, Aegir|Ægir, Ran, Garm|Garmr',
-      'Urd|Urðr, Verdandi, Skuld, Hermod|Hermóðr, Hoenir|Hœnir, Kvasir, Buri, Borr|Bor, Bestla, Bergelmir, Thrym, Hrungnir, Utgard-Loki|Skrymir, Thiazi|Þjazi, Gerd|Gerðr, Nanna, Magni, Modi, Thrud|Þrúðr, Fulla, Gefjon|Gefjun, Eir, Sol, Mani, Nott, Dagr|Dag, Jord|Jörð, Audhumla|Auðumbla, Skoll|Sköll, Hati, Geri, Freki, Gullinbursti, Tanngrisnir, Heidrun|Heiðrún, Svadilfari, Ask, Embla, Lif, Lifthrasir, Andvari, Regin, Volund|Wayland|Völundr, Gunnar, Gudrun, Sigmund, Hrym',
-    ],
-  },
-  {
     id: 'mythical-creatures',
     q: 'Name a mythical creature',
     tiers: [
@@ -103,18 +58,6 @@ export default [
       'Viola, Double bass|Upright bass|Contrabass, Bassoon, French horn|Horn, Triangle, Bagpipes|Bagpipe, Mandolin, Cymbals|Cymbal, Bongos|Bongo, Maracas, Piccolo, Synthesizer|Synth|Synthesiser, Harpsichord, Sitar, Kazoo, Cowbell, Glockenspiel, Timpani|Kettledrum, Snare drum|Snare, Bass drum, Cornet, Bugle, Didgeridoo, Castanets, Gong, Marimba, Lute, Steel drum|Steelpan|Steel pan, Tin whistle|Penny whistle, Pan pipes|Panpipes|Pan flute, Congas|Conga',
       "Euphonium, Vibraphone, Dulcimer|Hammered dulcimer, Zither, Lyre, Theremin, Melodica, Ocarina, Concertina, Flugelhorn, Cor anglais|English horn, Bass clarinet, Sousaphone, Celesta|Celeste, Clavichord, Balalaika, Bouzouki, Tabla, Djembe, Cajón, Kalimba|Thumb piano|Mbira, Hurdy-gurdy, Jew's harp|Jaw harp|Mouth harp, Autoharp, Washboard, Tubular bells|Chimes, Tenor horn|Alto horn, Vuvuzela, Bodhrán, Harmonium, Mellotron, Oud, Koto, Shamisen, Erhu, Güiro, Claves, Woodblock|Wood block, Handpan|Hang, Steel guitar|Lap steel|Pedal steel, Dobro|Resonator guitar, Fife, Viol|Viola da gamba",
       "Contrabassoon|Double bassoon, Serpent, Ophicleide, Sackbut, Shawm, Crumhorn|Krumhorn, Rebec, Psaltery, Theorbo, Cittern, Nyckelharpa, Hardanger fiddle, Glass harmonica|Glass armonica, Ondes Martenot, Stylophone, Otamatone, Keytar, Chapman Stick, Waterphone, Duduk, Ney, Zurna, Shakuhachi, Sheng, Pipa, Guzheng, Guqin, Dizi, Suona, Angklung, Sarod, Sarangi, Veena, Santoor|Santur, Shehnai, Tanpura|Tambura, Mridangam, Dhol, Dholak, Kora, Balafon, Ngoni, Udu, Talking drum, Shekere, Berimbau, Cuíca, Pandeiro, Cavaquinho, Charango, Quena, Zampoña|Siku, Bandoneon, Cimbalom, Alphorn|Alpenhorn, Kantele, Uilleann pipes, Bullroarer, Rainstick, Flexatone, Vibraslap, Slide whistle|Swanee whistle, Musical saw, Spoons, Cornett|Cornetto, Heckelphone, Sarrusophone, Oboe d'amore, Basset horn, Wagner tuba, Mellophone, Lur, Carnyx, Aulos, Kithara, Sistrum, Crotales",
-    ],
-  },
-  {
-    id: 'musical-terms',
-    q: 'Name an Italian term used in sheet music',
-    keepArticle: true,
-    tiers: [
-      'Forte, Piano, Allegro, Crescendo, Staccato',
-      'Tempo, Adagio, Fortissimo, Pianissimo, Legato, Andante, Presto, Vibrato, Diminuendo, Coda, Da capo, A cappella|Acapella',
-      'Largo, Moderato, Mezzo forte, Mezzo piano, Pizzicato, Fermata, Vivace, Lento, Decrescendo, Glissando, Tremolo, Arpeggio, Ritardando, Accelerando, Rallentando, Dolce, Sforzando, Cantabile, Allegretto, Andantino, Tutti, Maestoso, Rubato|Tempo rubato, Cadenza, Ostinato, Scherzo, Sotto voce, Con brio, Fine',
-      'Grave, Larghetto, Prestissimo, Adagietto, Animato, Agitato, Espressivo, Sostenuto, Tenuto, Marcato, Portamento, Leggiero|Leggero, Con moto, Con fuoco, Poco a poco, Molto, Subito, Dal segno, A tempo, Segue, Attacca, Arco, Col legno, Sul ponticello, Divisi, Una corda, Morendo, Stringendo, Allargando, Ritenuto, Meno mosso, Più mosso, Giocoso, Grazioso, Scherzando, Appassionato, Tranquillo, Pesante, Con sordino|Sordino, Acciaccatura, Appoggiatura, Fortepiano, Rinforzando, Staccatissimo',
-      'Calando, Smorzando, Perdendosi, Affettuoso, Risoluto, Semplice, Mezza voce, Obbligato, Ripieno, Spiccato, Martellato, Tessitura, Forzando, Niente|Al niente, Lacrimoso, Doloroso, Mesto, Lugubre, Furioso, Brillante, Deciso, Energico, Feroce, Misterioso, Sospirando, Spiritoso, Vigoroso, Comodo, Simile, Sempre, Ossia, Volti subito, Loco, Ottava, Tre corde, Con amore, Senza sordino, Sforzato, Legatissimo, Pianississimo, Fortississimo',
     ],
   },
   {
@@ -167,7 +110,7 @@ export default [
   },
   {
     id: 'typefaces',
-    q: 'Name a typeface (font)',
+    q: 'Name a font or typeface',
     tiers: [
       'Times New Roman|Times, Arial, Comic Sans|Comic Sans MS, Helvetica|Helvetica Neue, Calibri',
       'Courier|Courier New, Verdana, Georgia, Impact, Garamond, Futura, Tahoma, Cambria, Roboto, Papyrus',
@@ -218,17 +161,6 @@ export default [
       'Albatross|Double eagle, Double bogey, Slice, Hook, Divot, Links, Tee off|Tee shot, Wood, Hazard|Water hazard, Stroke, Round, Scratch, Backswing, Follow-through, Grip, Stance, Gimme, Lie, Approach|Approach shot, Pitch|Pitch shot, Dogleg, Front nine, Back nine, Clubhouse, Scorecard, Driving range|Range, Sand wedge, Pitching wedge, Hybrid, Out of bounds|OB, Stroke play, Match play, Shank, Fade, Draw, Yips, Cart|Golf cart|Buggy, Ball|Golf ball, Triple bogey',
       'Tee box|Teeing ground, Cup, Fringe|Apron, Loft, Shaft, Tee time, Pro shop, Green fee|Green fees, Marker|Ball marker, 19th hole|Nineteenth hole, Lay up|Layup, Flop shot|Flop, Punch shot|Punch, Bump and run, Up and down, Skins, Scramble, Four-ball|Fourball|Best ball, Foursomes|Foursome, Stableford, Condor, Halved, All square, Provisional ball|Provisional, Drop, Penalty stroke|Penalty, Unplayable lie|Unplayable, Plugged lie|Plugged|Fried egg, Ground under repair|GUR, Loose impediment, Honour|Honor, Address, Waggle, Takeaway, Downswing, Lag putt|Lag, Break, Stimpmeter|Stimp, Pin high, Tap-in, Lip out, Duff, Thin, Fat|Chunk, Worm burner, Snap hook|Duck hook, Push, Pull, Texas wedge, Stinger, Sandbagger, Snowman, Pot bunker, Island green, Pitch mark|Ball mark, Yardage book, Rangefinder, Nine iron|9 iron',
       'Dormie, Ostrich, Featherie|Feathery, Gutta-percha|Guttie, Niblick, Mashie, Brassie, Spoon, Cleek, Jigger, Baffy|Baffing spoon, Stymie, Rub of the green, Waste area|Waste bunker, False front, Collar, First cut, Second cut, Burn, Swale, Punchbowl, Redan, Biarritz, Cape hole, Signature hole, Casual water|Temporary water, Borrow, Grain, Skull, Banana ball, Knockdown, Greenie, Away, Concession|Concede, Divot tool|Pitch mark repairer, Bunker rake|Rake, Tee marker, Cart path, Ball washer, Impact, Top',
-    ],
-  },
-  {
-    id: 'olympic-sports',
-    q: 'Name a sport that has been contested at the Summer or Winter Olympics',
-    tiers: [
-      "Swimming, Athletics|Track and field|Track, Gymnastics|Artistic gymnastics, Football|Soccer, Basketball, Ice hockey, Figure skating|Ice skating, Alpine skiing|Skiing|Downhill skiing",
-      "Tennis, Boxing, Cycling|Road cycling|Track cycling, Diving, Volleyball, Rowing, Golf, Wrestling, Ski jumping, Snowboarding|Snowboard, Bobsleigh|Bobsled, Speed skating, Curling",
-      "Judo, Fencing, Archery, Table tennis|Ping pong, Badminton, Weightlifting, Sailing, Hockey|Field hockey, Rugby|Rugby sevens|Rugby union, Equestrian|Horse riding|Dressage|Show jumping|Eventing, Shooting, Taekwondo, Luge, Biathlon, Cross-country skiing, Skeleton, Short track speed skating|Short track, Freestyle skiing|Moguls|Aerials",
-      "Triathlon, Water polo, Handball, Beach volleyball, Skateboarding, Surfing, Canoeing|Canoe|Kayaking|Kayak|Canoe sprint, Artistic swimming|Synchronized swimming|Synchronised swimming, BMX|BMX racing|BMX freestyle, Sport climbing|Climbing, Trampoline|Trampolining, Rhythmic gymnastics, Baseball, Softball, Nordic combined, Ski mountaineering|Skimo, Squash, Flag football",
-      "Modern pentathlon|Pentathlon, Breaking|Breakdancing, Marathon swimming|Open water swimming, Mountain biking|Mountain bike, Canoe slalom, Karate, Cricket, Lacrosse, Polo, Tug of war, Croquet, Military patrol, Skijoring, Jeu de paume|Real tennis, Rackets, Basque pelota|Pelota, Motorboating|Powerboating, Roque",
     ],
   },
 ];

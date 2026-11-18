@@ -70,7 +70,7 @@ export default [
   },
   {
     id: 'capitals',
-    q: 'Name a capital city (of a country, state or province)',
+    q: 'Name a capital city',
     tiers: [
       'London, Paris, Tokyo, Washington|Washington DC|DC, Rome, Berlin, Madrid, Beijing|Peking, Moscow',
       'Amsterdam, Athens, Dublin, Vienna, Lisbon, Brussels, Stockholm, Prague, Copenhagen, Ottawa, Canberra, Cairo, New Delhi|Delhi, Seoul, Bangkok, Mexico City, Buenos Aires, Oslo, Helsinki, Warsaw, Budapest, Boston, Atlanta, Denver, Phoenix, Honolulu, Austin, Sacramento, Nashville, Sydney, Toronto, Wellington',
@@ -81,7 +81,7 @@ export default [
   },
   {
     id: 'space',
-    q: 'Name something in space (planet, moon, star, constellation...)',
+    q: 'Name something in space',
     tiers: [
       'Earth, Mars, Jupiter, Saturn, Venus, Moon|Luna, Sun|Sol, Star, Planet, Comet, Asteroid, Black hole, Milky Way',
       "Mercury, Neptune, Uranus, Pluto, Galaxy, Meteor|Meteorite|Shooting star, Satellite, Space station|International Space Station|ISS, Nebula, Polaris|North Star|Pole Star, Sirius|Dog Star, Big Dipper|Plough|Plow, Orion, Ursa Major|Great Bear, Halley's Comet|Halley",

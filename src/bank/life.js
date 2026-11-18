@@ -71,17 +71,6 @@ export default [
     ],
   },
   {
-    id: 'wine-grapes',
-    q: 'Name a wine grape variety',
-    tiers: [
-      'Chardonnay, Merlot, Cabernet Sauvignon|Cabernet|Cab Sav|Cab, Pinot Noir, Sauvignon Blanc',
-      'Pinot Grigio|Pinot Gris, Shiraz|Syrah, Riesling, Malbec, Zinfandel|Primitivo, Prosecco|Glera, Moscato|Muscat|Muscatel',
-      "Tempranillo, Sangiovese, Grenache|Garnacha, Chenin Blanc, Gewürztraminer, Viognier, Cabernet Franc, Pinotage, Nebbiolo, Gamay, Sémillon, Albariño|Alvarinho, Carménère, Barbera, Petit Verdot, Montepulciano, Grüner Veltliner, Pinot Blanc|Pinot Bianco|Weissburgunder, Pinot Meunier|Meunier, Trebbiano|Ugni Blanc, Verdejo, Torrontés, Mourvèdre|Monastrell|Mataro, Petite Sirah|Durif, Nero d'Avola, Lambrusco, Vermentino, Garganega",
-      'Aglianico, Dolcetto, Corvina, Touriga Nacional, Tannat, Carignan|Cariñena|Mazuelo, Cinsault|Cinsaut, Marsanne, Roussanne, Müller-Thurgau|Rivaner, Silvaner|Sylvaner, Furmint, Assyrtiko, Fiano, Greco, Falanghina, Verdicchio, Cortese, Arneis, Melon de Bourgogne|Muscadet, Picpoul|Piquepoul, Colombard, Macabeo|Viura, Xarel·lo, Parellada, Godello, Mencía, Bobal, Graciano, Zweigelt, Blaufränkisch|Lemberger|Kékfrankos, St. Laurent|Saint Laurent, Dornfelder, Sagrantino, Negroamaro, Frappato, Nerello Mascalese, Grillo, Catarratto, Vernaccia, Malvasia, Palomino, Pedro Ximénez|PX, Concord, Norton, Vidal|Vidal Blanc, Seyval Blanc|Seyval, Bacchus, Saperavi, Rkatsiteli, Xinomavro, Agiorgitiko, Aligoté, Chasselas|Fendant|Gutedel, Savagnin, Verdelho',
-      "Moschofilero, Plavac Mali, Kadarka, Fetească Neagră, Koshu, País|Mission|Listán Prieto, Criolla, Bonarda|Douce Noir|Charbono, Trousseau|Bastardo, Poulsard|Ploussard, Jacquère, Altesse|Roussette, Mondeuse, Auxerrois, Petite Arvine|Arvine, Cornalin, Humagne Rouge, Teroldego, Lagrein, Schiava|Vernatsch|Trollinger, Refosco, Ribolla Gialla|Ribolla, Friulano|Tocai Friulano, Pignolo, Schioppettino, Raboso, Marzemino, Croatina, Freisa, Grignolino, Ruché, Brachetto, Erbaluce, Timorasso, Pecorino, Passerina, Cesanese, Piedirosso, Coda di Volpe, Gaglioppo, Carricante, Zibibbo|Muscat of Alexandria, Inzolia|Ansonica, Nerello Cappuccio, Perricone, Susumaniello, Uva di Troia|Nero di Troia, Bombino Bianco|Bombino, Verduzzo, Picolit, Counoise, Clairette, Bourboulenc, Grenache Blanc, Tibouren, Fer Servadou|Fer, Négrette, Mauzac, Gros Manseng, Petit Manseng, Folle Blanche, Romorantin, Pineau d'Aunis, Grolleau, Touriga Franca, Tinta Barroca, Tinto Cão, Baga, Castelão, Trincadeira, Alfrocheiro, Encruzado, Arinto, Loureiro, Fernão Pires|Maria Gomes, Antão Vaz, Sercial, Bual|Boal, Terrantez, Hondarrabi Zuri, Treixadura, Prieto Picudo, Listán Negro, Airén, Sumoll, Trepat, Callet, Manto Negro, Kerner, Scheurebe, Welschriesling|Graševina|Olaszrizling, Chambourcin, Baco Noir",
-    ],
-  },
-  {
     id: 'berries',
     q: 'Name a berry',
     strip: ['berry', 'berries'],
@@ -103,28 +92,6 @@ export default [
       'Hessian|Burlap|Jute, Rayon|Viscose, Acrylic, Tartan|Plaid, Gingham, Muslin, Taffeta, Tulle, Organza, Velour, Jersey, Chenille, Chintz, Calico, Cheesecloth, Mohair, Angora, Merino, Twill, Gabardine, Seersucker, Terry cloth|Terrycloth|Terry|Towelling, Microfibre|Microfiber, Mesh, Hemp, Bamboo, Poplin, Chambray, Brocade, Damask, Crepe, Georgette, Lamé, Sateen, Gauze, Voile, Neoprene, Gore-Tex, Kevlar, Alpaca, Lambswool, Worsted',
       'Herringbone, Houndstooth, Batik, Ikat, Madras, Moleskin, Bouclé, Jacquard, Tapestry, Toile|Toile de Jouy, Ticking, Sailcloth, Buckram, Crinoline, Organdy|Organdie, Batiste, Cambric, Lawn, Percale, Broadcloth, Oxford cloth|Oxford, Flannelette, Baize, Serge, Melton, Loden, Vicuña, Pashmina, Camel hair|Camelhair, Horsehair, Ramie, Lyocell|Tencel, Modal, Acetate, Cordura, Ripstop, Sherpa, Velveteen, Charmeuse, Dupioni|Dupion, Shantung, Grosgrain, Moiré, Piqué, Eyelet|Broderie anglaise, Netting|Net, Ponte, Kente, Khadi, Waxed cotton|Oilskin, Oilcloth, Faux fur|Fake fur, Duck|Duck canvas, Drill, Duffel|Duffle',
       "Bombazine, Barathea, Cavalry twill, Qiviut, Shahtoosh, Cupro|Bemberg, Triacetate, Olefin, Aramid|Nomex, Minky, Panne velvet|Panne, Devoré|Burnout, Habotai|Habutai, Pongee, Tussah|Tussar|Tussore, Noil, Crepe de Chine, Faille, Ottoman, Bengaline, Peau de soie, Matelassé, Cloqué, Dimity, Dotted Swiss, Guipure, Point d'esprit, Scrim, Tarlatan, Bobbinet, Interlock, Stockinette, Tricot, Raschel, Aso oke, Adire, Bogolan|Mud cloth|Bogolanfini, Kitenge|Chitenge, Ankara|African wax print|Wax print, Shweshwe, Barkcloth|Tapa|Bark cloth, Chanderi, Jamdani, Mashru, Patola, Songket, Piña, Abacá, Kasuri, Chirimen, Tsumugi, Aertex, Viyella, Ventile, Fustian, Kersey, Linsey-woolsey, Samite, Sarsenet|Sarcenet, Cloth of gold, Lampas, Grogram, Paduasoy, Nankeen, Dowlas, Osnaburg, Lockram, Drugget, Frieze, Wadmal|Vadmal, Hodden|Hodden grey, Camlet",
-    ],
-  },
-  {
-    id: 'castle-parts',
-    q: 'Name a part of a castle',
-    tiers: [
-      'Moat, Drawbridge, Tower, Dungeon',
-      'Keep, Turret, Gatehouse|Gate, Wall|Castle wall, Battlements|Battlement|Crenellations|Crenellation, Courtyard, Portcullis, Great hall|Hall, Throne room, Chapel',
-      'Bailey|Ward, Rampart|Ramparts, Parapet, Arrow slit|Arrowslit|Arrow loop|Loophole, Barbican, Motte, Armoury|Armory, Stables|Stable, Kitchen|Kitchens, Bastion, Watchtower|Watch tower, Well, Cellar|Undercroft, Spiral staircase|Staircase|Stairs, Bedchamber|Chamber',
-      "Murder hole, Machicolation|Machicolations, Curtain wall, Postern|Postern gate, Garderobe|Privy|Latrine, Solar, Oubliette, Donjon, Merlon, Crenel, Buttery, Pantry, Wall walk|Allure|Chemin de ronde, Hoarding|Hoard|Brattice, Inner ward|Inner bailey, Outer ward|Outer bailey, Corner tower, Minstrels' gallery|Minstrel gallery|Gallery, Granary, Smithy|Forge, Brewhouse, Bakehouse, Dovecote, Tiltyard, Mews, Guardroom|Guard room|Guardhouse, Ditch",
-      'Sally port, Embrasure, Bartizan, Bretèche, Bergfried, Enceinte, Glacis, Talus|Batter, Scarp|Escarp, Counterscarp, Berm, Palisade, Revetment, Casemate, Caponier, Ravelin, Hornwork, Demilune, Chemise, Shell keep, Forebuilding, Yett, Drawbar, Corbel, Putlog hole|Putlog, Squint|Hagioscope, Screens passage|Screens, Dais, Oriel, Wardrobe, Aumbry, Piscina, Cistern, Kennels|Kennel, Pleasance, Barmkin, Bawn, Peel tower|Pele tower, Gun loop|Gunport|Gun port, Oillet, Wicket|Wicket gate, Causeway, Fosse',
-    ],
-  },
-  {
-    id: 'armour',
-    q: "Name a piece of a knight's armour",
-    tiers: [
-      'Helmet|Helm, Shield, Breastplate|Chestplate|Chest plate, Chainmail|Chain mail|Mail|Maille',
-      'Gauntlet|Gauntlets, Visor, Greave|Greaves, Backplate|Back plate, Surcoat|Tabard',
-      'Pauldron|Pauldrons|Shoulder plate, Cuirass, Hauberk, Vambrace|Bracer, Gorget, Coif|Mail coif, Sabaton|Sabatons|Solleret, Codpiece',
-      'Cuisse|Cuisses, Poleyn|Knee cop, Couter|Elbow cop, Tasset|Tassets, Bevor|Beaver, Aventail|Camail, Bascinet|Basinet, Great helm|Heaume, Sallet, Armet, Gambeson|Aketon|Arming doublet, Spaulder, Rerebrace, Fauld|Faulds, Besagew, Barbute|Barbuta, Kettle hat|Chapel de fer, Buckler, Brigandine, Chausses, Plackart',
-      'Culet, Rondel, Lance rest|Arret, Burgonet, Morion, Cabasset, Close helm|Close helmet, Frog-mouth helm|Stechhelm, Cervelliere, Spangenhelm, Nasal helm, Pixane, Mitten gauntlet|Mitons, Schynbald, Gousset|Voider, Jupon|Gipon, Coat of plates, Jack of plate, Lamellar, Scale armour|Scale armor|Scale, Splint armour|Splint armor|Splint, Heater shield|Heater, Kite shield|Kite, Pavise, Targe, Rotella, Ailette, Grand guard|Grandguard, Pasguard, Manifer, Vamplate, Chanfron|Shaffron|Champron, Criniere|Crinet, Peytral|Poitrel, Crupper|Croupiere, Flanchard, Barding|Bard, Caparison',
     ],
   },
   {

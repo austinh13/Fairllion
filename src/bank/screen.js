@@ -71,50 +71,6 @@ export default [
     ],
   },
   {
-    id: 'simpsons',
-    q: 'Name a character from The Simpsons',
-    tiers: [
-      'Homer|Homer Simpson, Marge|Marge Simpson, Bart|Bart Simpson, Lisa|Lisa Simpson, Maggie|Maggie Simpson, Mr. Burns|Mr Burns|Monty Burns|Burns',
-      "Ned Flanders|Flanders|Ned, Moe|Moe Szyslak, Apu, Krusty|Krusty the Clown, Milhouse, Smithers|Waylon Smithers, Chief Wiggum|Clancy Wiggum, Ralph Wiggum|Ralph, Barney Gumble|Barney, Sideshow Bob, Grampa|Grampa Simpson|Abe Simpson, Principal Skinner|Skinner|Seymour Skinner, Nelson|Nelson Muntz, Patty, Selma, Comic Book Guy, Santa's Little Helper|Santas Little Helper",
-      'Edna Krabappel|Mrs Krabappel|Krabappel, Groundskeeper Willie|Willie, Otto, Lenny, Carl, Dr. Hibbert|Dr Hibbert, Dr. Nick|Dr Nick, Reverend Lovejoy, Helen Lovejoy, Mayor Quimby|Quimby, Snake, Troy McClure, Lionel Hutz, Kent Brockman, Martin Prince|Martin, Todd Flanders|Todd, Rod Flanders|Rod, Itchy, Scratchy, Fat Tony, Hans Moleman, Superintendent Chalmers|Chalmers, Professor Frink|Frink, Cletus, Disco Stu, Kang, Kodos, Gil, Lunchlady Doris, Agnes Skinner, Maude Flanders|Maude, Bleeding Gums Murphy, Snowball',
-      'Jimbo Jones|Jimbo, Kearney, Dolph, Sherri, Terri, Uter, Wendell, Database, Miss Hoover, Jasper, Crazy Cat Lady, Rainier Wolfcastle|McBain, Sideshow Mel, Lou, Eddie, Brandine, Manjula, Duffman, Sea Captain, Plopper|Spider-Pig, Luann Van Houten|Luann, Kirk Van Houten, Herb Powell|Herb, Mona Simpson|Mona, Ling, Artie Ziff, Lindsey Naegle, Bumblebee Man, Arnie Pye',
-      'Frank Grimes|Grimey, Hank Scorpio, Lurleen Lumpkin|Lurleen, Allison Taylor, Jessica Lovejoy, Lyle Lanley, Poochie, Sanjay, Squeaky-Voiced Teen, Dr. Marvin Monroe|Marvin Monroe, Hyman Krustofski, Laura Powers, Leon Kompowsky, Shary Bobbins, Llewellyn Sinclair, Lucius Sweet, Mr. Teeny|Mr Teeny, Larry Burns, Cookie Kwan, Baby Gerald, Blinky, Jub-Jub, Jacqueline Bouvier',
-    ],
-  },
-  {
-    id: 'star-wars',
-    q: 'Name a Star Wars character',
-    tiers: [
-      'Luke Skywalker|Luke, Darth Vader|Vader|Anakin Skywalker|Anakin, Han Solo|Han, Princess Leia|Leia, Yoda, Chewbacca|Chewie, R2-D2|R2D2|Artoo, C-3PO|C3PO|Threepio, Obi-Wan Kenobi|Obi-Wan|Kenobi|Ben Kenobi',
-      'Jabba the Hutt|Jabba, Boba Fett|Boba, Darth Maul|Maul, Palpatine|Emperor Palpatine|Darth Sidious|The Emperor, Lando Calrissian|Lando, Rey, Kylo Ren|Ben Solo, Finn, Poe Dameron|Poe, BB-8|BB8, Padmé Amidala|Padme|Amidala, Qui-Gon Jinn|Qui-Gon, Jar Jar Binks|Jar Jar, Count Dooku|Dooku, Mace Windu|Windu, The Mandalorian|Din Djarin|Mando, Grogu|Baby Yoda',
-      'Grand Moff Tarkin|Tarkin, General Grievous|Grievous, Jango Fett|Jango, Ahsoka Tano|Ahsoka, Captain Phasma|Phasma, Snoke|Supreme Leader Snoke, Wedge Antilles|Wedge, Admiral Ackbar|Ackbar, Wicket, Greedo, Bossk, IG-88, Watto, Sebulba, Rose Tico, Maz Kanata|Maz, Cassian Andor|Andor, Jyn Erso|Jyn, K-2SO, Krennic|Orson Krennic, Moff Gideon, Bo-Katan, Owen Lars|Uncle Owen, Beru Lars|Aunt Beru, Biggs Darklighter|Biggs',
-      'Nien Nunb, Salacious Crumb, Max Rebo, Bib Fortuna, Ezra Bridger, Hera Syndulla, Kanan Jarrus, Sabine Wren, Thrawn|Grand Admiral Thrawn, Asajj Ventress|Ventress, Cad Bane, Captain Rex|Rex, Plo Koon, Kit Fisto, Ki-Adi-Mundi, Shmi Skywalker|Shmi, General Hux|Hux, Mon Mothma, Bail Organa, Admiral Piett|Piett, General Veers|Veers, Lobot, Dengar, Darth Plagueis|Plagueis, Cara Dune, Saw Gerrera',
-      'Unkar Plutt, Dexter Jettster, Lama Su, Zam Wesell, Nute Gunray, Boss Nass, Captain Panaka|Panaka, Yaddle, Depa Billaba, Luminara Unduli, Barriss Offee, Aayla Secura, Shaak Ti, Admiral Ozzel|Ozzel, Zuckuss, 4-LOM, EV-9D9, Oola, Teebo, Chief Chirpa, Paploo, Chirrut Îmwe|Chirrut Imwe|Chirrut, Baze Malbus, Bodhi Rook',
-    ],
-  },
-  {
-    id: 'star-trek',
-    q: 'Name a character, ship or alien species from Star Trek',
-    tiers: [
-      'Captain Kirk|Kirk|James T Kirk, Spock|Mr Spock, Picard|Jean-Luc Picard|Captain Picard, Uhura, Scotty|Montgomery Scott, McCoy|Bones|Dr McCoy|Leonard McCoy, Enterprise|USS Enterprise',
-      'Sulu, Chekov, Data, Worf, Riker|Will Riker|William Riker, Klingons|Klingon, Borg, Q, Janeway|Kathryn Janeway, Sisko|Benjamin Sisko, Seven of Nine, Geordi La Forge|Geordi|La Forge, Deanna Troi|Troi, Beverly Crusher|Dr Crusher, Wesley Crusher|Wesley, Khan, Vulcans|Vulcan, Romulans|Romulan, Ferengi, Tribbles|Tribble',
-      "Quark, Odo, Kira Nerys|Kira, Jadzia Dax|Dax, Julian Bashir|Bashir, Miles O'Brien|O'Brien, Garak, Gul Dukat|Dukat, Tuvok, Chakotay, Tom Paris, B'Elanna Torres|Torres, Neelix, Kes, The Doctor|EMH, Harry Kim, Jonathan Archer|Archer, T'Pol, Christopher Pike|Captain Pike|Pike, Michael Burnham|Burnham, Saru, Guinan, Tasha Yar|Yar, Voyager|USS Voyager, Defiant|USS Defiant, Deep Space Nine|DS9",
-      "Borg Queen, Locutus, Lore, Martok, Gowron, Weyoun, Rom, Nog, Cardassians|Cardassian, Bajorans|Bajoran, Andorians|Andorian, Gorn, Jem'Hadar, Changelings|Founders, Hirogen, Kazon, Tellarites|Tellarite, Trill, Species 8472, Lwaxana Troi|Lwaxana, Reginald Barclay|Barclay, Ro Laren, Keiko O'Brien|Keiko, Ezri Dax|Ezri, Kai Winn, Damar, Sarek, Saavik, Christine Chapel|Nurse Chapel, Janice Rand|Yeoman Rand, Harry Mudd|Mudd",
-      "Vic Fontaine, Morn, Brunt, Grand Nagus Zek|Zek, Kor, Kang, Koloth, Amanda Grayson, Tuvix, Icheb, Naomi Wildman, Sela, Lursa, B'Etor, Hugh, Moriarty, Gary Mitchell, Cyrano Jones, Tholians|Tholian, Horta, Xindi, Suliban, Sylvia Tilly|Tilly, Paul Stamets|Stamets, Cleveland Booker|Book, Beckett Mariner|Mariner, Brad Boimler|Boimler, Leeta, Kasidy Yates",
-    ],
-  },
-  {
-    id: 'tolkien',
-    q: "Name a character from Tolkien's Middle-earth",
-    tiers: [
-      'Frodo|Frodo Baggins, Gandalf|Mithrandir, Bilbo|Bilbo Baggins, Gollum|Smeagol|Sméagol, Aragorn|Strider, Legolas, Sauron',
-      'Samwise Gamgee|Sam|Samwise|Sam Gamgee, Gimli, Boromir, Merry|Meriadoc Brandybuck, Pippin|Peregrin Took, Saruman, Arwen, Elrond, Galadriel, Smaug, Thorin|Thorin Oakenshield, Éowyn|Eowyn, Treebeard|Fangorn',
-      "Faramir, Théoden|Theoden, Éomer|Eomer, Denethor, Gríma Wormtongue|Wormtongue|Grima, Witch-king of Angmar|Witch-king|Witch King, Shelob, Balrog|Durin's Bane, Tom Bombadil|Bombadil, Radagast, Bard the Bowman|Bard, Thranduil, Tauriel, Azog, Balin, Dwalin, Fili, Kili, Bombur, Bofur, Bifur, Dori, Nori, Ori, Óin|Oin, Glóin|Gloin, Beorn, Celeborn, Haldir, Glorfindel, Goldberry, Barliman Butterbur|Butterbur, Rosie Cotton|Rosie, Lobelia Sackville-Baggins|Lobelia, Bill the Pony, Shadowfax",
-      'Gil-galad, Elendil, Isildur, Círdan|Cirdan, Grishnákh|Grishnakh, Uglúk|Ugluk, Shagrat, Gorbag, Mouth of Sauron, Great Goblin, Bolg, Thrór|Thror, Thráin|Thrain, Dáin Ironfoot|Dain, Fatty Bolger|Fredegar Bolger, Old Man Willow, Farmer Maggot, Ted Sandyman, Gaffer Gamgee|Hamfast Gamgee|The Gaffer, Ghân-buri-Ghân|Ghan-buri-Ghan, Imrahil, Beregond, Háma|Hama, Gamling, Erkenbrand, Halbarad, Elladan, Elrohir, Quickbeam, Gwaihir',
-      'Morgoth|Melkor, Fëanor|Feanor, Lúthien|Luthien, Beren, Túrin Turambar|Turin, Fingolfin, Finrod Felagund|Finrod, Thingol, Melian, Eärendil|Earendil, Elwing, Ungoliant, Glaurung, Ancalagon, Tuor, Idril, Maeglin, Húrin|Hurin, Ar-Pharazôn|Ar-Pharazon, Celebrimbor, Manwë|Manwe, Varda|Elbereth, Ulmo, Aulë|Aule, Yavanna, Tulkas, Oromë|Orome, Mandos|Namo, Thorondor',
-    ],
-  },
-  {
     id: 'villains',
     q: 'Name a fictional villain',
     tiers: [
@@ -170,28 +126,6 @@ export default [
     ],
   },
   {
-    id: 'game-of-thrones',
-    q: 'Name a character, dragon or direwolf from Game of Thrones or House of the Dragon',
-    tiers: [
-      'Jon Snow|Jon, Daenerys Targaryen|Daenerys|Dany, Tyrion Lannister|Tyrion, Cersei Lannister|Cersei, Arya Stark|Arya, Ned Stark|Eddard Stark|Ned, Sansa Stark|Sansa',
-      "Jaime Lannister|Jaime, Joffrey Baratheon|Joffrey, Bran Stark|Bran, Robb Stark|Robb, Catelyn Stark|Catelyn, Theon Greyjoy|Theon|Reek, The Hound|Sandor Clegane|Hound, The Mountain|Gregor Clegane|Mountain, Littlefinger|Petyr Baelish, Varys, Samwell Tarly|Samwell, Brienne of Tarth|Brienne, Tywin Lannister|Tywin, Khal Drogo|Drogo, Jorah Mormont|Jorah, Ramsay Bolton|Ramsay, The Night King|Night King, Hodor, Ygritte, Davos Seaworth|Davos, Melisandre|The Red Woman, Stannis Baratheon|Stannis, Robert Baratheon|Robert, Margaery Tyrell|Margaery, Olenna Tyrell|Olenna, Bronn, Missandei, Grey Worm, Gendry, Tormund Giantsbane|Tormund, Oberyn Martell|Oberyn|The Red Viper, Jaqen H'ghar|Jaqen, Ghost, Drogon",
-      'Viserys Targaryen|Viserys, Rickon Stark|Rickon, Lyanna Stark, Benjen Stark|Benjen, Roose Bolton|Roose, Walder Frey, Euron Greyjoy|Euron, Yara Greyjoy|Yara, Balon Greyjoy|Balon, Shae, Podrick Payne|Podrick, Gilly, Lysa Arryn|Lysa, Robin Arryn|Sweetrobin, The High Sparrow|High Sparrow, Qyburn, Daario Naharis|Daario, Ellaria Sand|Ellaria, Barristan Selmy|Barristan, Jeor Mormont, Lyanna Mormont, Maester Aemon, Pycelle|Grand Maester Pycelle, Shireen Baratheon|Shireen, Tommen Baratheon|Tommen, Myrcella Baratheon|Myrcella, Loras Tyrell|Loras, Renly Baratheon|Renly, Mance Rayder|Mance, Rhaegal, Viserion, Nymeria, Summer, Grey Wind, Shaggydog, Osha, Meera Reed|Meera, Jojen Reed|Jojen, Three-Eyed Raven, Syrio Forel|Syrio, Hot Pie, Alliser Thorne, Craster',
-      'Rhaenyra Targaryen|Rhaenyra, Alicent Hightower|Alicent, Daemon Targaryen|Daemon, King Viserys|Viserys I, Aegon Targaryen|Aegon, Aemond Targaryen|Aemond, Otto Hightower|Otto, Corlys Velaryon|Corlys|The Sea Snake, Rhaenys Targaryen|Rhaenys, Laenor Velaryon|Laenor, Criston Cole, Larys Strong|Larys, Mysaria, Helaena, Jacaerys Velaryon|Jacaerys|Jace, Lucerys Velaryon|Lucerys, Caraxes, Vhagar, Syrax, Sunfyre, Meleys, Balerion, Aegon the Conqueror',
-      'Kraznys mo Nakloz|Kraznys, Xaro Xhoan Daxos|Xaro, Pyat Pree, Quaithe, Thoros of Myr|Thoros, Beric Dondarrion|Beric, Septa Unella|Unella, Septa Mordane|Mordane, Old Nan, Rodrik Cassel|Ser Rodrik, Maester Luwin|Luwin, Yoren, Polliver, Locke, Randyll Tarly, Dickon Tarly, Lancel Lannister|Lancel, Kevan Lannister|Kevan, Mirri Maz Duur, Doreah, Irri, Ros, Talisa, Olly, Hizdahr zo Loraq|Hizdahr, The Waif, Lady Crane',
-    ],
-  },
-  {
-    id: 'doctor-who',
-    q: 'Name a character, monster or companion from Doctor Who',
-    tiers: [
-      'The Doctor|Doctor, Daleks|Dalek, Cybermen|Cyberman, TARDIS, Weeping Angels|Weeping Angel, The Master|Master, K9|K-9',
-      "Rose Tyler|Rose, Clara Oswald|Clara, Amy Pond|Amy, Rory Williams|Rory, Martha Jones|Martha, Donna Noble|Donna, River Song, Captain Jack Harkness|Captain Jack|Jack Harkness, Sarah Jane Smith|Sarah Jane, Davros, Sontarans|Sontaran, Silurians|Silurian, Ood, The Silence|Silence, Zygons|Zygon, Missy, Bill Potts, Yasmin Khan|Yaz, Graham O'Brien, Ryan Sinclair, Ruby Sunday, Mickey Smith",
-      "Judoon, Slitheen, Autons|Auton, Ice Warriors|Ice Warrior, Sea Devils|Sea Devil, Vashta Nerada, The Rani|Rani, The Brigadier|Brigadier|Lethbridge-Stewart, Kate Stewart|Kate Lethbridge-Stewart, Jackie Tyler, Wilfred Mott|Wilf, Madame Vastra|Vastra, Jenny Flint, Strax, Nardole, Adric, Tegan Jovanka|Tegan, Nyssa, Peri Brown|Peri, Ace, Jo Grant, Leela, Romana, Susan Foreman|Susan, Ian Chesterton, Barbara Wright, Jamie McCrimmon|Jamie, The War Doctor|War Doctor, The Valeyard|Valeyard",
-      'Zoe Heriot|Zoe, Victoria Waterfield, Polly, Ben Jackson, Dodo, Steven Taylor, Vicki, Mel Bush|Melanie Bush, Kamelion, Turlough, Harry Sullivan, Liz Shaw, Grace Holloway, Adam Mitchell, Osgood, Rassilon, Omega, Sutekh, The Toymaker|Celestial Toymaker, The Great Intelligence|Great Intelligence, Black Guardian, White Guardian, Sycorax, Krillitanes, Toclafane, Nestene Consciousness|Nestene, Racnoss, Carrionites, Adipose, Pyroviles, The Moment',
-      'Axons, Krynoid, Mara, Sil, Zarbi, Mechonoids, Voord, Sensorites, Macra, Yeti, Quarks, Dominators, Kandyman, Morbius, Weng-Chiang, Fendahl, Draconians, Ogrons, Kraals, Wirrn, Rutans, Terileptils, Malus, Haemovores, Cheetah People, Boneless, The Mire',
-    ],
-  },
-  {
     id: 'video-games',
     q: 'Name a video game',
     tiers: [
@@ -211,17 +145,6 @@ export default [
       'Nathan Drake, Ellie, Joel, Arthur Morgan, John Marston, Ezio|Ezio Auditore, Altaïr|Altair, Gordon Freeman, GLaDOS, Sephiroth, Aerith, Tifa, Commander Shepard, Leon Kennedy, Jill Valentine, Chris Redfield, Marcus Fenix, Rayman, Sackboy, Ratchet, Clank, Jak, Daxter, Sly Cooper, Banjo, Kazooie, Diddy Kong, King Dedede, Meta Knight, Fox McCloud, Ness, Captain Falcon, Isabelle, Tom Nook, Pyramid Head, Big Boss, Dante, Bayonetta, Aloy, Trevor Philips, CJ|Carl Johnson, Niko Bellic, Tommy Vercetti, Cortana, Agent 47',
       'Earthworm Jim, Gex, Croc, Dizzy, Miner Willy, Guybrush Threepwood|Guybrush, LeChuck, Manny Calavera, Duke Nukem, BJ Blazkowicz|B.J. Blazkowicz, Doomguy|Doom Slayer, Alucard, Simon Belmont, Professor Layton, Phoenix Wright, Ryu Hayabusa, Kazuya, Heihachi, Akuma, Ken Masters, Guile, Blanka, Zangief, M. Bison|M Bison, Liu Kang, Raiden, Johnny Cage, Sonya Blade, Shao Kahn, Terry Bogard, Cammy, Vault Boy, Handsome Jack, Andrew Ryan, Sam Fisher, Max Payne, Alan Wake',
       'Madeline, The Knight, Sans, Papyrus, Frisk, Zagreus, Shovel Knight, Ori, Isaac, Meat Boy, Hat Kid, Hornet, Cuphead, Mugman, Razputin|Raz, Chell, Wheatley, Alyx Vance|Alyx, Adam Jensen, JC Denton, Corvo Attano|Corvo, Garrett, Clementine, Max Caulfield, Chloe Price, Senua',
-    ],
-  },
-  {
-    id: 'pokemon',
-    q: 'Name a Pokémon',
-    tiers: [
-      'Pikachu, Charizard, Bulbasaur, Squirtle, Charmander, Mewtwo, Jigglypuff, Eevee',
-      'Mew, Snorlax, Psyduck, Meowth, Gengar, Gyarados, Magikarp, Ivysaur, Venusaur, Charmeleon, Wartortle, Blastoise, Raichu, Lucario, Lugia, Ho-Oh, Togepi, Onix, Machamp, Dragonite, Vulpix, Ninetales, Geodude, Abra, Alakazam, Butterfree, Caterpie, Pidgey, Rattata, Zubat, Ditto, Slowpoke, Clefairy, Greninja, Pichu, Arcanine, Growlithe, Cubone, Lapras, Articuno, Zapdos, Moltres',
-      "Haunter, Gastly, Hitmonlee, Hitmonchan, Kangaskhan, Tauros, Porygon, Kabuto, Omanyte, Aerodactyl, Mr. Mime|Mr Mime, Jynx, Electabuzz, Magmar, Pinsir, Scyther, Starmie, Staryu, Horsea, Goldeen, Voltorb, Electrode, Exeggutor, Koffing, Weezing, Rhyhorn, Chansey, Diglett, Sandshrew, Ekans, Arbok, Oddish, Bellsprout, Tentacool, Ponyta, Rapidash, Magnemite, Farfetch'd|Farfetchd, Seel, Grimer, Muk, Shellder, Drowzee, Krabby, Mankey, Poliwag, Golem, Weedle, Beedrill, Metapod, Pidgeot, Venonat, Paras, Vaporeon, Jolteon, Flareon",
-      'Chikorita, Cyndaquil, Totodile, Treecko, Torchic, Mudkip, Turtwig, Chimchar, Piplup, Snivy, Tepig, Oshawott, Umbreon, Espeon, Leafeon, Glaceon, Sylveon, Rayquaza, Kyogre, Groudon, Dialga, Palkia, Giratina, Arceus, Celebi, Jirachi, Deoxys, Gardevoir, Blaziken, Garchomp, Tyranitar, Scizor, Marill, Wobbuffet, Sudowoodo, Mareep, Ampharos, Heracross, Sneasel, Steelix, Skarmory, Houndoom, Absol, Metagross, Salamence, Milotic, Bidoof, Shinx, Riolu',
-      'Chespin, Fennekin, Froakie, Rowlet, Litten, Popplio, Grookey, Scorbunny, Sobble, Sprigatito, Fuecoco, Quaxly, Decidueye, Incineroar, Primarina, Mimikyu, Rockruff, Lycanroc, Wooloo, Corviknight, Zacian, Zamazenta, Eternatus, Koraidon, Miraidon, Tinkaton, Wishiwashi, Pyukumuku, Klefki, Hawlucha, Dedenne, Xerneas, Yveltal, Zygarde, Reshiram, Zekrom, Kyurem, Victini, Zoroark, Chandelure, Haxorus, Hydreigon, Volcarona, Trubbish, Vanillite',
     ],
   },
   {

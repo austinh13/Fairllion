@@ -15,17 +15,6 @@ export default [
     ],
   },
   {
-    id: 'us-capitals',
-    q: 'Name a US state capital',
-    tiers: [
-      'Boston, Atlanta, Denver, Phoenix, Honolulu, Nashville',
-      'Austin, Sacramento, Salt Lake City, Oklahoma City, Indianapolis, Albany, Richmond, Raleigh, Little Rock, Santa Fe',
-      'Tallahassee, Juneau, Boise, Baton Rouge, Columbus, Madison, Saint Paul|St Paul, Des Moines, Providence, Hartford, Charleston, Montgomery',
-      'Springfield, Lansing, Harrisburg, Trenton, Annapolis, Columbia, Jackson, Topeka, Lincoln, Cheyenne, Olympia, Salem, Helena, Dover',
-      'Jefferson City, Frankfort, Pierre, Bismarck, Montpelier, Concord, Augusta, Carson City',
-    ],
-  },
-  {
     id: 'africa',
     q: 'Name a country in Africa',
     tiers: [
@@ -52,10 +41,10 @@ export default [
     q: 'Name a country in Asia',
     tiers: [
       'China, Japan, India, South Korea|Korea|Republic of Korea, Thailand',
-      'Vietnam, Indonesia, Philippines, Singapore, Pakistan, North Korea, Russia, Malaysia, Iran, Iraq, Saudi Arabia, Israel, Afghanistan, Turkey|Türkiye',
-      'Nepal, Mongolia, Sri Lanka, Bangladesh, Cambodia, Taiwan, United Arab Emirates|UAE|Emirates, Syria, Qatar, Kazakhstan, Myanmar|Burma, Laos, Jordan, Lebanon',
-      'Kuwait, Yemen, Oman, Bhutan, Maldives, Uzbekistan, Bahrain, Georgia, Armenia, Azerbaijan, Palestine, Cyprus',
-      'Brunei, Kyrgyzstan, Tajikistan, Turkmenistan, Timor-Leste|East Timor',
+      'Vietnam, Indonesia, Philippines, Singapore, Pakistan, North Korea',
+      'Russia, Malaysia, Iran, Iraq, Saudi Arabia, Israel, Afghanistan, Turkey|Türkiye, Nepal, Mongolia',
+      'Sri Lanka, Bangladesh, Cambodia, Taiwan, United Arab Emirates|UAE|Emirates, Syria, Qatar, Kazakhstan, Myanmar|Burma, Laos, Jordan, Lebanon, Kuwait',
+      'Yemen, Oman, Bhutan, Maldives, Uzbekistan, Bahrain, Georgia, Armenia, Azerbaijan, Palestine, Cyprus, Brunei, Kyrgyzstan, Tajikistan, Turkmenistan, Timor-Leste|East Timor',
     ],
   },
   {
@@ -67,28 +56,6 @@ export default [
       'Costa Rica, Panama, Ecuador, Bolivia, Uruguay, Paraguay, Haiti, Dominican Republic, Bahamas, Guatemala',
       'Honduras, Nicaragua, El Salvador, Belize, Barbados, Trinidad and Tobago|Trinidad, Guyana, Suriname',
       'Grenada, Saint Lucia|St Lucia, Dominica, Antigua and Barbuda|Antigua, Saint Kitts and Nevis|St Kitts and Nevis|St Kitts|Saint Kitts, Saint Vincent and the Grenadines|St Vincent and the Grenadines|St Vincent|Saint Vincent',
-    ],
-  },
-  {
-    id: 'euro-capitals',
-    q: 'Name a capital city in Europe',
-    tiers: [
-      'Paris, London, Rome, Berlin, Madrid',
-      'Amsterdam, Athens, Dublin, Vienna, Lisbon, Moscow, Brussels, Stockholm, Prague, Copenhagen',
-      'Oslo, Helsinki, Budapest, Warsaw, Bern|Berne, Kyiv|Kiev, Reykjavik, Bucharest, Zagreb, Belgrade, Ankara, Monaco, Luxembourg|Luxembourg City',
-      'Sofia, Riga, Tallinn, Vilnius, Bratislava, Ljubljana, Minsk, Valletta, Sarajevo, Tirana, Nicosia, Vatican City',
-      'Skopje, Podgorica, Chisinau|Kishinev, Pristina, Vaduz, Andorra la Vella, San Marino, Tbilisi, Yerevan, Baku, Astana',
-    ],
-  },
-  {
-    id: 'olympic-cities',
-    q: 'Name a place that has hosted, or will host, the Olympic, Paralympic or Youth Olympic Games',
-    tiers: [
-      "London, Paris, Tokyo, Los Angeles|LA, Beijing, Rio de Janeiro|Rio",
-      "Sydney, Athens, Barcelona, Atlanta, Rome, Berlin, Moscow, Seoul, Brisbane",
-      "Munich, Montreal, Mexico City, Vancouver, Sochi, Salt Lake City, Melbourne, Calgary, Amsterdam, Stockholm, Helsinki, Stoke Mandeville, Toronto, New York, Whistler, Marseille, Singapore",
-      "Turin|Torino, Nagano, Lillehammer, Sarajevo, Innsbruck, Lake Placid, Pyeongchang, Oslo, Milan|Milano, Antwerp, St. Louis|Saint Louis, Tel Aviv, Heidelberg, Arnhem, Nanjing, Buenos Aires, Lausanne, Gangneung, Zhangjiakou, Qingdao, Hong Kong, Weymouth, Nice, Dakar",
-      "Sapporo, Grenoble, Albertville, Chamonix, St. Moritz|Saint Moritz|Sankt Moritz, Cortina d'Ampezzo|Cortina, Garmisch-Partenkirchen|Garmisch, Squaw Valley|Palisades Tahoe, Örnsköldsvik|Ornskoldsvik, Geilo, Tignes, Gangwon, Tallinn, Teahupo'o|Tahiti",
     ],
   },
   {
