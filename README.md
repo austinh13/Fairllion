@@ -1,6 +1,6 @@
 # Fairllion
 
-Word golf. Six holes, one category per shot, and the rarer your answer, the farther the ball flies.
+Word golf. Three holes, one category per shot, and the rarer your answer, the farther the ball flies.
 
 Fairllion is an original game in the word-golf genre. It is a static site with no build step, no dependencies and no server-side code: everything runs in the browser, and rounds are saved in `localStorage`.
 

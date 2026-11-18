@@ -71,17 +71,6 @@ export default [
     ],
   },
   {
-    id: 'wine-grapes',
-    q: 'Name a wine grape variety',
-    tiers: [
-      'Chardonnay, Merlot, Cabernet Sauvignon|Cabernet|Cab Sav|Cab, Pinot Noir, Sauvignon Blanc',
-      'Pinot Grigio|Pinot Gris, Shiraz|Syrah, Riesling, Malbec, Zinfandel|Primitivo, Prosecco|Glera, Moscato|Muscat|Muscatel',
-      "Tempranillo, Sangiovese, Grenache|Garnacha, Chenin Blanc, Gewürztraminer, Viognier, Cabernet Franc, Pinotage, Nebbiolo, Gamay, Sémillon, Albariño|Alvarinho, Carménère, Barbera, Petit Verdot, Montepulciano, Grüner Veltliner, Pinot Blanc|Pinot Bianco|Weissburgunder, Pinot Meunier|Meunier, Trebbiano|Ugni Blanc, Verdejo, Torrontés, Mourvèdre|Monastrell|Mataro, Petite Sirah|Durif, Nero d'Avola, Lambrusco, Vermentino, Garganega",
-      'Aglianico, Dolcetto, Corvina, Touriga Nacional, Tannat, Carignan|Cariñena|Mazuelo, Cinsault|Cinsaut, Marsanne, Roussanne, Müller-Thurgau|Rivaner, Silvaner|Sylvaner, Furmint, Assyrtiko, Fiano, Greco, Falanghina, Verdicchio, Cortese, Arneis, Melon de Bourgogne|Muscadet, Picpoul|Piquepoul, Colombard, Macabeo|Viura, Xarel·lo, Parellada, Godello, Mencía, Bobal, Graciano, Zweigelt, Blaufränkisch|Lemberger|Kékfrankos, St. Laurent|Saint Laurent, Dornfelder, Sagrantino, Negroamaro, Frappato, Nerello Mascalese, Grillo, Catarratto, Vernaccia, Malvasia, Palomino, Pedro Ximénez|PX, Concord, Norton, Vidal|Vidal Blanc, Seyval Blanc|Seyval, Bacchus, Saperavi, Rkatsiteli, Xinomavro, Agiorgitiko, Aligoté, Chasselas|Fendant|Gutedel, Savagnin, Verdelho',
-      "Moschofilero, Plavac Mali, Kadarka, Fetească Neagră, Koshu, País|Mission|Listán Prieto, Criolla, Bonarda|Douce Noir|Charbono, Trousseau|Bastardo, Poulsard|Ploussard, Jacquère, Altesse|Roussette, Mondeuse, Auxerrois, Petite Arvine|Arvine, Cornalin, Humagne Rouge, Teroldego, Lagrein, Schiava|Vernatsch|Trollinger, Refosco, Ribolla Gialla|Ribolla, Friulano|Tocai Friulano, Pignolo, Schioppettino, Raboso, Marzemino, Croatina, Freisa, Grignolino, Ruché, Brachetto, Erbaluce, Timorasso, Pecorino, Passerina, Cesanese, Piedirosso, Coda di Volpe, Gaglioppo, Carricante, Zibibbo|Muscat of Alexandria, Inzolia|Ansonica, Nerello Cappuccio, Perricone, Susumaniello, Uva di Troia|Nero di Troia, Bombino Bianco|Bombino, Verduzzo, Picolit, Counoise, Clairette, Bourboulenc, Grenache Blanc, Tibouren, Fer Servadou|Fer, Négrette, Mauzac, Gros Manseng, Petit Manseng, Folle Blanche, Romorantin, Pineau d'Aunis, Grolleau, Touriga Franca, Tinta Barroca, Tinto Cão, Baga, Castelão, Trincadeira, Alfrocheiro, Encruzado, Arinto, Loureiro, Fernão Pires|Maria Gomes, Antão Vaz, Sercial, Bual|Boal, Terrantez, Hondarrabi Zuri, Treixadura, Prieto Picudo, Listán Negro, Airén, Sumoll, Trepat, Callet, Manto Negro, Kerner, Scheurebe, Welschriesling|Graševina|Olaszrizling, Chambourcin, Baco Noir",
-    ],
-  },
-  {
     id: 'berries',
     q: 'Name a berry',
     strip: ['berry', 'berries'],
@@ -106,28 +95,6 @@ export default [
     ],
   },
   {
-    id: 'castle-parts',
-    q: 'Name a part of a castle',
-    tiers: [
-      'Moat, Drawbridge, Tower, Dungeon',
-      'Keep, Turret, Gatehouse|Gate, Wall|Castle wall, Battlements|Battlement|Crenellations|Crenellation, Courtyard, Portcullis, Great hall|Hall, Throne room, Chapel',
-      'Bailey|Ward, Rampart|Ramparts, Parapet, Arrow slit|Arrowslit|Arrow loop|Loophole, Barbican, Motte, Armoury|Armory, Stables|Stable, Kitchen|Kitchens, Bastion, Watchtower|Watch tower, Well, Cellar|Undercroft, Spiral staircase|Staircase|Stairs, Bedchamber|Chamber',
-      "Murder hole, Machicolation|Machicolations, Curtain wall, Postern|Postern gate, Garderobe|Privy|Latrine, Solar, Oubliette, Donjon, Merlon, Crenel, Buttery, Pantry, Wall walk|Allure|Chemin de ronde, Hoarding|Hoard|Brattice, Inner ward|Inner bailey, Outer ward|Outer bailey, Corner tower, Minstrels' gallery|Minstrel gallery|Gallery, Granary, Smithy|Forge, Brewhouse, Bakehouse, Dovecote, Tiltyard, Mews, Guardroom|Guard room|Guardhouse, Ditch",
-      'Sally port, Embrasure, Bartizan, Bretèche, Bergfried, Enceinte, Glacis, Talus|Batter, Scarp|Escarp, Counterscarp, Berm, Palisade, Revetment, Casemate, Caponier, Ravelin, Hornwork, Demilune, Chemise, Shell keep, Forebuilding, Yett, Drawbar, Corbel, Putlog hole|Putlog, Squint|Hagioscope, Screens passage|Screens, Dais, Oriel, Wardrobe, Aumbry, Piscina, Cistern, Kennels|Kennel, Pleasance, Barmkin, Bawn, Peel tower|Pele tower, Gun loop|Gunport|Gun port, Oillet, Wicket|Wicket gate, Causeway, Fosse',
-    ],
-  },
-  {
-    id: 'armour',
-    q: "Name a piece of a knight's armour",
-    tiers: [
-      'Helmet|Helm, Shield, Breastplate|Chestplate|Chest plate, Chainmail|Chain mail|Mail|Maille',
-      'Gauntlet|Gauntlets, Visor, Greave|Greaves, Backplate|Back plate, Surcoat|Tabard',
-      'Pauldron|Pauldrons|Shoulder plate, Cuirass, Hauberk, Vambrace|Bracer, Gorget, Coif|Mail coif, Sabaton|Sabatons|Solleret, Codpiece',
-      'Cuisse|Cuisses, Poleyn|Knee cop, Couter|Elbow cop, Tasset|Tassets, Bevor|Beaver, Aventail|Camail, Bascinet|Basinet, Great helm|Heaume, Sallet, Armet, Gambeson|Aketon|Arming doublet, Spaulder, Rerebrace, Fauld|Faulds, Besagew, Barbute|Barbuta, Kettle hat|Chapel de fer, Buckler, Brigandine, Chausses, Plackart',
-      'Culet, Rondel, Lance rest|Arret, Burgonet, Morion, Cabasset, Close helm|Close helmet, Frog-mouth helm|Stechhelm, Cervelliere, Spangenhelm, Nasal helm, Pixane, Mitten gauntlet|Mitons, Schynbald, Gousset|Voider, Jupon|Gipon, Coat of plates, Jack of plate, Lamellar, Scale armour|Scale armor|Scale, Splint armour|Splint armor|Splint, Heater shield|Heater, Kite shield|Kite, Pavise, Targe, Rotella, Ailette, Grand guard|Grandguard, Pasguard, Manifer, Vamplate, Chanfron|Shaffron|Champron, Criniere|Crinet, Peytral|Poitrel, Crupper|Croupiere, Flanchard, Barding|Bard, Caparison',
-    ],
-  },
-  {
     id: 'car-makers',
     q: 'Name a make of car',
     tiers: [
@@ -147,6 +114,28 @@ export default [
       'Leveret, Owlet, Eaglet, Kit, Fry, Larva|Larvae, Whelp, Nestling, Fledgling, Yearling, Caterpillar, Pullet',
       'Poult, Squab, Elver, Smolt, Fingerling, Cria, Nymph, Grub, Maggot, Spat, Shoat, Cockerel, Heifer, Hogget, Peachick, Porcupette, Puggle, Hoglet, Parr, Codling, Keet',
       'Eyas, Alevin, Leptocephalus, Zoea, Nauplius, Veliger, Planula, Ephyra, Ammocoete, Spiderling, Naiad, Stirk, Teg, Gimmer, Weaner|Weanling, Gilt, Pinkie|Pinky, Squeaker, Cheeper, Wriggler|Wiggler, Flapper, Snakelet, Glass eel',
+    ],
+  },
+  {
+    id: 'drinks',
+    q: 'Name a drink',
+    tiers: [
+      'Water, Coffee, Tea, Milk, Juice|Orange juice|Apple juice, Cola|Coke|Coca-Cola|Pepsi, Beer, Wine|Red wine|White wine',
+      'Lemonade, Hot chocolate|Cocoa, Smoothie, Milkshake|Shake, Vodka, Whisky|Whiskey|Scotch|Bourbon, Rum, Gin, Tequila, Champagne, Cider, Soda|Pop|Soft drink|Fizzy drink, Sprite|7 Up|Lemon-lime soda, Iced tea, Energy drink|Red Bull|Monster, Latte, Cappuccino, Espresso, Sparkling water|Soda water|Club soda|Seltzer|Fizzy water, Prosecco',
+      "Brandy|Cognac, Sake, Sangria, Margarita, Mojito, Martini, Root beer, Ginger ale, Ginger beer, Dr Pepper, Fanta, Mountain Dew, Gatorade|Sports drink|Powerade, Kombucha, Bubble tea|Boba|Boba tea|Pearl milk tea, Chai|Masala chai|Chai tea|Chai latte, Green tea|Matcha, Coconut water, Mocha, Americano, Macchiato, Flat white, Frappuccino|Frappé, Eggnog, Mulled wine|Glühwein, Port, Sherry, Rosé|Rosé wine, Lager, Ale|Pale ale|IPA, Stout|Guinness, Absinthe, Liqueur, Baileys|Irish cream, Kahlúa, Schnapps, Mead, Punch, Hot toddy, Tonic water|Tonic, Herbal tea|Chamomile tea|Peppermint tea|Tisane, Lassi, Horchata, Yerba mate|Mate",
+      "Ouzo, Raki|Rakı, Grappa, Limoncello, Amaretto, Sambuca, Jägermeister|Jager, Pimm's, Vermouth, Campari, Aperol, Mezcal|Mescal, Pisco, Cachaça, Soju, Baijiu, Shochu, Arak|Arrack, Kvass, Akvavit|Aquavit, Calvados, Armagnac, Madeira, Marsala, Porter, Pilsner|Pils, Wheat beer|Hefeweizen|Weissbier, Perry, Kefir, Buttermilk, Ayran, Almond milk, Oat milk, Soy milk|Soya milk, Rooibos|Redbush, Earl Grey, Oolong, Darjeeling, Turkish coffee, Irish coffee, Affogato, Cortado, Ristretto, Cold brew, Iced coffee, Slushie|Slush|Slurpee, Squash|Cordial, Barley water, Malted milk|Horlicks|Ovaltine, Milo, Agua fresca, Sweet tea, Arnold Palmer",
+      "Chicha, Pulque, Tepache, Kumis|Koumiss, Airag, Tongba, Makgeolli, Chuhai, Awamori, Feni, Palm wine|Toddy, Tej, Umqombothi, Mauby, Atole, Champurrado, Tejuino, Boza, Salep|Sahlep, Sbiten, Kissel, Ryazhenka, Doogh, Sharbat|Sherbet, Jallab, Sikhye, Sujeonggwa, Genmaicha, Hojicha, Pu-erh|Puer, Lapsang souchong|Lapsang, Yuanyang, Teh tarik, Vietnamese iced coffee|Ca phe sua da, Café de olla, Sarsaparilla, Birch beer, Moxie, Irn-Bru, Vimto, Tizer, Dandelion and burdock, Shandy, Snakebite, Michelada, Radler, Gose, Lambic, Kriek, Tripel, Dubbel, Bock, Doppelbock, Rauchbier, Kölsch, Barleywine|Barley wine, Retsina, Tokaji|Tokay, Vinho verde, Txakoli, Slivovitz, Pálinka, Rakia, Tsipouro, Chacha, Becherovka, Unicum, Underberg, Fernet|Fernet-Branca, Chartreuse, Bénédictine, Cynar, Malört, Advocaat, Kirsch|Kirschwasser, Poitín|Poteen, Genever|Jenever",
+    ],
+  },
+  {
+    id: 'castle',
+    q: 'Name something you would find in a medieval castle',
+    tiers: [
+      'Moat, Drawbridge, Tower, Dungeon, Knight, King, Queen, Throne, Sword, Crown, Armour|Armor|Suit of armour|Suit of armor, Helmet|Helm, Shield, Breastplate|Chestplate|Chest plate, Chainmail|Chain mail|Mail|Maille',
+      'Keep, Turret, Gatehouse|Gate, Wall|Castle wall, Battlements|Battlement|Crenellations|Crenellation, Courtyard, Portcullis, Great hall|Hall, Throne room, Chapel, Gauntlet|Gauntlets, Visor, Greave|Greaves, Backplate|Back plate, Surcoat|Tabard, Banner|Flag, Torch, Catapult, Lance, Jester, Prince, Princess, Feast, Horse, Bow|Longbow, Crossbow, Spear, Axe|Battle axe, Dagger, Candle',
+      'Bailey|Ward, Rampart|Ramparts, Parapet, Arrow slit|Arrowslit|Arrow loop|Loophole, Barbican, Motte, Armoury|Armory, Stables|Stable, Kitchen|Kitchens, Bastion, Watchtower|Watch tower, Well, Cellar|Undercroft, Spiral staircase|Staircase|Stairs, Bedchamber|Chamber, Pauldron|Pauldrons|Shoulder plate, Cuirass, Hauberk, Vambrace|Bracer, Gorget, Coif|Mail coif, Sabaton|Sabatons|Solleret, Codpiece, Trebuchet, Battering ram|Ram, Mace, Squire, Lord, Lady, Servant, Guard|Guards, Archer, Blacksmith, Tapestry, Goblet, Chandelier, Cauldron, Coat of arms, Minstrel, Page, Falcon|Hawk, Hound|Hounds, Halberd, Pike',
+      "Murder hole, Machicolation|Machicolations, Curtain wall, Postern|Postern gate, Garderobe|Privy|Latrine, Solar, Oubliette, Donjon, Merlon, Crenel, Buttery, Pantry, Wall walk|Allure|Chemin de ronde, Hoarding|Hoard|Brattice, Inner ward|Inner bailey, Outer ward|Outer bailey, Corner tower, Minstrels' gallery|Minstrel gallery|Gallery, Granary, Smithy|Forge, Brewhouse, Bakehouse, Dovecote, Tiltyard, Mews, Guardroom|Guard room|Guardhouse, Ditch, Cuisse|Cuisses, Poleyn|Knee cop, Couter|Elbow cop, Tasset|Tassets, Bevor|Beaver, Aventail|Camail, Bascinet|Basinet, Great helm|Heaume, Sallet, Armet, Gambeson|Aketon|Arming doublet, Spaulder, Rerebrace, Fauld|Faulds, Besagew, Barbute|Barbuta, Kettle hat|Chapel de fer, Buckler, Brigandine, Chausses, Plackart, Steward, Herald, Chaplain, Constable, Marshal, Morning star|Flail, Warhammer|War hammer, Mangonel, Ballista, Siege tower, Rushes, Trencher, Falconer",
+      'Sally port, Embrasure, Bartizan, Bretèche, Bergfried, Enceinte, Glacis, Talus|Batter, Scarp|Escarp, Counterscarp, Berm, Palisade, Revetment, Casemate, Caponier, Ravelin, Hornwork, Demilune, Chemise, Shell keep, Forebuilding, Yett, Drawbar, Corbel, Putlog hole|Putlog, Squint|Hagioscope, Screens passage|Screens, Dais, Oriel, Wardrobe, Aumbry, Piscina, Cistern, Kennels|Kennel, Pleasance, Barmkin, Bawn, Peel tower|Pele tower, Gun loop|Gunport|Gun port, Oillet, Wicket|Wicket gate, Causeway, Fosse, Culet, Rondel, Lance rest|Arret, Burgonet, Morion, Cabasset, Close helm|Close helmet, Frog-mouth helm|Stechhelm, Cervelliere, Spangenhelm, Nasal helm, Pixane, Mitten gauntlet|Mitons, Schynbald, Gousset|Voider, Jupon|Gipon, Coat of plates, Jack of plate, Lamellar, Scale armour|Scale armor|Scale, Splint armour|Splint armor|Splint, Heater shield|Heater, Kite shield|Kite, Pavise, Targe, Rotella, Ailette, Grand guard|Grandguard, Pasguard, Manifer, Vamplate, Chanfron|Shaffron|Champron, Criniere|Crinet, Peytral|Poitrel, Crupper|Croupiere, Flanchard, Barding|Bard, Caparison, Seneschal, Chatelaine, Reeve, Bailiff, Almoner, Sconce, Arras',
     ],
   },
 ];

@@ -3,29 +3,6 @@
 
 export default [
   {
-    id: 'shakespeare',
-    q: 'Name a play by Shakespeare',
-    tiers: [
-      'Hamlet, Macbeth, Romeo and Juliet, Othello',
-      "King Lear, A Midsummer Night's Dream, The Tempest, Julius Caesar, Much Ado About Nothing, Twelfth Night, The Merchant of Venice",
-      "As You Like It, The Taming of the Shrew, Richard III|Richard 3|Richard the Third, Henry V|Henry 5|Henry the Fifth, Antony and Cleopatra, The Winter's Tale, The Comedy of Errors",
-      "Measure for Measure, Love's Labour's Lost|Loves Labors Lost, The Merry Wives of Windsor, All's Well That Ends Well, Henry IV|Henry 4|Henry IV Part 1|Henry IV Part 2|Henry the Fourth, Richard II|Richard 2|Richard the Second, Coriolanus, Titus Andronicus, The Two Gentlemen of Verona|Two Gentlemen of Verona",
-      'Cymbeline, Pericles|Pericles Prince of Tyre, Troilus and Cressida, Timon of Athens, King John, Henry VI|Henry 6|Henry the Sixth, Henry VIII|Henry 8|Henry the Eighth, The Two Noble Kinsmen|Two Noble Kinsmen',
-    ],
-  },
-  {
-    id: 'presidents',
-    q: 'Name a president of the United States',
-    people: true,
-    tiers: [
-      'Washington, Lincoln|Abe Lincoln, Obama, Trump, Kennedy|JFK, Biden',
-      'Roosevelt|FDR|Teddy Roosevelt, Jefferson, Bush, Clinton, Reagan, Nixon',
-      'Adams, Carter, Eisenhower|Ike, Truman, Jackson, Johnson|LBJ, Grant, Wilson, Ford, Madison',
-      'Monroe, Hoover, Taft, Coolidge, McKinley, Cleveland, Garfield, Harding, Polk, Taylor',
-      'Van Buren, Harrison, Tyler, Fillmore, Pierce, Buchanan, Hayes, Arthur',
-    ],
-  },
-  {
     id: 'composers',
     q: 'Name a classical composer',
     people: true,
@@ -62,28 +39,6 @@ export default [
     ],
   },
   {
-    id: 'greek-myth',
-    q: 'Name a god, hero or monster from Greek mythology',
-    tiers: [
-      'Zeus, Poseidon, Hades, Athena, Hercules|Heracles, Apollo, Aphrodite',
-      'Ares, Hermes, Hera, Artemis, Medusa, Achilles, Dionysus, Odysseus|Ulysses, Hephaestus, Demeter, Persephone, Perseus, Minotaur, Cerberus, Pegasus',
-      'Prometheus, Atlas, Cronus|Kronos|Cronos, Eros, Pandora, Icarus, Theseus, Jason, Helen|Helen of Troy, Hector, Paris, Agamemnon, Orpheus, Cyclops|Polyphemus, Hydra, Hestia, Pan, Gaia|Gaea, Nike, Narcissus, Oedipus, Ajax, Uranus|Ouranos, Rhea, Sisyphus, Midas, Chimera|Chimaera, Sphinx, Siren, Centaur, Daedalus, Ariadne, Calypso, Circe, Penelope, Hecate, Nemesis, Morpheus, Charon, Adonis, Andromeda, Cassandra, Medea',
-      'Chiron, Bellerophon, Atalanta, Antigone, Electra, Clytemnestra, Menelaus, Patroclus, Priam, Aeneas, Telemachus, Castor, Pollux|Polydeuces, Leda, Europa, Io, Ganymede, Callisto, Tiresias, Arachne, Pygmalion, Galatea, Psyche, Eurydice, Asclepius, Hebe, Eris, Tyche, Themis, Mnemosyne, Hyperion, Oceanus, Leto, Thetis, Proteus, Aeolus, Nyx, Hypnos, Thanatos, Helios, Selene, Eos, Iris, Triton, Typhon, Scylla, Charybdis, Tantalus, Echo, Minos, Phaedra, Hippolyta, Orion, Actaeon, Niobe, Talos, Argus|Argos, Harpy|Harpies, Gorgon, Satyr, Nymph, Muse, Fates|Moirai, Furies|Erinyes, Daphne, Orestes, Iphigenia, Nestor, Diomedes',
-      'Semele, Danaë, Phaethon|Phaeton, Tethys, Iapetus, Epimetheus, Maia, Metis, Nereus, Boreas, Zephyrus|Zephyr, Erebus, Tartarus, Chaos, Phobos, Deimos, Harmonia, Cadmus, Pasiphaë, Hippolytus, Penthesilea, Philoctetes, Laocoön, Geryon, Ladon, Echidna, Procrustes, Lycaon, Endymion, Hyacinthus|Hyacinth, Syrinx, Alcestis, Admetus, Meleager, Peleus, Neoptolemus|Pyrrhus, Pylades, Creon, Jocasta, Laius, Eteocles, Polynices, Ismene, Hecuba, Andromache, Astyanax, Briseis, Sarpedon, Memnon, Nausicaa, Laertes, Aegeus, Pirithous, Deucalion, Pyrrha, Atreus, Thyestes, Pelops, Alcmene, Amphitryon, Eurystheus, Iolaus, Deianira, Nessus, Omphale, Hylas, Antaeus, Tithonus, Anchises, Clio, Calliope, Erato, Euterpe, Melpomene, Polyhymnia, Terpsichore, Thalia, Urania, Clotho, Lachesis, Atropos, Alecto, Megaera, Tisiphone, Stheno, Euryale, Hygieia, Panacea, Bia, Kratos, Eileithyia, Enyo, Momus',
-    ],
-  },
-  {
-    id: 'norse-myth',
-    q: 'Name a figure from Norse mythology',
-    tiers: [
-      'Thor, Odin, Loki',
-      'Freya|Freyja, Valkyrie|Valkyries, Frigg|Frigga, Baldur|Balder|Baldr, Heimdall|Heimdallr, Fenrir|Fenris',
-      'Tyr, Freyr|Frey, Hel|Hela, Jörmungandr|Midgard Serpent|World Serpent, Sif, Sleipnir, Ymir, Njord|Njörðr, Idun|Idunn|Iðunn, Bragi, Mimir',
-      'Skadi|Skaði, Surtr|Surt, Vidar|Víðarr, Vali, Hodr|Höðr|Hod|Hoder, Forseti, Ullr|Ull, Sigurd|Siegfried, Brynhildr|Brunhild|Brynhild|Brunhilde, Fafnir, Nidhogg|Níðhöggr, Ratatoskr|Ratatosk, Huginn|Hugin, Muninn|Munin, Norns|Norn, Angrboda|Angrboða, Sigyn, Aegir|Ægir, Ran, Garm|Garmr',
-      'Urd|Urðr, Verdandi, Skuld, Hermod|Hermóðr, Hoenir|Hœnir, Kvasir, Buri, Borr|Bor, Bestla, Bergelmir, Thrym, Hrungnir, Utgard-Loki|Skrymir, Thiazi|Þjazi, Gerd|Gerðr, Nanna, Magni, Modi, Thrud|Þrúðr, Fulla, Gefjon|Gefjun, Eir, Sol, Mani, Nott, Dagr|Dag, Jord|Jörð, Audhumla|Auðumbla, Skoll|Sköll, Hati, Geri, Freki, Gullinbursti, Tanngrisnir, Heidrun|Heiðrún, Svadilfari, Ask, Embla, Lif, Lifthrasir, Andvari, Regin, Volund|Wayland|Völundr, Gunnar, Gudrun, Sigmund, Hrym',
-    ],
-  },
-  {
     id: 'mythical-creatures',
     q: 'Name a mythical creature',
     tiers: [
@@ -103,18 +58,6 @@ export default [
       'Viola, Double bass|Upright bass|Contrabass, Bassoon, French horn|Horn, Triangle, Bagpipes|Bagpipe, Mandolin, Cymbals|Cymbal, Bongos|Bongo, Maracas, Piccolo, Synthesizer|Synth|Synthesiser, Harpsichord, Sitar, Kazoo, Cowbell, Glockenspiel, Timpani|Kettledrum, Snare drum|Snare, Bass drum, Cornet, Bugle, Didgeridoo, Castanets, Gong, Marimba, Lute, Steel drum|Steelpan|Steel pan, Tin whistle|Penny whistle, Pan pipes|Panpipes|Pan flute, Congas|Conga',
       "Euphonium, Vibraphone, Dulcimer|Hammered dulcimer, Zither, Lyre, Theremin, Melodica, Ocarina, Concertina, Flugelhorn, Cor anglais|English horn, Bass clarinet, Sousaphone, Celesta|Celeste, Clavichord, Balalaika, Bouzouki, Tabla, Djembe, Cajón, Kalimba|Thumb piano|Mbira, Hurdy-gurdy, Jew's harp|Jaw harp|Mouth harp, Autoharp, Washboard, Tubular bells|Chimes, Tenor horn|Alto horn, Vuvuzela, Bodhrán, Harmonium, Mellotron, Oud, Koto, Shamisen, Erhu, Güiro, Claves, Woodblock|Wood block, Handpan|Hang, Steel guitar|Lap steel|Pedal steel, Dobro|Resonator guitar, Fife, Viol|Viola da gamba",
       "Contrabassoon|Double bassoon, Serpent, Ophicleide, Sackbut, Shawm, Crumhorn|Krumhorn, Rebec, Psaltery, Theorbo, Cittern, Nyckelharpa, Hardanger fiddle, Glass harmonica|Glass armonica, Ondes Martenot, Stylophone, Otamatone, Keytar, Chapman Stick, Waterphone, Duduk, Ney, Zurna, Shakuhachi, Sheng, Pipa, Guzheng, Guqin, Dizi, Suona, Angklung, Sarod, Sarangi, Veena, Santoor|Santur, Shehnai, Tanpura|Tambura, Mridangam, Dhol, Dholak, Kora, Balafon, Ngoni, Udu, Talking drum, Shekere, Berimbau, Cuíca, Pandeiro, Cavaquinho, Charango, Quena, Zampoña|Siku, Bandoneon, Cimbalom, Alphorn|Alpenhorn, Kantele, Uilleann pipes, Bullroarer, Rainstick, Flexatone, Vibraslap, Slide whistle|Swanee whistle, Musical saw, Spoons, Cornett|Cornetto, Heckelphone, Sarrusophone, Oboe d'amore, Basset horn, Wagner tuba, Mellophone, Lur, Carnyx, Aulos, Kithara, Sistrum, Crotales",
-    ],
-  },
-  {
-    id: 'musical-terms',
-    q: 'Name an Italian term used in sheet music',
-    keepArticle: true,
-    tiers: [
-      'Forte, Piano, Allegro, Crescendo, Staccato',
-      'Tempo, Adagio, Fortissimo, Pianissimo, Legato, Andante, Presto, Vibrato, Diminuendo, Coda, Da capo, A cappella|Acapella',
-      'Largo, Moderato, Mezzo forte, Mezzo piano, Pizzicato, Fermata, Vivace, Lento, Decrescendo, Glissando, Tremolo, Arpeggio, Ritardando, Accelerando, Rallentando, Dolce, Sforzando, Cantabile, Allegretto, Andantino, Tutti, Maestoso, Rubato|Tempo rubato, Cadenza, Ostinato, Scherzo, Sotto voce, Con brio, Fine',
-      'Grave, Larghetto, Prestissimo, Adagietto, Animato, Agitato, Espressivo, Sostenuto, Tenuto, Marcato, Portamento, Leggiero|Leggero, Con moto, Con fuoco, Poco a poco, Molto, Subito, Dal segno, A tempo, Segue, Attacca, Arco, Col legno, Sul ponticello, Divisi, Una corda, Morendo, Stringendo, Allargando, Ritenuto, Meno mosso, Più mosso, Giocoso, Grazioso, Scherzando, Appassionato, Tranquillo, Pesante, Con sordino|Sordino, Acciaccatura, Appoggiatura, Fortepiano, Rinforzando, Staccatissimo',
-      'Calando, Smorzando, Perdendosi, Affettuoso, Risoluto, Semplice, Mezza voce, Obbligato, Ripieno, Spiccato, Martellato, Tessitura, Forzando, Niente|Al niente, Lacrimoso, Doloroso, Mesto, Lugubre, Furioso, Brillante, Deciso, Energico, Feroce, Misterioso, Sospirando, Spiritoso, Vigoroso, Comodo, Simile, Sempre, Ossia, Volti subito, Loco, Ottava, Tre corde, Con amore, Senza sordino, Sforzato, Legatissimo, Pianississimo, Fortississimo',
     ],
   },
   {
@@ -221,14 +164,72 @@ export default [
     ],
   },
   {
-    id: 'olympic-sports',
-    q: 'Name a sport that has been contested at the Summer Olympics',
+    id: 'plays-musicals',
+    q: 'Name a famous play or musical',
     tiers: [
-      'Swimming, Athletics|Track and field|Track, Gymnastics|Artistic gymnastics, Football|Soccer, Basketball',
-      'Tennis, Boxing, Cycling|Road cycling|Track cycling, Diving, Volleyball, Rowing, Golf, Wrestling',
-      'Judo, Fencing, Archery, Table tennis|Ping pong, Badminton, Weightlifting, Sailing, Hockey|Field hockey, Rugby|Rugby sevens|Rugby union, Equestrian|Horse riding|Dressage|Show jumping|Eventing, Shooting, Taekwondo',
-      'Triathlon, Water polo, Handball, Beach volleyball, Skateboarding, Surfing, Canoeing|Canoe|Kayaking|Kayak|Canoe sprint, Artistic swimming|Synchronized swimming|Synchronised swimming, BMX|BMX racing|BMX freestyle, Sport climbing|Climbing, Trampoline|Trampolining, Rhythmic gymnastics, Baseball, Softball',
-      'Modern pentathlon|Pentathlon, Breaking|Breakdancing, Marathon swimming|Open water swimming, Mountain biking|Mountain bike, Canoe slalom, Karate, Cricket, Lacrosse, Polo, Tug of war, Croquet',
+      'Hamlet, Romeo and Juliet, Macbeth, The Lion King|Lion King, Cats, Les Misérables|Les Mis|Les Miserables, Hamilton, The Phantom of the Opera|Phantom of the Opera|Phantom, Wicked, Grease',
+      "Othello, King Lear, A Midsummer Night's Dream|Midsummer Night's Dream, The Tempest, Julius Caesar, Mamma Mia|Mamma Mia!, Chicago, The Sound of Music|Sound of Music, West Side Story, Annie, Matilda, Mary Poppins, Frozen, Rent, Oliver|Oliver!, The Wizard of Oz|Wizard of Oz, Death of a Salesman, A Christmas Carol|Christmas Carol",
+      "Much Ado About Nothing, Twelfth Night, The Merchant of Venice|Merchant of Venice, Antony and Cleopatra, Richard III|Richard 3|Richard the Third, Henry V|Henry 5|Henry the Fifth, The Taming of the Shrew|Taming of the Shrew, As You Like It, Our Town, A Streetcar Named Desire|Streetcar Named Desire, The Crucible, Waiting for Godot, The Importance of Being Earnest, Pygmalion, My Fair Lady, Evita, Jesus Christ Superstar, Joseph and the Amazing Technicolor Dreamcoat|Joseph, Cabaret, The Book of Mormon|Book of Mormon, Dear Evan Hansen, Hairspray, Fiddler on the Roof, Miss Saigon, Jersey Boys, Six, Into the Woods, Beauty and the Beast, Aladdin, Peter Pan, Oedipus|Oedipus Rex|Oedipus the King, Antigone",
+      "Measure for Measure, The Winter's Tale|Winter's Tale, The Comedy of Errors|Comedy of Errors, Coriolanus, Titus Andronicus, King John, Henry IV|Henry 4|Henry the Fourth, Richard II|Richard 2|Richard the Second, Long Day's Journey into Night, Who's Afraid of Virginia Woolf, The Glass Menagerie|Glass Menagerie, Cat on a Hot Tin Roof, A Doll's House|Doll's House, Hedda Gabler, Uncle Vanya, The Seagull|Seagull, The Cherry Orchard|Cherry Orchard, Three Sisters, Medea, Lysistrata, Doctor Faustus|Dr Faustus|Faustus, Faust, Cyrano de Bergerac|Cyrano, Tartuffe, Rosencrantz and Guildenstern Are Dead, Look Back in Anger, The Mousetrap|Mousetrap, An Inspector Calls|Inspector Calls, Equus, Amadeus, Angels in America, A Raisin in the Sun|Raisin in the Sun, Fences, Sweeney Todd, Company, Kinky Boots, Billy Elliot, Spamalot, The Producers|Producers, Avenue Q, Little Shop of Horrors, The Rocky Horror Show|Rocky Horror, Starlight Express, Hadestown, In the Heights, Come From Away, Kiss Me Kate, Oklahoma|Oklahoma!, South Pacific, Carousel, The King and I|King and I, Guys and Dolls, Anything Goes, Show Boat|Showboat, Hello Dolly|Hello Dolly!, A Chorus Line|Chorus Line, Dreamgirls, The Music Man|Music Man, Godspell, Pippin, Waitress, Moulin Rouge",
+      "Cymbeline, Pericles|Pericles Prince of Tyre, Troilus and Cressida, Timon of Athens, Henry VI|Henry 6|Henry the Sixth, Henry VIII|Henry 8|Henry the Eighth, The Two Noble Kinsmen|Two Noble Kinsmen, All's Well That Ends Well, Love's Labour's Lost|Loves Labors Lost, The Merry Wives of Windsor|Merry Wives of Windsor, The Two Gentlemen of Verona|Two Gentlemen of Verona, Peer Gynt, Woyzeck, The Oresteia|Oresteia, Agamemnon, Prometheus Bound, The Bacchae|Bacchae, The Frogs|Frogs, The Birds, Everyman, The Duchess of Malfi|Duchess of Malfi, Volpone, The Alchemist, The Spanish Tragedy, Tamburlaine, The Way of the World, The School for Scandal|School for Scandal, She Stoops to Conquer, The Misanthrope|Misanthrope, Phèdre|Phedre, Le Cid, Six Characters in Search of an Author, The Caucasian Chalk Circle, Mother Courage|Mother Courage and Her Children, The Threepenny Opera|Threepenny Opera, Rhinoceros, The Bald Soprano, No Exit|Huis Clos, Ubu Roi, Blood Wedding, Juno and the Paycock, The Playboy of the Western World, Translations, The Birthday Party, Betrayal, Top Girls, Arcadia, Glengarry Glen Ross, August: Osage County, Fun Home, Next to Normal, Assassins, Follies, A Little Night Music, Merrily We Roll Along, Pacific Overtures, Brigadoon, Camelot, Porgy and Bess, Candide, Man of La Mancha, Sunset Boulevard, Aspects of Love, Chess, Blood Brothers, Spring Awakening",
+    ],
+  },
+  {
+    id: 'world-leaders',
+    q: 'Name a world leader, past or present',
+    people: true,
+    tiers: [
+      'Lincoln|Abe Lincoln|Abraham Lincoln, Washington|George Washington, Obama, Trump, Kennedy|JFK, Biden, Churchill, Napoleon|Napoleon Bonaparte|Bonaparte, Hitler, Putin, Elizabeth|Queen Elizabeth|Elizabeth II|Queen Elizabeth II',
+      'Roosevelt|FDR|Teddy Roosevelt, Reagan, Nixon, Clinton, Bush, Jefferson, Gandhi|Mahatma Gandhi|Indira Gandhi, Mandela|Nelson Mandela, Stalin, Thatcher|Margaret Thatcher, Caesar|Julius Caesar, Cleopatra, Mao|Mao Zedong|Mao Tse-tung|Chairman Mao, Lenin, Merkel|Angela Merkel, Macron, Trudeau, Castro|Fidel Castro, Alexander the Great|Alexander, Genghis Khan|Khan, Henry VIII|Henry the Eighth, Victoria|Queen Victoria, Zelensky|Zelenskyy',
+      'Adams, Carter, Eisenhower|Ike, Truman, Jackson, Johnson|LBJ|Boris Johnson, Grant, Wilson, Ford, Madison, Blair|Tony Blair, De Gaulle|Charles de Gaulle|Gaulle, Mussolini, Gorbachev, Kim Jong-un|Kim Jong Un, Xi Jinping|Xi, Modi, Netanyahu, Mugabe, Peter the Great, Catherine the Great, Louis XIV|Louis 14|Sun King, Charlemagne, Augustus, Nero, Saddam Hussein|Saddam|Hussein, Lula, Erdoğan|Erdogan, Starmer, Sunak, Cameron, Atatürk|Ataturk, Charles|King Charles|Charles III',
+      'Monroe, Hoover, Taft, Coolidge, McKinley, Cleveland, Garfield, Harding, Polk, Taylor, Attlee, Disraeli, Gladstone, Bismarck|Otto von Bismarck, Franco, Tito, Nasser, Sadat, Mitterrand, Kohl, Adenauer, Brezhnev, Khrushchev, Yeltsin, Ho Chi Minh, Deng Xiaoping|Deng, Chiang Kai-shek, Nehru, Ben-Gurion, Golda Meir|Meir, Pinochet, Perón|Peron|Eva Perón|Evita, Bolívar|Bolivar|Simón Bolívar, Montezuma|Moctezuma, Hammurabi, Ramesses|Ramses|Rameses, Tutankhamun|Tutankhamen|King Tut, Pericles, Constantine, Hadrian, Attila|Attila the Hun, Saladin, Suleiman|Suleiman the Magnificent, Qin Shi Huang, Akbar, Ashoka|Asoka, Haile Selassie|Selassie, Kenyatta, Nkrumah, Pol Pot, Ardern|Jacinda Ardern, Bolsonaro',
+      "Van Buren, Harrison, Tyler, Fillmore, Pierce, Buchanan, Hayes, Arthur, Walpole, Pitt|William Pitt, Lloyd George, Asquith, Chamberlain, Eden, Macmillan, Heath, Callaghan, Major|John Major, Brandt, Schmidt, Pompidou, Chirac, Sarkozy, Andropov, Chernenko, Kerensky, Lumumba, Nyerere, Kaunda, Sukarno, Suharto, Marcos, Aquino, Lee Kuan Yew, Mahathir, Bhutto, Jinnah, Bandaranaike, Allende, Juárez|Juarez, Atahualpa, Pachacuti, Shaka|Shaka Zulu, Mansa Musa, Cyrus|Cyrus the Great, Darius, Xerxes, Nebuchadnezzar, Hatshepsut, Akhenaten, Nefertiti, Justinian, Theodora, Trajan, Diocletian, Kublai Khan|Kublai, Tamerlane|Timur, Wu Zetian, Meiji, Hirohito, Tokugawa|Tokugawa Ieyasu, Oda Nobunaga|Nobunaga, Cnut|Canute, Alfred the Great|Alfred, William the Conqueror, Boudica|Boudicca, Robert the Bruce|Bruce",
+    ],
+  },
+  {
+    id: 'authors',
+    q: 'Name a famous author or poet',
+    people: true,
+    tiers: [
+      'Shakespeare|William Shakespeare, Dickens|Charles Dickens, Rowling|JK Rowling|J K Rowling, Austen|Jane Austen, Tolkien|JRR Tolkien|J R R Tolkien, Stephen King|King, Hemingway|Ernest Hemingway, Mark Twain|Twain, Dr Seuss|Seuss',
+      'Orwell|George Orwell, Tolstoy|Leo Tolstoy, Agatha Christie|Christie, Poe|Edgar Allan Poe, Homer, Dante, Victor Hugo|Hugo, Roald Dahl|Dahl, Steinbeck|John Steinbeck, Fitzgerald|F Scott Fitzgerald|Scott Fitzgerald, Dostoevsky|Dostoyevsky, Emily Dickinson|Dickinson, Brontë|Bronte|Charlotte Brontë|Emily Brontë|Anne Brontë, Oscar Wilde|Wilde, Harper Lee|Lee, Robert Frost|Frost, CS Lewis|C S Lewis|Lewis, Maya Angelou|Angelou, Goethe, Cervantes',
+      'Virginia Woolf|Woolf, Kafka, Chaucer, Milton, Wordsworth, Keats, Byron|Lord Byron, Shelley|Mary Shelley|Percy Shelley, Jules Verne|Verne, HG Wells|H G Wells|Wells, Kipling, Faulkner, Toni Morrison|Morrison, Salinger, Kerouac, Vonnegut, Hans Christian Andersen|Andersen, Grimm|Brothers Grimm, Tennyson, Walt Whitman|Whitman, Sylvia Plath|Plath, Margaret Atwood|Atwood, Neil Gaiman|Gaiman, Terry Pratchett|Pratchett, George RR Martin|George R R Martin|Martin, Arthur Conan Doyle|Conan Doyle|Doyle, Bram Stoker|Stoker, Thomas Hardy|Hardy, Gabriel García Márquez|Garcia Marquez|Márquez, Murakami|Haruki Murakami, Huxley|Aldous Huxley, Bradbury|Ray Bradbury, Asimov, Douglas Adams|Adams, Dan Brown|Brown, John Grisham|Grisham, James Patterson|Patterson, Lewis Carroll|Carroll, Camus, Dumas, Rumi, Virgil, Ovid, Langston Hughes|Hughes, Tagore',
+      'Chekhov, Pushkin, Nabokov, Gogol, Solzhenitsyn, Ibsen, Molière|Moliere, Balzac, Flaubert, Zola, Baudelaire, Rimbaud, Stendhal, Proust, Thomas Mann|Mann, Hesse|Hermann Hesse, Brecht, Rilke, Borges, Neruda|Pablo Neruda, Isabel Allende|Allende, Paulo Coelho|Coelho, Achebe|Chinua Achebe, Soyinka, Rushdie|Salman Rushdie, Ishiguro|Kazuo Ishiguro, Zadie Smith|Smith, Joyce|James Joyce, Beckett, Yeats, Seamus Heaney|Heaney, Swift|Jonathan Swift, Defoe, Melville, Hawthorne, Henry James|James, Edith Wharton|Wharton, Willa Cather|Cather, Eliot|T S Eliot|TS Eliot|George Eliot, Cormac McCarthy|McCarthy, Alice Walker|Walker, Zora Neale Hurston|Hurston, Ralph Ellison|Ellison, James Baldwin|Baldwin, Tom Clancy|Clancy, Michael Crichton|Crichton, Philip K Dick|Dick, Ursula K Le Guin|Le Guin, Octavia Butler|Butler, A A Milne|AA Milne|Milne, Beatrix Potter|Potter, Enid Blyton|Blyton, Judy Blume|Blume, R L Stine|RL Stine|Stine, Rick Riordan|Riordan, Suzanne Collins|Collins, Graham Greene|Greene, Evelyn Waugh|Waugh, Ian Fleming|Fleming, John le Carré|le Carre',
+      "Aeschylus, Sophocles, Euripides, Aristophanes, Sappho, Li Bai|Li Po, Du Fu, Bashō|Basho|Matsuo Basho, Murasaki Shikibu|Murasaki, Hafez|Hafiz, Omar Khayyam|Khayyam, Ferdowsi|Firdausi, Kalidasa, Petrarch, Boccaccio, Rabelais, Racine, Corneille, Lope de Vega, Calderón|Calderon, Schiller, Heine, Kleist, Fontane, Musil, Günter Grass|Grass, Böll|Boll, Kundera, Hrabal, Szymborska, Miłosz|Milosz, Mickiewicz, Lermontov, Turgenev, Bulgakov, Pasternak, Akhmatova, Tsvetaeva, Mayakovsky, Gorky, Lagerlöf|Lagerlof, Strindberg, Hamsun, Laxness, Saramago, Pessoa, Machado de Assis, Cortázar|Cortazar, Vargas Llosa, Juan Rulfo|Rulfo, Octavio Paz|Paz, Carlos Fuentes|Fuentes, Mahfouz|Naguib Mahfouz, Ngũgĩ wa Thiong'o|Ngugi, Nadine Gordimer|Gordimer, Coetzee|J M Coetzee, Doris Lessing|Lessing, Mishima, Kawabata, Natsume Sōseki|Soseki, Lu Xun, Mo Yan, Naipaul, Walcott, Herta Müller|Muller, Elfriede Jelinek|Jelinek, Han Kang, Annie Ernaux|Ernaux, Jon Fosse|Fosse, Olga Tokarczuk|Tokarczuk, Ondaatje, Alice Munro|Munro, Elena Ferrante|Ferrante, Italo Calvino|Calvino, Umberto Eco|Eco, Primo Levi|Levi, Pirandello, Leopardi, Manzoni",
+    ],
+  },
+  {
+    id: 'mythology',
+    q: 'Name a god, hero or monster from any mythology',
+    tiers: [
+      'Zeus, Poseidon, Hades, Athena, Hercules|Heracles, Apollo, Aphrodite, Thor, Odin, Loki, Ra|Re, Anubis, Cupid',
+      'Ares, Hermes, Hera, Artemis, Medusa, Achilles, Dionysus, Odysseus|Ulysses, Hephaestus, Demeter, Persephone, Perseus, Minotaur, Cerberus, Pegasus, Freya|Freyja, Valkyrie|Valkyries, Frigg|Frigga, Baldur|Balder|Baldr, Heimdall|Heimdallr, Fenrir|Fenris, Osiris, Isis, Horus, Jupiter, Mars, Venus, Neptune, Shiva, Vishnu, Krishna, Ganesha|Ganesh',
+      'Prometheus, Atlas, Cronus|Kronos|Cronos, Eros, Pandora, Icarus, Theseus, Jason, Helen|Helen of Troy, Hector, Paris, Agamemnon, Orpheus, Cyclops|Polyphemus, Hydra, Hestia, Pan, Gaia|Gaea, Nike, Narcissus, Oedipus, Ajax, Uranus|Ouranos, Rhea, Sisyphus, Midas, Chimera|Chimaera, Sphinx, Siren, Centaur, Daedalus, Ariadne, Calypso, Circe, Penelope, Hecate, Nemesis, Morpheus, Charon, Adonis, Andromeda, Cassandra, Medea, Tyr, Freyr|Frey, Hel|Hela, Jörmungandr|Midgard Serpent|World Serpent, Sif, Sleipnir, Ymir, Njord|Njörðr, Idun|Idunn|Iðunn, Bragi, Mimir, Set|Seth, Thoth, Bastet|Bast, Minerva, Juno, Diana, Mercury, Vulcan, Saturn, Bacchus, Pluto, Janus, Brahma, Rama, Hanuman, Kali, Lakshmi, Quetzalcoatl, Maui',
+      'Chiron, Bellerophon, Atalanta, Antigone, Electra, Clytemnestra, Menelaus, Patroclus, Priam, Aeneas, Telemachus, Castor, Pollux|Polydeuces, Leda, Europa, Io, Ganymede, Callisto, Tiresias, Arachne, Pygmalion, Galatea, Psyche, Eurydice, Asclepius, Hebe, Eris, Tyche, Themis, Mnemosyne, Hyperion, Oceanus, Leto, Thetis, Proteus, Aeolus, Nyx, Hypnos, Thanatos, Helios, Selene, Eos, Iris, Triton, Typhon, Scylla, Charybdis, Tantalus, Echo, Minos, Phaedra, Hippolyta, Orion, Actaeon, Niobe, Talos, Argus|Argos, Harpy|Harpies, Gorgon, Satyr, Nymph, Muse, Fates|Moirai, Furies|Erinyes, Daphne, Orestes, Iphigenia, Nestor, Diomedes, Skadi|Skaði, Surtr|Surt, Vidar|Víðarr, Vali, Hodr|Höðr|Hod|Hoder, Forseti, Ullr|Ull, Sigurd|Siegfried, Brynhildr|Brunhild|Brynhild|Brunhilde, Fafnir, Nidhogg|Níðhöggr, Ratatoskr|Ratatosk, Huginn|Hugin, Muninn|Munin, Norns|Norn, Angrboda|Angrboða, Sigyn, Aegir|Ægir, Ran, Garm|Garmr, Sekhmet, Hathor, Ptah, Amun|Amon|Amun-Ra, Sobek, Nephthys, Maat|Ma\'at, Aten, Apophis|Apep, Durga, Indra, Agni, Parvati, Saraswati, Amaterasu, Sun Wukong|Monkey King, Vesta, Ceres',
+      "Semele, Danaë, Phaethon|Phaeton, Tethys, Iapetus, Epimetheus, Maia, Metis, Nereus, Boreas, Zephyrus|Zephyr, Erebus, Tartarus, Chaos, Phobos, Deimos, Harmonia, Cadmus, Pasiphaë, Hippolytus, Penthesilea, Philoctetes, Laocoön, Geryon, Ladon, Echidna, Procrustes, Lycaon, Endymion, Hyacinthus|Hyacinth, Syrinx, Alcestis, Admetus, Meleager, Peleus, Neoptolemus|Pyrrhus, Pylades, Creon, Jocasta, Laius, Eteocles, Polynices, Ismene, Hecuba, Andromache, Astyanax, Briseis, Sarpedon, Memnon, Nausicaa, Laertes, Aegeus, Pirithous, Deucalion, Pyrrha, Atreus, Thyestes, Pelops, Alcmene, Amphitryon, Eurystheus, Iolaus, Deianira, Nessus, Omphale, Hylas, Antaeus, Tithonus, Anchises, Clio, Calliope, Erato, Euterpe, Melpomene, Polyhymnia, Terpsichore, Thalia, Urania, Clotho, Lachesis, Atropos, Alecto, Megaera, Tisiphone, Stheno, Euryale, Hygieia, Panacea, Bia, Kratos, Eileithyia, Enyo, Momus, Urd|Urðr, Verdandi, Skuld, Hermod|Hermóðr, Hoenir|Hœnir, Kvasir, Buri, Borr|Bor, Bestla, Bergelmir, Thrym, Hrungnir, Utgard-Loki|Skrymir, Thiazi|Þjazi, Gerd|Gerðr, Nanna, Magni, Modi, Thrud|Þrúðr, Fulla, Gefjon|Gefjun, Eir, Sol, Mani, Nott, Dagr|Dag, Jord|Jörð, Audhumla|Auðumbla, Skoll|Sköll, Hati, Geri, Freki, Gullinbursti, Tanngrisnir, Heidrun|Heiðrún, Svadilfari, Ask, Embla, Lif, Lifthrasir, Andvari, Regin, Volund|Wayland|Völundr, Gunnar, Gudrun, Sigmund, Hrym, Geb, Shu, Tefnut, Khepri, Khonsu, Taweret, Bes, Varuna, Yama, Huitzilopochtli, Tezcatlipoca, Tlaloc, Viracocha, Inti, Pachamama, Izanagi, Izanami, Susanoo, Raijin, Marduk, Tiamat, Ishtar|Inanna, Gilgamesh, Enki, Dagda|The Dagda, Lugh, Morrígan|Morrigan|The Morrigan, Brigid, Cú Chulainn|Cuchulainn, Perun, Veles, Anansi, Ogun, Shango|Sango, Yemoja|Yemaya",
+    ],
+  },
+  {
+    id: 'music-terms',
+    q: 'Name a musical term',
+    keepArticle: true,
+    tiers: [
+      'Melody, Rhythm, Chord, Harmony, Note, Beat, Lyrics|Lyric, Chorus, Verse, Key, Forte, Piano, Allegro, Crescendo, Staccato',
+      'Scale, Octave, Bar|Measure, Treble clef|Treble, Bass clef, Sharp, Flat, Solo, Duet, Major, Minor, Riff, Bridge, Pitch, Rest, Encore, Tempo, Adagio, Fortissimo, Pianissimo, Legato, Andante, Presto, Vibrato, Diminuendo, Coda, Da capo, A cappella|Acapella',
+      'Clef, Stave|Staff, Time signature, Key signature, Crotchet|Quarter note, Minim|Half note, Quaver|Eighth note, Semibreve|Whole note, Natural, Interval, Syncopation, Improvisation|Improv, Overture, Symphony, Sonata, Concerto, Cadence, Counterpoint, Tone|Whole tone, Semitone|Half step, Dissonance, Timbre, Chromatic, Unison, Largo, Moderato, Mezzo forte, Mezzo piano, Pizzicato, Fermata, Vivace, Lento, Decrescendo, Glissando, Tremolo, Arpeggio, Ritardando, Accelerando, Rallentando, Dolce, Sforzando, Cantabile, Allegretto, Andantino, Tutti, Maestoso, Rubato|Tempo rubato, Cadenza, Ostinato, Scherzo, Sotto voce, Con brio, Fine',
+      'Polyphony, Monophony, Homophony, Leitmotif, Hemiola, Triplet, Dotted note, Tie, Slur, Accent, Grace note, Trill, Mordent, Transposition, Modulation, Dominant, Tonic, Subdominant, Diatonic, Pentatonic, Augmented, Diminished, Inversion, Suspension, Grave, Larghetto, Prestissimo, Adagietto, Animato, Agitato, Espressivo, Sostenuto, Tenuto, Marcato, Portamento, Leggiero|Leggero, Con moto, Con fuoco, Poco a poco, Molto, Subito, Dal segno, A tempo, Segue, Attacca, Arco, Col legno, Sul ponticello, Divisi, Una corda, Morendo, Stringendo, Allargando, Ritenuto, Meno mosso, Più mosso, Giocoso, Grazioso, Scherzando, Appassionato, Tranquillo, Pesante, Con sordino|Sordino, Acciaccatura, Appoggiatura, Fortepiano, Rinforzando, Staccatissimo',
+      'Hocket, Melisma, Picardy third|Tierce de Picardie, Neapolitan sixth, Mixolydian, Dorian, Phrygian, Lydian, Aeolian, Locrian, Ionian, Enharmonic, Hemidemisemiquaver|Sixty-fourth note, Demisemiquaver|Thirty-second note, Breve, Calando, Smorzando, Perdendosi, Affettuoso, Risoluto, Semplice, Mezza voce, Obbligato, Ripieno, Spiccato, Martellato, Tessitura, Forzando, Niente|Al niente, Lacrimoso, Doloroso, Mesto, Lugubre, Furioso, Brillante, Deciso, Energico, Feroce, Misterioso, Sospirando, Spiritoso, Vigoroso, Comodo, Simile, Sempre, Ossia, Volti subito, Loco, Ottava, Tre corde, Con amore, Senza sordino, Sforzato, Legatissimo, Pianississimo, Fortississimo',
+    ],
+  },
+  {
+    id: 'sports',
+    q: 'Name a sport',
+    tiers: [
+      'Football|Soccer, Basketball, Tennis, Baseball, Swimming, Golf, Cricket, Rugby|Rugby union|Rugby league|Rugby sevens, American football|Gridiron, Boxing, Hockey|Ice hockey|Field hockey',
+      'Athletics|Track and field|Track, Gymnastics|Artistic gymnastics, Volleyball, Cycling|Road cycling|Track cycling, Running, Skiing|Alpine skiing, Snowboarding, Surfing, Wrestling, Table tennis|Ping pong, Badminton, Formula One|Formula 1|F1|Motor racing|Motorsport, Skateboarding, Diving, Rowing, Bowling|Ten-pin bowling|Tenpin bowling, Darts, Snooker, Pool|Billiards, Martial arts, Ice skating|Figure skating|Skating, Horse racing',
+      'Judo, Fencing, Archery, Weightlifting, Sailing, Equestrian|Horse riding|Dressage|Show jumping|Eventing, Shooting, Taekwondo, Karate, Lacrosse, Netball, Handball, Water polo, Softball, Triathlon, Marathon, Canoeing|Canoe|Kayaking|Kayak, Rock climbing|Climbing|Sport climbing|Bouldering, Squash, Polo, Curling, Bobsleigh|Bobsled, Beach volleyball, BMX, Mountain biking|Mountain bike, Trampoline|Trampolining, MMA|Mixed martial arts, Dodgeball, Ultimate|Ultimate frisbee, Pickleball, Kickboxing, Water skiing|Waterskiing, Paintball',
+      'Artistic swimming|Synchronized swimming|Synchronised swimming, Rhythmic gymnastics, Modern pentathlon|Pentathlon, Decathlon, Heptathlon, Biathlon, Luge, Skeleton, Ski jumping, Cross-country skiing, Speed skating, Breaking|Breakdancing, Gaelic football, Hurling, Australian rules football|Aussie rules|AFL, Rounders, Kabaddi, Sepak takraw, Jai alai, Korfball, Racquetball, Croquet, Bowls|Lawn bowls, Tug of war, Orienteering, Kitesurfing|Kiteboarding, Windsurfing, Wakeboarding, Bodyboarding, Parkour|Freerunning, Motocross, Rallying|Rally, NASCAR|Stock car racing, Sumo, Fishing|Angling, Powerlifting, Bodybuilding, Rodeo, Cheerleading, Esports|E-sports, Chess, Disc golf, Paddleboarding|Stand-up paddleboarding|SUP, Skydiving, Hang gliding|Paragliding',
+      'Shinty, Camogie, Fives|Eton fives|Rugby fives, Real tennis|Court tennis, Rackets|Racquets, Pelota|Basque pelota, Bandy, Floorball, Underwater hockey|Octopush, Underwater rugby, Hornussen, Pesäpallo, Bossaball, Footvolley, Teqball, Padel, Platform tennis, Roller derby, Quidditch|Quadball, Cycle ball|Cycleball, Canoe polo, Caber toss|Tossing the caber, Buzkashi, Elephant polo, Bog snorkelling, Cheese rolling, Wife carrying, Chess boxing|Chessboxing, Tobogganing|Toboggan, Skijoring, Ski mountaineering, Gaga|Gaga ball, Kin-Ball|Kinball, Tchoukball, Goalball, Boccia, Sitting volleyball, Wheelchair rugby|Murderball, Pétanque|Petanque|Boules, Bocce, Skittles, Kho kho, Gilli-danda, Stoolball',
     ],
   },
 ];

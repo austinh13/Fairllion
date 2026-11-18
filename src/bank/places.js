@@ -15,17 +15,6 @@ export default [
     ],
   },
   {
-    id: 'us-capitals',
-    q: 'Name a US state capital',
-    tiers: [
-      'Boston, Atlanta, Denver, Phoenix, Honolulu, Nashville',
-      'Austin, Sacramento, Salt Lake City, Oklahoma City, Indianapolis, Albany, Richmond, Raleigh, Little Rock, Santa Fe',
-      'Tallahassee, Juneau, Boise, Baton Rouge, Columbus, Madison, Saint Paul|St Paul, Des Moines, Providence, Hartford, Charleston, Montgomery',
-      'Springfield, Lansing, Harrisburg, Trenton, Annapolis, Columbia, Jackson, Topeka, Lincoln, Cheyenne, Olympia, Salem, Helena, Dover',
-      'Jefferson City, Frankfort, Pierre, Bismarck, Montpelier, Concord, Augusta, Carson City',
-    ],
-  },
-  {
     id: 'africa',
     q: 'Name a country in Africa',
     tiers: [
@@ -67,28 +56,6 @@ export default [
       'Costa Rica, Panama, Ecuador, Bolivia, Uruguay, Paraguay, Haiti, Dominican Republic, Bahamas, Guatemala',
       'Honduras, Nicaragua, El Salvador, Belize, Barbados, Trinidad and Tobago|Trinidad, Guyana, Suriname',
       'Grenada, Saint Lucia|St Lucia, Dominica, Antigua and Barbuda|Antigua, Saint Kitts and Nevis|St Kitts and Nevis|St Kitts|Saint Kitts, Saint Vincent and the Grenadines|St Vincent and the Grenadines|St Vincent|Saint Vincent',
-    ],
-  },
-  {
-    id: 'euro-capitals',
-    q: 'Name a capital city in Europe',
-    tiers: [
-      'Paris, London, Rome, Berlin, Madrid',
-      'Amsterdam, Athens, Dublin, Vienna, Lisbon, Moscow, Brussels, Stockholm, Prague, Copenhagen',
-      'Oslo, Helsinki, Budapest, Warsaw, Bern|Berne, Kyiv|Kiev, Reykjavik, Bucharest, Zagreb, Belgrade, Ankara, Monaco, Luxembourg|Luxembourg City',
-      'Sofia, Riga, Tallinn, Vilnius, Bratislava, Ljubljana, Minsk, Valletta, Sarajevo, Tirana, Nicosia, Vatican City',
-      'Skopje, Podgorica, Chisinau|Kishinev, Pristina, Vaduz, Andorra la Vella, San Marino, Tbilisi, Yerevan, Baku, Astana',
-    ],
-  },
-  {
-    id: 'olympic-cities',
-    q: 'Name a city that has hosted the Olympic Games, summer or winter',
-    tiers: [
-      'London, Paris, Tokyo, Los Angeles|LA, Beijing, Rio de Janeiro|Rio',
-      'Sydney, Athens, Barcelona, Atlanta, Rome, Berlin, Moscow, Seoul',
-      'Munich, Montreal, Mexico City, Vancouver, Sochi, Salt Lake City, Melbourne, Calgary, Amsterdam, Stockholm, Helsinki',
-      'Turin|Torino, Nagano, Lillehammer, Sarajevo, Innsbruck, Lake Placid, Pyeongchang, Oslo, Milan|Milano, Antwerp, St. Louis|Saint Louis',
-      "Sapporo, Grenoble, Albertville, Chamonix, St. Moritz|Saint Moritz|Sankt Moritz, Cortina d'Ampezzo|Cortina, Garmisch-Partenkirchen|Garmisch, Squaw Valley|Palisades Tahoe",
     ],
   },
   {
@@ -148,6 +115,17 @@ export default [
       'Polish, Swedish, Turkish, Hebrew, Irish|Gaelic|Irish Gaelic|Gaeilge, Welsh, Vietnamese, Thai, Norwegian, Danish, Finnish, Swahili|Kiswahili, Ukrainian, Bengali|Bangla, Urdu, Persian|Farsi, Cantonese, Punjabi|Panjabi, Tagalog|Filipino, Indonesian|Bahasa Indonesia, Czech, Hungarian|Magyar, Romanian, Sign language|American Sign Language|ASL|British Sign Language|BSL, Esperanto',
       'Tamil, Telugu, Marathi, Gujarati, Malay|Bahasa Melayu|Malaysian, Nepali, Sinhala|Sinhalese, Burmese, Khmer|Cambodian, Lao|Laotian, Mongolian, Tibetan, Kazakh, Uzbek, Pashto|Pushto, Kurdish, Armenian, Georgian, Azerbaijani|Azeri, Bulgarian, Serbian, Croatian, Bosnian, Slovak, Slovenian|Slovene, Lithuanian, Latvian, Estonian, Icelandic, Albanian, Macedonian, Belarusian, Catalan, Basque|Euskara, Galician, Scottish Gaelic|Scots Gaelic, Breton, Maltese, Luxembourgish, Afrikaans, Zulu|isiZulu, Xhosa|isiXhosa, Yoruba, Igbo, Hausa, Amharic, Somali, Yiddish, Sanskrit, Hawaiian, Maori|Te Reo|Te Reo Maori, Navajo, Cherokee, Quechua, Klingon',
       "Kannada, Malayalam, Odia|Oriya, Assamese, Sindhi, Kashmiri, Dzongkha, Uyghur|Uighur, Kyrgyz, Tajik, Turkmen, Tatar, Chechen, Ossetian, Aramaic, Coptic, Akkadian, Sumerian, Old Norse|Norse, Old English|Anglo-Saxon, Gothic, Faroese, Frisian|West Frisian, Scots, Cornish, Manx, Occitan, Corsican, Sardinian, Romansh, Ladino, Sorbian, Sami|Saami, Tigrinya, Oromo, Wolof, Fula|Fulani|Fulfulde, Bambara, Twi|Akan, Ewe, Shona, Ndebele, Tswana|Setswana, Sotho|Sesotho, Swazi|Swati|siSwati, Venda, Tsonga, Chichewa|Nyanja, Kinyarwanda, Kirundi, Luganda, Lingala, Kikuyu|Gikuyu, Malagasy, Javanese, Sundanese, Balinese, Cebuano|Bisaya, Ilocano, Hmong, Hakka, Hokkien|Min Nan|Taiwanese, Ainu, Tok Pisin, Fijian, Samoan, Tongan, Tahitian, Guarani, Aymara, Nahuatl, Mayan|Maya, Mapuche|Mapudungun, Inuktitut, Greenlandic|Kalaallisut, Cree, Ojibwe|Ojibwa, Lakota, Hopi, Mohawk, Haitian Creole|Creole|Kreyol, Papiamento, Interlingua, Volapük, Toki Pona, Lojban, Dothraki, Na'vi, Etruscan, Hittite, Phoenician, Pali, Avestan",
+    ],
+  },
+  {
+    id: 'capitals',
+    q: 'Name a capital city (of a country, state or province)',
+    tiers: [
+      'London, Paris, Tokyo, Washington|Washington DC|DC, Rome, Berlin, Madrid, Beijing|Peking, Moscow',
+      'Amsterdam, Athens, Dublin, Vienna, Lisbon, Brussels, Stockholm, Prague, Copenhagen, Ottawa, Canberra, Cairo, New Delhi|Delhi, Seoul, Bangkok, Mexico City, Buenos Aires, Oslo, Helsinki, Warsaw, Budapest, Boston, Atlanta, Denver, Phoenix, Honolulu, Austin, Sacramento, Nashville, Sydney, Toronto, Wellington',
+      'Bern|Berne, Kyiv|Kiev, Reykjavik, Bucharest, Zagreb, Belgrade, Ankara, Monaco, Luxembourg|Luxembourg City, Jerusalem, Tehran, Baghdad, Riyadh, Abu Dhabi, Doha, Kabul, Islamabad, Kathmandu, Hanoi, Manila, Jakarta, Kuala Lumpur, Singapore, Taipei, Brasília|Brasilia, Lima, Santiago, Bogotá|Bogota, Caracas, Havana, Nairobi, Pretoria, Cape Town, Addis Ababa, Rabat, Algiers, Tunis, Salt Lake City, Oklahoma City, Indianapolis, Albany, Richmond, Raleigh, Little Rock, Santa Fe, Tallahassee, Juneau, Boise, Baton Rouge, Columbus, Madison, Saint Paul|St Paul, Des Moines, Providence, Hartford, Montgomery, Melbourne, Brisbane, Perth, Edinburgh, Cardiff, Belfast, Quebec City|Quebec, Victoria, Edmonton',
+      "Sofia, Riga, Tallinn, Vilnius, Bratislava, Ljubljana, Minsk, Valletta, Sarajevo, Tirana, Nicosia, Vatican City, Damascus, Beirut, Amman, Muscat, Kuwait City, Manama, Sana'a|Sanaa, Dhaka, Colombo, Phnom Penh, Vientiane, Ulaanbaatar|Ulan Bator, Pyongyang, Tashkent, Tbilisi, Yerevan, Baku, Astana|Nur-Sultan, Quito, La Paz, Sucre, Montevideo, Asunción|Asuncion, Kingston, Panama City, San José|San Jose, Managua, Tegucigalpa, San Salvador, Guatemala City, Santo Domingo, Port-au-Prince, Nassau, Accra, Abuja, Kinshasa, Luanda, Kampala, Kigali, Harare, Lusaka, Maputo, Windhoek, Gaborone, Khartoum, Tripoli, Dakar, Mogadishu, Antananarivo, Springfield, Lansing, Harrisburg, Trenton, Annapolis, Columbia, Jackson, Topeka, Lincoln, Cheyenne, Olympia, Salem, Helena, Dover, Charleston, Adelaide, Hobart, Darwin, Winnipeg, Halifax, Regina",
+      "Skopje, Podgorica, Chisinau|Kishinev, Pristina, Vaduz, Andorra la Vella, San Marino, Jefferson City, Frankfort, Pierre, Bismarck, Montpelier, Concord, Augusta, Carson City, Naypyidaw|Nay Pyi Taw, Thimphu, Malé|Male, Bishkek, Dushanbe, Ashgabat, Bandar Seri Begawan, Dili, Port Moresby, Suva, Apia, Nuku'alofa, Honiara, Port Vila, Tarawa|South Tarawa, Majuro, Palikir, Funafuti, Yaren, Ngerulmud, Paramaribo, Georgetown, Belmopan, Castries, Bridgetown, Roseau, St. George's|Saint George's, Basseterre, Kingstown, St. John's|Saint John's, Port of Spain, Bamako, Niamey, Ouagadougou, N'Djamena, Nouakchott, Conakry, Bissau, Freetown, Monrovia, Yamoussoukro, Lomé|Lome, Porto-Novo, Malabo, Libreville, Brazzaville, Bangui, Yaoundé|Yaounde, Juba, Asmara, Djibouti|Djibouti City, Gitega, Lilongwe, Maseru, Mbabane, Moroni, Praia, São Tomé|Sao Tome, Port Louis, Dodoma, Bloemfontein, Fredericton, Charlottetown",
     ],
   },
 ];

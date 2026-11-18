@@ -14,7 +14,7 @@ export function renderHow(root) {
   <article class="page prose">
     <p class="eyebrow">The rules</p>
     <h1>How Fairllion works</h1>
-    <p class="lede">Fairllion is six holes of golf played with words. Each shot gives you a category. You type one thing that belongs in it, and how unusual your answer is decides which club you just swung.</p>
+    <p class="lede">Fairllion is three holes of golf played with words. Each shot gives you a category. You type one thing that belongs in it, and how unusual your answer is decides which club you just swung.</p>
 
     <h2>The bag</h2>
     <p>Every answer on a category's card sits in one of five tiers, and each tier is a club.</p>
@@ -52,7 +52,7 @@ export function renderHow(root) {
     <p>Capitals, accents, punctuation, spacing, a leading &ldquo;the&rdquo; and a plural &ldquo;s&rdquo; are all ignored, so &ldquo;The Bagpipes&rdquo; and &ldquo;bagpipe&rdquo; are the same answer.</p>
 
     <h2>Scoring</h2>
-    <p>A round is six holes: par ${PARS.join(', ')}, for a par of ${PARS.reduce((a, b) => a + b, 0)}. Each hole is scored the usual golf way, and the most a hole can cost is ${MAX_OVER_PAR} over its par. After that you pick up and walk to the next tee.</p>
+    <p>A round is three holes: par ${PARS.join(', ')}, for a par of ${PARS.reduce((a, b) => a + b, 0)}. Each hole is scored the usual golf way, and the most a hole can cost is ${MAX_OVER_PAR} over its par. After that you pick up and walk to the next tee.</p>
     <div class="table-wrap"><table class="clubs">
       <thead><tr><th>Par 3</th><th>Par 4</th><th>Par 5</th></tr></thead>
       <tbody><tr><td>105&ndash;170 yards</td><td>240&ndash;330 yards</td><td>410&ndash;520 yards</td></tr></tbody>
@@ -61,7 +61,7 @@ export function renderHow(root) {
     <p class="marks">${scoreMark(1, 3)} ${scoreMark(2, 4)} ${scoreMark(3, 4)} ${scoreMark(4, 4)} ${scoreMark(5, 4)} ${scoreMark(7, 4)}</p>
 
     <h2>Daily and practice rounds</h2>
-    <p><b>The daily</b> is one round a day, new at midnight where you are. Everyone gets the same six holes and the same category on the same shot, so scores compare fairly. Your round is saved in this browser as you go.</p>
+    <p><b>The daily</b> is one round a day, new at midnight where you are. Everyone gets the same three holes and the same category on the same shot, so scores compare fairly. Your round is saved in this browser as you go.</p>
     <p><b>Practice rounds</b> are unlimited and do not touch your daily record. Each has a short code; anyone who plays the same code gets the same round, so you can send one to a friend. In practice you can also switch the shot clock off.</p>
 
     <h2>Where the rarities come from</h2>

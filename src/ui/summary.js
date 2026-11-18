@@ -10,11 +10,11 @@ import { store } from '../store.js';
 import { $, copyText, esc, scoreMark, tierChip } from './dom.js';
 
 function verdict(diff) {
-  if (diff <= -9) return 'Nearly flawless. Very few rounds go this low.';
-  if (diff <= -6) return 'A fine round: the right club, hole after hole.';
-  if (diff <= -3) return 'Comfortably under par.';
+  if (diff <= -5) return 'Nearly flawless. Very few rounds go this low.';
+  if (diff <= -3) return 'A fine round: the right club, hole after hole.';
+  if (diff <= -1) return 'Comfortably under par.';
   if (diff <= 0) return 'Tidy golf. A sharper answer here and there and this goes lower.';
-  if (diff <= 4) return 'A few loose shots. The cards below show what you could have said.';
+  if (diff <= 2) return 'A few loose shots. The cards below show what you could have said.';
   return 'A rough day out. Read the cards below and come back swinging.';
 }
 
@@ -110,7 +110,7 @@ export function renderSummary(root, { round, mode, dateKey, code }) {
       <a class="btn btn-ghost" href="#/practice">${mode === 'practice' ? 'Play another' : 'Play a practice round'}</a>
       <a class="btn btn-ghost" href="#/">Home</a>
     </div>
-    <p class="fine" id="s-note" role="status" aria-live="polite">${mode === 'daily' ? 'The next daily round starts in <b id="s-count"></b>.' : 'Send the link to a friend: the same code deals the same six holes and categories.'}</p>
+    <p class="fine" id="s-note" role="status" aria-live="polite">${mode === 'daily' ? 'The next daily round starts in <b id="s-count"></b>.' : 'Send the link to a friend: the same code deals the same three holes and categories.'}</p>
     <textarea class="manual" id="s-manual" rows="5" readonly hidden aria-label="Text to copy"></textarea>
 
     <div class="table-wrap">

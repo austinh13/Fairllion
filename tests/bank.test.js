@@ -81,14 +81,9 @@ test('closed sets are complete', () => {
   const count = (id) => cardFor(id).answers.length;
   assert.equal(count('elements'), 118);
   assert.equal(count('us-states'), 50);
-  assert.equal(count('us-capitals'), 50);
   assert.equal(count('africa'), 54);
   assert.equal(count('americas'), 35);
   assert.equal(count('greek-letters'), 24);
-  assert.equal(count('nato-alphabet'), 26);
-  assert.equal(count('si-prefixes'), 24);
-  assert.equal(count('constellations'), 88);
-  assert.equal(count('presidents'), 40);
 });
 
 test('the bank reports its size', () => {

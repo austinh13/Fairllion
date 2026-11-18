@@ -53,8 +53,8 @@ test('a full name finds a surname on people cards only', () => {
   assert.equal(findAnswer(cardFor('painters'), 'Vincent van Gogh').name, 'Van Gogh');
   assert.equal(findAnswer(cardFor('composers'), 'Ludwig van Beethoven').name, 'Beethoven');
   assert.equal(findAnswer(cardFor('composers'), 'Ralph Vaughan Williams').name, 'Vaughan Williams');
-  assert.equal(findAnswer(cardFor('presidents'), 'Martin Van Buren').name, 'Van Buren');
-  assert.equal(findAnswer(cardFor('presidents'), 'Abraham Lincoln').name, 'Lincoln');
+  assert.equal(findAnswer(cardFor('world-leaders'), 'Martin Van Buren').name, 'Van Buren');
+  assert.equal(findAnswer(cardFor('world-leaders'), 'Abraham Lincoln').name, 'Lincoln');
   assert.equal(findAnswer(cardFor('philosophers'), 'Simone de Beauvoir').name, 'De Beauvoir');
   assert.equal(findAnswer(cardFor('us-states'), 'South Texas'), null);
 });
@@ -67,8 +67,8 @@ test('look-alike answers stay apart', () => {
   assert.equal(findAnswer(cardFor('africa'), 'Nigeria').name, 'Nigeria');
   assert.equal(findAnswer(cardFor('americas'), 'Dominica').name, 'Dominica');
   assert.equal(findAnswer(cardFor('americas'), 'Dominican Republic').name, 'Dominican Republic');
-  assert.equal(findAnswer(cardFor('shakespeare'), 'Henry V').name, 'Henry V');
-  assert.equal(findAnswer(cardFor('shakespeare'), 'Henry VI').name, 'Henry VI');
+  assert.equal(findAnswer(cardFor('plays-musicals'), 'Henry V').name, 'Henry V');
+  assert.equal(findAnswer(cardFor('plays-musicals'), 'Henry VI').name, 'Henry VI');
 });
 
 test('edit distance counts a swap of neighbours as one', () => {
