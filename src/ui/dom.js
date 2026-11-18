@@ -1,5 +1,6 @@
 // Small DOM helpers shared by the screens.
 
+import { EXAMPLES } from '../examples.js';
 import { CLUBS, formatRel, scoreName } from '../rules.js';
 
 const ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -14,6 +15,12 @@ export const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 /** A rarity name in its tier's colour. */
 export function tierChip(tier) {
   return `<span class="chip" data-tier="${tier}">${esc(CLUBS[tier - 1].rarity)}</span>`;
+}
+
+/** Five steps from common to rare, filled up to this tier. */
+export function rarityMeter(tier) {
+  const steps = CLUBS.map((c) => `<i${c.tier <= tier ? ' class="on"' : ''}></i>`).join('');
+  return `<span class="meter" data-tier="${tier}" role="img" aria-label="Rarity ${tier} of ${CLUBS.length}">${steps}</span>`;
 }
 
 /** How a hole score is marked on the card: circles under par, squares over. */
@@ -61,10 +68,10 @@ export async function copyText(text) {
 export function clubTable() {
   const rows = CLUBS.map(
     (c) => `<tr>
-      <td>${tierChip(c.tier)}</td>
+      <td>${tierChip(c.tier)} ${rarityMeter(c.tier)}</td>
       <td>${esc(c.club)}</td>
       <td class="num">${c.lo}&ndash;${c.hi} yds</td>
-      <td class="muted">${esc(c.hint)}</td>
+      <td class="muted">${esc(c.hint)} For a fruit, ${esc(EXAMPLES[0].answers[c.tier - 1])}.</td>
     </tr>`,
   ).join('');
   return `<div class="table-wrap"><table class="clubs">

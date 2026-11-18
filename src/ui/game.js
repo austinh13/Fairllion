@@ -11,7 +11,7 @@ import { createRound, currentHole, currentPromptId, nextHole, restore, snapshot,
 import { BEYOND, CLUBS, GREEN_RADIUS, SHOT_CLOCK, formatRel, outlook, remaining, scoreName, zonesFor } from '../rules.js';
 import { sfx } from '../sfx.js';
 import { store } from '../store.js';
-import { $, clubTable, esc, scoreClass, scoreMark, tierChip, wait } from './dom.js';
+import { $, clubTable, esc, rarityMeter, scoreClass, scoreMark, tierChip, wait } from './dom.js';
 
 const BEYOND_NAME = { pond: 'the pond', pines: 'the pines', heather: 'the heather' };
 
@@ -88,22 +88,16 @@ function bagWord(o, hole, pos) {
   return o.club.carryLo - (hole.length - pos) > BEYOND ? 'Penalty' : 'Long';
 }
 
-const article = (word) => (/^(?!one)[aeiou]/i.test(word) ? 'an' : 'a');
-const capital = (text) => text.replace(/^./, (m) => m.toUpperCase());
-
-/** The one line under the prompt: what reaches the green from here. */
+/** The one line under the prompt: how rare an answer reaches the green from here. */
 function advice(hole, pos, lie) {
   const r = remaining(hole, pos);
-  if (r <= GREEN_RADIUS) return { lead: `${r} yds, on the green.`, rest: `Only a ${CLUBS[0].rarity} answer drops the putt.` };
+  const name = (c) => `${tierChip(c.tier)} ${rarityMeter(c.tier)}`;
+  if (r <= GREEN_RADIUS) return { lead: `${r} yds, on the green.`, rest: `Only ${name(CLUBS[0])} drops.` };
   const all = CLUBS.map((c) => ({ c, o: outlook(hole, pos, lie, c.tier) }));
   const good = all.filter((x) => x.o.status === 'reach');
-  const name = ({ c, o }) => `${article(c.rarity)} <b>${esc(c.rarity)}</b> answer (${esc(o.club.club)} ${o.club.lo}–${o.club.hi}y)`;
-  if (good.length) {
-    const list = good.length === 1 ? name(good[0]) : `${good.slice(0, -1).map(name).join(', ')} or ${name(good.at(-1))}`;
-    return { lead: `${r} to the pin.`, rest: `${capital(list)} reaches the green.` };
-  }
+  if (good.length) return { lead: `${r} to the pin.`, rest: `Go ${good.map((x) => name(x.c)).join(' or ')}` };
   const best = all.filter((x) => x.o.status === 'short').at(-1);
-  return { lead: `${r} to the pin.`, rest: best ? `Nothing reaches. ${capital(name(best))} gets closest.` : 'Every club runs long from here.' };
+  return { lead: `${r} to the pin.`, rest: best ? `Nothing reaches. ${name(best.c)} gets closest.` : 'Every club runs long from here.' };
 }
 
 /**
@@ -223,6 +217,8 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
       top: Math.max(0, top.bottom - s.top),
       bottom: Math.max(0, s.bottom - form.top),
     });
+    // On wide screens the club guide sits down the left edge, just under the prompt.
+    el.game.style.setProperty('--drop-top', `${Math.round(top.bottom - s.top + 10)}px`);
   }
   const watcher = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
   for (const node of [el.stage, el.top, el.ask, el.form]) watcher?.observe(node);
@@ -320,9 +316,10 @@ export function mountGame(root, { mode, dateKey, code, onFinish }) {
       const o = outlook(hole, round.pos, round.lie, c.tier);
       const club = o.putt ? 'Putter' : `${o.club.club} · ${o.club.lo}–${o.club.hi} yds`;
       const good = o.status === 'reach' || o.status === 'drops';
-      return `<li class="${good ? 'is-good' : ''}" data-tier="${c.tier}">
+      return `<li class="${good ? 'is-good' : ''}" data-tier="${c.tier}" title="${esc(club)}">
         <span class="swatch"></span>
         <span class="bag-rarity">${esc(c.rarity)}</span>
+        ${rarityMeter(c.tier).replace('class="meter"', 'class="meter bag-meter"')}
         <span class="bag-short" aria-hidden="true">${esc(c.short)}</span>
         <span class="bag-word" aria-hidden="true">${esc(bagWord(o, hole, round.pos))}</span>
         <span class="bag-club">${esc(club)}</span>

@@ -193,6 +193,12 @@ main:focus { outline: none; }
 [data-tier="5"] { --tier: var(--t5); }
 .chip[data-tier] { background: var(--tier); }
 
+/* Rarity meter: five steps from common to rare, filled up to the tier. */
+.meter { display: inline-flex; gap: 2px; vertical-align: -0.05em; }
+.meter i { width: 6px; height: 10px; box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 45%, transparent); }
+.meter i.on { background: var(--tier); box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25); }
+.ask-more summary .chip { margin-right: 2px; }
+
 /* ---- Tables ------------------------------------------------------------ */
 
 .table-wrap { overflow-x: auto; background: var(--paper-hi); box-shadow: var(--frame), var(--lift); margin: var(--px); }
@@ -474,12 +480,13 @@ td.marks .mark { margin-right: 10px; }
 
 .bag { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
 .bag li {
-  display: grid; align-items: baseline; column-gap: 8px; margin: 0 var(--px);
-  grid-template-columns: 12px auto minmax(0, 1fr) auto;
-  grid-template-areas: "dot rarity club status";
+  display: grid; align-items: baseline; column-gap: 8px; row-gap: 1px; margin: 0 var(--px);
+  grid-template-columns: 12px auto auto minmax(0, 1fr) auto;
+  grid-template-areas: "dot rarity meter club status";
   padding: 3px 10px 4px 8px; font-size: 0.88rem;
   background: var(--paper-hi); box-shadow: var(--frame);
 }
+.bag .bag-meter { grid-area: meter; align-self: center; }
 .bag .swatch { grid-area: dot; align-self: center; width: 12px; height: 12px; background: var(--tier); box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25); }
 .bag .bag-rarity { grid-area: rarity; font-weight: 700; color: var(--tier); white-space: nowrap; filter: brightness(0.85); }
 .bag .bag-club { grid-area: club; font-size: 0.76rem; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -553,12 +560,13 @@ mark { background: var(--gold); color: var(--ink); padding: 0 3px; font-weight: 
 
   .bag { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
   .bag li {
-    grid-template-columns: minmax(0, 1fr); grid-template-areas: "dot" "short" "word";
+    grid-template-columns: minmax(0, 1fr); grid-template-areas: "dot" "short" "meter" "word";
     justify-items: center; text-align: center; row-gap: 2px;
     padding: 0 2px 4px; font-size: 0.72rem; margin: var(--px);
   }
   .bag .swatch { width: 100%; height: 6px; box-shadow: none; }
   .bag .bag-rarity, .bag .bag-club, .bag .bag-status { display: none; }
+  .bag .meter i { width: 5px; height: 7px; }
   .bag .bag-short { display: block; grid-area: short; font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .bag .bag-word { display: block; grid-area: word; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .bag .is-good { box-shadow: var(--frame), inset 0 -3px 0 var(--tier); }
@@ -581,6 +589,27 @@ mark { background: var(--gold); color: var(--ink); padding: 0 3px; font-weight: 
   .brand span { display: none; }
   .masthead nav { gap: 8px; font-size: 0.74rem; }
   .masthead nav button { font-size: 0.68rem; padding: 2px 5px; }
+}
+
+/* Wide screens: the club guide is a column down the left edge, clear of the course. */
+@media (min-width: 900px) {
+  .ask { position: static; }
+  .ask-drop {
+    left: 16px; right: auto; top: var(--drop-top, 180px); width: 220px;
+    max-height: calc(100% - var(--drop-top, 180px) - 110px); overflow: hidden auto;
+    padding: 8px; gap: 8px; background: rgba(18, 27, 22, 0.7);
+  }
+  .bag { gap: 2px; }
+  .bag li {
+    grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "meter rarity word";
+    column-gap: 8px; margin: 0; padding: 4px 6px; font-size: 0.8rem;
+    background: none; box-shadow: none; color: rgba(251, 245, 226, 0.7);
+  }
+  .bag .swatch, .bag .bag-club, .bag .bag-status { display: none; }
+  .bag .bag-rarity { color: inherit; filter: none; font-weight: 400; }
+  .bag .bag-word { display: block; grid-area: word; font-size: 0.74rem; white-space: nowrap; }
+  .bag .is-good { background: rgba(251, 245, 226, 0.1); box-shadow: inset 3px 0 0 var(--tier); color: #fffaf0; }
+  .bag .is-good .bag-rarity, .bag .is-good .bag-word { font-weight: 700; }
 }
 
 @media (max-height: 560px) and (max-width: 899px) {
